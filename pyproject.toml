@@ -57,3 +57,10 @@ patch_tags = [
 match = "(main|master)"
 prerelease_token = "rc"
 prerelease = false
+
+[tool.pymarkdownlnt]
+log.level = "INFO"
+log.stack-trace = true
+rules = [
+  "MD013", # Line length
+]

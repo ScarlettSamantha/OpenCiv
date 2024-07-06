@@ -43,7 +43,7 @@ lint_markdown_files() {
 }
 
 fix_markdown_files() {
-    pymarkdown fix .
+    pymarkdownlnt fix .
 }
 
 print() {
