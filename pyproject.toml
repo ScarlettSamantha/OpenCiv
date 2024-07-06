@@ -24,6 +24,7 @@ ignore = [
 [tool.semantic_release]
 version_variables = ["openciv/version.py:__version__"]
 commit_parser="emoji"
+github_release = false
 
 [tool.semantic_release.commit_parser_options]
 major_tags = [":boom:"]
