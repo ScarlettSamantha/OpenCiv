@@ -1,0 +1,10 @@
+panda3d
+types-panda3d
+ursina
+python-i18n
+pytest
+pytest-cov
+poetry-core
+webcolors
+pymarkdownlnt
+stringio

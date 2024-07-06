@@ -1,0 +1,11 @@
+- All Units
+    - AR (Armor Rating)
+    - DR (Damage Rating)
+    - Health
+    - Logicstics
+    - Accuracy
+    - Range
+    - In Direct(?)
+- AA
+    - Interceptors
+- Drones

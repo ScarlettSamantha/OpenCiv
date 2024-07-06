@@ -1,0 +1,2 @@
+class Mood:
+    pass

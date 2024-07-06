@@ -1,0 +1,13 @@
+{
+  "version_variable": "openciv/version.py:__version__",
+  "branch": "main",
+  "changelog_file": "CHANGELOG.md",
+  "commit_message": "chore(release): version {version}",
+  "version_source": "tag",
+  "build_command": "python setup.py sdist bdist_wheel",
+  "upload_to_pypi": false,
+  "changelog": {
+    "formatter": "keepachangelog",
+    "output": "CHANGELOG.md"
+  }
+}

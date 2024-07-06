@@ -1,0 +1,684 @@
+{
+    "en_EN": {
+        "world":{
+            "terrain":{
+                "mountain": "Mountain",
+                "ocean": "Ocean",
+                "coast": "Coast",
+
+                "flat_desert": "Flat desert",
+                "flat_forest": "Flat forest",
+                "flat_snow": "Flat now",
+                "flat_tundra": "Flat tundra",
+                "flat_wasteland": "Flat wasteland",
+
+                "hills_desert": "Hilly Dessert",
+                "hills_forest": "Hilly Forest",
+                "hills_grass": "Hilly Grass",
+                "hills_snow": "Hilly Snow",
+                "hills_tundra": "Hilly Tundra",
+                "hills_wasteland": "Hilly Wasteland"
+            }
+        },
+        "tiles": {
+            "resources": {
+                "food_farm_tier_1_name": "Farm (tier 1)",
+                "food_farm_tier_1_description": "A basic farm"
+            }
+        },
+        "civilization": {
+            "rome": {
+                "name": "Rome",
+                "description": "The Great Roman Empire",
+                "leaders": {
+                    "ceasar": {
+                        "name": "Julius Caesar",
+                        "description": "The great Julius Caesar"
+                    },
+                    "augustus": {
+                        "name": "Augustus",
+                        "description": "The great Augustus"
+                    }
+                }
+            },
+            "american_empire": {
+                "name": "American Empire",
+                "description": "The Great American Empire",
+                "leaders": {
+                    "abraham_lincoln": {
+                        "name": "Abraham Lincoln",
+                        "description": "The great Abraham Lincoln"
+                    },
+                    "fdr": {
+                        "name": "Franklin D. Roosevelt",
+                        "description": "The great Franklin D. Roosevelt"
+                    },
+                    "kamehameha": {
+                        "name": "Kamehameha",
+                        "description": "The great Kamehameha"
+                    },
+                    "sitting_bull": {
+                        "name": "Sitting Bull",
+                        "description": "The great Sitting Bull"
+                    }
+                }
+            },
+            "greece": {
+                "name": "Greece",
+                "description": "The Great Greek Empire",
+                "leaders": {
+                    "alexander": {
+                        "name": "Alexander the Great",
+                        "description": "The great Alexander the Great"
+                    },
+                    "leonidas": {
+                        "name": "Leonidas",
+                        "description": "The great Leonidas"
+                    }
+                }
+            },
+            "low_countries": {
+                "name": "Low Countries",
+                "description": "The Great Low Countries",
+                "leaders": {
+                    "william": {
+                        "name": "William of Orange",
+                        "description": "The great William of Orange"
+                    },
+                    "ambiorix": {
+                        "name": "Ambiorix",
+                        "description": "The great Amiorix"
+                    },
+                    "joan_van_oldenbarnevelt": {
+                        "name": "Joan van Oldenbarnevelt",
+                        "description": "Joan van Oldenbarnevelt of The VoC"
+                    }
+                }
+            },
+            "ottoman": {
+                "name": "Ottoman Empire",
+                "description": "The Great Ottoman Empire",
+                "leaders": {
+                    "suleiman": {
+                        "name": "Suleiman the Magnificent",
+                        "description": "Suleiman the Magnificent"
+                    },
+                    "attaturk": {
+                        "name": "Atta Turk",
+                        "description": "The great Atta Turk"
+                    }
+                }
+            },
+            "akkadian": {
+                "name": "Akkadian Empire",
+                "description": "The Great Akkadian Empire",
+                "leaders": {
+                    "sargon": {
+                        "name": "Sargon of Akkad",
+                        "description": "The great Sargon of Akkad"
+                    },
+                    "naram_sin": {
+                        "name": "Naram-Sin",
+                        "description": "Naram-Sin of Akkad"
+                    }
+                }
+            },
+            "spain": {
+                "name": "Spain",
+                "description": "The Great Spanish Empire",
+                "leaders": {
+                    "isabella": {
+                        "name": "Isabella",
+                        "description": "The great Isabella"
+                    },
+                    "philip": {
+                        "name": "Philip II",
+                        "description": "The great Philip II"
+                    },
+                    "charles_v": {
+                        "name": "Charles V",
+                        "description": "The great Charles V"
+                    },
+                    "charles_iii": {
+                        "name": "Charles III",
+                        "description": "The great Charles III"
+                    },
+                    "james": {
+                        "name": "James I",
+                        "description": "The great James I"
+                    }
+                }
+            },
+            "france": {
+                "name": "France",
+                "description": "The Great French Empire",
+                "leaders":{
+                    "charlemange": {
+                        "name": "Charlemange",
+                        "description": "The great Charlemange"
+                    },
+                    "de_gaulle": {
+                        "name": "Charles De Gaulle",
+                        "description": "The great Vercingetorix"
+                    },
+                    "louis": {
+                        "name": "Louis XIV",
+                        "description": "The great Louis XIV"
+                    },
+                    "napoleon": {
+                        "name": "Napoleon",
+                        "description": "The great Napoleon"
+                    }
+                }
+            },
+            "egypt": {
+                "name": "France",
+                "description": "The Great French Empire",
+                "leaders":{
+                    "cleopatra": {
+                        "name": "Cleopatra",
+                        "description": "The great Cleopatra"
+                    },
+                    "ramesses": {
+                        "name": "Ramesses II",
+                        "description": "The great Ramesses II"
+                    }
+                }
+            },
+            "vikings": {
+                "name": "Vikings",
+                "description": "The great Vikings",
+                "leaders": {
+                    "ragnar": {
+                        "name": "Ragnar Lothbrok",
+                        "description": "The great Ragnar Lothbrok"
+                    },
+                    "cnut": {
+                        "name": "Cnut the Great",
+                        "description": "The great Cnut the Great"
+                    },
+                    "herald": {
+                        "name": "Herald Fairhair",
+                        "description": "The great Herald Fairhair"
+                    }
+                }
+            },
+            "byzantine": {
+                "name": "Byzantine Empire",
+                "description": "The great Byzantine Empire",
+                "leaders": {
+                    "justinian": {
+                        "name": "Justinian",
+                        "description": "The great Justinian"
+                    },
+                    "constantine": {
+                        "name": "Constantine",
+                        "description": "The great Constantine"
+                    }
+                }
+            },
+            "persia": {
+                "name": "Persia",
+                "description": "The great Persian Empire",
+                "leaders": {
+                    "darius": {
+                        "name": "Darius the Great",
+                        "description": "The great Darius the Great"
+                    },
+                    "xerxes": {
+                        "name": "Xerxes",
+                        "description": "The great Xerxes"
+                    },
+                    "nebuchadnezzar": {
+                        "name": "Nebuchadnezzar",
+                        "description": "The great Nebuchadnezzar"
+                    }
+                }
+            },
+            "china": {
+                "name": "China",
+                "description": "The great Chinese Empire",
+                "leaders": {
+                    "qin_shi_huang": {
+                        "name": "Qin Shi Huang",
+                        "description": "The great Qin Shi Huang"
+                    },
+                    "kublai": {
+                        "name": "Kublai Khan",
+                        "description": "The great Kublai Khan"
+                    }
+                }
+            },
+            "japan": {
+                "name": "Japan",
+                "description": "The great Japanese Empire",
+                "leaders": {
+                    "tokugawa": {
+                        "name": "Tokugawa Ieyasu",
+                        "description": "The great Tokugawa Ieyasu"
+                    },
+                    "meiji": {
+                        "name": "Meiji",
+                        "description": "The great Meiji"
+                    },
+                    "taisho": {
+                        "name": "Taisho",
+                        "description": "The great Taisho"
+                    }
+                }
+            },
+            "england": {
+                "name": "England",
+                "description": "The great English Empire",
+                "leaders": {
+                    "elizabeth": {
+                        "name": "Elizabeth I",
+                        "description": "The great Elizabeth I"
+                    },
+                    "victoria": {
+                        "name": "Victoria",
+                        "description": "The great Victoria"
+                    }
+                }
+            },
+            "korea": {
+                "name": "Korea",
+                "description": "The great Korean Empire",
+                "leaders": {
+                    "sejong": {
+                        "name": "Sejong the Great",
+                        "description": "The great Sejong the Great"
+                    },
+                    "goi": {
+                        "name": "Goi Soon",
+                        "description": "The great Goi Soon"
+                    }
+                }
+            },
+            "ussr": {
+                "name": "USSR",
+                "description": "The great USSR",
+                "leaders": {
+                    "lenin": {
+                        "name": "Lenin",
+                        "description": "The great Lenin"
+                    },
+                    "gorbachev": {
+                        "name": "Gorbachev",
+                        "description": "The great Gorbachev"
+                    },
+                    "peter": {
+                        "name": "Peter the Great",
+                        "description": "The great Peter the Great"
+                    }
+                }
+            },
+            "germany": {
+                "name": "Germany",
+                "description": "The great German Empire",
+                "leaders": {
+                    "otto": {
+                        "name": "Otto",
+                        "description": "Otto the great"
+                    },
+                    "wilhelm": {
+                        "name": "Wilhelm I",
+                        "description": "Wilhelm the great"
+                    }
+                }
+            }
+        },
+        "tech": {
+            "hunting_gethering": {
+                "name": "Hunting & Gathering",
+                "description": "The science of hunting and gathering"
+            },
+            "agriculture": {
+                "name": "Agriculture",
+                "description": "The science of farming"
+            },
+            "mining": {
+                "name": "Mining",
+                "description": "The science of mining"
+            },
+            "masonry": {
+                "name": "Masonry",
+                "description": "The science of masonry"
+            },
+            "bronze_working": {
+                "name": "Bronze Working",
+                "description": "The science of bronze working"
+            },
+            "wheel": {
+                "name": "Wheel",
+                "description": "The science of the wheel"
+            },
+            "animal_husbandry": {
+                "name": "Animal Husbandry",
+                "description": "The science of animal husbandry"
+            },
+            "archery": {
+                "name": "Archery",
+                "description": "The science of archery"
+            },
+            "irrigation": {
+                "name": "Irrigation",
+                "description": "The science of irrigation"
+            },
+            "writing": {
+                "name": "Writing",
+                "description": "The science of writing"
+            },
+            "clay_tablets": {
+                "name": "Clay Tablets",
+                "description": "The science of clay tablets"
+            },
+            "calendar": {
+                "name": "Calendar",
+                "description": "The science of the calendar"
+            },
+            "celestial_navigation": {
+                "name": "Celestial Navigation",
+                "description": "The science of celestial navigation"
+            },
+            "horseback_riding": {
+                "name": "Horseback Riding",
+                "description": "The science of horseback riding"
+            },
+            "iron_working": {
+                "name": "Iron Working",
+                "description": "The science of iron working"
+            },
+            "ship_building": {
+                "name": "Ship Building",
+                "description": "The science of Ship Building"
+            },
+            "currency": {
+                "name": "Currency",
+                "description": "The science of currency"
+            },
+            "mathematics": {
+                "name": "Mathematics",
+                "description": "The science of mathematics"
+            },
+            "philosophy": {
+                "name": "Philosophy",
+                "description": "The science of philosophy"
+            },
+            "engineering": {
+                "name": "Engineering",
+                "description": "The science of engineering"
+            },
+            "construction": {
+                "name": "Construction",
+                "description": "The science of construction"
+            },
+            "metal_casting": {
+                "name": "Metal Casting",
+                "description": "The science of metal casting"
+            },
+            "machinery": {
+                "name": "Machinery",
+                "description": "The science of machinery"
+            },
+            "physics": {
+                "name": "Physics",
+                "description": "The science of physics"
+            },
+            "chemistry": {
+                "name": "Chemistry",
+                "description": "The science of chemistry"
+            },
+            "biology": {
+                "name": "Biology",
+                "description": "The science of biology"
+            },
+            "electricity": {
+                "name": "Electricity",
+                "description": "The science of electricity"
+            },
+            "electronics": {
+                "name": "Electronics",
+                "description": "The science of electronics"
+            },
+            "nuclear_fission": {
+                "name": "Nuclear Fission",
+                "description": "The science of nuclear fission"
+            },
+            "rocketry": {
+                "name": "Rocketry",
+                "description": "The science of rocketry"
+            },
+            "satellites": {
+                "name": "Satellites",
+                "description": "The science of satellites"
+            },
+            "robotics": {
+                "name": "Robotics",
+                "description": "The science of robotics"
+            },
+            "nanotechnology": {
+                "name": "Nanotechnology",
+                "description": "The science of nanotechnology"
+            },
+            "genetics": {
+                "name": "Genetics",
+                "description": "The science of genetics"
+            },
+            "artificial_intelligence": {
+                "name": "Artificial Intelligence",
+                "description": "The science of artificial intelligence"
+            },
+            "quantum_computing": {
+                "name": "Quantum Computing",
+                "description": "The science of quantum computing"
+            },
+            "space_travel": {
+                "name": "Space Travel",
+                "description": "The science of space travel"
+            },
+            "advanced_ballistics": {
+                "name": "Advanced Ballistics",
+                "description": "The science of advanced ballistics"
+            },
+            "advanced_flight": {
+                "name": "Advanced Flight",
+                "description": "The science of advanced flight"
+            },
+            "apprenticeship": {
+                "name": "Apprenticeship",
+                "description": "The science of apprenticeship"
+            },
+            "banking": {
+                "name": "Banking",
+                "description": "The science of banking"
+            },
+            "buttress": {
+                "name": "Buttress",
+                "description": "The science of buttress"
+            },
+            "cartography": {
+                "name": "Cartography",
+                "description": "The science of cartography"
+            },
+            "castles": {
+                "name": "Castles",
+                "description": "The science of castles"
+            },
+            "combined_arms": {
+                "name": "Combined Arms",
+                "description": "The science of combined arms"
+            },
+            "combusiton": {
+                "name": "Combustion",
+                "description": "The science of combustion"
+            },
+            "composites": {
+                "name": "Composites",
+                "description": "The science of composites"
+            },
+            "computers": {
+                "name": "Computers",
+                "description": "The science of computers"
+            },
+            "economics": {
+                "name": "Economics",
+                "description": "The science of economics"
+            },
+            "education": {
+                "name": "Education",
+                "description": "The science of education"
+            },
+            "flight": {
+                "name": "Flight",
+                "description": "The science of flight"
+            },
+            "guidance_systems": {
+                "name": "Guidance Systems",
+                "description": "The science of guidance systems"
+            },
+            "gunpowder": {
+                "name": "Gunpowder",
+                "description": "The science of gunpowder"
+            },
+            "industrialization": {
+                "name": "Industrialization",
+                "description": "The science of industrialization"
+            },
+            "mass_production": {
+                "name": "Mass Production",
+                "description": "The science of mass production"
+            },
+            "military_science": {
+                "name": "Military Science",
+                "description": "The science of military science"
+            },
+            "military_engineering": {
+                "name": "Military Engineering",
+                "description": "The science of military engineering"
+            },
+            "military_tactics": {
+                "name": "Military Tactics",
+                "description": "The science of military tactics"
+            },
+            "nuclear_fusion": {
+                "name": "Nuclear Fusion",
+                "description": "The science of nuclear fusion"
+            },
+            "plastics": {
+                "name": "Plastics",
+                "description": "The science of plastics"
+            },
+            "printing": {
+                "name": "Printing",
+                "description": "The science of printing"
+            },
+            "radio": {
+                "name": "Radio",
+                "description": "The science of radio"
+            },
+            "refining": {
+                "name": "Refining",
+                "description": "The science of refining"
+            },
+            "replaceable_parts": {
+                "name": "Replaceable Parts",
+                "description": "The science of replaceable parts"
+            },
+            "rifling": {
+                "name": "Rifling",
+                "description": "The science of rifling"
+            },
+            "sanitation": {
+                "name": "Sanitation",
+                "description": "The science of sanitation"
+            },
+            "scientific_theory": {
+                "name": "Scientific Theory",
+                "description": "The science of scientific theory"
+            },
+            "siege_tactics": {
+                "name": "Siege Tactics",
+                "description": "The science of siege tactics"
+            },
+            "square_rigging": {
+                "name": "Square Rigging",
+                "description": "The science of square rigging"
+            },
+            "stealth_technology": {
+                "name": "Stealth Technology",
+                "description": "The science of stealth technology"
+            },
+            "steam_power": {
+                "name": "Steam Power",
+                "description": "The science of steam power"
+            },
+            "steel": {
+                "name": "Steel",
+                "description": "The science of steel"
+            },
+            "stirrups": {
+                "name": "Stirrups",
+                "description": "The science of stirrups"
+            },
+            "synthetic_materials": {
+                "name": "Synthetic Materials",
+                "description": "The science of synthetic materials"
+            },
+            "telecommunications": {
+                "name": "Telecommunications",
+                "description": "The science of telecommunications"
+            }
+        },
+        "content": {
+            "tech": {
+                "trees": {
+                    "core": {
+                        "name": "Core",
+                        "description": "The core technologies"
+                    }
+                }
+            },
+            "ages": {
+                "core": {
+                    "ancient": {
+                        "name": "Ancient",
+                        "description": "The ancient age"
+                    },
+                    "classical": {
+                        "name": "Classical",
+                        "description": "The classical age"
+                    },
+                    "medieval": {
+                        "name": "Medieval",
+                        "description": "The medieval age"
+                    },
+                    "renaissance": {
+                        "name": "Renaissance",
+                        "description": "The renaissance age"
+                    },
+                    "industrial": {
+                        "name": "Industrial",
+                        "description": "The industrial age"
+                    },
+                    "modern": {
+                        "name": "Modern",
+                        "description": "The modern age"
+                    },
+                    "atomic": {
+                        "name": "Atomic",
+                        "description": "The atomic age"
+                    },
+                    "information": {
+                        "name": "Information",
+                        "description": "The information age"
+                    },
+                    "future": {
+                        "name": "Future",
+                        "description": "The future age"
+                    }
+                }
+            }
+        }
+    }
+}

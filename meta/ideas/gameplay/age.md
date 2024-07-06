@@ -1,0 +1,2 @@
+# Age
+I suggest implementing a system where ages are determined by the number of turns after a player reaches a certain era or achieves a specific milestone. To calculate the required points for each age, we can consider factors such as the number of players and their cultural influence. Additionally, we can introduce exponential growth in points if a player starts advancing significantly in technology. This would add depth and strategy to the gameplay.

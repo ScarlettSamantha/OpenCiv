@@ -1,0 +1,9 @@
+from openciv.world.tiles._base_tile import BaseTile
+from openciv.world.terrain.flat_desert import FlatDesert
+
+
+class LandDesert(BaseTile):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.setTerrain(FlatDesert)

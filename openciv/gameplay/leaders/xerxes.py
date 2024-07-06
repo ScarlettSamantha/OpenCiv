@@ -1,0 +1,13 @@
+from openciv.gameplay.leader import Leader
+from openciv.gameplay.effects import Effects
+from openciv.engine.managers.i18n import _t
+
+
+class Xerxes(Leader):
+    def __init__(self):
+        super().__init__()
+        self.name = _t("civilization.persia.leaders.xerxes.name")
+        self.icon = "civilization/persia/leaders/xerxes/leader_icon.png"
+        self.description = _t("civilization.persia.leaders.xerxes.description")
+
+        self._effects = Effects()

@@ -1,0 +1,13 @@
+panda3d
+types-panda3d
+ursina
+python-i18n
+pytest
+pytest-cov
+poetry-core
+pymarkdownlnt
+
+# This is used by the tech tree to generate a graph of the dependencies
+graphviz
+python-semantic-release
+ruff

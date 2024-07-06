@@ -1,0 +1,6 @@
+- Internet (Multiple route possibilities ?)
+- 3 gourges dam (Elecricity + low disaster management)
+- The delta works (Disaster management)
+- The hubble telescope (Speed boost scientific ?)
+- GPS (Increases missle range and accuracy also increases global tourism) + 1 accuracy
+- The Human gnome project

@@ -1,0 +1,2 @@
+HRE/Germany -> Otto
+            -> Wilhelm

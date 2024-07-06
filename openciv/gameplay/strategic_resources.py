@@ -1,0 +1,2 @@
+class StrategicResources:
+    pass

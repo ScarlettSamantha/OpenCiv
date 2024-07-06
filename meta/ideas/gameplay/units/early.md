@@ -1,0 +1,1 @@
+- Basic ships (Caravel/row ship)

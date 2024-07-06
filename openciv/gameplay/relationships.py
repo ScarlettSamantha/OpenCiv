@@ -1,0 +1,2 @@
+class Relationships:
+    pass

@@ -1,0 +1,14 @@
+{
+    "game": {
+        "language": "en_EN",
+        "engine": {
+            "init": {
+                "i18n":{
+                    "path":{
+                        "relative": "openciv/i18n/"
+                    }
+                }
+            }
+        }
+    }
+}

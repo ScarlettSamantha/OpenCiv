@@ -1,0 +1,11 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/scarlett/.local/lib/python3.12/site-packages/panda3d-stubs",
+        "/home/scarlett/.local/lib/python3.12/site-packages/ursina"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/scarlett/.local/lib/python3.12/site-packages/panda3d-stubs",
+        "/home/scarlett/.local/lib/python3.12/site-packages/ursina"
+    ],
+    "python.analysis.stubPath": "/home/scarlett/.local/lib/python3.12/site-packages/"
+}

@@ -1,0 +1,2 @@
+class BaseScene:
+    pass

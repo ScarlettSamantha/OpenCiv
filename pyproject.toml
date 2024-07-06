@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "openciv"
+description = "A Python project for OpenCiv game"
+authors = ["Scarlett Samantha Verheul <scarlett.verheul@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.ruff]
+line-length = 120
+select = [
+    "E", # All error codes (PEP8)
+    "W", # All warning codes (PEP8)
+    "F", # All Pyflakes codes
+]
+ignore = [
+    "E501", # Ignore line length (to handle long function parameters)
+    # Add other rule codes here that you want to ignore
+    "F841", # Ignore unused variables
+    "E721", # Ignore do not compare types
+]
+
+[tool.semantic_release]
+version_variables = ["openciv/version.py:__version__"]
+commit_parser="emoji"
+
+[tool.semantic_release.commit_parser_options]
+major_tags = [":boom:"]
+minor_tags = [
+    ":sparkles:",
+    ":children_crossing:",
+    ":lipstick:",
+    ":iphone:",
+    ":egg:",
+    ":chart_with_upwards_trend:",
+]
+patch_tags = [
+    ":ambulance:",
+    ":lock:",
+    ":bug:",
+    ":zap:",
+    ":goal_net:",
+    ":alien:",
+    ":wheelchair:",
+    ":speech_balloon:",
+    ":mag:",
+    ":apple:",
+    ":penguin:",
+    ":checkered_flag:",
+    ":robot:",
+    ":green_apple:",
+]
+
+[semantic_release.branches.main]
+match = "(main|master)"
+prerelease_token = "rc"
+prerelease = false

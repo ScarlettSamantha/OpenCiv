@@ -1,0 +1,2 @@
+class Votes:
+    pass
