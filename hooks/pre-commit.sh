@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 
 git add coverage.xml
-
+semantic-release changelog
 git add CHANGELOG.md
 
 # Function to fix trailing whitespace
