@@ -89,6 +89,9 @@ v1.1.0
     - Blancing
     - Oversight rework
 
+v1.2.0
+    - Dedicated server mode/docker container (?)
+
 ? = Meaby not sure yet if fun or needed at that point.
 ! = Lower prio
 !! = Mid prio
