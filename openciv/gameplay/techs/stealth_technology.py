@@ -2,7 +2,7 @@ from openciv.gameplay.tech import Tech
 from openciv.engine.managers.i18n import _t
 
 
-class StealTechnology(Tech):
+class StealthTechnology(Tech):
     def __init__(self, *args, **kwargs):
         super().__init__(
             "core.stealth_technology",

@@ -2,7 +2,7 @@ from openciv.gameplay.tech import Tech
 from openciv.engine.managers.i18n import _t
 
 
-class Apprenticship(Tech):
+class Apprenticeship(Tech):
     def __init__(self, *args, **kwargs):
         super().__init__(
             "core.apprenticeship",

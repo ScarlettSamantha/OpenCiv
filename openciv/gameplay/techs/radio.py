@@ -2,7 +2,7 @@ from openciv.gameplay.tech import Tech
 from openciv.engine.managers.i18n import _t
 
 
-class Printing(Tech):
+class Radio(Tech):
     def __init__(self, *args, **kwargs):
         super().__init__(
             "core.radio",

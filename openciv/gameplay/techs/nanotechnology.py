@@ -2,12 +2,12 @@ from openciv.gameplay.tech import Tech
 from openciv.engine.managers.i18n import _t
 
 
-class NanoTechnology(Tech):
+class Nanotechnology(Tech):
     def __init__(self, *args, **kwargs):
         super().__init__(
-            "core.nano_technology",
-            _t("tech.nano_technology.name"),
-            _t("tech.nano_technology.description"),
+            "core.nanotechnology",
+            _t("tech.nanotechnology.name"),
+            _t("tech.nanotechnology.description"),
             tech_points_required=20,
             *args,
             **kwargs,
