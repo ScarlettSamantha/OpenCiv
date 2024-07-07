@@ -4,6 +4,8 @@
 
 ### Other
 
+* :snake: fix tech typos ([`6825bec`](https://github.com/ScarlettSamantha/OpenCiv/commit/6825becf2487c398e7d5d76974f43dfbed1253b3))
+
 * :construction_worker: only run pytest if there are any python changes ([`b6912e8`](https://github.com/ScarlettSamantha/OpenCiv/commit/b6912e8956a72e789caf1dcbe68915c2cfa805b7))
 
 * :memo: fix markdown auto fix ([`aa24f82`](https://github.com/ScarlettSamantha/OpenCiv/commit/aa24f82eae4bd7301cc75cef92ae20358e88b803))
