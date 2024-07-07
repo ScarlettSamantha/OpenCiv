@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### :sparkles:
+
+* :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7))
+
 ### Other
 
 * ✨ add core tech tree structure ([`b247fd5`](https://github.com/ScarlettSamantha/OpenCiv/commit/b247fd59099256269e11537d3dec70882775f17c))
