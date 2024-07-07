@@ -4,6 +4,8 @@
 
 ### Other
 
+* ✨ add core tech tree structure ([`b247fd5`](https://github.com/ScarlettSamantha/OpenCiv/commit/b247fd59099256269e11537d3dec70882775f17c))
+
 * :snake: fix tech typos ([`6825bec`](https://github.com/ScarlettSamantha/OpenCiv/commit/6825becf2487c398e7d5d76974f43dfbed1253b3))
 
 * :construction_worker: only run pytest if there are any python changes ([`b6912e8`](https://github.com/ScarlettSamantha/OpenCiv/commit/b6912e8956a72e789caf1dcbe68915c2cfa805b7))

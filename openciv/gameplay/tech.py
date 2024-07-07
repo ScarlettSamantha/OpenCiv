@@ -34,7 +34,7 @@ class Tech:
     def __repr__(self, recursive: bool = False):
         contributes_to = [tech.__repr__(recursive=recursive) for tech in self.contributes_to]
         contributes_to = f"[{'}, {'.join(contributes_to)}]"
-        return f"{self.name}<{self.completed}> -> contributes_to: {contributes_to}"
+        return f"{self.name}"
 
     def __hash__(self):
         return hash(self.name)
