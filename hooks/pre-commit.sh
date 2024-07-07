@@ -1,6 +1,8 @@
 #!/bin/sh
 # Run pytest
-pytest --cov=openciv --cov-report=xml
+if git diff --name-only HEAD~1 | grep -E '.*\.py$|.*/test_.*\.py$'; then
+    pytest --cov=openciv --cov-report=xml
+fi
 
 # Check the exit status of pytest
 if [ $? -ne 0 ]; then

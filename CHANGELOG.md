@@ -4,7 +4,7 @@
 
 ### Other
 
-* :memo: fix markdown auto fix ([`691fcdc`](https://github.com/ScarlettSamantha/OpenCiv/commit/691fcdc3ea0774b8f494f5b7dc9b739a7d09ffd2))
+* :memo: fix markdown auto fix ([`aa24f82`](https://github.com/ScarlettSamantha/OpenCiv/commit/aa24f82eae4bd7301cc75cef92ae20358e88b803))
 
 * :memo: add roadmap dedicated server mode v1.2.0 ([`e830d4d`](https://github.com/ScarlettSamantha/OpenCiv/commit/e830d4db3f934df466b532fcac249a45b6af6c9d))
 
