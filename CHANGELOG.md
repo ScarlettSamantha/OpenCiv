@@ -4,28 +4,32 @@
 
 ### :sparkles:
 
-* :sparkles: add testing mode to log manager ([`ca05137`](https://github.com/ScarlettSamantha/OpenCiv/commit/ca05137511216017fdf124ba3f631803058af9a6))
+* :sparkles: add testing mode to log manager ([`ca05137`](https://github.com/ScarlettSamantha/OpenCiv/commit/ca05137511216017fdf124ba3f631803058af9a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7))
+* :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 ### Other
 
-* ✨ add core tech tree structure ([`b247fd5`](https://github.com/ScarlettSamantha/OpenCiv/commit/b247fd59099256269e11537d3dec70882775f17c))
+* 📝 add custom changelog generator ([`2da098d`](https://github.com/ScarlettSamantha/OpenCiv/commit/2da098d7010f77c4324753c5af8ebf816ca39e71)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :snake: fix tech typos ([`6825bec`](https://github.com/ScarlettSamantha/OpenCiv/commit/6825becf2487c398e7d5d76974f43dfbed1253b3))
+* ✅ add tech tree pytests ([`09832a0`](https://github.com/ScarlettSamantha/OpenCiv/commit/09832a0d0fca1cf7caa66909e92e48318d0d5c4e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :construction_worker: only run pytest if there are any python changes ([`b6912e8`](https://github.com/ScarlettSamantha/OpenCiv/commit/b6912e8956a72e789caf1dcbe68915c2cfa805b7))
+* ✨ add core tech tree structure ([`b247fd5`](https://github.com/ScarlettSamantha/OpenCiv/commit/b247fd59099256269e11537d3dec70882775f17c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :memo: fix markdown auto fix ([`aa24f82`](https://github.com/ScarlettSamantha/OpenCiv/commit/aa24f82eae4bd7301cc75cef92ae20358e88b803))
+* :snake: fix tech typos ([`6825bec`](https://github.com/ScarlettSamantha/OpenCiv/commit/6825becf2487c398e7d5d76974f43dfbed1253b3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :memo: add roadmap dedicated server mode v1.2.0 ([`e830d4d`](https://github.com/ScarlettSamantha/OpenCiv/commit/e830d4db3f934df466b532fcac249a45b6af6c9d))
+* :construction_worker: only run pytest if there are any python changes ([`b6912e8`](https://github.com/ScarlettSamantha/OpenCiv/commit/b6912e8956a72e789caf1dcbe68915c2cfa805b7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :memo: Add basic readme. ([`e139a3e`](https://github.com/ScarlettSamantha/OpenCiv/commit/e139a3e0bca2e717d65960831b6a566735f4bc07))
+* :memo: fix markdown auto fix ([`aa24f82`](https://github.com/ScarlettSamantha/OpenCiv/commit/aa24f82eae4bd7301cc75cef92ae20358e88b803)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
-* :construction_worker: disable github autorelease ([`5b9ca44`](https://github.com/ScarlettSamantha/OpenCiv/commit/5b9ca44d5c682adf2a1a9dca2a6b44de875d71b0))
+* :memo: add roadmap dedicated server mode v1.2.0 ([`e830d4d`](https://github.com/ScarlettSamantha/OpenCiv/commit/e830d4db3f934df466b532fcac249a45b6af6c9d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :memo: Add basic readme. ([`e139a3e`](https://github.com/ScarlettSamantha/OpenCiv/commit/e139a3e0bca2e717d65960831b6a566735f4bc07)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :construction_worker: disable github autorelease ([`5b9ca44`](https://github.com/ScarlettSamantha/OpenCiv/commit/5b9ca44d5c682adf2a1a9dca2a6b44de875d71b0)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 ## v0.0.0 (2024-07-06)
 
 ### Other
 
-* :tada: Init ([`adf1963`](https://github.com/ScarlettSamantha/OpenCiv/commit/adf1963e0e4d1fec999ec9dbfc5c841baa6ad91e))
+* :tada: Init ([`adf1963`](https://github.com/ScarlettSamantha/OpenCiv/commit/adf1963e0e4d1fec999ec9dbfc5c841baa6ad91e)) | [](https://github.com/scarlett.verheul)
