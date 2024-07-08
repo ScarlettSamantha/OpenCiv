@@ -7,8 +7,8 @@ from openciv.engine.additions.pyload import PyLoad
 
 
 class TechManager(BaseManager, CallbacksMixin, PyLoad):
-    def __init__(self, game, technology_folders: List = []):
-        BaseManager.__init__(self, game)
+    def __init__(self, technology_folders: List = [], *args, **kwargs):
+        BaseManager.__init__(self, *args, **kwargs)
         CallbacksMixin.__init__(self)
         PyLoad.__init__(self)
 
