@@ -10,7 +10,7 @@
 
 ### Other
 
-* 📝 add custom changelog generator ([`2da098d`](https://github.com/ScarlettSamantha/OpenCiv/commit/2da098d7010f77c4324753c5af8ebf816ca39e71)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+* 📝 add custom changelog generator ([`92fec2d`](https://github.com/ScarlettSamantha/OpenCiv/commit/92fec2dacea6b92c7a147b04087cb165b60d2b5a)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✅ add tech tree pytests ([`09832a0`](https://github.com/ScarlettSamantha/OpenCiv/commit/09832a0d0fca1cf7caa66909e92e48318d0d5c4e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
