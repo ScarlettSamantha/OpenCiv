@@ -104,6 +104,14 @@ class Translation:
         except I18NTranslationNotFound:
             return self.key
 
+    def __hash__(self):
+        return hash(self.key)
+
+    def __eq__(self, other):
+        if isinstance(other, Translation):
+            return self.key == other.key
+        return False
+
 
 _t = Translation
 T_TranslationOrStr = Union[Translation, str]

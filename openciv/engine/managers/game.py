@@ -15,6 +15,8 @@ from openciv.engine.managers.log import LogManager
 from openciv.gameplay.civilizations.rome import Rome
 from openciv.gameplay.leaders.ceasar import Ceasar
 from openciv.gameplay.player import Player
+from openciv.gameplay.resource import ResourceValueType
+from typing import Union, List
 
 GameManagerInstance = None
 
@@ -78,7 +80,15 @@ class GameManager(BaseManager):
         pass
 
     def start_game(self):
-        def init_player(self):
+        def load_resources(self):
+            from openciv.engine.additions.pyload import PyLoad
+
+            resources = PyLoad.load_classes("openciv/gameplay/resources/")
+            resource_list = []
+            for _, resource in resources.items():
+                resource_list.append(resource)
+
+        def init_player(self, resources: Union[List | "Resource"] = None):  # noqa: F821
             leader = Ceasar()
             civilization = Rome()
             player = Player(
@@ -89,6 +99,12 @@ class GameManager(BaseManager):
                 civilization=civilization,
                 leader=leader,
             )
+
+            if resources is not None:
+                for resource in resources:
+                    resource.value = 0 if resource._value_storage == ResourceValueType.INT else 0.0
+                    player.resources.add(resource)
+
             self.player().add(player, is_session=True)
 
         def init_board(self):
@@ -106,7 +122,8 @@ class GameManager(BaseManager):
         def finish(self):
             self.ui().start_game()
 
-        init_player(self)
+        resources = load_resources(self)
+        init_player(self, resources)
         init_board(self)
         place_player(self)
         check_state(self)

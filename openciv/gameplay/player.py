@@ -18,8 +18,6 @@ from openciv.gameplay._units import Units
 from openciv.gameplay.votes import Votes
 from openciv.gameplay.citizens import Citizens
 
-from openciv.gameplay.strategic_resources import StrategicResources
-from openciv.gameplay.bonus_resources import BonusResources
 from openciv.gameplay.resources import Resources
 from openciv.gameplay.greats import Greats
 
@@ -87,8 +85,6 @@ class Player:
         self.trades: Trades = Trades()
 
         self.resources: Resources = Resources()
-        self.strategic_resources: StrategicResources = StrategicResources()
-        self.bonus_resources: BonusResources = BonusResources()
         self.greats = Greats()
 
         self.effects: Effects = Effects()
