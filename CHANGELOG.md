@@ -10,7 +10,7 @@
 
 ### Other
 
-* ✨ add resource system and skeletons for resources ([`aabf6d2`](https://github.com/ScarlettSamantha/OpenCiv/commit/aabf6d296e636e1211cc0ed42b0f42e226c948ad)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+* ✨ add resource system and skeletons for resources ([`00ecf57`](https://github.com/ScarlettSamantha/OpenCiv/commit/00ecf5710154ca577a3fcb367a3f8f08ece259a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 🐛 Fix wrong Techmanager inheritance issue ([`a5956b2`](https://github.com/ScarlettSamantha/OpenCiv/commit/a5956b2f54074fefbd8be0ddc152e5592a2b4fc6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 

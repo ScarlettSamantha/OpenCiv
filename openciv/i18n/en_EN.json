@@ -1,846 +1,846 @@
 {
-    "en_EN": {
-        "world":{
-            "terrain":{
-                "mountain": "Mountain",
-                "ocean": "Ocean",
-                "coast": "Coast",
+  "en_EN": {
+    "world": {
+      "terrain": {
+        "mountain": "Mountain",
+        "ocean": "Ocean",
+        "coast": "Coast",
 
-                "flat_desert": "Flat desert",
-                "flat_forest": "Flat forest",
-                "flat_snow": "Flat now",
-                "flat_tundra": "Flat tundra",
-                "flat_wasteland": "Flat wasteland",
+        "flat_desert": "Flat desert",
+        "flat_forest": "Flat forest",
+        "flat_snow": "Flat now",
+        "flat_tundra": "Flat tundra",
+        "flat_wasteland": "Flat wasteland",
 
-                "hills_desert": "Hilly Dessert",
-                "hills_forest": "Hilly Forest",
-                "hills_grass": "Hilly Grass",
-                "hills_snow": "Hilly Snow",
-                "hills_tundra": "Hilly Tundra",
-                "hills_wasteland": "Hilly Wasteland"
-            }
-        },
-        "tiles": {
-            "resources": {
-                "food_farm_tier_1_name": "Farm (tier 1)",
-                "food_farm_tier_1_description": "A basic farm"
-            }
-        },
-        "civilization": {
-            "rome": {
-                "name": "Rome",
-                "description": "The Great Roman Empire",
-                "leaders": {
-                    "ceasar": {
-                        "name": "Julius Caesar",
-                        "description": "The great Julius Caesar"
-                    },
-                    "augustus": {
-                        "name": "Augustus",
-                        "description": "The great Augustus"
-                    }
-                }
-            },
-            "american_empire": {
-                "name": "American Empire",
-                "description": "The Great American Empire",
-                "leaders": {
-                    "abraham_lincoln": {
-                        "name": "Abraham Lincoln",
-                        "description": "The great Abraham Lincoln"
-                    },
-                    "fdr": {
-                        "name": "Franklin D. Roosevelt",
-                        "description": "The great Franklin D. Roosevelt"
-                    },
-                    "kamehameha": {
-                        "name": "Kamehameha",
-                        "description": "The great Kamehameha"
-                    },
-                    "sitting_bull": {
-                        "name": "Sitting Bull",
-                        "description": "The great Sitting Bull"
-                    }
-                }
-            },
-            "greece": {
-                "name": "Greece",
-                "description": "The Great Greek Empire",
-                "leaders": {
-                    "alexander": {
-                        "name": "Alexander the Great",
-                        "description": "The great Alexander the Great"
-                    },
-                    "leonidas": {
-                        "name": "Leonidas",
-                        "description": "The great Leonidas"
-                    }
-                }
-            },
-            "low_countries": {
-                "name": "Low Countries",
-                "description": "The Great Low Countries",
-                "leaders": {
-                    "william": {
-                        "name": "William of Orange",
-                        "description": "The great William of Orange"
-                    },
-                    "ambiorix": {
-                        "name": "Ambiorix",
-                        "description": "The great Amiorix"
-                    },
-                    "joan_van_oldenbarnevelt": {
-                        "name": "Joan van Oldenbarnevelt",
-                        "description": "Joan van Oldenbarnevelt of The VoC"
-                    }
-                }
-            },
-            "ottoman": {
-                "name": "Ottoman Empire",
-                "description": "The Great Ottoman Empire",
-                "leaders": {
-                    "suleiman": {
-                        "name": "Suleiman the Magnificent",
-                        "description": "Suleiman the Magnificent"
-                    },
-                    "attaturk": {
-                        "name": "Atta Turk",
-                        "description": "The great Atta Turk"
-                    }
-                }
-            },
-            "akkadian": {
-                "name": "Akkadian Empire",
-                "description": "The Great Akkadian Empire",
-                "leaders": {
-                    "sargon": {
-                        "name": "Sargon of Akkad",
-                        "description": "The great Sargon of Akkad"
-                    },
-                    "naram_sin": {
-                        "name": "Naram-Sin",
-                        "description": "Naram-Sin of Akkad"
-                    }
-                }
-            },
-            "spain": {
-                "name": "Spain",
-                "description": "The Great Spanish Empire",
-                "leaders": {
-                    "isabella": {
-                        "name": "Isabella",
-                        "description": "The great Isabella"
-                    },
-                    "philip": {
-                        "name": "Philip II",
-                        "description": "The great Philip II"
-                    },
-                    "charles_v": {
-                        "name": "Charles V",
-                        "description": "The great Charles V"
-                    },
-                    "charles_iii": {
-                        "name": "Charles III",
-                        "description": "The great Charles III"
-                    },
-                    "james": {
-                        "name": "James I",
-                        "description": "The great James I"
-                    }
-                }
-            },
-            "france": {
-                "name": "France",
-                "description": "The Great French Empire",
-                "leaders":{
-                    "charlemange": {
-                        "name": "Charlemange",
-                        "description": "The great Charlemange"
-                    },
-                    "de_gaulle": {
-                        "name": "Charles De Gaulle",
-                        "description": "The great Vercingetorix"
-                    },
-                    "louis": {
-                        "name": "Louis XIV",
-                        "description": "The great Louis XIV"
-                    },
-                    "napoleon": {
-                        "name": "Napoleon",
-                        "description": "The great Napoleon"
-                    }
-                }
-            },
-            "egypt": {
-                "name": "France",
-                "description": "The Great French Empire",
-                "leaders":{
-                    "cleopatra": {
-                        "name": "Cleopatra",
-                        "description": "The great Cleopatra"
-                    },
-                    "ramesses": {
-                        "name": "Ramesses II",
-                        "description": "The great Ramesses II"
-                    }
-                }
-            },
-            "vikings": {
-                "name": "Vikings",
-                "description": "The great Vikings",
-                "leaders": {
-                    "ragnar": {
-                        "name": "Ragnar Lothbrok",
-                        "description": "The great Ragnar Lothbrok"
-                    },
-                    "cnut": {
-                        "name": "Cnut the Great",
-                        "description": "The great Cnut the Great"
-                    },
-                    "herald": {
-                        "name": "Herald Fairhair",
-                        "description": "The great Herald Fairhair"
-                    }
-                }
-            },
-            "byzantine": {
-                "name": "Byzantine Empire",
-                "description": "The great Byzantine Empire",
-                "leaders": {
-                    "justinian": {
-                        "name": "Justinian",
-                        "description": "The great Justinian"
-                    },
-                    "constantine": {
-                        "name": "Constantine",
-                        "description": "The great Constantine"
-                    }
-                }
-            },
-            "persia": {
-                "name": "Persia",
-                "description": "The great Persian Empire",
-                "leaders": {
-                    "darius": {
-                        "name": "Darius the Great",
-                        "description": "The great Darius the Great"
-                    },
-                    "xerxes": {
-                        "name": "Xerxes",
-                        "description": "The great Xerxes"
-                    },
-                    "nebuchadnezzar": {
-                        "name": "Nebuchadnezzar",
-                        "description": "The great Nebuchadnezzar"
-                    }
-                }
-            },
-            "china": {
-                "name": "China",
-                "description": "The great Chinese Empire",
-                "leaders": {
-                    "qin_shi_huang": {
-                        "name": "Qin Shi Huang",
-                        "description": "The great Qin Shi Huang"
-                    },
-                    "kublai": {
-                        "name": "Kublai Khan",
-                        "description": "The great Kublai Khan"
-                    }
-                }
-            },
-            "japan": {
-                "name": "Japan",
-                "description": "The great Japanese Empire",
-                "leaders": {
-                    "tokugawa": {
-                        "name": "Tokugawa Ieyasu",
-                        "description": "The great Tokugawa Ieyasu"
-                    },
-                    "meiji": {
-                        "name": "Meiji",
-                        "description": "The great Meiji"
-                    },
-                    "taisho": {
-                        "name": "Taisho",
-                        "description": "The great Taisho"
-                    }
-                }
-            },
-            "england": {
-                "name": "England",
-                "description": "The great English Empire",
-                "leaders": {
-                    "elizabeth": {
-                        "name": "Elizabeth I",
-                        "description": "The great Elizabeth I"
-                    },
-                    "victoria": {
-                        "name": "Victoria",
-                        "description": "The great Victoria"
-                    }
-                }
-            },
-            "korea": {
-                "name": "Korea",
-                "description": "The great Korean Empire",
-                "leaders": {
-                    "sejong": {
-                        "name": "Sejong the Great",
-                        "description": "The great Sejong the Great"
-                    },
-                    "goi": {
-                        "name": "Goi Soon",
-                        "description": "The great Goi Soon"
-                    }
-                }
-            },
-            "ussr": {
-                "name": "USSR",
-                "description": "The great USSR",
-                "leaders": {
-                    "lenin": {
-                        "name": "Lenin",
-                        "description": "The great Lenin"
-                    },
-                    "gorbachev": {
-                        "name": "Gorbachev",
-                        "description": "The great Gorbachev"
-                    },
-                    "peter": {
-                        "name": "Peter the Great",
-                        "description": "The great Peter the Great"
-                    }
-                }
-            },
-            "germany": {
-                "name": "Germany",
-                "description": "The great German Empire",
-                "leaders": {
-                    "otto": {
-                        "name": "Otto",
-                        "description": "Otto the great"
-                    },
-                    "wilhelm": {
-                        "name": "Wilhelm I",
-                        "description": "Wilhelm the great"
-                    }
-                }
-            }
-        },
-       "tech": {
-            "advanced_ballistics": {
-                "name": "Advanced Ballistics",
-                "description": "High-precision projectile technology and science."
-            },
-            "advanced_flight": {
-                "name": "Advanced Flight",
-                "description": "Modern aviation technologies and advancements."
-            },
-            "agriculture": {
-                "name": "Agriculture",
-                "description": "Cultivation of crops and animals."
-            },
-            "animal_husbandry": {
-                "name": "Animal Husbandry",
-                "description": "Breeding and raising livestock animals."
-            },
-            "apprenticeship": {
-                "name": "Apprenticeship",
-                "description": "Learning a trade through practical experience."
-            },
-            "archery": {
-                "name": "Archery",
-                "description": "Use of bows in hunting and warfare."
-            },
-            "artificial_intelligence": {
-                "name": "Artificial Intelligence",
-                "description": "Machines simulating human intelligence and learning."
-            },
-            "banking": {
-                "name": "Banking",
-                "description": "Management of financial transactions and institutions."
-            },
-            "biology": {
-                "name": "Biology",
-                "description": "Study of living organisms and life."
-            },
-            "bronze_working": {
-                "name": "Bronze Working",
-                "description": "Crafting tools and weapons from bronze."
-            },
-            "buttress": {
-                "name": "Buttress",
-                "description": "Support structures for large buildings."
-            },
-            "calendar": {
-                "name": "Calendar",
-                "description": "System for organizing days and time."
-            },
-            "cartography": {
-                "name": "Cartography",
-                "description": "Map-making and geographic studies."
-            },
-            "castles": {
-                "name": "Castles",
-                "description": "Fortified residences and defensive structures."
-            },
-            "celestial_navigation": {
-                "name": "Celestial Navigation",
-                "description": "Navigating by stars and celestial bodies."
-            },
-            "chemistry": {
-                "name": "Chemistry",
-                "description": "Study of substances and their reactions."
-            },
-            "clay_tablets": {
-                "name": "Clay Tablets",
-                "description": "Early medium for recording writing."
-            },
-            "combined_arms": {
-                "name": "Combined Arms",
-                "description": "Coordinated military strategies using multiple forces."
-            },
-            "combustion": {
-                "name": "Combustion",
-                "description": "Burning fuels for energy production."
-            },
-            "composites": {
-                "name": "Composites",
-                "description": "Materials made from multiple combined substances."
-            },
-            "computers": {
-                "name": "Computers",
-                "description": "Programmable electronic devices for computation."
-            },
-            "construction": {
-                "name": "Construction",
-                "description": "Building infrastructure and large buildings."
-            },
-            "currency": {
-                "name": "Currency",
-                "description": "Standardized money for trade and economy."
-            },
-            "economics": {
-                "name": "Economics",
-                "description": "Study of production, trade, and consumption."
-            },
-            "education": {
-                "name": "Education",
-                "description": "System of learning and teaching knowledge."
-            },
-            "electricity": {
-                "name": "Electricity",
-                "description": "Harnessing electrical power for use."
-            },
-            "electronics": {
-                "name": "Electronics",
-                "description": "Devices using electrical circuits and components."
-            },
-            "engineering": {
-                "name": "Engineering",
-                "description": "Design and construction of structures and machines."
-            },
-            "flight": {
-                "name": "Flight",
-                "description": "Human technology for powered flight."
-            },
-            "genetics": {
-                "name": "Genetics",
-                "description": "Study of genes, heredity, and DNA."
-            },
-            "guidance_systems": {
-                "name": "Guidance Systems",
-                "description": "Navigation aids for vehicles and missiles."
-            },
-            "gunpowder": {
-                "name": "Gunpowder",
-                "description": "Explosive substance for firearms and explosives."
-            },
-            "hunting_gathering": {
-                "name": "Hunting & Gathering",
-                "description": "Primitive methods for food sourcing."
-            },
-            "horseback_riding": {
-                "name": "Horseback Riding",
-                "description": "Riding horses for travel and warfare."
-            },
-            "industrialization": {
-                "name": "Industrialization",
-                "description": "Mass production and growth of industries."
-            },
-            "irrigation": {
-                "name": "Irrigation",
-                "description": "Artificial watering systems for crops."
-            },
-            "iron_working": {
-                "name": "Iron Working",
-                "description": "Creating tools and weapons from iron."
-            },
-            "machinery": {
-                "name": "Machinery",
-                "description": "Complex devices and engines for work."
-            },
-            "mass_production": {
-                "name": "Mass Production",
-                "description": "Large-scale manufacturing processes and techniques."
-            },
-            "mathematics": {
-                "name": "Mathematics",
-                "description": "The study of numbers and patterns."
-            },
-            "masonry": {
-                "name": "Masonry",
-                "description": "Building with stone and bricks."
-            },
-            "metal_casting": {
-                "name": "Metal Casting",
-                "description": "Forming metal objects by melting and molding."
-            },
-            "military_engineering": {
-                "name": "Military Engineering",
-                "description": "Construction of military structures and fortifications."
-            },
-            "military_science": {
-                "name": "Military Science",
-                "description": "Study of military operations and strategy."
-            },
-            "military_tactics": {
-                "name": "Military Tactics",
-                "description": "Strategic planning of military battles."
-            },
-            "mining": {
-                "name": "Mining",
-                "description": "Extraction of minerals and resources."
-            },
-            "nanotechnology": {
-                "name": "Nanotechnology",
-                "description": "Manipulating matter at the atomic scale."
-            },
-            "nuclear_fission": {
-                "name": "Nuclear Fission",
-                "description": "Splitting atomic nuclei for energy."
-            },
-            "nuclear_fusion": {
-                "name": "Nuclear Fusion",
-                "description": "Fusing atomic nuclei for immense energy."
-            },
-            "philosophy": {
-                "name": "Philosophy",
-                "description": "Study of fundamental existential questions."
-            },
-            "physics": {
-                "name": "Physics",
-                "description": "Study of matter, energy, and forces."
-            },
-            "plastics": {
-                "name": "Plastics",
-                "description": "Synthetic materials for manufacturing and use."
-            },
-            "printing": {
-                "name": "Printing",
-                "description": "Reproduction of text and images on paper."
-            },
-            "radio": {
-                "name": "Radio",
-                "description": "Wireless communication technology using radio waves."
-            },
-            "refining": {
-                "name": "Refining",
-                "description": "Purifying raw materials for use."
-            },
-            "replaceable_parts": {
-                "name": "Replaceable Parts",
-                "description": "Interchangeable components for machines and devices."
-            },
-            "rifling": {
-                "name": "Rifling",
-                "description": "Grooves in gun barrels for improved accuracy."
-            },
-            "robotics": {
-                "name": "Robotics",
-                "description": "Automated machines and robotic technology."
-            },
-            "rocketry": {
-                "name": "Rocketry",
-                "description": "Building rockets for propulsion and space."
-            },
-            "sanitation": {
-                "name": "Sanitation",
-                "description": "Clean water and waste management systems."
-            },
-            "satellites": {
-                "name": "Satellites",
-                "description": "Artificial objects orbiting in space."
-            },
-            "scientific_theory": {
-                "name": "Scientific Theory",
-                "description": "Foundations of scientific principles and theories."
-            },
-            "ship_building": {
-                "name": "Ship Building",
-                "description": "Constructing vessels for water travel."
-            },
-            "siege_tactics": {
-                "name": "Siege Tactics",
-                "description": "Methods of besieging and capturing fortifications."
-            },
-            "space_travel": {
-                "name": "Space Travel",
-                "description": "Travel beyond Earth's atmosphere and into space."
-            },
-            "square_rigging": {
-                "name": "Square Rigging",
-                "description": "Sailing ship rigging technology for wind navigation."
-            },
-            "stealth_technology": {
-                "name": "Stealth Technology",
-                "description": "Camouflage and invisibility technologies."
-            },
-            "steam_power": {
-                "name": "Steam Power",
-                "description": "Energy generation using steam engines."
-            },
-            "steel": {
-                "name": "Steel",
-                "description": "Strong alloy used in construction and tools."
-            },
-            "stirrups": {
-                "name": "Stirrups",
-                "description": "Supports for feet while riding horses."
-            },
-            "synthetic_materials": {
-                "name": "Synthetic Materials",
-                "description": "Man-made materials with advanced properties."
-            },
-            "telecommunications": {
-                "name": "Telecommunications",
-                "description": "Transmission of information over long distances."
-            },
-            "wheel": {
-                "name": "Wheel",
-                "description": "Invention of the wheel for transportation."
-            },
-            "writing": {
-                "name": "Writing",
-                "description": "Systematic recording of information and ideas."
-            }
-        },
-        "content": {
-            "resources": {
-                "core": {
-                    "types": {
-                        "bonus": {
-                            "name": "Bonus",
-                            "description": "A bonus resource"
-                        },
-                        "strategic": {
-                            "name": "Strategic",
-                            "description": "A strategic resource"
-                        },
-                        "luxury": {
-                            "name": "Luxury",
-                            "description": "A luxury resource"
-                        }
-                    },
-                    "bison": {
-                        "name": "Bison",
-                        "description": "A large wild animal of the bovine family, important for food and raw materials."
-                    },
-                    "cheese": {
-                        "name": "Cheese",
-                        "description": "A dairy product derived from milk, used as food."
-                    },
-                    "copper": {
-                        "name": "Copper",
-                        "description": "A reddish-brown metal used as a conductor of heat and electricity."
-                    },
-                    "cows": {
-                        "name": "Cows",
-                        "description": "Domesticated bovines, essential for dairy and meat production."
-                    },
-                    "deer": {
-                        "name": "Deer",
-                        "description": "Wild animals known for their antlers and valued for their meat and hide."
-                    },
-                    "ember": {
-                        "name": "Ember",
-                        "description": "A small piece of burning or glowing coal or wood in a dying fire."
-                    },
-                    "fish": {
-                        "name": "Fish",
-                        "description": "Aquatic animals that are caught for food."
-                    },
-                    "furs": {
-                        "name": "Furs",
-                        "description": "The hairy coat of certain animals, valued for warmth and clothing."
-                    },
-                    "glass": {
-                        "name": "Glass",
-                        "description": "A hard, brittle substance typically made from sand, used in windows and bottles."
-                    },
-                    "hardwood": {
-                        "name": "Hardwood",
-                        "description": "Wood from broad-leaved trees, used for furniture and flooring."
-                    },
-                    "murcury": {
-                        "name": "Murcury",
-                        "description": "A heavy silvery metal that is liquid at room temperature, used in thermometers."
-                    },
-                    "obsidian": {
-                        "name": "Obsidian",
-                        "description": "A hard, dark, glass-like volcanic rock used for tools and weapons."
-                    },
-                    "pigs": {
-                        "name": "Pigs",
-                        "description": "Domesticated animals kept for their meat and other products."
-                    },
-                    "potato": {
-                        "name": "Potato",
-                        "description": "A starchy tuberous crop that is a staple food in many countries."
-                    },
-                    "rice": {
-                        "name": "Rice",
-                        "description": "A cereal grain that is a staple food for a large part of the world's population."
-                    },
-                    "salt": {
-                        "name": "Salt",
-                        "description": "A mineral composed primarily of sodium chloride, used for seasoning and preservation."
-                    },
-                    "tin": {
-                        "name": "Tin",
-                        "description": "A soft, silvery-white metal used in alloys and for coating iron to prevent rust."
-                    },
-                    "whales": {
-                        "name": "Whales",
-                        "description": "Large marine mammals hunted for their oil and meat."
-                    },
-                    "wheat": {
-                        "name": "Wheat",
-                        "description": "A cereal grain that is a staple food used to make flour for bread."
-                    },
-                    "cats": {
-                        "name": "Cats",
-                        "description": "Domesticated felines valued for companionship and pest control."
-                    },
-                    "diamonds": {
-                        "name": "Diamonds",
-                        "description": "Precious gemstones made of carbon, valued for their hardness and sparkle."
-                    },
-                    "dogs": {
-                        "name": "Dogs",
-                        "description": "Domesticated canines valued for companionship, work, and protection."
-                    },
-                    "gold": {
-                        "name": "Gold",
-                        "description": "A yellow precious metal highly valued for use in jewelry and as currency."
-                    },
-                    "ivory": {
-                        "name": "Ivory",
-                        "description": "A hard white material from the tusks of elephants, valued for carving and ornaments."
-                    },
-                    "jade": {
-                        "name": "Jade",
-                        "description": "A green gemstone used in ornaments and jewelry."
-                    },
-                    "marble": {
-                        "name": "Marble",
-                        "description": "A metamorphic rock used in sculpture and building materials."
-                    },
-                    "silver": {
-                        "name": "Silver",
-                        "description": "A precious metal valued for its use in jewelry, currency, and as an industrial metal."
-                    },
-                    "aluminium": {
-                        "name": "Aluminium",
-                        "description": "A lightweight, silvery metal used in a wide variety of applications."
-                    },
-                    "coal": {
-                        "name": "Coal",
-                        "description": "A black or brownish-black sedimentary rock used as a fuel source."
-                    },
-                    "gas": {
-                        "name": "Gas",
-                        "description": "Natural gas, a fossil fuel used as an energy source."
-                    },
-                    "graphite": {
-                        "name": "Graphite",
-                        "description": "A form of carbon used in pencils and as a lubricant."
-                    },
-                    "horses": {
-                        "name": "Horses",
-                        "description": "Domesticated animals used for riding, work, and companionship."
-                    },
-                    "oil": {
-                        "name": "Oil",
-                        "description": "A viscous liquid derived from petroleum, used as a fuel and in various products."
-                    },
-                    "rare_earth_metals": {
-                        "name": "Rare Earth Metals",
-                        "description": "A group of 17 chemically similar elements crucial in high-tech devices."
-                    },
-                    "uranium": {
-                        "name": "Uranium",
-                        "description": "A heavy metal used as a fuel in nuclear reactors."
-                    },
-                    "food": {
-                        "name": "Food",
-                        "description": "A food resource"
-                    },
-                    "production": {
-                        "name": "Production",
-                        "description": "A production resource"
-                    }
-                }
-            },
-            "tech": {
-                "trees": {
-                    "core": {
-                        "name": "Core",
-                        "description": "The core technologies"
-                    }
-                }
-            },
-            "ages": {
-                "core": {
-                    "ancient": {
-                        "name": "Ancient",
-                        "description": "The ancient age"
-                    },
-                    "classical": {
-                        "name": "Classical",
-                        "description": "The classical age"
-                    },
-                    "medieval": {
-                        "name": "Medieval",
-                        "description": "The medieval age"
-                    },
-                    "renaissance": {
-                        "name": "Renaissance",
-                        "description": "The renaissance age"
-                    },
-                    "industrial": {
-                        "name": "Industrial",
-                        "description": "The industrial age"
-                    },
-                    "modern": {
-                        "name": "Modern",
-                        "description": "The modern age"
-                    },
-                    "atomic": {
-                        "name": "Atomic",
-                        "description": "The atomic age"
-                    },
-                    "information": {
-                        "name": "Information",
-                        "description": "The information age"
-                    },
-                    "future": {
-                        "name": "Future",
-                        "description": "The future age"
-                    }
-                }
-            }
+        "hills_desert": "Hilly Dessert",
+        "hills_forest": "Hilly Forest",
+        "hills_grass": "Hilly Grass",
+        "hills_snow": "Hilly Snow",
+        "hills_tundra": "Hilly Tundra",
+        "hills_wasteland": "Hilly Wasteland"
+      }
+    },
+    "tiles": {
+      "resources": {
+        "food_farm_tier_1_name": "Farm (tier 1)",
+        "food_farm_tier_1_description": "A basic farm"
+      }
+    },
+    "civilization": {
+      "rome": {
+        "name": "Rome",
+        "description": "The Great Roman Empire",
+        "leaders": {
+          "ceasar": {
+            "name": "Julius Caesar",
+            "description": "Roman general and statesman"
+          },
+          "augustus": {
+            "name": "Augustus",
+            "description": "First Roman emperor"
+          }
         }
+      },
+      "american_empire": {
+        "name": "American Empire",
+        "description": "The Great American Empire",
+        "leaders": {
+          "abraham_lincoln": {
+            "name": "Abraham Lincoln",
+            "description": "16th U.S. president, Civil War leader"
+          },
+          "fdr": {
+            "name": "Franklin D. Roosevelt",
+            "description": "32nd U.S. president, New Deal architect"
+          },
+          "kamehameha": {
+            "name": "Kamehameha",
+            "description": "Unifier of the Hawaiian Islands"
+          },
+          "sitting_bull": {
+            "name": "Sitting Bull",
+            "description": "Lakota leader, Battle of Little Bighorn"
+          }
+        }
+      },
+      "greece": {
+        "name": "Greece",
+        "description": "The Great Greek Empire",
+        "leaders": {
+          "alexander": {
+            "name": "Alexander the Great",
+            "description": "Conqueror of the known world"
+          },
+          "leonidas": {
+            "name": "Leonidas",
+            "description": "Spartan king, Battle of Thermopylae"
+          }
+        }
+      },
+      "low_countries": {
+        "name": "Low Countries",
+        "description": "The Great Low Countries",
+        "leaders": {
+          "william": {
+            "name": "William of Orange",
+            "description": "Leader of Dutch revolt"
+          },
+          "ambiorix": {
+            "name": "Ambiorix",
+            "description": "Eburonean chieftain, anti-Roman resistance"
+          },
+          "joan_van_oldenbarnevelt": {
+            "name": "Joan van Oldenbarnevelt",
+            "description": "Dutch statesman, VoC founder"
+          }
+        }
+      },
+      "ottoman": {
+        "name": "Ottoman Empire",
+        "description": "The Great Ottoman Empire",
+        "leaders": {
+          "suleiman": {
+            "name": "Suleiman the Magnificent",
+            "description": "Sultan during the Ottoman golden age"
+          },
+          "attaturk": {
+            "name": "Atatürk",
+            "description": "Founder of modern Turkey"
+          }
+        }
+      },
+      "akkadian": {
+        "name": "Akkadian Empire",
+        "description": "The Great Akkadian Empire",
+        "leaders": {
+          "sargon": {
+            "name": "Sargon of Akkad",
+            "description": "Founder of Akkadian Empire"
+          },
+          "naram_sin": {
+            "name": "Naram-Sin",
+            "description": "Akkadian emperor, Sargon's grandson"
+          }
+        }
+      },
+      "spain": {
+        "name": "Spain",
+        "description": "The Great Spanish Empire",
+        "leaders": {
+          "isabella": {
+            "name": "Isabella",
+            "description": "Queen, Columbus' sponsor"
+          },
+          "philip": {
+            "name": "Philip II",
+            "description": "King during Spanish golden age"
+          },
+          "charles_v": {
+            "name": "Charles V",
+            "description": "Holy Roman Emperor, Spanish king"
+          },
+          "charles_iii": {
+            "name": "Charles III",
+            "description": "Reforming Spanish monarch"
+          },
+          "james": {
+            "name": "James I",
+            "description": "Union of the Crowns initiator"
+          }
+        }
+      },
+      "france": {
+        "name": "France",
+        "description": "The Great French Empire",
+        "leaders": {
+          "charlemange": {
+            "name": "Charlemagne",
+            "description": "First Holy Roman Emperor"
+          },
+          "de_gaulle": {
+            "name": "Charles De Gaulle",
+            "description": "Leader of Free France"
+          },
+          "louis": {
+            "name": "Louis XIV",
+            "description": "The Sun King, absolute monarch"
+          },
+          "napoleon": {
+            "name": "Napoleon",
+            "description": "Military genius, French emperor"
+          }
+        }
+      },
+      "egypt": {
+        "name": "Egypt",
+        "description": "The Great Egyptian Empire",
+        "leaders": {
+          "cleopatra": {
+            "name": "Cleopatra",
+            "description": "Last Pharaoh of Egypt"
+          },
+          "ramesses": {
+            "name": "Ramesses II",
+            "description": "Great builder Pharaoh"
+          }
+        }
+      },
+      "vikings": {
+        "name": "Vikings",
+        "description": "The great Vikings",
+        "leaders": {
+          "ragnar": {
+            "name": "Ragnar Lothbrok",
+            "description": "Legendary Norse hero"
+          },
+          "cnut": {
+            "name": "Cnut the Great",
+            "description": "King of Denmark, England, Norway"
+          },
+          "herald": {
+            "name": "Harald Fairhair",
+            "description": "First King of Norway"
+          }
+        }
+      },
+      "byzantine": {
+        "name": "Byzantine Empire",
+        "description": "The great Byzantine Empire",
+        "leaders": {
+          "justinian": {
+            "name": "Justinian",
+            "description": "Emperor, Codified Roman law"
+          },
+          "constantine": {
+            "name": "Constantine",
+            "description": "First Christian emperor"
+          }
+        }
+      },
+      "persia": {
+        "name": "Persia",
+        "description": "The great Persian Empire",
+        "leaders": {
+          "darius": {
+            "name": "Darius the Great",
+            "description": "Expanded Persian Empire"
+          },
+          "xerxes": {
+            "name": "Xerxes",
+            "description": "Led Persian invasion of Greece"
+          },
+          "nebuchadnezzar": {
+            "name": "Nebuchadnezzar",
+            "description": "King of Neo-Babylonian Empire"
+          }
+        }
+      },
+      "china": {
+        "name": "China",
+        "description": "The great Chinese Empire",
+        "leaders": {
+          "qin_shi_huang": {
+            "name": "Qin Shi Huang",
+            "description": "First Emperor of unified China"
+          },
+          "kublai": {
+            "name": "Kublai Khan",
+            "description": "Founder of Yuan Dynasty"
+          }
+        }
+      },
+      "japan": {
+        "name": "Japan",
+        "description": "The great Japanese Empire",
+        "leaders": {
+          "tokugawa": {
+            "name": "Tokugawa Ieyasu",
+            "description": "Shogun, unified Japan"
+          },
+          "meiji": {
+            "name": "Meiji",
+            "description": "Emperor, modernized Japan"
+          },
+          "taisho": {
+            "name": "Taisho",
+            "description": "Emperor during Taisho Democracy"
+          }
+        }
+      },
+      "england": {
+        "name": "England",
+        "description": "The great English Empire",
+        "leaders": {
+          "elizabeth": {
+            "name": "Elizabeth I",
+            "description": "Virgin Queen, Spanish Armada defiance"
+          },
+          "victoria": {
+            "name": "Victoria",
+            "description": "Longest-reigning British monarch"
+          }
+        }
+      },
+      "korea": {
+        "name": "Korea",
+        "description": "The great Korean Empire",
+        "leaders": {
+          "sejong": {
+            "name": "Sejong the Great",
+            "description": "Inventor of Hangul script"
+          },
+          "goi": {
+            "name": "Gojong",
+            "description": "Last Emperor of Korea"
+          }
+        }
+      },
+      "ussr": {
+        "name": "USSR",
+        "description": "The great USSR",
+        "leaders": {
+          "lenin": {
+            "name": "Lenin",
+            "description": "Founder of Soviet Union"
+          },
+          "gorbachev": {
+            "name": "Gorbachev",
+            "description": "Reformer, ended Cold War"
+          },
+          "peter": {
+            "name": "Peter the Great",
+            "description": "Modernizer of Russia"
+          }
+        }
+      },
+      "germany": {
+        "name": "Germany",
+        "description": "The great German Empire",
+        "leaders": {
+          "otto": {
+            "name": "Otto von Bismarck",
+            "description": "Unified German states"
+          },
+          "wilhelm": {
+            "name": "Wilhelm I",
+            "description": "First German Emperor"
+          }
+        }
+      }
+    },
+    "tech": {
+      "advanced_ballistics": {
+        "name": "Advanced Ballistics",
+        "description": "High-precision projectile technology and science."
+      },
+      "advanced_flight": {
+        "name": "Advanced Flight",
+        "description": "Modern aviation technologies and advancements."
+      },
+      "agriculture": {
+        "name": "Agriculture",
+        "description": "Cultivation of crops and animals."
+      },
+      "animal_husbandry": {
+        "name": "Animal Husbandry",
+        "description": "Breeding and raising livestock animals."
+      },
+      "apprenticeship": {
+        "name": "Apprenticeship",
+        "description": "Learning a trade through practical experience."
+      },
+      "archery": {
+        "name": "Archery",
+        "description": "Use of bows in hunting and warfare."
+      },
+      "artificial_intelligence": {
+        "name": "Artificial Intelligence",
+        "description": "Machines simulating human intelligence and learning."
+      },
+      "banking": {
+        "name": "Banking",
+        "description": "Management of financial transactions and institutions."
+      },
+      "biology": {
+        "name": "Biology",
+        "description": "Study of living organisms and life."
+      },
+      "bronze_working": {
+        "name": "Bronze Working",
+        "description": "Crafting tools and weapons from bronze."
+      },
+      "buttress": {
+        "name": "Buttress",
+        "description": "Support structures for large buildings."
+      },
+      "calendar": {
+        "name": "Calendar",
+        "description": "System for organizing days and time."
+      },
+      "cartography": {
+        "name": "Cartography",
+        "description": "Map-making and geographic studies."
+      },
+      "castles": {
+        "name": "Castles",
+        "description": "Fortified residences and defensive structures."
+      },
+      "celestial_navigation": {
+        "name": "Celestial Navigation",
+        "description": "Navigating by stars and celestial bodies."
+      },
+      "chemistry": {
+        "name": "Chemistry",
+        "description": "Study of substances and their reactions."
+      },
+      "clay_tablets": {
+        "name": "Clay Tablets",
+        "description": "Early medium for recording writing."
+      },
+      "combined_arms": {
+        "name": "Combined Arms",
+        "description": "Coordinated military strategies using multiple forces."
+      },
+      "combustion": {
+        "name": "Combustion",
+        "description": "Burning fuels for energy production."
+      },
+      "composites": {
+        "name": "Composites",
+        "description": "Materials made from multiple combined substances."
+      },
+      "computers": {
+        "name": "Computers",
+        "description": "Programmable electronic devices for computation."
+      },
+      "construction": {
+        "name": "Construction",
+        "description": "Building infrastructure and large buildings."
+      },
+      "currency": {
+        "name": "Currency",
+        "description": "Standardized money for trade and economy."
+      },
+      "economics": {
+        "name": "Economics",
+        "description": "Study of production, trade, and consumption."
+      },
+      "education": {
+        "name": "Education",
+        "description": "System of learning and teaching knowledge."
+      },
+      "electricity": {
+        "name": "Electricity",
+        "description": "Harnessing electrical power for use."
+      },
+      "electronics": {
+        "name": "Electronics",
+        "description": "Devices using electrical circuits and components."
+      },
+      "engineering": {
+        "name": "Engineering",
+        "description": "Design and construction of structures and machines."
+      },
+      "flight": {
+        "name": "Flight",
+        "description": "Human technology for powered flight."
+      },
+      "genetics": {
+        "name": "Genetics",
+        "description": "Study of genes, heredity, and DNA."
+      },
+      "guidance_systems": {
+        "name": "Guidance Systems",
+        "description": "Navigation aids for vehicles and missiles."
+      },
+      "gunpowder": {
+        "name": "Gunpowder",
+        "description": "Explosive substance for firearms and explosives."
+      },
+      "hunting_gathering": {
+        "name": "Hunting & Gathering",
+        "description": "Primitive methods for food sourcing."
+      },
+      "horseback_riding": {
+        "name": "Horseback Riding",
+        "description": "Riding horses for travel and warfare."
+      },
+      "industrialization": {
+        "name": "Industrialization",
+        "description": "Mass production and growth of industries."
+      },
+      "irrigation": {
+        "name": "Irrigation",
+        "description": "Artificial watering systems for crops."
+      },
+      "iron_working": {
+        "name": "Iron Working",
+        "description": "Creating tools and weapons from iron."
+      },
+      "machinery": {
+        "name": "Machinery",
+        "description": "Complex devices and engines for work."
+      },
+      "mass_production": {
+        "name": "Mass Production",
+        "description": "Large-scale manufacturing processes and techniques."
+      },
+      "mathematics": {
+        "name": "Mathematics",
+        "description": "The study of numbers and patterns."
+      },
+      "masonry": {
+        "name": "Masonry",
+        "description": "Building with stone and bricks."
+      },
+      "metal_casting": {
+        "name": "Metal Casting",
+        "description": "Forming metal objects by melting and molding."
+      },
+      "military_engineering": {
+        "name": "Military Engineering",
+        "description": "Construction of military structures and fortifications."
+      },
+      "military_science": {
+        "name": "Military Science",
+        "description": "Study of military operations and strategy."
+      },
+      "military_tactics": {
+        "name": "Military Tactics",
+        "description": "Strategic planning of military battles."
+      },
+      "mining": {
+        "name": "Mining",
+        "description": "Extraction of minerals and resources."
+      },
+      "nanotechnology": {
+        "name": "Nanotechnology",
+        "description": "Manipulating matter at the atomic scale."
+      },
+      "nuclear_fission": {
+        "name": "Nuclear Fission",
+        "description": "Splitting atomic nuclei for energy."
+      },
+      "nuclear_fusion": {
+        "name": "Nuclear Fusion",
+        "description": "Fusing atomic nuclei for immense energy."
+      },
+      "philosophy": {
+        "name": "Philosophy",
+        "description": "Study of fundamental existential questions."
+      },
+      "physics": {
+        "name": "Physics",
+        "description": "Study of matter, energy, and forces."
+      },
+      "plastics": {
+        "name": "Plastics",
+        "description": "Synthetic materials for manufacturing and use."
+      },
+      "printing": {
+        "name": "Printing",
+        "description": "Reproduction of text and images on paper."
+      },
+      "radio": {
+        "name": "Radio",
+        "description": "Wireless communication technology using radio waves."
+      },
+      "refining": {
+        "name": "Refining",
+        "description": "Purifying raw materials for use."
+      },
+      "replaceable_parts": {
+        "name": "Replaceable Parts",
+        "description": "Interchangeable components for machines and devices."
+      },
+      "rifling": {
+        "name": "Rifling",
+        "description": "Grooves in gun barrels for improved accuracy."
+      },
+      "robotics": {
+        "name": "Robotics",
+        "description": "Automated machines and robotic technology."
+      },
+      "rocketry": {
+        "name": "Rocketry",
+        "description": "Building rockets for propulsion and space."
+      },
+      "sanitation": {
+        "name": "Sanitation",
+        "description": "Clean water and waste management systems."
+      },
+      "satellites": {
+        "name": "Satellites",
+        "description": "Artificial objects orbiting in space."
+      },
+      "scientific_theory": {
+        "name": "Scientific Theory",
+        "description": "Foundations of scientific principles and theories."
+      },
+      "ship_building": {
+        "name": "Ship Building",
+        "description": "Constructing vessels for water travel."
+      },
+      "siege_tactics": {
+        "name": "Siege Tactics",
+        "description": "Methods of besieging and capturing fortifications."
+      },
+      "space_travel": {
+        "name": "Space Travel",
+        "description": "Travel beyond Earth's atmosphere and into space."
+      },
+      "square_rigging": {
+        "name": "Square Rigging",
+        "description": "Sailing ship rigging technology for wind navigation."
+      },
+      "stealth_technology": {
+        "name": "Stealth Technology",
+        "description": "Camouflage and invisibility technologies."
+      },
+      "steam_power": {
+        "name": "Steam Power",
+        "description": "Energy generation using steam engines."
+      },
+      "steel": {
+        "name": "Steel",
+        "description": "Strong alloy used in construction and tools."
+      },
+      "stirrups": {
+        "name": "Stirrups",
+        "description": "Supports for feet while riding horses."
+      },
+      "synthetic_materials": {
+        "name": "Synthetic Materials",
+        "description": "Man-made materials with advanced properties."
+      },
+      "telecommunications": {
+        "name": "Telecommunications",
+        "description": "Transmission of information over long distances."
+      },
+      "wheel": {
+        "name": "Wheel",
+        "description": "Invention of the wheel for transportation."
+      },
+      "writing": {
+        "name": "Writing",
+        "description": "Systematic recording of information and ideas."
+      }
+    },
+    "content": {
+      "resources": {
+        "core": {
+          "types": {
+            "bonus": {
+              "name": "Bonus",
+              "description": "A bonus resource"
+            },
+            "strategic": {
+              "name": "Strategic",
+              "description": "A strategic resource"
+            },
+            "luxury": {
+              "name": "Luxury",
+              "description": "A luxury resource"
+            }
+          },
+          "bison": {
+            "name": "Bison",
+            "description": "A large wild animal of the bovine family, important for food and raw materials."
+          },
+          "cheese": {
+            "name": "Cheese",
+            "description": "A dairy product derived from milk, used as food."
+          },
+          "copper": {
+            "name": "Copper",
+            "description": "A reddish-brown metal used as a conductor of heat and electricity."
+          },
+          "cows": {
+            "name": "Cows",
+            "description": "Domesticated bovines, essential for dairy and meat production."
+          },
+          "deer": {
+            "name": "Deer",
+            "description": "Wild animals known for their antlers and valued for their meat and hide."
+          },
+          "ember": {
+            "name": "Ember",
+            "description": "A small piece of burning or glowing coal or wood in a dying fire."
+          },
+          "fish": {
+            "name": "Fish",
+            "description": "Aquatic animals that are caught for food."
+          },
+          "furs": {
+            "name": "Furs",
+            "description": "The hairy coat of certain animals, valued for warmth and clothing."
+          },
+          "glass": {
+            "name": "Glass",
+            "description": "A hard, brittle substance typically made from sand, used in windows and bottles."
+          },
+          "hardwood": {
+            "name": "Hardwood",
+            "description": "Wood from broad-leaved trees, used for furniture and flooring."
+          },
+          "murcury": {
+            "name": "Murcury",
+            "description": "A heavy silvery metal that is liquid at room temperature, used in thermometers."
+          },
+          "obsidian": {
+            "name": "Obsidian",
+            "description": "A hard, dark, glass-like volcanic rock used for tools and weapons."
+          },
+          "pigs": {
+            "name": "Pigs",
+            "description": "Domesticated animals kept for their meat and other products."
+          },
+          "potato": {
+            "name": "Potato",
+            "description": "A starchy tuberous crop that is a staple food in many countries."
+          },
+          "rice": {
+            "name": "Rice",
+            "description": "A cereal grain that is a staple food for a large part of the world's population."
+          },
+          "salt": {
+            "name": "Salt",
+            "description": "A mineral composed primarily of sodium chloride, used for seasoning and preservation."
+          },
+          "tin": {
+            "name": "Tin",
+            "description": "A soft, silvery-white metal used in alloys and for coating iron to prevent rust."
+          },
+          "whales": {
+            "name": "Whales",
+            "description": "Large marine mammals hunted for their oil and meat."
+          },
+          "wheat": {
+            "name": "Wheat",
+            "description": "A cereal grain that is a staple food used to make flour for bread."
+          },
+          "cats": {
+            "name": "Cats",
+            "description": "Domesticated felines valued for companionship and pest control."
+          },
+          "diamonds": {
+            "name": "Diamonds",
+            "description": "Precious gemstones made of carbon, valued for their hardness and sparkle."
+          },
+          "dogs": {
+            "name": "Dogs",
+            "description": "Domesticated canines valued for companionship, work, and protection."
+          },
+          "gold": {
+            "name": "Gold",
+            "description": "A yellow precious metal highly valued for use in jewelry and as currency."
+          },
+          "ivory": {
+            "name": "Ivory",
+            "description": "A hard white material from the tusks of elephants, valued for carving and ornaments."
+          },
+          "jade": {
+            "name": "Jade",
+            "description": "A green gemstone used in ornaments and jewelry."
+          },
+          "marble": {
+            "name": "Marble",
+            "description": "A metamorphic rock used in sculpture and building materials."
+          },
+          "silver": {
+            "name": "Silver",
+            "description": "A precious metal valued for its use in jewelry, currency, and as an industrial metal."
+          },
+          "aluminium": {
+            "name": "Aluminium",
+            "description": "A lightweight, silvery metal used in a wide variety of applications."
+          },
+          "coal": {
+            "name": "Coal",
+            "description": "A black or brownish-black sedimentary rock used as a fuel source."
+          },
+          "gas": {
+            "name": "Gas",
+            "description": "Natural gas, a fossil fuel used as an energy source."
+          },
+          "graphite": {
+            "name": "Graphite",
+            "description": "A form of carbon used in pencils and as a lubricant."
+          },
+          "horses": {
+            "name": "Horses",
+            "description": "Domesticated animals used for riding, work, and companionship."
+          },
+          "oil": {
+            "name": "Oil",
+            "description": "A viscous liquid derived from petroleum, used as a fuel and in various products."
+          },
+          "rare_earth_metals": {
+            "name": "Rare Earth Metals",
+            "description": "A group of 17 chemically similar elements crucial in high-tech devices."
+          },
+          "uranium": {
+            "name": "Uranium",
+            "description": "A heavy metal used as a fuel in nuclear reactors."
+          },
+          "food": {
+            "name": "Food",
+            "description": "A food resource"
+          },
+          "production": {
+            "name": "Production",
+            "description": "A production resource"
+          }
+        }
+      },
+      "tech": {
+        "trees": {
+          "core": {
+            "name": "Core",
+            "description": "The core technologies"
+          }
+        }
+      },
+      "ages": {
+        "core": {
+          "ancient": {
+            "name": "Ancient",
+            "description": "Early human civilization period"
+          },
+          "classical": {
+            "name": "Classical",
+            "description": "Era of classical antiquity"
+          },
+          "medieval": {
+            "name": "Medieval",
+            "description": "Time of the Middle Ages"
+          },
+          "renaissance": {
+            "name": "Renaissance",
+            "description": "Cultural and artistic rebirth period"
+          },
+          "industrial": {
+            "name": "Industrial",
+            "description": "Industrial revolution and progress"
+          },
+          "modern": {
+            "name": "Modern",
+            "description": "Contemporary and recent history"
+          },
+          "atomic": {
+            "name": "Atomic",
+            "description": "Nuclear age and beyond"
+          },
+          "information": {
+            "name": "Information",
+            "description": "Digital and technological advancements"
+          },
+          "future": {
+            "name": "Future",
+            "description": "Upcoming technological advancements"
+          }
+        }
+      }
     }
+  }
 }
