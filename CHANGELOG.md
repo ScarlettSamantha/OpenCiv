@@ -10,6 +10,10 @@
 
 ### Other
 
+* ✨ Add keyable and Saveable objects for object saving ([`e1d9004`](https://github.com/ScarlettSamantha/OpenCiv/commit/e1d9004717e9bfa9afba8846fc75975f2381d497)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🌐 add better descriptions for leaders, ages, tech ([`1b4bb26`](https://github.com/ScarlettSamantha/OpenCiv/commit/1b4bb261068cb782c76924c101e28070173ffe3c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * ✨ add resource system and skeletons for resources ([`00ecf57`](https://github.com/ScarlettSamantha/OpenCiv/commit/00ecf5710154ca577a3fcb367a3f8f08ece259a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 🐛 Fix wrong Techmanager inheritance issue ([`a5956b2`](https://github.com/ScarlettSamantha/OpenCiv/commit/a5956b2f54074fefbd8be0ddc152e5592a2b4fc6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

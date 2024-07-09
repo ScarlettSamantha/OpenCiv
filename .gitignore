@@ -20,9 +20,14 @@ var/
 .installed.cfg
 *.egg
 
+.ruff_cache/
+.pytest_cache/
+
 logs/debug/*
 logs/engine/*
 logs/gameplay/*
 logs/graphics/*
 logs/misc/*
 logs/ursina/*
+
+saves/*
