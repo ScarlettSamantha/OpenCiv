@@ -1,0 +1,6 @@
+# Treat specific files as binary
+coverage.xml -diff
+
+# You can also use patterns
+*.bin binary
+*.dat binary
