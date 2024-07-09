@@ -10,6 +10,8 @@
 
 ### Other
 
+* 🧑‍💻 remove coverage from diff in git ([`9a41f09`](https://github.com/ScarlettSamantha/OpenCiv/commit/9a41f0936d5e0b2e71e15848964870d0aa3ec9c3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 👷 add setup.py for build and actions for maintenance actions ([`768b7c9`](https://github.com/ScarlettSamantha/OpenCiv/commit/768b7c9beec490743d5c1496387a90a108c515cd)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✨ Add keyable and Saveable objects for object saving ([`aeb3a50`](https://github.com/ScarlettSamantha/OpenCiv/commit/aeb3a50976fb61027886306407bccc938fd6bc48)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
