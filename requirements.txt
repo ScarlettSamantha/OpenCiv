@@ -7,3 +7,5 @@ pytest-cov
 poetry-core
 webcolors
 pymarkdownlnt
+sentry-sdk
+python-dotenv

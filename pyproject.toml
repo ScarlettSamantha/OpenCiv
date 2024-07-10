@@ -1,42 +1,57 @@
 [tool.poetry]
-name = "openciv"
-description = "A Python project for OpenCiv game"
 authors = ["Scarlett Samantha Verheul <scarlett.verheul@gmail.com>"]
-license = "MIT"
 dependencies.python = "^3.12"
+description = "A Python project for OpenCiv game"
+license = "MIT"
+name = "openciv"
 
 [tool.ruff]
+ignore = ["E501", "F841", "E721"]
 line-length = 120
 select = ["E", "W", "F"]
-ignore = ["E501", "F841", "E721"]
 
 [tool.semantic_release]
-version_variables = ["openciv/version.py:__version__"]
+changelog_function = "changelog.py:openciv_changelog"
 commit_parser = "emoji"
 github_release = false
 version_source = "commit"
-changelog_function = "changelog.py:openciv_changelog"
+version_variables = ["openciv/version.py:__version__"]
 
 [tool.semantic_release.changelog]
-template_dir = "templates"
 changelog_file = "CHANGELOG.md"
+template_dir = "templates"
 
 [tool.semantic_release.commit_parser_options]
 major_tags = [":boom:"]
 minor_tags = [
-    ":sparkles:", ":children_crossing:", ":lipstick:", ":iphone:",
-    ":egg:", ":chart_with_upwards_trend:"
+  ":sparkles:",
+  ":children_crossing:",
+  ":lipstick:",
+  ":iphone:",
+  ":egg:",
+  ":chart_with_upwards_trend:",
 ]
 patch_tags = [
-    ":ambulance:", ":lock:", ":bug:", ":zap:", ":goal_net:", ":alien:",
-    ":wheelchair:", ":speech_balloon:", ":mag:", ":apple:", ":penguin:",
-    ":checkered_flag:", ":robot:", ":green_apple:"
+  ":ambulance:",
+  ":lock:",
+  ":bug:",
+  ":zap:",
+  ":goal_net:",
+  ":alien:",
+  ":wheelchair:",
+  ":speech_balloon:",
+  ":mag:",
+  ":apple:",
+  ":penguin:",
+  ":checkered_flag:",
+  ":robot:",
+  ":green_apple:",
 ]
 
 [semantic_release.branches.main]
 match = "(main|master)"
-prerelease_token = "rc"
 prerelease = false
+prerelease_token = "rc"
 
 [tool.pymarkdownlnt]
 log.level = "INFO"

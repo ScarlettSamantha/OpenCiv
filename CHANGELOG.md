@@ -10,6 +10,8 @@
 
 ### Other
 
+* 👷 optimize the pyproject.toml file ([`b6b2cd9`](https://github.com/ScarlettSamantha/OpenCiv/commit/b6b2cd93204c0f75467b97d0099fb0e4e3dc50bb)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 🧑‍💻 remove coverage from diff in git ([`9a41f09`](https://github.com/ScarlettSamantha/OpenCiv/commit/9a41f0936d5e0b2e71e15848964870d0aa3ec9c3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 👷 add setup.py for build and actions for maintenance actions ([`768b7c9`](https://github.com/ScarlettSamantha/OpenCiv/commit/768b7c9beec490743d5c1496387a90a108c515cd)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

@@ -1,6 +1,8 @@
 from ursina import Entity, Ursina
 from pathlib import Path
 from random import Random
+from dotenv import load_dotenv
+from importlib import util
 
 from openciv.engine.managers.config import Config
 from openciv.engine.managers.log import LogManager
@@ -16,8 +18,6 @@ from openciv.engine.managers.tech import TechManager
 from openciv.engine.managers.culture import CultureManager
 from openciv.engine.managers.ui import UIManager
 from openciv.engine.managers.i18n import _i18n, set_i18n
-
-
 from openciv.engine.additions.hex_grid import HexGrid
 
 
@@ -41,6 +41,7 @@ class Game:
         self.show_fps = show_fps
         self.hertz = hertz
         self.display = display
+        self.env = {}
 
         self.icon: str = "./openciv/assets/images/game_icon.png"
         self.development_mode = True
@@ -54,6 +55,9 @@ class Game:
         self.game_manager: GameManager = None
 
         self.ursina: Ursina
+        self.setup_dotenv()
+        if self.env["sentry_enabled"] and util.find_spec("sentry_sdk"):
+            self.setup_sentry()
         self.setup_engine()
         self.setup_camera()
         self.prepare_game_managers()
@@ -76,6 +80,19 @@ class Game:
             borderless=False,
         )
         log_manager.engine.debug("Engine setup complete")
+
+    def setup_dof(self) -> None:
+        self.env = load_dotenv()
+
+    def setup_sentry(self) -> None:
+        # We have to import sentry here because it's not a dependency
+        import sentry_sdk
+
+        sentry_sdk.init(
+            dsn=self.env["sentry_license_key"],
+            traces_sample_rate=1.0,
+            profiles_sample_rate=1.0,
+        )
 
     def setup_camera(self) -> None:
         self.camera = Camera(None)

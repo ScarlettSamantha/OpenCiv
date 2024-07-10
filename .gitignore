@@ -31,3 +31,4 @@ logs/misc/*
 logs/ursina/*
 
 saves/*
+.env
