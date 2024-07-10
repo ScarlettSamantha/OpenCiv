@@ -2,11 +2,14 @@ from openciv.gameplay.tile_yield import TileYield
 from openciv.gameplay.effects import Effects
 from openciv.gameplay.conditions import Conditions
 from openciv.engine.mixins.callbacks import CallbacksMixin
+from openciv.engine.saving import SaveAble
+from openciv.engine.managers.i18n import T_TranslationOrStr
+from openciv.engine.managers.tags import Taggable
 
-from typing import List, Tuple
+from typing import Tuple
 
 
-class Improvement(CallbacksMixin):
+class Improvement(CallbacksMixin, SaveAble, Taggable):
     # Will always finish in 1 turn.
     SINGLE_TURN = 0
     # Will finish in a fixed amount of turns.
@@ -14,8 +17,11 @@ class Improvement(CallbacksMixin):
     # Will finish when an certain production resource is used.
     MULTI_TURN_PRODUCTION = 2
 
-    def __init__(self, name: str, tile, health: int = 100, max_health: int = 100):
-        super().__init__()
+    def __init__(self, key: str, name: str, tile, health: int = 100, max_health: int = 100, *args, **kwargs):
+        CallbacksMixin.__init__(self, *args, **kwargs)
+        SaveAble.__init__(self, *args, **kwargs)
+        Taggable.__init__(self, *args, **kwargs)
+        self.key: str = key
         self.active: bool = True
         self.destroyed: bool = False
 
@@ -35,8 +41,8 @@ class Improvement(CallbacksMixin):
 
         self.player_enabled: bool = True
 
-        self.name = name
-        self.description_str = None
+        self.name: T_TranslationOrStr = name
+        self.description: T_TranslationOrStr = None
 
         self.multi_turn_mode = self.SINGLE_TURN
 
@@ -57,8 +63,6 @@ class Improvement(CallbacksMixin):
         self._texture = None
         self._owner = None
         self._tile_ref = None
-
-        self._tags: List = []
 
     @property
     def model(self):

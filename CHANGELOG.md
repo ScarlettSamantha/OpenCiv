@@ -10,7 +10,7 @@
 
 ### Other
 
-* ✨ add a method that tries to auto register args for saveable ([`46429d1`](https://github.com/ScarlettSamantha/OpenCiv/commit/46429d1fbd22ca0170be003cb19e46f1e09043a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+* ✨ add a method that tries to auto register args for saveable ([`f6e7f6c`](https://github.com/ScarlettSamantha/OpenCiv/commit/f6e7f6c4554842a2e5d124cd019ad048975bddb8)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✨ add sentry and dotenv support ([`81eb72a`](https://github.com/ScarlettSamantha/OpenCiv/commit/81eb72a4bac177fdb7581a4526f3e74e9a105654)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 

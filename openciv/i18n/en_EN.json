@@ -843,9 +843,159 @@
       },
       "improvements": {
         "core": {
-          "farm": {
-            "name": "Farm",
-            "description": "Agricultural improvement"
+          "general": {
+            "beach_resort": {
+              "name": "Beach Resort",
+              "description": "Tourist destination on the beach"
+            },
+            "water_park": {
+              "name": "Water Park",
+              "description": "Recreational water facility"
+            },
+            "attraction_park": {
+              "name": "Attraction Park",
+              "description": "Amusement park for entertainment"
+            },
+            "bridge": {
+              "name": "Bridge",
+              "description": "Structure for crossing obstacles"
+            },
+            "corporation": {
+              "name": "Corporation",
+              "description": "Business organization for resources"
+            },
+            "desalination_plant": {
+              "name": "Desalination Plant",
+              "description": "Facility to produce fresh water"
+            },
+            "industry": {
+              "name": "Industry",
+              "description": "Manufacturing and production facilities"
+            },
+            "mountain_tunnel": {
+              "name": "Mountain Tunnel",
+              "description": "Passageway through a mountain"
+            },
+            "national_park": {
+              "name": "National Park",
+              "description": "Protected natural area"
+            },
+            "research_center": {
+              "name": "Research Center",
+              "description": "Facility for scientific research"
+            },
+            "seastead": {
+              "name": "Seastead",
+              "description": "Floating habitat on the sea"
+            }
+          },
+          "military": {
+            "castle": {
+              "name": "Castle",
+              "description": "Fortified defensive structure"
+            },
+            "fortress": {
+              "name": "Fortress",
+              "description": "Stronghold for defense and security"
+            },
+            "military_base": {
+              "name": "Military Base",
+              "description": "Military installation and operations"
+            },
+            "missile_silo": {
+              "name": "Missile Silo",
+              "description": "Underground missile launch facility"
+            }
+          },
+          "resources": {
+            "dam": {
+              "name": "Dam",
+              "description": "Barrier for water storage"
+            },
+            "farm": {
+              "name": "Farm",
+              "description": "Agricultural improvement"
+            },
+            "fishing_boats": {
+              "name": "Fishing Boats",
+              "description": "Boats for fishing activities"
+            },
+            "foundry": {
+              "name": "Foundry",
+              "description": "Factory for metal casting"
+            },
+            "geothermal": {
+              "name": "Geothermal Plant",
+              "description": "Facility for geothermal energy"
+            },
+            "hunting_camp": {
+              "name": "Hunting Camp",
+              "description": "Camp for hunting expeditions"
+            },
+            "logging_camp": {
+              "name": "Logging Camp",
+              "description": "Camp for logging operations"
+            },
+            "mine": {
+              "name": "Mine",
+              "description": "Site for mineral extraction"
+            },
+            "offshore_oil_rig": {
+              "name": "Offshore Oil Rig",
+              "description": "Platform for offshore drilling"
+            },
+            "oil_field": {
+              "name": "Oil Field",
+              "description": "Area for oil extraction"
+            },
+            "pasture": {
+              "name": "Pasture",
+              "description": "Land for grazing livestock"
+            },
+            "solar_farm": {
+              "name": "Photovoltaics",
+              "description": "Solar energy production facility"
+            },
+            "plantation": {
+              "name": "Plantation",
+              "description": "Large-scale farm for crops"
+            },
+            "power_plant_coal": {
+              "name": "Coal Power Plant",
+              "description": "Facility for coal energy production"
+            },
+            "power_plant_gas": {
+              "name": "Gas Power Plant",
+              "description": "Facility for gas energy production"
+            },
+            "power_plant_nuclear": {
+              "name": "Nuclear Power Plant",
+              "description": "Facility for nuclear energy production"
+            },
+            "power_plant_oil": {
+              "name": "Oil Power Plant",
+              "description": "Facility for oil energy production"
+            },
+            "power_pylon": {
+              "name": "Power Pylon",
+              "description": "Structure for electricity transmission"
+            },
+            "quarry": {
+              "name": "Quarry",
+              "description": "Site for extracting stones"
+            },
+            "tidal_generators": {
+              "name": "Tidal Generators",
+              "description": "Facility for tidal energy production"
+            },
+            "vineyard": {
+              "name": "Vineyard",
+              "description": "Field for growing grapes"
+            },
+            "wind_farm": {
+              "name": "Wind Farm",
+              "description": "Facility for wind energy production"
+            }
           }
         }
       }

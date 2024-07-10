@@ -1,26 +1,63 @@
 from typing import Dict, List
+from openciv.engine.mixins.singleton import Singleton
 
-# This object is a singleton
-class _Tags():
 
-    __instance: '_Tags' = None
+class Tag:
+    def __init__(self, tag: str, instance: object):
+        self._tag: str = tag
+        self._tag_instance: object = instance
 
-    def __init__(self):
+    def tag(self) -> str:
+        return self._tag
+
+    def instance(self) -> object:
+        return self._tag_instance
+
+    def __repr__(self) -> str:
+        return self._tag
+
+
+class _Tags(Singleton):
+    def __setup__(self):
         self._tags: Dict[str, List[object]] = {}
 
-    def add(self, tag: str, ref: object|List):
-        if isinstance(ref, object):
-            ref = [ref]
-        for item in ref:
-            self._tags[tag].append(ref)
+    def add(self, tag: Tag):
+        if tag.tag() not in self._tags:
+            self._tags[tag.tag()] = []
+        self._tags[tag.tag()].append(tag.instance())
 
-    def tags(self, tag: str = None) -> Dict|List:
+    def tags(self, tag: str = None) -> Dict | List:
         return self._tags[tag] if tag is not None else self._tags
 
-    @staticmethod
-    def retrive_instance(cls) -> '_Tags':
-        if cls.__instance is None:
-            cls.__instance = _Tags()
-        return cls.__instance
 
-Tags = _Tags.retrive_instance()
+class Taggable:
+    def __init__(self):
+        self.tags: List[Tag] = []
+
+    def add_tag(self, tag: Tag):
+        self.tags.append(tag)
+        _Tags._get_instance().add(tag)
+
+    def has_tag(self, tag: str) -> bool:
+        return any(t.tag == tag for t in self.tags)
+
+    def remove_tag(self, tag: str):
+        self.tags = [t for t in self.tags if t.tag() != tag]
+
+    def get_tag(self, tag: str) -> Tag:
+        return next(t for t in self.tags if t.tag() == tag)
+
+    def get_tags(self) -> List[Tag]:
+        return self.tags
+
+    def get_tag_instances(self, tag: str) -> List[object]:
+        return [t.instance for t in self.tags if t.tag() == tag()]
+
+    def get_all_tags(self) -> List[str]:
+        return [t.tag for t in self.tags]
+
+    def get_all_tag_instances(self) -> List[object]:
+        return [t.instance for t in self.tags]
+
+    def clear_tags(self):
+        self.tags = []
