@@ -5,6 +5,7 @@ from openciv.engine.exceptions.save_exception import (
     SaveRestoreObjectNotRestorableException,
 )
 import abc
+import inspect
 from typing import Dict, List, TypeVar, Any, ForwardRef
 
 # Define a type variable for saveable properties with self-reference
@@ -44,13 +45,15 @@ class SaveAble(Keyable):
 
     @abc.abstractmethod
     def _register_instance_args(self) -> List[str]:
-        """Abstract method to register instance arguments.
-        Must be implemented by child classes.
+        """
+        Registers instance arguments that have corresponding class properties.
 
         Returns:
-            List[str]: List of instance arguments.
+            List[str]: List of instance argument names that have corresponding properties.
         """
-        pass
+        constructor_params = inspect.signature(self.__init__).parameters
+        instance_args = [arg for arg in constructor_params if hasattr(self, arg)]
+        return list(instance_args)
 
     @abc.abstractmethod
     def _register_saveable_properties(self) -> List[str]:
@@ -60,7 +63,11 @@ class SaveAble(Keyable):
         Returns:
             List[str]: List of saveable properties.
         """
-        pass
+        r = []
+        for prop in self.__dict__.keys():
+            if not prop.startswith("_") and prop not in self._meta_properties:
+                r.append(prop)
+        return r
 
     def _restore_property(self, key: str, value: SaveableType) -> None:
         """Restore a property from the saved data.

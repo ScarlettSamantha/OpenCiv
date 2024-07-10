@@ -1,5 +1,6 @@
 # Define a concrete class for testing
 from openciv.engine.saving import SaveAble
+from openciv.engine.exceptions.save_exception import SaveRestorationRestoreTypeInvalidException
 from typing import ForwardRef, List
 
 import pytest
@@ -7,10 +8,10 @@ import pytest
 
 # Define a concrete class for testing
 class ConcreteSaveAble(SaveAble):
-    def __init__(self, prop1, prop2):
+    def __init__(self, prop1, prop2, *args, **kwargs):
         self.prop1 = prop1
         self.prop2 = prop2
-        super().__init__()
+        super().__init__(*args, **kwargs)
 
     def _register_saveable_properties(self) -> List:
         return ["prop1", "prop2"]
@@ -21,16 +22,16 @@ class ConcreteSaveAble(SaveAble):
 
 # Define a concrete class for testing
 class ConcreteNestableSaveAble(SaveAble):
-    def __init__(self, prop1: ForwardRef("ConcreteNestableSaveAble"), prop2):
+    def __init__(self, prop1: ForwardRef("ConcreteNestableSaveAble"), prop2, *args, **kwargs):
         self.prop1 = prop1
         self.prop2 = prop2
-        super().__init__()
+        super().__init__(*args, **kwargs)
 
     def _register_saveable_properties(self) -> List:
-        return ["prop1", "prop2"]
+        return super()._register_saveable_properties()
 
     def _register_instance_args(self) -> List:
-        return ["prop1", "prop2"]
+        return super()._register_instance_args()
 
 
 def test_saveable_data():
@@ -92,3 +93,66 @@ def test_recursive_save_restore():
     assert restored_obj.prop1.prop1 == "nested_value"
     assert restored_obj.prop1.prop2 == 99
     assert restored_obj.prop2 == 42
+
+
+def test_register_saveable_properties():
+    obj = ConcreteSaveAble("value1", 42)
+    properties = obj._register_saveable_properties()
+    assert properties == ["prop1", "prop2"]
+
+    nested_obj = ConcreteNestableSaveAble("nested_value", 99)
+    properties = nested_obj._register_saveable_properties()
+    assert properties == ["prop1", "prop2"]
+
+
+def test_register_instance_args():
+    obj = ConcreteSaveAble("value1", 42)
+    args = obj._register_instance_args()
+    assert args == ["prop1", "prop2"]
+
+    nested_obj = ConcreteNestableSaveAble("nested_value", 99)
+    args = nested_obj._register_instance_args()
+    assert args == ["prop1", "prop2"]
+
+
+def test_eq_method():
+    import uuid
+
+    matching_uuid = str(uuid.uuid4())
+    obj1 = ConcreteSaveAble("value1", 42, _key=matching_uuid)
+    obj2 = ConcreteSaveAble("value1", 42, _key=matching_uuid)
+    obj3 = ConcreteSaveAble("value2", 43, _key=str(uuid.uuid4()))
+
+    assert obj1 == obj2
+    assert obj1 != obj3
+
+    nested_obj1 = ConcreteNestableSaveAble("nested_value1", 99, _key=matching_uuid)
+    nested_obj2 = ConcreteNestableSaveAble("nested_value1", 99, _key=matching_uuid)
+    nested_obj3 = ConcreteNestableSaveAble("nested_value2", 100, _key=str(uuid.uuid4()))
+
+    assert nested_obj1 == nested_obj2
+    assert nested_obj1 != nested_obj3
+
+
+def test_module_not_found():
+    instance = ConcreteNestableSaveAble(None, None)
+    data = {"__type": "non_existent_module.NonExistentClass", "__instance_args": []}
+    with pytest.raises(SaveRestorationRestoreTypeInvalidException) as excinfo:
+        instance._create_object(data)
+    assert "Module not found" in str(excinfo.value)
+
+
+def test_class_not_found():
+    instance = ConcreteNestableSaveAble(None, None)
+    data = {"__type": "unittest.NonExistentClass", "__instance_args": []}
+    with pytest.raises(SaveRestorationRestoreTypeInvalidException) as excinfo:
+        instance._create_object(data)
+    assert "Class not found" in str(excinfo.value)
+
+
+def test_object_not_saveable():
+    instance = ConcreteNestableSaveAble(None, None)
+    data = {"__type": "unittest.TestCase", "__instance_args": []}
+    with pytest.raises(SaveRestorationRestoreTypeInvalidException) as excinfo:
+        instance._create_object(data)
+    assert "Object is not a SaveAble" in str(excinfo.value)

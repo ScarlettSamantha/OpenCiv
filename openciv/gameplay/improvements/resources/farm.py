@@ -1,11 +1,12 @@
 from openciv.gameplay import Improvement, TileYield
 from openciv.engine.managers.tags import Tags
+from openciv.engine.managers.i18n import _t
 
 
 class Farm(Improvement):
     def __init__(self):
-        self.name = "world.tiles.resource.food_farm_tier_1_name"
-        self.description_str = "world.tiles.resource.food_farm_tier_1_description"
+        self.name = _t("content.improvements.core.farm.name")
+        self.description_str = _t("content.improvements.core.farm.description")
 
         self.health = 50
         self.max_health = 50

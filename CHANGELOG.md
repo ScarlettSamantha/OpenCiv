@@ -10,6 +10,10 @@
 
 ### Other
 
+* ✨ add a method that tries to auto register args for saveable ([`46429d1`](https://github.com/ScarlettSamantha/OpenCiv/commit/46429d1fbd22ca0170be003cb19e46f1e09043a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* ✨ add sentry and dotenv support ([`81eb72a`](https://github.com/ScarlettSamantha/OpenCiv/commit/81eb72a4bac177fdb7581a4526f3e74e9a105654)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 👷 optimize the pyproject.toml file ([`b6b2cd9`](https://github.com/ScarlettSamantha/OpenCiv/commit/b6b2cd93204c0f75467b97d0099fb0e4e3dc50bb)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 🧑‍💻 remove coverage from diff in git ([`9a41f09`](https://github.com/ScarlettSamantha/OpenCiv/commit/9a41f0936d5e0b2e71e15848964870d0aa3ec9c3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

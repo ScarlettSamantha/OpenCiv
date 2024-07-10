@@ -840,6 +840,14 @@
             "description": "Upcoming technological advancements"
           }
         }
+      },
+      "improvements": {
+        "core": {
+          "farm": {
+            "name": "Farm",
+            "description": "Agricultural improvement"
+          }
+        }
       }
     }
   }
