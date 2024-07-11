@@ -2,7 +2,8 @@ import argparse
 import os
 import glob
 import sys
-from typing import Any
+import shutil
+from typing import Any, NoReturn
 
 # This is to make sure it can still finds its references.
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +25,21 @@ class MaintenanceActions:
                     print(f"Removed {log_file}")
                 except Exception as e:
                     print(f"Failed to remove {log_file}: {e}")
+
+    def remove_pycache(self, **kwargs) -> NoReturn:
+        """
+        Recursively remove all __pycache__ directories from the given base directory.
+
+        :param base_dir: The base directory to start the search.
+        """
+        counter: int = 0
+        for root, dirs, files in os.walk(os.getcwd()):
+            for dir_name in dirs:
+                if dir_name == "__pycache__":
+                    counter += 1
+                    dir_path = os.path.join(root, dir_name)
+                    shutil.rmtree(dir_path)
+        print(f"Removed {counter} __pycache__ directories.")
 
 
 def parse_args() -> argparse.Namespace:

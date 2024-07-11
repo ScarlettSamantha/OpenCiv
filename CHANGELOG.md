@@ -10,6 +10,8 @@
 
 ### Other
 
+* ✏️ fix typo in vineyard ([`e9f1838`](https://github.com/ScarlettSamantha/OpenCiv/commit/e9f18387c18f1f5f6d4bec2c6aa7fd1965e64b15)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * ✨ add and implement keyable, tags and basic skeletons for improvements ([`0c5ce5f`](https://github.com/ScarlettSamantha/OpenCiv/commit/0c5ce5f546639b357bd1f581823df122e9f94379)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✨ add a method that tries to auto register args for saveable ([`f6e7f6c`](https://github.com/ScarlettSamantha/OpenCiv/commit/f6e7f6c4554842a2e5d124cd019ad048975bddb8)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
