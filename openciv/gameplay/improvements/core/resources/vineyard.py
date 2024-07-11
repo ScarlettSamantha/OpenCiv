@@ -3,7 +3,7 @@ from openciv.gameplay.tile_yield import TileYield
 from openciv.engine.managers.i18n import _t
 
 
-class VineYard(Improvement):
+class Vineyard(Improvement):
     def __init__(self, *args, **kwargs):
         super().__init__(
             "core.improvement.resource.vineyard",
