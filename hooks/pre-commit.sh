@@ -70,6 +70,11 @@ fix_markdown_files
 ensure_newline_at_eof
 lint_markdown_files
 
+git add .coverage
+git add coverage.xml
+git add coverage.json
+git add CHANGELOG.md
+
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
         against=HEAD
