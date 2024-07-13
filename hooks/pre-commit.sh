@@ -15,7 +15,7 @@ semantic-release changelog
 git add CHANGELOG.md
 
 
-python3 ./detect_debug_commits.py
+python3 hooks/detect_debug_methods.py
 status=$?
 
 if [ $status -ne 0 ]; then

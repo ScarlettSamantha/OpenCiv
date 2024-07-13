@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 from typing import List
 
 # List of debug methods to check for
@@ -16,7 +17,7 @@ def scan_file(file_path: str) -> List[str]:
     violations = []
     with open(file_path, "r") as file:
         for line_no, line in enumerate(file, 1):
-            if any(debug_method in line for debug_method in DEBUG_METHODS) and "# noqa" not in line:
+            if any(re.search(rf"\b{debug_method}\b", line) for debug_method in DEBUG_METHODS) and "# noqa" not in line:
                 violations.append(f"{file_path}:{line_no} {line.strip()}")
     return violations
 
@@ -31,13 +32,13 @@ def main() -> int:
     violations = []
 
     for file_path in staged_files:
-        if file_path.endswith(".py"):
+        if file_path.endswith(".py") and not file_path.endswith("detect_debug_methods.py"):
             violations.extend(scan_file(file_path))
 
     if violations:
-        print("Debug methods found without `# noqa` comment:")
+        print("Debug methods found without `# noqa` comment:")  # noqa
         for violation in violations:
-            print(violation)
+            print(violation)  # noqa
         return 1
 
     return 0

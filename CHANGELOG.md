@@ -12,6 +12,8 @@
 
 ### Other
 
+* :green_heart: add automatic checking for print and other debug functions ([`1f129cd`](https://github.com/ScarlettSamantha/OpenCiv/commit/1f129cd293ee0020600b8aa12793ff2fc048fd31)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 👷 add remove_pycache action ([`4503c70`](https://github.com/ScarlettSamantha/OpenCiv/commit/4503c7053e0c943676321ad072836702aaa2b2f3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✏️ fix typo in vineyard ([`e9f1838`](https://github.com/ScarlettSamantha/OpenCiv/commit/e9f18387c18f1f5f6d4bec2c6aa7fd1965e64b15)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

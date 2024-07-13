@@ -65,7 +65,6 @@ def test_recursive_save_restore():
     nested_obj = ConcreteNestableSaveAble("nested_value", 99)
     obj = ConcreteNestableSaveAble(nested_obj, 42)
     data = obj.saveable_data()
-    print(data)
     assert data["prop1"]["prop1"] == "nested_value"
     assert data["prop1"]["prop2"] == 99
     assert data["prop2"] == 42
