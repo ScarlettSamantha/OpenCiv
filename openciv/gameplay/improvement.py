@@ -6,7 +6,7 @@ from openciv.engine.saving import SaveAble
 from openciv.engine.managers.i18n import T_TranslationOrStr
 from openciv.engine.managers.tags import Taggable
 
-from typing import Tuple
+from typing import Tuple, ForwardRef
 
 
 class Improvement(CallbacksMixin, SaveAble, Taggable):
@@ -17,10 +17,11 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
     # Will finish when an certain production resource is used.
     MULTI_TURN_PRODUCTION = 2
 
-    def __init__(self, key: str, name: str, tile, health: int = 100, max_health: int = 100, *args, **kwargs):
+    def __init__(self, key: str, name: str, health: int = 100, max_health: int = 100, *args, **kwargs):
         CallbacksMixin.__init__(self, *args, **kwargs)
-        SaveAble.__init__(self, *args, **kwargs)
         Taggable.__init__(self, *args, **kwargs)
+        SaveAble.__init__(self, *args, **kwargs)
+
         self.key: str = key
         self.active: bool = True
         self.destroyed: bool = False
@@ -29,7 +30,7 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
         self.max_health: int = max_health
 
         self.upgradable: bool = False
-        self.upgrade_into: "Improvement" | None = None
+        self.upgrade_into: ForwardRef("Improvement") | None = None
 
         self.constructable_builder: bool = True
         self.constructable_on_tile: bool = True
@@ -56,13 +57,17 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
         self.effects: Effects = Effects(name)
         self.conditions: Conditions = Conditions()
 
-        self._tile = tile
         self._model = None
         self._model_offset: Tuple[int, int, int] = (0, 0, 0)
         self._mesh = None
         self._texture = None
         self._owner = None
         self._tile_ref = None
+
+        self._setup_saveable()
+
+    def _validate_state(self) -> bool:
+        return True
 
     @property
     def model(self):
@@ -96,7 +101,7 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
     def tile_ref(self, value):
         self._tile_ref = value
 
-    def tile(self) -> "Tile":  # noqa: F821
+    def tile(self) -> ForwardRef("Tile"):
         return self.tile
 
     @property
@@ -135,18 +140,18 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
             print("Cant upgrade into a null object. needs to be an improvement effect")
         self.replace(self.upgrade_into)
 
-    def replace(self, _with: "Improvement"):
+    def replace(self, _with: ForwardRef("Improvement")):
         pass
 
     @staticmethod
     def basic_resource_improvement(
         name: str,
-        tile: "Tile",  # noqa: F821
+        tile: ForwardRef("Tile"),
         property: str,
         delta: float,
         mode: int = TileYield.ADDITIVE,
-        health: int = 100,  # noqa: F821
-    ) -> "Improvement":
+        health: int = 100,
+    ) -> ForwardRef("Improvement"):
         ref = Improvement(name, tile, health)
         _yield = TileYield(f"{name} yield")
         _yield.mode = mode

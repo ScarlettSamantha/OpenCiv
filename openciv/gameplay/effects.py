@@ -1,13 +1,17 @@
 from openciv.gameplay.effect import Effect
+from openciv.engine.saving import SaveAble
+from openciv.engine.managers.log import LogManager
 
 
-class Effects:
-    def __init__(self, collection_name: str = None):
-        from openciv.engine.managers.log import LogManager
-
+class Effects(SaveAble):
+    def __init__(self, collection_name: str = None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.index = 0
         self.effects = {}
         self.collection_name: str | None = collection_name
+        self._setup_saveable()
+
+        # We dont want this to be saved.
         self.logger = LogManager._get_instance()
 
     def add(self, effect: Effect, auto_add_name_on_empty: bool = True):

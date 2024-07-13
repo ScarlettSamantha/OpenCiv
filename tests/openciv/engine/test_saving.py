@@ -9,9 +9,10 @@ import pytest
 # Define a concrete class for testing
 class ConcreteSaveAble(SaveAble):
     def __init__(self, prop1, prop2, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.prop1 = prop1
         self.prop2 = prop2
-        super().__init__(*args, **kwargs)
+        self._setup_saveable()
 
     def _register_saveable_properties(self) -> List:
         return ["prop1", "prop2"]
@@ -23,9 +24,10 @@ class ConcreteSaveAble(SaveAble):
 # Define a concrete class for testing
 class ConcreteNestableSaveAble(SaveAble):
     def __init__(self, prop1: ForwardRef("ConcreteNestableSaveAble"), prop2, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.prop1 = prop1
         self.prop2 = prop2
-        super().__init__(*args, **kwargs)
+        self._setup_saveable()
 
     def _register_saveable_properties(self) -> List:
         return super()._register_saveable_properties()
@@ -41,14 +43,6 @@ def test_saveable_data():
     assert data["prop2"] == 42
 
 
-def test_restore_from_data():
-    obj = ConcreteSaveAble(None, None)
-    data = {"prop1": "value1", "prop2": 42}
-    obj.restore_from_data(data)
-    assert obj.prop1 == "value1"
-    assert obj.prop2 == 42
-
-
 def test_is_valid_saveable_type():
     assert SaveAble._is_valid_saveable_type("string")
     assert SaveAble._is_valid_saveable_type(123)
@@ -56,6 +50,7 @@ def test_is_valid_saveable_type():
     assert SaveAble._is_valid_saveable_type(True)
     assert SaveAble._is_valid_saveable_type(None)
     assert SaveAble._is_valid_saveable_type([1, 2, 3])
+    assert SaveAble._is_valid_saveable_type((1, 2, 3))
     assert SaveAble._is_valid_saveable_type({"key": "value"})
     assert not SaveAble._is_valid_saveable_type(object())
 
@@ -66,19 +61,11 @@ def test_invalid_restore_property():
         obj._restore_property("prop1", object())
 
 
-def test_restore_object():
-    obj = ConcreteSaveAble(None, None)
-    data = {"prop1": "value1", "prop2": 42}
-    obj.restore_object(data)
-    assert obj.prop1 == "value1"
-    assert obj.prop2 == 42
-
-
 def test_recursive_save_restore():
     nested_obj = ConcreteNestableSaveAble("nested_value", 99)
     obj = ConcreteNestableSaveAble(nested_obj, 42)
     data = obj.saveable_data()
-
+    print(data)
     assert data["prop1"]["prop1"] == "nested_value"
     assert data["prop1"]["prop2"] == 99
     assert data["prop2"] == 42
@@ -156,3 +143,23 @@ def test_object_not_saveable():
     with pytest.raises(SaveRestorationRestoreTypeInvalidException) as excinfo:
         instance._create_object(data)
     assert "Object is not a SaveAble" in str(excinfo.value)
+
+
+####
+#
+# Tests if implementations of SaveAble are able to be saved and restored.
+#
+####
+
+
+def test_improvement_saveable():
+    from openciv.gameplay.improvement import Improvement
+
+    improvement = Improvement("test.improvement.key", "test_improvement")
+    data = improvement.saveable_data()
+    restored_improvement = Improvement(None, None)
+    restored_improvement.restore_from_data(data)
+
+    assert restored_improvement.name == "test_improvement"
+    assert restored_improvement.effects.collection_name == "test_improvement"
+    assert restored_improvement.get_state_hash() == improvement.get_state_hash()

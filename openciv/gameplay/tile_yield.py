@@ -1,4 +1,7 @@
-class TileYield:
+from openciv.engine.saving import SaveAble
+
+
+class TileYield(SaveAble):
     BASE = 0
     ADDITIVE = 1
 
@@ -28,6 +31,7 @@ class TileYield:
         *args,
         **kwargs,
     ):
+        super().__init__(*args, **kwargs)
         self._name = name
         self.mode = mode
         self.gold = gold
@@ -54,6 +58,8 @@ class TileYield:
         self._population_modifiers = ("content", "angre", "revolt", "stability")
 
         self._calculatable_great_people = ("science", "production", "admiral", "marchant", "leader")
+
+        self._setup_saveable()
 
     @property
     def name(self) -> None | str:

@@ -17,9 +17,21 @@ class SaveRestoreObjectPropertyNotFoundException(SaveRestorationFailure):
     pass
 
 
+class SaveRestoreObjectPropertyObjectInvalidRestoreStateException(SaveRestorationFailure):
+    pass
+
+
 class SaveRestoreObjectNotRestorableException(SaveRestorationFailure):
     pass
 
 
 class SaveRestorationRestoreTypeInvalidException(SaveRestorationFailure):
+    pass
+
+
+class SavePropertyIsNotAValidSaveableTypeException(SaveFailureException):
+    pass
+
+
+class SavePropertyIsObjectButNotSaveAbleException(SaveFailureException):
     pass
