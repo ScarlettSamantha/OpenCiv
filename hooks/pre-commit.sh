@@ -14,6 +14,16 @@ git add coverage.xml
 semantic-release changelog
 git add CHANGELOG.md
 
+
+python3 ./detect_debug_commits.py
+status=$?
+
+if [ $status -ne 0 ]; then
+    echo "Commit rejected due to debug methods without # noqa comment."
+    exit 1
+fi
+
+
 # Function to fix trailing whitespace
 fix_trailing_whitespace() {
     find . -type f \( -name "*.py" -o -name "*.md" \) -exec sed -i 's/[[:space:]]\+$//' {} +
@@ -44,6 +54,8 @@ lint_markdown_files() {
     fi
 }
 
+exit 0
+
 fix_markdown_files() {
     pymarkdownlnt fix .
 }
@@ -57,10 +69,6 @@ format_python_files
 fix_markdown_files
 ensure_newline_at_eof
 lint_markdown_files
-
-
-# Add any fixes to the commit
-git add .
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then

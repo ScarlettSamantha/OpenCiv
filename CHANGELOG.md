@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: make saving more robust and implement object state verifification ([`31bf4c4`](https://github.com/ScarlettSamantha/OpenCiv/commit/31bf4c418f35288140b4e50a8357048406005407)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: add testing mode to log manager ([`ca05137`](https://github.com/ScarlettSamantha/OpenCiv/commit/ca05137511216017fdf124ba3f631803058af9a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
