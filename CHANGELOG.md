@@ -12,6 +12,8 @@
 
 ### Other
 
+* :green_heart: add some auto git add for auto generated files ([`0d816f1`](https://github.com/ScarlettSamantha/OpenCiv/commit/0d816f1137a59c16a127c38ae4eb22277521eaf1)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: add changelog to readme ([`7ed1b62`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed1b622b25e2fd1ad69f764b660e9d0420500d8)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :art: restructure the improvement upgrade into a exception instead of an print ([`fc19eb5`](https://github.com/ScarlettSamantha/OpenCiv/commit/fc19eb5d6270a2c6c72ca104e941e126773e7148)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

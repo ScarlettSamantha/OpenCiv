@@ -3,11 +3,11 @@
 
 ## Project
 
-A rough roadmap (without times as this is a hobby) [meta/roadmap.md](Roadmap)
+A rough roadmap (without times as this is a hobby) [Roadmap](meta/roadmap.md)
 
-The contribution guide van be found here [CONTRIBUTE.md](Contribute)
+The contribution guide van be found here [Contribute](CONTRIBUTE.md)
 
-The automatically generated changelog [CHANGELOG.md](Changelog)
+The automatically generated changelog [Changelog](CHANGELOG.md)
 
 ## Game
 
