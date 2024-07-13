@@ -1,6 +1,7 @@
 from openciv.gameplay.tile_yield import TileYield
 from openciv.gameplay.effects import Effects
 from openciv.gameplay.conditions import Conditions
+from openciv.gameplay.exceptions.improvement_exceptions import ImprovementUpgradeException
 from openciv.engine.mixins.callbacks import CallbacksMixin
 from openciv.engine.saving import SaveAble
 from openciv.engine.managers.i18n import T_TranslationOrStr
@@ -137,7 +138,7 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
 
     def upgrade(self):
         if self.upgrade_into is None:
-            print("Cant upgrade into a null object. needs to be an improvement effect")
+            raise ImprovementUpgradeException("Cant upgrade into a null object. needs to be an improvement effect")
         self.replace(self.upgrade_into)
 
     def replace(self, _with: ForwardRef("Improvement")):

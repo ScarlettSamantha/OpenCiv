@@ -12,6 +12,8 @@
 
 ### Other
 
+* :fire: remove some print methods ([`81532d8`](https://github.com/ScarlettSamantha/OpenCiv/commit/81532d8805c76915fcc45a969c44b31552564b06)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :green_heart: add automatic checking for print and other debug functions ([`1f129cd`](https://github.com/ScarlettSamantha/OpenCiv/commit/1f129cd293ee0020600b8aa12793ff2fc048fd31)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 👷 add remove_pycache action ([`4503c70`](https://github.com/ScarlettSamantha/OpenCiv/commit/4503c7053e0c943676321ad072836702aaa2b2f3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
