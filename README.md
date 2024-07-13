@@ -7,6 +7,8 @@ A rough roadmap (without times as this is a hobby) [meta/roadmap.md](Roadmap)
 
 The contribution guide van be found here [CONTRIBUTE.md](Contribute)
 
+The automatically generated changelog [CHANGELOG.md](Changelog)
+
 ## Game
 
 ### Civs
