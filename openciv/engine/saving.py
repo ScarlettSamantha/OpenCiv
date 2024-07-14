@@ -306,7 +306,23 @@ class SaveAble(Keyable, StateHashable):
         self._restored_on = datetime.now()
         self.validate_state(data["__hash"])
 
-    def _create_object(self, data: Dict[str, SaveableType]) -> "SaveAble":
+    @classmethod
+    def create_object_from_data(cls, data: Dict[str, SaveableType]) -> ForwardRef("SaveAble"):
+        """Create an object from saved data.
+
+        Args:
+            data (Dict[str, SaveableType]): The saved data.
+
+        Returns:
+            SaveAble: The created object.
+        """
+        instance_args = data.pop("__instance_args", None)
+        instance = cls(**{k: v for k, v in data.items() if k in instance_args})
+        instance.restore_from_data({k: v for k, v in data.items() if k != "__instance_args"})
+        return instance
+
+    @staticmethod
+    def _create_object(data: Dict[str, SaveableType]) -> ForwardRef("SaveAble"):
         """Create an object from saved data.
 
         Args:
