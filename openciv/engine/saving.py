@@ -9,6 +9,7 @@ from openciv.engine.exceptions.save_exception import (
     SavePropertyIsObjectButNotSaveAbleException,
 )
 import inspect
+from abc import ABCMeta
 from logging import DEBUG
 from typing import Dict, List, TypeVar, Any, ForwardRef, Tuple, Callable
 
@@ -57,6 +58,14 @@ def hash_saveable_type(value: SaveableType, hash_func: Callable[[Any], int] = md
         raise TypeError(f"Unsupported type for hashing: {type(value)}")
 
 
+def nosave(f):
+    """
+    Decorator to mark properties that should not be saved.
+    """
+    f._nosave = True
+    return f
+
+
 class SaveAble(Keyable, StateHashable):
     """
     SaveAble is an abstract base class designed to facilitate the saving and restoring
@@ -70,7 +79,6 @@ class SaveAble(Keyable, StateHashable):
         """Initialize SaveAble object, register key, and saveable properties."""
         StateHashable.__init__(self)
         Keyable.__init__(self, *args, **kwargs)
-        self._register_key()
         self._meta_properties: List[str] = [
             "_key",
             "__type",
@@ -80,7 +88,7 @@ class SaveAble(Keyable, StateHashable):
             "_restorable",
             "_restored_on",
         ]
-
+        self._disable_auto_property_detection: bool = False
         self._saveable_properties: List[str] = []
         self._add_default_saveable_properties()
         self._instance_args: List[str] = []
@@ -89,6 +97,14 @@ class SaveAble(Keyable, StateHashable):
         self._restore_failure_reasons: List[str] = []
 
         self._restored_on: bool | datetime = False
+        self._register_key()
+
+    def __call__(self, *args: Any, **kwargs: Any):
+        """Call the object."""
+        rv = super().__call__(*args, **kwargs)
+        if not rv._disable_auto_property_detection:
+            rv._register_saveable_properties()
+        return rv
 
     def _add_default_saveable_properties(self) -> None:
         self._saveable_properties.append("_key")  # Add _key property to saveable properties
@@ -115,13 +131,14 @@ class SaveAble(Keyable, StateHashable):
         """
         instance_args: List = []
         for key, parameter in inspect.signature(self.__init__).parameters.items():
-            if hasattr(self, key):
+            if hasattr(self, key) and not key.startswith("_"):
                 instance_args.append(key)
         return instance_args
 
     def _register_saveable_properties(self) -> List[str]:
-        """Abstract method to register saveable properties.
-        Must be implemented by child classes.
+        """
+        Registers saveable properties.
+        Excludes properties starting with an underscore and those marked with @nosave.
 
         Returns:
             List[str]: List of saveable properties.
@@ -129,7 +146,9 @@ class SaveAble(Keyable, StateHashable):
         r = []
         for prop in self.__dict__.keys():
             if not prop.startswith("_") and prop not in self._meta_properties:
-                r.append(prop)
+                attr = getattr(self, prop)
+                if not (callable(attr) and getattr(attr, "_nosave", False)):
+                    r.append(prop)
         return r
 
     def validate_state(self, previous_state_hash: str) -> bool:
@@ -250,6 +269,9 @@ class SaveAble(Keyable, StateHashable):
         global _debug_timer_enable
         if _debug_timer_enable:
             _debug_timers[self._key] = datetime.now()
+
+        if self._key is None:
+            self._register_key()
 
         data = {
             "__type": f"{self.__module__}.{self.__class__.__name__}",

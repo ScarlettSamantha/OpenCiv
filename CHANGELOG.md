@@ -12,6 +12,8 @@
 
 ### Other
 
+* :memo: fix links in readme ([`f9b8e71`](https://github.com/ScarlettSamantha/OpenCiv/commit/f9b8e71280fa782d5447c84fb24b3e7bc582cf6e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :green_heart: add some auto git add for auto generated files ([`0d816f1`](https://github.com/ScarlettSamantha/OpenCiv/commit/0d816f1137a59c16a127c38ae4eb22277521eaf1)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: add changelog to readme ([`7ed1b62`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed1b622b25e2fd1ad69f764b660e9d0420500d8)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
