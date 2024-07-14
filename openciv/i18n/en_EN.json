@@ -801,6 +801,114 @@
           }
         }
       },
+      "culture": {
+        "tree": {
+          "core": {
+            "name": "Core",
+            "description": "The core cultural advancements"
+          }
+        },
+        "subtrees": {
+          "core": {
+            "liberalism": {
+              "name": "Liberalism",
+              "description": "Political philosophy focused on individual freedoms and equality."
+            },
+            "nationalism": {
+              "name": "Nationalism",
+              "description": "Ideology emphasizing loyalty and devotion to a nation."
+            },
+            "socialism": {
+              "name": "Socialism",
+              "description": "System advocating for collective or governmental ownership of production."
+            },
+            "fascism": {
+              "name": "Fascism",
+              "description": "Authoritarian ideology centered on nationalism and dictatorial power."
+            },
+            "communism": {
+              "name": "Communism",
+              "description": "Ideology for a classless system where resources are shared equally."
+            },
+            "capitalism": {
+              "name": "Capitalism",
+              "description": "Economic system based on private ownership and free markets."
+            },
+            "democracy": {
+              "name": "Democracy",
+              "description": "System of government by the whole population, usually through elected representatives."
+            },
+            "monarchy": {
+              "name": "Monarchy",
+              "description": "Government system with a hereditary ruler, such as a king or queen."
+            },
+            "theocracy": {
+              "name": "Theocracy",
+              "description": "Government system in which priests rule in the name of a deity."
+            },
+            "dictatorship": {
+              "name": "Dictatorship",
+              "description": "Authoritarian government where power is concentrated in one leader."
+            },
+            "oligarchy": {
+              "name": "Oligarchy",
+              "description": "Power structure where a small number of people control the country."
+            },
+            "anarchy": {
+              "name": "Anarchy",
+              "description": "Absence of government and absolute freedom of individuals."
+            },
+            "corporatocracy": {
+              "name": "Corporatocracy",
+              "description": "Control of a state or organization by large corporations."
+            },
+            "slavery": {
+              "name": "Slavery",
+              "description": "System where individuals are owned and forced to work by others."
+            },
+            "puritanism": {
+              "name": "Puritanism",
+              "description": "Movement advocating for strict religious discipline and moral purity."
+            },
+            "technocracy": {
+              "name": "Technocracy",
+              "description": "Government or control by technical experts and professionals."
+            },
+            "rationalism": {
+              "name": "Rationalism",
+              "description": "Philosophical belief in reason as the primary source of knowledge."
+            },
+            "unionism": {
+              "name": "Unionism",
+              "description": "Ideology focused on unifying diverse states or cultures through democratic processes."
+            },
+            "federalism": {
+              "name": "Federalism",
+              "description": "System of government where power is divided between a central authority and constituent units."
+            }
+          }
+        },
+        "civics": {
+          "core": {
+            "free_thought": {
+              "name": "Free Thought",
+              "description": "Freedom of thought and expression"
+            },
+            "seperation_church_state": {
+              "name": "Seperation of Church and State",
+              "description": "Religious and political independence"
+            },
+            "scientific_revolution": {
+              "name": "Scientific Revolution",
+              "description": "Advancements in science and technology"
+            },
+            "secularism": {
+              "name": "Secularism",
+              "description": "Non-religious and non-theocratic principles"
+            }
+          }
+        }
+      },
       "ages": {
         "core": {
           "ancient": {

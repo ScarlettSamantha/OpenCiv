@@ -53,3 +53,33 @@ class Requires(Condition):
 class RequiresMultiple(ConditionMultiple):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+
+class RequiresCivicComplete(Requires):
+    def __init__(self, civic: ForwardRef("Civic"), *args, **kwargs):
+        super().__init__(obj=civic, property="completed", required_value=True, *args, **kwargs)
+
+
+class RequiresCivicsComplete(RequiresMultiple):
+    def __init__(self, civics: List[ForwardRef("Civic")], *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for civic in civics:
+            if not isinstance(civic, ForwardRef("Civic")):
+                raise TypeError(f"RequiresCivicsComplete requires a list of Civics, not {type(civic)}")
+            _instance: RequiresCivicComplete = RequiresCivicComplete(civic)
+            self.conditions.append(_instance)
+
+
+class RequriesSubtreeCompelete(Requires):
+    def __init__(self, subtree: ForwardRef("CultureSubtree"), *args, **kwargs):
+        super().__init__(obj=subtree, property="is_completed", required_value=True, *args, **kwargs)
+
+
+class RequiresSubtreesComplete(RequiresMultiple):
+    def __init__(self, subtrees: List[ForwardRef("CultureSubtree")], *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for subtree in subtrees:
+            if not isinstance(subtree, ForwardRef("CultureSubtree")):
+                raise TypeError(f"RequiresSubtreesComplete requires a list of CultureSubtrees, not {type(subtree)}")
+            _instance: RequriesSubtreeCompelete = RequriesSubtreeCompelete(subtree)
+            self.conditions.append(_instance)
