@@ -6,6 +6,7 @@ import json
 
 from typing import Union
 from openciv.engine.managers.log import LogManager
+from openciv.engine.saving import SaveAble
 
 from openciv.engine.exceptions.i18n_exception import (
     I18NLoadException,
@@ -77,17 +78,11 @@ def set_i18n(i18n_instance: i18n) -> None:
     i18n = i18n_instance
 
 
-class Translation:
+class Translation(SaveAble):
     def __init__(self, key: str):
-        self._key = key
-
-    @property
-    def key(self):
-        return self._key
-
-    @key.setter
-    def key(self, value) -> None:
-        self._key = value
+        SaveAble.__init__(self)
+        self.key = key
+        self._setup_saveable()
 
     def __repr__(self):
         self_str = str(self) if i18n else "[!unloaded i18n engine!]"

@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: add object auto property detection. ([`9191e2d`](https://github.com/ScarlettSamantha/OpenCiv/commit/9191e2d55129df6988d21b65ebf59878b0a617b2)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: make saving more robust and implement object state verifification ([`31bf4c4`](https://github.com/ScarlettSamantha/OpenCiv/commit/31bf4c418f35288140b4e50a8357048406005407)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add testing mode to log manager ([`ca05137`](https://github.com/ScarlettSamantha/OpenCiv/commit/ca05137511216017fdf124ba3f631803058af9a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
