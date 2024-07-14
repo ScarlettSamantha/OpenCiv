@@ -18,6 +18,8 @@
 
 ### Other
 
+* :fire: remove print statements ([`aac6f36`](https://github.com/ScarlettSamantha/OpenCiv/commit/aac6f36e9b4dd38b148c2153f554eadae83a6ad5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: fix links in readme ([`f9b8e71`](https://github.com/ScarlettSamantha/OpenCiv/commit/f9b8e71280fa782d5447c84fb24b3e7bc582cf6e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :green_heart: add some auto git add for auto generated files ([`0d816f1`](https://github.com/ScarlettSamantha/OpenCiv/commit/0d816f1137a59c16a127c38ae4eb22277521eaf1)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
