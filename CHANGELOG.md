@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: add support to load object from data and auto instance it with instance args. ([`824289e`](https://github.com/ScarlettSamantha/OpenCiv/commit/824289e5b8a5fddbc1e8939dcb16d84441731e04)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: make translations saveable ([`28864de`](https://github.com/ScarlettSamantha/OpenCiv/commit/28864de13a3bd514ff78e44cdba9b60d2a3ba4a3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
