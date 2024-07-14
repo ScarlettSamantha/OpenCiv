@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: add support to load object from data and auto instance it with instance args. ([`824289e`](https://github.com/ScarlettSamantha/OpenCiv/commit/824289e5b8a5fddbc1e8939dcb16d84441731e04)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: make translations saveable ([`28864de`](https://github.com/ScarlettSamantha/OpenCiv/commit/28864de13a3bd514ff78e44cdba9b60d2a3ba4a3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add object auto property detection. ([`9191e2d`](https://github.com/ScarlettSamantha/OpenCiv/commit/9191e2d55129df6988d21b65ebf59878b0a617b2)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

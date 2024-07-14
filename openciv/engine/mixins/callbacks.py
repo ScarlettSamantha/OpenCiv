@@ -37,6 +37,4 @@ class CallbacksMixin:
             _trigger(self, self.__callbacks[category][index], *args, **kwargs)
 
     def register_callback(self, event: str, callback: callable):
-        print(self.__callbacks)
         self.__callbacks[event].append(callback)
-        print(self.__callbacks)
