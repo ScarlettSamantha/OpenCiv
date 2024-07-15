@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: rewrite pyload to be a lot more structured. ([`c372695`](https://github.com/ScarlettSamantha/OpenCiv/commit/c372695ad7b181885fbdc53dc8fed5c53cb6a7b4)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add support to load object from data and auto instance it with instance args. ([`824289e`](https://github.com/ScarlettSamantha/OpenCiv/commit/824289e5b8a5fddbc1e8939dcb16d84441731e04)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
@@ -19,6 +21,8 @@
 * :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 ### Other
+
+* :memo: add some documentation for the ideas behind gold and religion victory conditions ([`b3ab569`](https://github.com/ScarlettSamantha/OpenCiv/commit/b3ab56949eef0e1f6f6ca93c1226926fae15bef5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkle: add callback support in pyload baseclass detection ([`f10b634`](https://github.com/ScarlettSamantha/OpenCiv/commit/f10b634d22b95528169177088b006d2ffb70f8f9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 

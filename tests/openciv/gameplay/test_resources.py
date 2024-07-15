@@ -79,7 +79,6 @@ def test_resources_add_and_get():
     resource = Resource("testkey", _t("test.resource.name"), ResourceTypeBonus, 100)
 
     resources.add(resource)
-    print(resources.resources)
     retrieved_resource = resources.get(ResourceTypeBonus, "testkey")
 
     assert retrieved_resource.name == resource.name
@@ -107,7 +106,7 @@ def test_resources_to_dict():
 def test_loading_resources():
     from openciv.engine.additions.pyload import PyLoad
 
-    pyload = PyLoad().load_classes("openciv/gameplay/resources/")
+    pyload = PyLoad.load_classes("openciv/gameplay/resources/")
     for _, resource in pyload.items():
         instance = resource()
         assert isinstance(instance, Resource)

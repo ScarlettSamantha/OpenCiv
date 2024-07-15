@@ -6,11 +6,10 @@ from openciv.engine.mixins.callbacks import CallbacksMixin
 from openciv.engine.additions.pyload import PyLoad
 
 
-class TechManager(BaseManager, CallbacksMixin, PyLoad):
+class TechManager(BaseManager, CallbacksMixin):
     def __init__(self, technology_folders: List = [], *args, **kwargs):
         BaseManager.__init__(self, *args, **kwargs)
         CallbacksMixin.__init__(self)
-        PyLoad.__init__(self)
 
         self.queue: OrderedDict[int, Tech] = OrderedDict()
         self.registered_techs: List[Tech] = []
