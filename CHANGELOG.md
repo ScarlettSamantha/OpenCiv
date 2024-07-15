@@ -4,7 +4,7 @@
 
 ### :sparkles:
 
-* :sparkles: rewrite pyload to be a lot more structured. ([`c372695`](https://github.com/ScarlettSamantha/OpenCiv/commit/c372695ad7b181885fbdc53dc8fed5c53cb6a7b4)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+* :sparkles: rewrite pyload to be a lot more structured. ([`42d61e7`](https://github.com/ScarlettSamantha/OpenCiv/commit/42d61e78026c594381245575bed06f8da48b8d89)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
