@@ -2,7 +2,8 @@ import os
 import ast
 import fnmatch
 import importlib.util
-from typing import Dict, Type, List, Union, Tuple
+import inspect
+from typing import Dict, Type, List, Union, Tuple, Callable as CallableType
 from openciv.engine.managers.log import LogManager
 
 
@@ -30,9 +31,9 @@ class PyLoad:
     @staticmethod
     def load_classes(
         directory: str,
-        name_pattern: str = "*.py",
-        base_classes: Union[Type, List[Type]] = None,
-        properties: List[Tuple[str, str]] = None,
+        name_pattern: Union[str, CallableType[[str], bool]] = "*.py",
+        base_classes: Union[Type, List[Type], CallableType[[str, str], bool]] = None,
+        properties: Tuple[str, str] = None,
     ) -> Dict[str, Type]:
         """
         Loads and returns classes from Python files in the given directory based on the provided criteria.
@@ -61,7 +62,11 @@ class PyLoad:
                                 spec = importlib.util.spec_from_file_location(module_name, file_path)
                                 module = importlib.util.module_from_spec(spec)
                                 spec.loader.exec_module(module)
-                                loaded_classes[class_name] = getattr(module, class_name)
+                                if inspect.isfunction(base_classes):
+                                    if base_classes(module, class_name):
+                                        loaded_classes[class_name] = getattr(module, class_name)
+                                else:
+                                    loaded_classes[class_name] = getattr(module, class_name)
                         except SyntaxError as e:
                             LogManager._get_instance().engine.debug(f"Skipping {file_path} due to syntax error: {e}")
         return loaded_classes

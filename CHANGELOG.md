@@ -20,6 +20,8 @@
 
 ### Other
 
+* :memo: added a religion idea to meta ([`035e180`](https://github.com/ScarlettSamantha/OpenCiv/commit/035e1805731cec11b17c67f26d557e759f231c4a)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :fire: remove print statements ([`aac6f36`](https://github.com/ScarlettSamantha/OpenCiv/commit/aac6f36e9b4dd38b148c2153f554eadae83a6ad5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: fix links in readme ([`f9b8e71`](https://github.com/ScarlettSamantha/OpenCiv/commit/f9b8e71280fa782d5447c84fb24b3e7bc582cf6e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
