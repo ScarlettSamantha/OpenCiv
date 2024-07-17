@@ -6,6 +6,8 @@
 
 * :sparkles: finish basic implementation of resource system ([`764b458`](https://github.com/ScarlettSamantha/OpenCiv/commit/764b4583296c153c1746a8814c8114a4d5c94e13)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
+* :sparkles: add civics skeletons ([`26daad2`](https://github.com/ScarlettSamantha/OpenCiv/commit/26daad2d19e19407fcca74dbde37dd3a1e821519)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: rewrite pyload to be a lot more structured. ([`42d61e7`](https://github.com/ScarlettSamantha/OpenCiv/commit/42d61e78026c594381245575bed06f8da48b8d89)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
@@ -23,6 +25,10 @@
 * :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 ### Other
+
+* Merge remote-tracking branch &#39;origin/scarlett/feature/culture_sub_system&#39; ([`e0f1de9`](https://github.com/ScarlettSamantha/OpenCiv/commit/e0f1de9abd8bc61932c1159019db7e7d9f50f59d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :construction: add basic culture system and loading systems ([`0c81998`](https://github.com/ScarlettSamantha/OpenCiv/commit/0c819982d941208352fdbaa303fe49bd157d5127)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: added some documentation to the readme ([`c174c06`](https://github.com/ScarlettSamantha/OpenCiv/commit/c174c067d65de869c345446bca7f5c7c080fe5ed)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
