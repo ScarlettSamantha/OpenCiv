@@ -32,7 +32,11 @@ def main() -> int:
     violations = []
 
     for file_path in staged_files:
-        if file_path.endswith(".py") and not file_path.endswith("detect_debug_methods.py"):
+        if (
+            file_path.endswith(".py")
+            and not file_path.endswith("detect_debug_methods.py")
+            and os.path.exists(file_path)
+        ):
             violations.extend(scan_file(file_path))
 
     if violations:

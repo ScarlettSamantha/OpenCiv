@@ -22,6 +22,8 @@
 
 ### Other
 
+* :memo: added some documentation to the readme ([`c174c06`](https://github.com/ScarlettSamantha/OpenCiv/commit/c174c067d65de869c345446bca7f5c7c080fe5ed)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: add some documentation for the ideas behind gold and religion victory conditions ([`b3ab569`](https://github.com/ScarlettSamantha/OpenCiv/commit/b3ab56949eef0e1f6f6ca93c1226926fae15bef5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkle: add callback support in pyload baseclass detection ([`f10b634`](https://github.com/ScarlettSamantha/OpenCiv/commit/f10b634d22b95528169177088b006d2ffb70f8f9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

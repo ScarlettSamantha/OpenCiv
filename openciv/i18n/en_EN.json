@@ -628,8 +628,84 @@
     },
     "content": {
       "resources": {
+        "science": {
+          "name": "Science",
+          "description": "A science resource"
+        },
+        "production": {
+          "name": "Production",
+          "description": "A production resource"
+        },
+        "food": {
+          "name": "Food",
+          "description": "A food resource"
+        },
+        "gold": {
+          "name": "Gold",
+          "description": "A gold resource"
+        },
+        "culture": {
+          "name": "Culture",
+          "description": "A culture resource"
+        },
+        "faith": {
+          "name": "Faith",
+          "description": "A faith resource"
+        },
+        "happiness": {
+          "name": "Happiness",
+          "description": "A happiness resource"
+        },
+        "contentment": {
+          "name": "Contentment",
+          "description": "A contentment resource"
+        },
+        "angre": {
+          "name": "Angre",
+          "description": "An anger resource"
+        },
+        "revolt": {
+          "name": "Revolt",
+          "description": "A revolt resource"
+        },
+        "stability": {
+          "name": "Stability",
+          "description": "A stability resource"
+        },
+        "great_person_science": {
+          "name": "Great Person Science",
+          "description": "A great person science resource"
+        },
+        "great_person_production": {
+          "name": "Great Person Production",
+          "description": "A great person production resource"
+        },
+        "great_person_commerece": {
+          "name": "Great Person Commerece",
+          "description": "A great person gold resource"
+        },
+        "great_person_culture": {
+          "name": "Great Person Culture",
+          "description": "A great person culture resource"
+        },
+        "great_person_faith": {
+          "name": "Great Person Faith",
+          "description": "A great person faith resource"
+        },
+        "great_person_military": {
+          "name": "Great Person Military",
+          "description": "A great person military resource"
+        },
+        "great_person_hero": {
+          "name": "Great Person Hero",
+          "description": "A great person Hero resource"
+        },
         "core": {
           "types": {
+            "basic": {
+              "name": "Basic",
+              "description": "A basic game resource"
+            },
             "bonus": {
               "name": "Bonus",
               "description": "A bonus resource"
@@ -641,8 +717,13 @@
             "luxury": {
               "name": "Luxury",
               "description": "A luxury resource"
+            },
+            "mechanic": {
+              "name": "Mechanic",
+              "description": "Internal game mechanics resource"
             }
           },
+
           "bison": {
             "name": "Bison",
             "description": "A large wild animal of the bovine family, important for food and raw materials."

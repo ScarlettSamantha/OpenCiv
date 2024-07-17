@@ -1,4 +1,29 @@
 from openciv.engine.saving import SaveAble
+from openciv.gameplay.resource import Resource
+from openciv.gameplay.resources.core.basic.culture import Culture
+from openciv.gameplay.resources.core.basic.faith import Faith
+from openciv.gameplay.resources.core.basic.food import Food
+from openciv.gameplay.resources.core.basic.gold import Gold
+from openciv.gameplay.resources.core.basic.housing import Housing
+from openciv.gameplay.resources.core.basic.production import Production
+from openciv.gameplay.resources.core.basic.science import Science
+
+from openciv.gameplay.resources.core.mechanics.stability import Stability
+from openciv.gameplay.resources.core.mechanics.contentment import Contentment
+from openciv.gameplay.resources.core.mechanics.angre import Angre
+from openciv.gameplay.resources.core.mechanics.revolt import Revolt
+
+from openciv.gameplay.resources.core.mechanics.greats import (
+    GreatArtist,
+    GreatCommerece,
+    GreatMilitary,
+    GreatEngineer,
+    GreatScientist,
+    GreatHero,
+    GreatHoly,
+)
+
+from typing import Dict, ForwardRef, Tuple
 
 
 class TileYield(SaveAble):
@@ -34,30 +59,48 @@ class TileYield(SaveAble):
         super().__init__(*args, **kwargs)
         self._name = name
         self.mode = mode
-        self.gold = gold
-        self.production = production
-        self.science = science
-        self.food = food
-        self.culture = culture
-        self.housing = housing
-        self.faith = faith
+        self.gold: Gold = Gold(gold)
+        self.production: Production = Production(production)
+        self.science: Science = Science(science)
+        self.food: Food = Food(food)
+        self.culture: Culture = Culture(culture)
+        self.housing: Housing = Housing(housing)
+        self.faith: Faith = Faith(faith)
 
-        self.content = 0.0
-        self.angre = 0.0
-        self.revolt = 0.0
-        self.stability = 0.0
+        self.contentment: Contentment = Contentment(0.0)
+        self.angre: Angre = Angre(0.0)
+        self.revolt: Revolt = Revolt(0.0)
+        self.stability: Stability = Stability(0.0)
 
-        self.great_person_science = 0
-        self.great_person_production = 0
-        self.great_person_admiral = 0
-        self.great_person_marchant = 0
-        self.great_person_leader = 0
+        self.great_person_science: GreatScientist = GreatScientist(0.0)
+        self.great_person_production: GreatEngineer = GreatEngineer(0.0)
+        self.great_person_artist: GreatArtist = GreatArtist(0.0)
+        self.great_person_military: GreatMilitary = GreatMilitary(0.0)
+        self.great_person_commerce: GreatCommerece = GreatCommerece(0.0)
+        self.great_person_hero: GreatHero = GreatHero(0.0)
+        self.great_person_holy: GreatHoly = GreatHoly(0.0)
 
-        self._calculatable_properties = ("gold", "production", "science", "food", "culture", "housing", "faith")
+        self._calculatable_properties: Tuple[str] = (
+            "gold",
+            "production",
+            "science",
+            "food",
+            "culture",
+            "housing",
+            "faith",
+        )
+        self._mechanic_resources: Tuple[str] = ("contentment", "angre", "revolt", "stability")
+        self._calculatable_great_people: Tuple[str] = (
+            "science",
+            "production",
+            "artist",
+            "military",
+            "commerce",
+            "hero",
+            "holy",
+        )
 
-        self._population_modifiers = ("content", "angre", "revolt", "stability")
-
-        self._calculatable_great_people = ("science", "production", "admiral", "marchant", "leader")
+        self.other_mechnics: Dict[str, Resource] = {}
 
         self._setup_saveable()
 
@@ -87,33 +130,51 @@ class TileYield(SaveAble):
         for property in self.calculatable_properties():
             addative_value = getattr(tile_yield, property)
             old_value = getattr(self, property)
-            setattr(self, property, float(old_value + addative_value))
-        for property in self.population_modifiers():
+            setattr(self, property, old_value + addative_value)
+        for property in self.mechanic_resources():
             addative_value = getattr(tile_yield, property)
             old_value = getattr(self, property)
             # Ensure both values are floats
-            setattr(self, property, float(old_value + addative_value))
+            setattr(self, property, old_value + addative_value)
         for property in self.calculatable_great_people():
             addative_value = getattr(tile_yield, f"great_person_{property}")
             old_value = getattr(self, f"great_person_{property}")
-            setattr(self, f"great_person_{property}", float(old_value + addative_value))
+            setattr(self, f"great_person_{property}", old_value + addative_value)
+        for key, mechanic in self.other_mechnics.items():
+            # Property is not in the other object so no operation.
+            if key not in tile_yield.other_mechnics.keys():
+                continue
+            addative_value = getattr(tile_yield, mechanic)
+            self.other_mechnics[key] = tile_yield.other_mechnics[key] + addative_value
         return self
 
-    def multiply(self, tile_yield: "TileYield"):
+    def multiply(self, tile_yield: ForwardRef("TileYield")):
         for property in self.calculatable_properties():
             multiplicative_value = getattr(tile_yield, property)
-            if multiplicative_value != 0.0:
-                old_value = getattr(self, property)
-                new_value = float(old_value * multiplicative_value)
-                setattr(self, property, new_value)
-        for property in self.population_modifiers():
+            if (
+                multiplicative_value == 0.0
+                or multiplicative_value == 1.0
+                or multiplicative_value == -1.0
+                or multiplicative_value == 0
+            ):
+                continue
+            old_value = getattr(self, property)
+            new_value = old_value * multiplicative_value
+            setattr(self, property, new_value)
+        for property in self.mechanic_resources():
             multiplicative_value = getattr(tile_yield, property)
-            new_value = float(getattr(self, property) * multiplicative_value)
+            new_value = getattr(self, property) * multiplicative_value
             setattr(self, property, new_value)
         for property in self.calculatable_great_people():
             multiplicative_value = getattr(tile_yield, f"great_person_{property}")
-            new_value = float(getattr(self, f"great_person_{property}") * multiplicative_value)
+            new_value = getattr(self, f"great_person_{property}") * multiplicative_value
             setattr(self, f"great_person_{property}", new_value)
+        for key, mechanic in self.other_mechnics.items():
+            # Property is not in the other object so no operation.
+            if key not in tile_yield.other_mechnics.keys():
+                continue
+            multiplicative_value = getattr(tile_yield, mechanic)
+            self.other_mechnics[key] = tile_yield.other_mechnics[key] * multiplicative_value
         return self
 
     def calculate(self):
@@ -135,8 +196,8 @@ class TileYield(SaveAble):
     def calculatable_properties(self):
         return self._calculatable_properties
 
-    def population_modifiers(self):
-        return self._population_modifiers
+    def mechanic_resources(self):
+        return self._mechanic_resources
 
     def calculatable_great_people(self):
         return self._calculatable_great_people

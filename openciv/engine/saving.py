@@ -9,7 +9,6 @@ from openciv.engine.exceptions.save_exception import (
     SavePropertyIsObjectButNotSaveAbleException,
 )
 import inspect
-from abc import ABCMeta
 from logging import DEBUG
 from typing import Dict, List, TypeVar, Any, ForwardRef, Tuple, Callable
 
@@ -333,7 +332,7 @@ class SaveAble(Keyable, StateHashable):
         """
 
         module_name, class_name = data["__type"].rsplit(".", 1)
-        LogManager._get_instance().engine.debug(f"Creating object from data: {module_name}.{class_name}ms")
+        LogManager._get_instance().engine.debug(f"Creating object from data: {module_name}.{class_name}")
         _kwargs = (
             {}
             if "__instance_args" not in data or data["__instance_args"] is None

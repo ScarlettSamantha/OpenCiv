@@ -63,19 +63,18 @@ class TileYieldModifier:
         for _, _yield in self.get_addative().items():
             result = current + _yield
             current = result
-
         i = False
         for _, _yield in self.get_percentage_addative().items():
             i = True
-            percentage += _yield
+            percentage = percentage + _yield
+
         if i:
             current = current * percentage
-
         for _, _yield in self.get_percentage_cummulative().items():
-            current *= _yield
-
+            current = current * _yield
         if cache:
             self._calulated_cache = deepcopy(current)
+
         return current
 
     def __repr__(self):

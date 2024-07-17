@@ -18,7 +18,7 @@ from openciv.gameplay._units import Units
 from openciv.gameplay.votes import Votes
 from openciv.gameplay.citizens import Citizens
 
-from openciv.gameplay.resources import Resources
+from openciv.gameplay.resource import Resources
 from openciv.gameplay.greats import Greats
 
 from openciv.gameplay.trades import Trades

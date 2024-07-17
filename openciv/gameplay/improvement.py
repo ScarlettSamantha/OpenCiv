@@ -54,7 +54,7 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
         self.build_progress = None
         self.cost = TileYield.nullYield()
 
-        self._tile_yield_improvement: TileYield = TileYield.nullYield()
+        self.tile_yield_improvement: TileYield = TileYield.nullYield()
         self.effects: Effects = Effects(name)
         self.conditions: Conditions = Conditions()
 

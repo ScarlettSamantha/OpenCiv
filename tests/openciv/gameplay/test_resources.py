@@ -1,11 +1,11 @@
 import pytest
 from openciv.gameplay.resource import (
     Resource,
+    Resources,
     ResourceTypeBonus,
     ResourceTypeLuxury,
     ResourceTypeStrategic,
 )
-from openciv.gameplay.resources import Resources
 from openciv.engine.exceptions.resource_exception import ResourceTypeException
 from openciv.engine.managers.i18n import _t
 
@@ -18,7 +18,7 @@ def test_resource_initialization():
 
     assert resource.name == name
     assert resource.value == 100
-    assert resource.icon == icon
+    assert resource._icon == icon
     assert resource.description == description
     assert resource._type == ResourceTypeBonus
 
@@ -108,5 +108,5 @@ def test_loading_resources():
 
     pyload = PyLoad.load_classes("openciv/gameplay/resources/")
     for _, resource in pyload.items():
-        instance = resource()
+        instance = resource(0.0)
         assert isinstance(instance, Resource)
