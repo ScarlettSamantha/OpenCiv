@@ -162,3 +162,17 @@ def test_improvement_saveable():
     assert restored_improvement.name == "test_improvement"
     assert restored_improvement.effects.collection_name == "test_improvement"
     assert restored_improvement.get_state_hash() == improvement.get_state_hash()
+
+
+def test_saving_civic():
+    from openciv.gameplay.culture import Civic
+    from openciv.engine.managers.i18n import _t
+
+    civic = Civic("test.civic.key", _t("test_civic"), _t("test_civic_description"))
+    data = civic.saveable_data()
+
+    restored_civic = Civic.create_object_from_data(data)
+
+    assert restored_civic.name == _t("test_civic")
+    assert restored_civic.description == _t("test_civic_description")
+    assert restored_civic.get_state_hash() == civic.get_state_hash()

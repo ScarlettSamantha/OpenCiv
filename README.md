@@ -1,89 +1,22 @@
+
 # OpenCiv
-
-> 🚨 **Warning:** This project is in a very early development phase and is likely not functional yet. It may lack gameplay elements and is currently focused on testing raw system implementations.
-
-> ⚠️ **Danger:** This code is highly dynamic and can be vulnerable to arbitrary remote code execution if modified or when using downloaded files. Malicious actors could exploit this to run harmful code. Be extremely cautious and only load trusted, verified sources.
 
 ## Project
 
-- [Roadmap](meta/roadmap.md) - A rough roadmap (without timelines as this is a hobby project).
-- [Contribution Guide](CONTRIBUTE.md) - Guidelines for contributing.
-- [Changelog](CHANGELOG.md) - Automatically generated changelog.
+A rough roadmap (without times as this is a hobby) [Roadmap](meta/roadmap.md)
+
+The contribution guide van be found here [Contribute](CONTRIBUTE.md)
+
+The automatically generated changelog [Changelog](CHANGELOG.md)
 
 ## Game
 
-### Mechanics
-
-- [Ages](openciv/meta/ideas/gameplay/age.md)
-- [Climate](openciv/meta/ideas/gameplay/climate.md)
-- [Disease](openciv/meta/ideas/gameplay/disease.md)
-- [Yields](openciv/meta/ideas/gameplay/yields.md)
-- [Movement](openciv/meta/ideas/gameplay/mechanics/movement.md)
-- [Religion](openciv/meta/ideas/gameplay/mechanics/religion.md)
-
-### Wonders
-
-- [Early](openciv/meta/ideas/wonders/early.md)
-- [Mid](openciv/meta/ideas/wonders/mid.md)
-- [Late](openciv/meta/ideas/wonders/late.md)
-
-### Greats
-
-- [Artists](openciv/meta/ideas/gameplay/greats/artist.md)
-- [Commercial](openciv/meta/ideas/gameplay/greats/commercial.md)
-- [Folk Hero](openciv/meta/ideas/gameplay/greats/hero.md)
-- [Holy](openciv/meta/ideas/gameplay/greats/faith.md)
-- [Generals & Admirals](openciv/meta/ideas/gameplay/greats/military.md)
-- [Engineers](openciv/meta/ideas/gameplay/greats/production.md)
-- [Scientists](openciv/meta/ideas/gameplay/greats/science.md)
-
-### Resources
-
-| Resource      | Type       | Code                                    | Docs                                          |
-|---------------|------------|-----------------------------------------|-----------------------------------------------|
-| Bison         | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](resources/core/bonus/bison.py)              | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Cheese        | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/cheese.py)                | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Copper        | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/copper.py)                | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Cows          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/cows.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Deer          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/deer.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Ember         | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/ember.py)                 | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Fish          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/fish.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Furs          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/furs.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Glass         | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/glass.py)                 | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Hardwood      | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/hardwood.py)              | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Mercury       | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/murcury.py)               | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Obsidian      | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/obsidian.py)              | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Pigs          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/pigs.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Potato        | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/potato.py)                | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Rice          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/rice.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Salt          | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/salt.py)                  | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Tin           | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/tin.py)                   | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Whales        | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/whales.py)                | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Wheat         | [Bonus](meta/ideas/gameplay/resources/BONUS.md)     | [Code](ources/core/bonus/wheat.py)                 | [Docs](meta/ideas/gameplay/resources/BONUS.md)        |
-| Cats          | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](ources/core/luxury/cats.py)                 | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Diamonds      | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](ources/core/luxury/diamonds.py)             | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Dogs          | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](ources/core/luxury/dogs.py)                 | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Gold          | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](ources/core/luxury/gold.py)                 | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Ivory         | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](ources/core/luxury/ivory.py)                | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Jade          | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](resources/core/luxury/jade.py)              | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Marble        | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](resources/core/luxury/marble.py)            | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Silver        | [Luxury](meta/ideas/gameplay/resources/LUXURY.md)   | [Code](resources/core/luxury/silver.py)            | [Docs](meta/ideas/gameplay/resources/LUXURY.md)       |
-| Aluminium     | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/aluminium.py)  | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Coal          | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/coal.py)       | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Gas           | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/gas.py)        | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Graphite      | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/graphite.py)   | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Horses        | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/horses.py)     | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Oil           | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/oil.py)        | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Rare Earth Metals | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/rare_earth_metals.py) | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-| Uranium       | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/uranium.py) | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-
-
-### Civilizations
+### Civs
 
 | Civilization | Wikipedia Link | Code |
 |--------------|----------------|------|
 | [Akkadian](openciv/meta/ideas/civs/akkadian.md) | [Akkadian Empire](https://en.wikipedia.org/wiki/Akkadian_Empire) | [code](openciv/gameplay/civilization/akkadian.py) |
-| [American Empire](openciv/meta/ideas/civs/american_empire.md) | [American Empire](https://en.wikipedia.org/wiki/American_Empire) | [code](openciv/gameplay/civilization/american_empire.py) |
+| [American_Empire](openciv/meta/ideas/civs/american_empire.md) | [American Empire](https://en.wikipedia.org/wiki/American_Empire) | [code](openciv/gameplay/civilization/american_empire.py) |
 | [Byzantine](openciv/meta/ideas/civs/byzantine.md) | [Byzantine Empire](https://en.wikipedia.org/wiki/Byzantine_Empire) | [code](openciv/gameplay/civilization/byzantine.py) |
 | [China](openciv/meta/ideas/civs/china.md) | [History of China](https://en.wikipedia.org/wiki/History_of_China) | [code](openciv/gameplay/civilization/china.py) |
 | [Egypt](openciv/meta/ideas/civs/egypt.md) | [Ancient Egypt](https://en.wikipedia.org/wiki/Ancient_Egypt) | [code](openciv/gameplay/civilization/egypt.py) |
@@ -93,7 +26,7 @@
 | [Greece](openciv/meta/ideas/civs/greece.md) | [Ancient Greece](https://en.wikipedia.org/wiki/Ancient_Greece) | [code](openciv/gameplay/civilization/greece.py) |
 | [Japan](openciv/meta/ideas/civs/japan.md) | [History of Japan](https://en.wikipedia.org/wiki/History_of_Japan) | [code](openciv/gameplay/civilization/japan.py) |
 | [Korea](openciv/meta/ideas/civs/korea.md) | [History of Korea](https://en.wikipedia.org/wiki/History_of_Korea) | [code](openciv/gameplay/civilization/korea.py) |
-| [Low Countries](openciv/meta/ideas/civs/low_countries.md) | [Low Countries](https://en.wikipedia.org/wiki/Low_Countries) | [code](openciv/gameplay/civilization/low_countries.py) |
+| [Low_Countries](openciv/meta/ideas/civs/low_countries.md) | [Low Countries](https://en.wikipedia.org/wiki/Low_Countries) | [code](openciv/gameplay/civilization/low_countries.py) |
 | [Ottoman](openciv/meta/ideas/civs/ottoman.md) | [Ottoman Empire](https://en.wikipedia.org/wiki/Ottoman_Empire) | [code](openciv/gameplay/civilization/ottoman.py) |
 | [Persia](openciv/meta/ideas/civs/persia.md) | [Persian Empire](https://en.wikipedia.org/wiki/Persian_Empire) | [code](openciv/gameplay/civilization/persia.py) |
 | [Rome](openciv/meta/ideas/civs/rome.md) | [Ancient Rome](https://en.wikipedia.org/wiki/Ancient_Rome) | [code](openciv/gameplay/civilization/rome.py) |
@@ -101,69 +34,172 @@
 | [USSR](openciv/meta/ideas/civs/ussr.md) | [Soviet Union](https://en.wikipedia.org/wiki/Soviet_Union) | [code](openciv/gameplay/civilization/ussr.py) |
 | [Vikings](openciv/meta/ideas/civs/vikings.md) | [Vikings](https://en.wikipedia.org/wiki/Vikings) | [code](openciv/gameplay/civilization/vikings.py) |
 
+
 ### Leaders
 
 | Leader | Wikipedia Link | Code |
 |--------|----------------|------|
-| [Abraham Lincoln](openciv/meta/ideas/leaders/abraham_lincoln.md) | [Abraham Lincoln (American Empire)](https://en.wikipedia.org/wiki/Abraham_Lincoln) | [code](openciv/gameplay/leaders/abraham_lincoln.py) |
+| [Abraham_Lincoln](openciv/meta/ideas/leaders/abraham_lincoln.md) | [Abraham Lincoln (American Empire)](https://en.wikipedia.org/wiki/Abraham_Lincoln) | [code](openciv/gameplay/leaders/abraham_lincoln.py) |
 | [Alexander](openciv/meta/ideas/leaders/alexander.md) | [Alexander the Great (Greece)](https://en.wikipedia.org/wiki/Alexander_the_Great) | [code](openciv/gameplay/leaders/alexander.py) |
 | [Ambiorix](openciv/meta/ideas/leaders/ambiorix.md) | [Ambiorix (Low Countries)](https://en.wikipedia.org/wiki/Ambiorix) | [code](openciv/gameplay/leaders/ambiorix.py) |
-| [Atatürk](openciv/meta/ideas/leaders/attaturk.md) | [Mustafa Kemal Atatürk (Ottoman)](https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk) | [code](openciv/gameplay/leaders/attaturk.py) |
+| [Attaturk](openciv/meta/ideas/leaders/attaturk.md) | [Mustafa Kemal Atatürk (Ottoman)](https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk) | [code](openciv/gameplay/leaders/attaturk.py) |
 | [Augustus](openciv/meta/ideas/leaders/augustus.md) | [Augustus (Rome)](https://en.wikipedia.org/wiki/Augustus) | [code](openciv/gameplay/leaders/augustus.py) |
 | [Caesar](openciv/meta/ideas/leaders/caesar.md) | [Julius Caesar (Rome)](https://en.wikipedia.org/wiki/Julius_Caesar) | [code](openciv/gameplay/leaders/caesar.py) |
 | [Charlemagne](openciv/meta/ideas/leaders/charlemagne.md) | [Charlemagne (France)](https://en.wikipedia.org/wiki/Charlemagne) | [code](openciv/gameplay/leaders/charlemagne.py) |
-| [Charles III](openciv/meta/ideas/leaders/charles_iii.md) | [Charles III (Spain)](https://en.wikipedia.org/wiki/Charles_III_of_Spain) | [code](openciv/gameplay/leaders/charles_iii.py) |
-| [Charles V](openciv/meta/ideas/leaders/charles_v.md) | [Charles V (Holy Roman Empire)](https://en.wikipedia.org/wiki/Charles_V,_Holy_Roman_Emperor) | [code](openciv/gameplay/leaders/charles_v.py) |
+| [Charles_III](openciv/meta/ideas/leaders/charles_iii.md) | [Charles III (Spain)](https://en.wikipedia.org/wiki/Charles_III_of_Spain) | [code](openciv/gameplay/leaders/charles_iii.py) |
+| [Charles_V](openciv/meta/ideas/leaders/charles_v.md) | [Charles V (Holy Roman Empire)](https://en.wikipedia.org/wiki/Charles_V,_Holy_Roman_Emperor) | [code](openciv/gameplay/leaders/charles_v.py) |
 | [Cleopatra](openciv/meta/ideas/leaders/cleopatra.md) | [Cleopatra (Egypt)](https://en.wikipedia.org/wiki/Cleopatra) | [code](openciv/gameplay/leaders/cleopatra.py) |
 | [Cnut](openciv/meta/ideas/leaders/cnut.md) | [Cnut the Great (Vikings)](https://en.wikipedia.org/wiki/Cnut) | [code](openciv/gameplay/leaders/cnut.py) |
 | [Constantine](openciv/meta/ideas/leaders/constantine.md) | [Constantine the Great (Byzantine)](https://en.wikipedia.org/wiki/Constantine_the_Great) | [code](openciv/gameplay/leaders/constantine.py) |
 | [Darius](openciv/meta/ideas/leaders/darius.md) | [Darius the Great (Persia)](https://en.wikipedia.org/wiki/Darius_the_Great) | [code](openciv/gameplay/leaders/darius.py) |
-| [De Gaulle](openciv/meta/ideas/leaders/de_gaulle.md) | [Charles de Gaulle (France)](https://en.wikipedia.org/wiki/Charles_de_Gaulle) | [code](openciv/gameplay/leaders/de_gaulle.py) |
+| [De_Gaulle](openciv/meta/ideas/leaders/de_gaulle.md) | [Charles de Gaulle (France)](https://en.wikipedia.org/wiki/Charles_de_Gaulle) | [code](openciv/gameplay/leaders/de_gaulle.py) |
 | [Elizabeth](openciv/meta/ideas/leaders/elizabeth.md) | [Elizabeth I (England)](https://en.wikipedia.org/wiki/Elizabeth_I) | [code](openciv/gameplay/leaders/elizabeth.py) |
 | [FDR](openciv/meta/ideas/leaders/fdr.md) | [Franklin D. Roosevelt (American Empire)](https://en.wikipedia.org/wiki/Franklin_D._Roosevelt) | [code](openciv/gameplay/leaders/fdr.py) |
-| [Giovanni di Bicci de' Medici](openciv/meta/ideas/leaders/goi.md) | [Giovanni di Bicci de' Medici (Italy)](https://en.wikipedia.org/wiki/Giovanni_di_Bicci_de%27_Medici) | [code](openciv/gameplay/leaders/goi.py) |
-| [Gorbachev](openciv/meta/ideas/leaders/gorbashov.md) | [Mikhail Gorbachev (USSR)](https://en.wikipedia.org/wiki/Mikhail_Gorbachev) | [code](openciv/gameplay/leaders/gorbashov.py) |
+| [Goi](openciv/meta/ideas/leaders/goi.md) | [Giovanni di Bicci de' Medici (Italy)](https://en.wikipedia.org/wiki/Giovanni_di_Bicci_de%27_Medici) | [code](openciv/gameplay/leaders/goi.py) |
+| [Gorbashov](openciv/meta/ideas/leaders/gorbashov.md) | [Mikhail Gorbachev (USSR)](https://en.wikipedia.org/wiki/Mikhail_Gorbachev) | [code](openciv/gameplay/leaders/gorbashov.py) |
 | [Herald](openciv/meta/ideas/leaders/herald.md) | [Herald of the Great Danelaw (Vikings)](https://en.wikipedia.org/wiki/Herald_of_the_Great_Danelaw) | [code](openciv/gameplay/leaders/herald.py) |
 | [Isabella](openciv/meta/ideas/leaders/isabella.md) | [Isabella I of Castile (Spain)](https://en.wikipedia.org/wiki/Isabella_I_of_Castile) | [code](openciv/gameplay/leaders/isabella.py) |
 | [James](openciv/meta/ideas/leaders/james.md) | [James VI and I (England)](https://en.wikipedia.org/wiki/James_VI_and_I) | [code](openciv/gameplay/leaders/james.py) |
-| [Joan van Oldenbarnevelt](openciv/meta/ideas/leaders/joan_van_oldenbarnevelt.md) | [Johan van Oldenbarnevelt (Low Countries)](https://en.wikipedia.org/wiki/Johan_van_Oldenbarnevelt) | [code](openciv/gameplay/leaders/joan_van_oldenbarnevelt.py) |
+| [Joan_van_Oldenbarnevelt](openciv/meta/ideas/leaders/joan_van_oldenbarnevelt.md) | [Johan van Oldenbarnevelt (Low Countries)](https://en.wikipedia.org/wiki/Johan_van_Oldenbarnevelt) | [code](openciv/gameplay/leaders/joan_van_oldenbarnevelt.py) |
 | [Justinian](openciv/meta/ideas/leaders/justinian.md) | [Justinian I (Byzantine)](https://en.wikipedia.org/wiki/Justinian_I) | [code](openciv/gameplay/leaders/justinian.py) |
 | [Kamehameha](openciv/meta/ideas/leaders/kamehameha.md) | [Kamehameha I (Hawaii)](https://en.wikipedia.org/wiki/Kamehameha_I) | [code](openciv/gameplay/leaders/kamehameha.py) |
 | [Kublai](openciv/meta/ideas/leaders/kublai.md) | [Kublai Khan (Mongolia)](https://en.wikipedia.org/wiki/Kublai_Khan) | [code](openciv/gameplay/leaders/kublai.py) |
 | [Lenin](openciv/meta/ideas/leaders/lenin.md) | [Vladimir Lenin (USSR)](https://en.wikipedia.org/wiki/Vladimir_Lenin) | [code](openciv/gameplay/leaders/lenin.py) |
 | [Leonidas](openciv/meta/ideas/leaders/leonidas.md) | [Leonidas I (Greece)](https://en.wikipedia.org/wiki/Leonidas_I) | [code](openciv/gameplay/leaders/leonidas.py) |
-| [Louis XIV](openciv/meta/ideas/leaders/louis.md) | [Louis XIV (France)](https://en.wikipedia.org/wiki/Louis_XIV) | [code](openciv/gameplay/leaders/louis.py) |
+| [Louis](openciv/meta/ideas/leaders/louis.md) | [Louis XIV (France)](https://en.wikipedia.org/wiki/Louis_XIV) | [code](openciv/gameplay/leaders/louis.py) |
 | [Meiji](openciv/meta/ideas/leaders/meiji.md) | [Meiji Emperor (Japan)](https://en.wikipedia.org/wiki/Meiji_(emperor)) | [code](openciv/gameplay/leaders/meiji.py) |
 | [Napoleon](openciv/meta/ideas/leaders/napoleon.md) | [Napoleon Bonaparte (France)](https://en.wikipedia.org/wiki/Napoleon) | [code](openciv/gameplay/leaders/napoleon.py) |
-| [Naram-Sin](openciv/meta/ideas/leaders/naram_sin.md) | [Naram-Sin (Akkadian)](https://en.wikipedia.org/wiki/Naram-Sin_of_Akkad) | [code](openciv/gameplay/leaders/naram_sin.py) |
+| [Naram_Sin](openciv/meta/ideas/leaders/naram_sin.md) | [Naram-Sin (Akkadian)](https://en.wikipedia.org/wiki/Naram-Sin_of_Akkad) | [code](openciv/gameplay/leaders/naram_sin.py) |
 | [Nebuchadnezzar](openciv/meta/ideas/leaders/nebuchadnezzar.md) | [Nebuchadnezzar II (Babylon)](https://en.wikipedia.org/wiki/Nebuchadnezzar_II) | [code](openciv/gameplay/leaders/nebuchadnezzar.py) |
 | [Otto](openciv/meta/ideas/leaders/otto.md) | [Otto von Bismarck (Germany)](https://en.wikipedia.org/wiki/Otto_von_Bismarck) | [code](openciv/gameplay/leaders/otto.py) |
 | [Peter](openciv/meta/ideas/leaders/peter.md) | [Peter the Great (Russia)](https://en.wikipedia.org/wiki/Peter_the_Great) | [code](openciv/gameplay/leaders/peter.py) |
-| [Philip II](openciv/meta/ideas/leaders/phillip.md) | [Philip II of Spain (Spain)](https://en.wikipedia.org/wiki/Philip_II_of_Spain) | [code](openciv/gameplay/leaders/phillip.py) |
-| [Qin Shi Huang](openciv/meta/ideas/leaders/qin_shi_huang.md) | [Qin Shi Huang (China)](https://en.wikipedia.org/wiki/Qin_Shi_Huang) | [code](openciv/gameplay/leaders/qin_shi_huang.py) |
+| [Phillip](openciv/meta/ideas/leaders/phillip.md) | [Philip II of Spain (Spain)](https://en.wikipedia.org/wiki/Philip_II_of_Spain) | [code](openciv/gameplay/leaders/phillip.py) |
+| [Qin_Shi_Huang](openciv/meta/ideas/leaders/qin_shi_huang.md) | [Qin Shi Huang (China)](https://en.wikipedia.org/wiki/Qin_Shi_Huang) | [code](openciv/gameplay/leaders/qin_shi_huang.py) |
 | [Ragnar](openciv/meta/ideas/leaders/ragnar.md) | [Ragnar Lodbrok (Vikings)](https://en.wikipedia.org/wiki/Ragnar_Lodbrok) | [code](openciv/gameplay/leaders/ragnar.py) |
 | [Ramesses](openciv/meta/ideas/leaders/ramesses.md) | [Ramesses II (Egypt)](https://en.wikipedia.org/wiki/Ramesses_II) | [code](openciv/gameplay/leaders/ramesses.py) |
 | [Sargon](openciv/meta/ideas/leaders/sargon.md) | [Sargon of Akkad (Akkadian)](https://en.wikipedia.org/wiki/Sargon_of_Akkad) | [code](openciv/gameplay/leaders/sargon.py) |
-| [Sejong](openciv/meta/ideas/leaders/sejon.md) | [Sejong the Great (Korea)](https://en.wikipedia.org/wiki/Sejong_the_Great) | [code](openciv/gameplay/leaders/sejon.py) |
-| [Sitting Bull](openciv/meta/ideas/leaders/sitting_bull.md) | [Sitting Bull (Sioux)](https://en.wikipedia.org/wiki/Sitting_Bull) | [code](openciv/gameplay/leaders/sitting_bull.py) |
+| [Sejon](openciv/meta/ideas/leaders/sejon.md) | [Sejong the Great (Korea)](https://en.wikipedia.org/wiki/Sejong_the_Great) | [code](openciv/gameplay/leaders/sejon.py) |
+| [Sitting_Bull](openciv/meta/ideas/leaders/sitting_bull.md) | [Sitting Bull (Sioux)](https://en.wikipedia.org/wiki/Sitting_Bull) | [code](openciv/gameplay/leaders/sitting_bull.py) |
 | [Suleiman](openciv/meta/ideas/leaders/suleiman.md) | [Suleiman the Magnificent (Ottoman)](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent) | [code](openciv/gameplay/leaders/suleiman.py) |
 | [Taisho](openciv/meta/ideas/leaders/taisho.md) | [Taishō Emperor (Japan)](https://en.wikipedia.org/wiki/Taish%C5%8D_Emperor) | [code](openciv/gameplay/leaders/taisho.py) |
 | [Tokugawa](openciv/meta/ideas/leaders/tokugawa.md) | [Tokugawa Ieyasu (Japan)](https://en.wikipedia.org/wiki/Tokugawa_Ieyasu) | [code](openciv/gameplay/leaders/tokugawa.py) |
 | [Victoria](openciv/meta/ideas/leaders/victoria.md) | [Queen Victoria (England)](https://en.wikipedia.org/wiki/Queen_Victoria) | [code](openciv/gameplay/leaders/victoria.py) |
 | [Wilhelm](openciv/meta/ideas/leaders/wilhelm.md) | [Wilhelm II (Germany)](https://en.wikipedia.org/wiki/Wilhelm_II,_German_Emperor) | [code](openciv/gameplay/leaders/wilhelm.py) |
-| [William the Silent](openciv/meta/ideas/leaders/willem.md) | [William the Silent (Low Countries)](https://en.wikipedia.org/wiki/William_the_Silent) | [code](openciv/gameplay/leaders/willem.py) |
-| [Wu Zetian](openciv/meta/ideas/leaders/wu_zetian.md) | [Wu Zetian (China)](https://en.wikipedia.org/wiki/Wu_Zetian) | [code](openciv/gameplay/leaders/wu_zetian.py) |
+| [Willem](openciv/meta/ideas/leaders/willem.md) | [William the Silent (Low Countries)](https://en.wikipedia.org/wiki/William_the_Silent) | [code](openciv/gameplay/leaders/willem.py) |
+| [Wu_Zetian](openciv/meta/ideas/leaders/wu_zetian.md) | [Wu Zetian (China)](https://en.wikipedia.org/wiki/Wu_Zetian) | [code](openciv/gameplay/leaders/wu_zetian.py) |
 | [Xerxes](openciv/meta/ideas/leaders/xerxes.md) | [Xerxes I (Persia)](https://en.wikipedia.org/wiki/Xerxes_I) | [code](openciv/gameplay/leaders/xerxes.py) |
 
-### Win Conditions
+### Techs
 
-| Condition | Mechanic | Meta-Docs | Code |
-|-----------|----------|-----------|------|
-| [Alliance](openciv/meta/ideas/gameplay/victory/alliance.md) | State Building/Diplomacy | [alliance.md](openciv/meta/ideas/gameplay/victory/alliance.md) | code |
-| [Commerce](openciv/meta/ideas/gameplay/victory/gold.md) | Gold/Corporations/Trade | [gold.md](openciv/meta/ideas/gameplay/victory/gold.md) | code |
-| [Military](openciv/meta/ideas/gameplay/victory/military.md) | War/Military | [military.md](openciv/meta/ideas/gameplay/victory/military.md) | code |
-| [Religion](openciv/meta/ideas/gameplay/victory/religion.md) | Religion/War/Spy/Instability | [religion.md](openciv/meta/ideas/gameplay/victory/religion.md) | code |
-| [Science](openciv/meta/ideas/gameplay/victory/science.md) | State Building/Diplomacy | [science.md](openciv/meta/ideas/gameplay/victory/science.md) | code |
-| [Culture](openciv/meta/ideas/gameplay/victory/culture.md) | Culture/Tourism/Archaeology/Diplomacy | [culture.md](openciv/meta/ideas/gameplay/victory/culture.md) | code |
+### Civics
 
-> ⚖️ **Disclaimer:** This game and its associated code are provided for educational and informational purposes only. The author assumes no responsibility for any errors, omissions, or inaccuracies in the code. Users are strongly advised to thoroughly review, test, the code. The author makes no guarantees regarding the security, reliability, or performance of the game. By using this code, you agree that the author shall not be held liable for any damages, losses, or other consequences arising from its use, misuse, or inability to use the game, including but not limited to any unintended or harmful actions caused by the game. Use this game at your own risk and ensure that all necessary precautions are taken.
+| Civic                      | Tree                                           | Docs                                              | Code                                                   | Requires                                   |
+|----------------------------|------------------------------------------------|---------------------------------------------------|--------------------------------------------------------|--------------------------------------------|
+| Individual Rights          | [Liberalism](meta/ideas/civics/subtrees/liberalism.md)     | [Docs](meta/ideas/civics/individual_rights.md)             | [Code](openciv/gameplay/cultures/core/individual_rights.py)        |                                            |
+| Free Market                | [Liberalism](meta/ideas/civics/subtrees/liberalism.md)     | [Docs](meta/ideas/civics/free_market.md)                   | [Code](openciv/gameplay/cultures/core/free_market.py)              | [Individual Rights](meta/ideas/civics/individual_rights.md)        |
+| Representative Democracy   | [Liberalism](meta/ideas/civics/subtrees/liberalism.md)     | [Docs](meta/ideas/civics/representative_democracy.md)      | [Code](openciv/gameplay/cultures/core/representative_democracy.py) | [Individual Rights](meta/ideas/civics/individual_rights.md)        |
+| Social Welfare             | [Liberalism](meta/ideas/civics/subtrees/liberalism.md)     | [Docs](meta/ideas/civics/social_welfare.md)                | [Code](openciv/gameplay/cultures/core/social_welfare.py)           | [Free Market](meta/ideas/civics/free_market.md), [Representative Democracy](meta/ideas/civics/representative_democracy.md) |
+| Civil Liberties            | [Liberalism](meta/ideas/civics/subtrees/liberalism.md)     | [Docs](meta/ideas/civics/civil_liberties.md)               | [Code](openciv/gameplay/cultures/core/civil_liberties.py)          | [Individual Rights](meta/ideas/civics/individual_rights.md)        |
+| Global Cooperation         | [Liberalism](meta/ideas/civics/subtrees/liberalism.md)     | [Docs](meta/ideas/civics/global_cooperation.md)            | [Code](openciv/gameplay/cultures/core/global_cooperation.py)       | [Representative Democracy](meta/ideas/civics/representative_democracy.md), [Civil Liberties](meta/ideas/civics/civil_liberties.md) |
+| Patriotic Education        | [Nationalism](meta/ideas/civics/subtrees/nationalism.md)   | [Docs](meta/ideas/civics/patriotic_education.md)           | [Code](openciv/gameplay/cultures/core/patriotic_education.py)      |                                            |
+| Cultural Preservation      | [Nationalism](meta/ideas/civics/subtrees/nationalism.md)   | [Docs](meta/ideas/civics/cultural_preservation.md)         | [Code](openciv/gameplay/cultures/core/cultural_preservation.py)    | [Patriotic Education](meta/ideas/civics/patriotic_education.md)    |
+| Economic Nationalism       | [Nationalism](meta/ideas/civics/subtrees/nationalism.md)   | [Docs](meta/ideas/civics/economic_nationalism.md)          | [Code](openciv/gameplay/cultures/core/economic_nationalism.py)     | [Patriotic Education](meta/ideas/civics/patriotic_education.md)    |
+| Military Strength          | [Nationalism](meta/ideas/civics/subtrees/nationalism.md)   | [Docs](meta/ideas/civics/military_strength.md)             | [Code](openciv/gameplay/cultures/core/military_strength.py)        | [Cultural Preservation](meta/ideas/civics/cultural_preservation.md) |
+| National Sovereignty       | [Nationalism](meta/ideas/civics/subtrees/nationalism.md)   | [Docs](meta/ideas/civics/national_sovereignty.md)          | [Code](openciv/gameplay/cultures/core/national_sovereignty.py)     | [Economic Nationalism](meta/ideas/civics/economic_nationalism.md), [Military Strength](meta/ideas/civics/military_strength.md) |
+| National Unity             | [Nationalism](meta/ideas/civics/subtrees/nationalism.md)   | [Docs](meta/ideas/civics/national_unity.md)                | [Code](openciv/gameplay/cultures/core/national_unity.py)           | [National Sovereignty](meta/ideas/civics/national_sovereignty.md) |
+| Collective Ownership       | [Socialism](meta/ideas/civics/subtrees/socialism.md)       | [Docs](meta/ideas/civics/collective_ownership.md)          | [Code](openciv/gameplay/cultures/core/collective_ownership.py)     |                                            |
+| Workers' Rights            | [Socialism](meta/ideas/civics/subtrees/socialism.md)       | [Docs](meta/ideas/civics/workers_rights.md)                | [Code](openciv/gameplay/cultures/core/workers_rights.py)           | [Collective Ownership](meta/ideas/civics/collective_ownership.md)  |
+| Universal Healthcare       | [Socialism](meta/ideas/civics/subtrees/socialism.md)       | [Docs](meta/ideas/civics/universal_healthcare.md)          | [Code](openciv/gameplay/cultures/core/universal_healthcare.py)     | [Workers' Rights](meta/ideas/civics/workers_rights.md)             |
+| Free Education             | [Socialism](meta/ideas/civics/subtrees/socialism.md)       | [Docs](meta/ideas/civics/free_education.md)                | [Code](openciv/gameplay/cultures/core/free_education.py)           | [Collective Ownership](meta/ideas/civics/collective_ownership.md)  |
+| Social Equality            | [Socialism](meta/ideas/civics/subtrees/socialism.md)       | [Docs](meta/ideas/civics/social_equality.md)               | [Code](openciv/gameplay/cultures/core/social_equality.py)          | [Universal Healthcare](meta/ideas/civics/universal_healthcare.md), [Free Education](meta/ideas/civics/free_education.md) |
+| State Planning             | [Socialism](meta/ideas/civics/subtrees/socialism.md)       | [Docs](meta/ideas/civics/state_planning.md)                | [Code](openciv/gameplay/cultures/core/state_planning.py)           | [Social Equality](meta/ideas/civics/social_equality.md)            |
+| Totalitarian Control       | [Fascism](meta/ideas/civics/subtrees/fascism.md)           | [Docs](meta/ideas/civics/totalitarian_control.md)          | [Code](openciv/gameplay/cultures/core/totalitarian_control.py)     |                                            |
+| State Propaganda           | [Fascism](meta/ideas/civics/subtrees/fascism.md)           | [Docs](meta/ideas/civics/state_propaganda.md)              | [Code](openciv/gameplay/cultures/core/state_propaganda.py)         | [Totalitarian Control](meta/ideas/civics/totalitarian_control.md)  |
+| Militarization             | [Fascism](meta/ideas/civics/subtrees/fascism.md)           | [Docs](meta/ideas/civics/militarization.md)                | [Code](openciv/gameplay/cultures/core/militarization.py)           | [State Propaganda](meta/ideas/civics/state_propaganda.md)          |
+| Corporate State            | [Fascism](meta/ideas/civics/subtrees/fascism.md)           | [Docs](meta/ideas/civics/corporate_state.md)               | [Code](openciv/gameplay/cultures/core/corporate_state.py)          | [Militarization](meta/ideas/civics/militarization.md)              |
+| National Purity            | [Fascism](meta/ideas/civics/subtrees/fascism.md)           | [Docs](meta/ideas/civics/national_purity.md)               | [Code](openciv/gameplay/cultures/core/national_purity.py)          | [Corporate State](meta/ideas/civics/corporate_state.md)            |
+| Leader Worship             | [Fascism](meta/ideas/civics/subtrees/fascism.md)           | [Docs](meta/ideas/civics/leader_worship.md)                | [Code](openciv/gameplay/cultures/core/leader_worship.py)           | [National Purity](meta/ideas/civics/national_purity.md)            |
+| Class Abolition            | [Communism](meta/ideas/civics/subtrees/communism.md)       | [Docs](meta/ideas/civics/class_abolition.md)               | [Code](openciv/gameplay/cultures/core/class_abolition.py)          |                                            |
+| Communal Living            | [Communism](meta/ideas/civics/subtrees/communism.md)       | [Docs](meta/ideas/civics/communal_living.md)               | [Code](openciv/gameplay/cultures/core/communal_living.py)          | [Class Abolition](meta/ideas/civics/class_abolition.md)            |
+| Centralized Economy        | [Communism](meta/ideas/civics/subtrees/communism.md)       | [Docs](meta/ideas/civics/centralized_economy.md)           | [Code](openciv/gameplay/cultures/core/centralized_economy.py)      | [Class Abolition](meta/ideas/civics/class_abolition.md)            |
+| Proletarian Dictatorship   | [Communism](meta/ideas/civics/subtrees/communism.md)       | [Docs](meta/ideas/civics/proletarian_dictatorship.md)      | [Code](openciv/gameplay/cultures/core/proletarian_dictatorship.py) | [Communal Living](meta/ideas/civics/communal_living.md)            |
+| Collectivized Agriculture  | [Communism](meta/ideas/civics/subtrees/communism.md)       | [Docs](meta/ideas/civics/collectivized_agriculture.md)     | [Code](openciv/gameplay/cultures/core/collectivized_agriculture.py) | [Centralized Economy](meta/ideas/civics/centralized_economy.md), [Proletarian Dictatorship](meta/ideas/civics/proletarian_dictatorship.md) |
+| International Solidarity   | [Communism](meta/ideas/civics/subtrees/communism.md)       | [Docs](meta/ideas/civics/international_solidarity.md)      | [Code](openciv/gameplay/cultures/core/international_solidarity.py) | [Collectivized Agriculture](meta/ideas/civics/collectivized_agriculture.md) |
+| Private Property           | [Capitalism](meta/ideas/civics/subtrees/capitalism.md)     | [Docs](meta/ideas/civics/private_property.md)              | [Code](openciv/gameplay/cultures/core/private_property.py)         |                                            |
+| Entrepreneurship           | [Capitalism](meta/ideas/civics/subtrees/capitalism.md)     | [Docs](meta/ideas/civics/entrepreneurship.md)              | [Code](openciv/gameplay/cultures/core/entrepreneurship.py)         | [Private Property](meta/ideas/civics/private_property.md)          |
+| Free Trade                 | [Capitalism](meta/ideas/civics/subtrees/capitalism.md)     | [Docs](meta/ideas/civics/free_trade.md)                    | [Code](openciv/gameplay/cultures/core/free_trade.py)               | [Private Property](meta/ideas/civics/private_property.md)          |
+| Minimal Regulation         | [Capitalism](meta/ideas/civics/subtrees/capitalism.md)     | [Docs](meta/ideas/civics/minimal_regulation.md)            | [Code](openciv/gameplay/cultures/core/minimal_regulation.py)       | [Entrepreneurship](meta/ideas/civics/entrepreneurship.md), [Free Trade](meta/ideas/civics/free_trade.md) |
+| Capital Accumulation       | [Capitalism](meta/ideas/civics/subtrees/capitalism.md)     | [Docs](meta/ideas/civics/capital_accumulation.md)          | [Code](openciv/gameplay/cultures/core/capital_accumulation.py)     | [Minimal Regulation](meta/ideas/civics/minimal_regulation.md)      |
+| Market Competition         | [Capitalism](meta/ideas/civics/subtrees/capitalism.md)     | [Docs](meta/ideas/civics/market_competition.md)            | [Code](openciv/gameplay/cultures/core/market_competition.py)       | [Capital Accumulation](meta/ideas/civics/capital_accumulation.md)  |
+| Electoral Process          | [Democracy](meta/ideas/civics/subtrees/democracy.md)       | [Docs](meta/ideas/civics/electoral_process.md)             | [Code](openciv/gameplay/cultures/core/electoral_process.py)        |                                            |
+| Rule of Law                | [Democracy](meta/ideas/civics/subtrees/democracy.md)       | [Docs](meta/ideas/civics/rule_of_law.md)                   | [Code](openciv/gameplay/cultures/core/rule_of_law.py)              | [Electoral Process](meta/ideas/civics/electoral_process.md)        |
+| Separation of Powers       | [Democracy](meta/ideas/civics/subtrees/democracy.md)       | [Docs](meta/ideas/civics/separation_of_powers.md)          | [Code](openciv/gameplay/cultures/core/separation_of_powers.py)     | [Rule of Law](meta/ideas/civics/rule_of_law.md)                    |
+| Human Rights               | [Democracy](meta/ideas/civics/subtrees/democracy.md)       | [Docs](meta/ideas/civics/human_rights.md)                  | [Code](openciv/gameplay/cultures/core/human_rights.py)             | [Rule of Law](meta/ideas/civics/rule_of_law.md)                    |
+| Participatory Governance   | [Democracy](meta/ideas/civics/subtrees/democracy.md)       | [Docs](meta/ideas/civics/participatory_governance.md)      | [Code](openciv/gameplay/cultures/core/participatory_governance.py) | [Separation of Powers](meta/ideas/civics/separation_of_powers.md), [Human Rights](meta/ideas/civics/human_rights.md) |
+| Transparent Government     | [Democracy](meta/ideas/civics/subtrees/democracy.md)       | [Docs](meta/ideas/civics/transparent_government.md)        | [Code](openciv/gameplay/cultures/core/transparent_government.py)   | [Participatory Governance](meta/ideas/civics/participatory_governance.md) |
+| Hereditary Rule            | [Monarchy](meta/ideas/civics/subtrees/monarchy.md)         | [Docs](meta/ideas/civics/hereditary_rule.md)               | [Code](openciv/gameplay/cultures/core/hereditary_rule.py)          |                                            |
+| Divine Right               | [Monarchy](meta/ideas/civics/subtrees/monarchy.md)         | [Docs](meta/ideas/civics/divine_right.md)                  | [Code](openciv/gameplay/cultures/core/divine_right.py)             | [Hereditary Rule](meta/ideas/civics/hereditary_rule.md)            |
+| Nobility System            | [Monarchy](meta/ideas/civics/subtrees/monarchy.md)         | [Docs](meta/ideas/civics/nobility_system.md)               | [Code](openciv/gameplay/cultures/core/nobility_system.py)          | [Divine Right](meta/ideas/civics/divine_right.md)                  |
+| Feudal Obligations         | [Monarchy](meta/ideas/civics/subtrees/monarchy.md)         | [Docs](meta/ideas/civics/feudal_obligations.md)            | [Code](openciv/gameplay/cultures/core/feudal_obligations.py)       | [Nobility System](meta/ideas/civics/nobility_system.md)            |
+| Centralized Authority      | [Monarchy](meta/ideas/civics/subtrees/monarchy.md)         | [Docs](meta/ideas/civics/centralized_authority.md)         | [Code](openciv/gameplay/cultures/core/centralized_authority.py)    | [Feudal Obligations](meta/ideas/civics/feudal_obligations.md)      |
+| Royal Patronage            | [Monarchy](meta/ideas/civics/subtrees/monarchy.md)         | [Docs](meta/ideas/civics/royal_patronage.md)               | [Code](openciv/gameplay/cultures/core/royal_patronage.py)          | [Centralized Authority](meta/ideas/civics/centralized_authority.md) |
+| Religious Law              | [Theocracy](meta/ideas/civics/subtrees/theocracy.md)       | [Docs](meta/ideas/civics/religious_law.md)                 | [Code](openciv/gameplay/cultures/core/religious_law.py)            |                                            |
+| Clerical Rule              | [Theocracy](meta/ideas/civics/subtrees/theocracy.md)       | [Docs](meta/ideas/civics/clerical_rule.md)                 | [Code](openciv/gameplay/cultures/core/clerical_rule.py)            | [Religious Law](meta/ideas/civics/religious_law.md)                |
+| Moral Policing             | [Theocracy](meta/ideas/civics/subtrees/theocracy.md)       | [Docs](meta/ideas/civics/moral_policing.md)                | [Code](openciv/gameplay/cultures/core/moral_policing.py)           | [Religious Law](meta/ideas/civics/religious_law.md)                |
+| Faith-Based Education      | [Theocracy](meta/ideas/civics/subtrees/theocracy.md)       | [Docs](meta/ideas/civics/faith_based_education.md)         | [Code](openciv/gameplay/cultures/core/faith_based_education.py)    | [Clerical Rule](meta/ideas/civics/clerical_rule.md), [Moral Policing](meta/ideas/civics/moral_policing.md) |
+| Divine Governance          | [Theocracy](meta/ideas/civics/subtrees/theocracy.md)       | [Docs](meta/ideas/civics/divine_governance.md)             | [Code](openciv/gameplay/cultures/core/divine_governance.py)        | [Faith-Based Education](meta/ideas/civics/faith_based_education.md) |
+| Religious Unity            | [Theocracy](meta/ideas/civics/subtrees/theocracy.md)       | [Docs](meta/ideas/civics/religious_unity.md)               | [Code](openciv/gameplay/cultures/core/religious_unity.py)          | [Divine Governance](meta/ideas/civics/divine_governance.md)        |
+| Autocratic Rule            | [Dictatorship](meta/ideas/civics/subtrees/dictatorship.md) | [Docs](meta/ideas/civics/autocratic_rule.md)               | [Code](openciv/gameplay/cultures/core/autocratic_rule.py)          |                                            |
+| State Surveillance         | [Dictatorship](meta/ideas/civics/subtrees/dictatorship.md) | [Docs](meta/ideas/civics/state_surveillance.md)            | [Code](openciv/gameplay/cultures/core/state_surveillance.py)       | [Autocratic Rule](meta/ideas/civics/autocratic_rule.md)            |
+| Censorship                 | [Dictatorship](meta/ideas/civics/subtrees/dictatorship.md) | [Docs](meta/ideas/civics/censorship.md)                    | [Code](openciv/gameplay/cultures/core/censorship.py)               | [Autocratic Rule](meta/ideas/civics/autocratic_rule.md)            |
+| Repression                 | [Dictatorship](meta/ideas/civics/subtrees/dictatorship.md) | [Docs](meta/ideas/civics/repression.md)                    | [Code](openciv/gameplay/cultures/core/repression.py)               | [State Surveillance](meta/ideas/civics/state_surveillance.md), [Censorship](meta/ideas/civics/censorship.md) |
+| Propaganda                 | [Dictatorship](meta/ideas/civics/subtrees/dictatorship.md) | [Docs](meta/ideas/civics/propaganda.md)                    | [Code](openciv/gameplay/cultures/core/propaganda.py)               | [Repression](meta/ideas/civics/repression.md)                      |
+| Centralized Power          | [Dictatorship](meta/ideas/civics/subtrees/dictatorship.md) | [Docs](meta/ideas/civics/centralized_power.md)             | [Code](openciv/gameplay/cultures/core/centralized_power.py)        | [Propaganda](meta/ideas/civics/propaganda.md)                      |
+| Elite Rule                 | [Oligarchy](meta/ideas/civics/subtrees/oligarchy.md)       | [Docs](meta/ideas/civics/elite_rule.md)                    | [Code](openciv/gameplay/cultures/core/elite_rule.py)               |                                            |
+| Economic Control           | [Oligarchy](meta/ideas/civics/subtrees/oligarchy.md)       | [Docs](meta/ideas/civics/economic_control.md)              | [Code](openciv/gameplay/cultures/core/economic_control.py)         | [Elite Rule](meta/ideas/civics/elite_rule.md)                      |
+| Limited Participation      | [Oligarchy](meta/ideas/civics/subtrees/oligarchy.md)       | [Docs](meta/ideas/civics/limited_participation.md)         | [Code](openciv/gameplay/cultures/core/limited_participation.py)    | [Elite Rule](meta/ideas/civics/elite_rule.md)                      |
+| Wealth Accumulation        | [Oligarchy](meta/ideas/civics/subtrees/oligarchy.md)       | [Docs](meta/ideas/civics/wealth_accumulation.md)           | [Code](openciv/gameplay/cultures/core/wealth_accumulation.py)      | [Economic Control](meta/ideas/civics/economic_control.md), [Limited Participation](meta/ideas/civics/limited_participation.md) |
+| Exclusive Networks         | [Oligarchy](meta/ideas/civics/subtrees/oligarchy.md)       | [Docs](meta/ideas/civics/exclusive_networks.md)            | [Code](openciv/gameplay/cultures/core/exclusive_networks.py)       | [Wealth Accumulation](meta/ideas/civics/wealth_accumulation.md)    |
+| Political Manipulation     | [Oligarchy](meta/ideas/civics/subtrees/oligarchy.md)       | [Docs](meta/ideas/civics/political_manipulation.md)        | [Code](openciv/gameplay/cultures/core/political_manipulation.py)   | [Exclusive Networks](meta/ideas/civics/exclusive_networks.md)      |
+| Self-Governance            | [Anarchy](meta/ideas/civics/subtrees/anarchy.md)           | [Docs](meta/ideas/civics/self_governance.md)               | [Code](openciv/gameplay/cultures/core/self_governance.py)          |                                            |
+| Mutual Aid                 | [Anarchy](meta/ideas/civics/subtrees/anarchy.md)           | [Docs](meta/ideas/civics/mutual_aid.md)                    | [Code](openciv/gameplay/cultures/core/mutual_aid.py)               | [Self-Governance](meta/ideas/civics/self_governance.md)            |
+| Direct Action              | [Anarchy](meta/ideas/civics/subtrees/anarchy.md)           | [Docs](meta/ideas/civics/direct_action.md)                 | [Code](openciv/gameplay/cultures/core/direct_action.py)            | [Self-Governance](meta/ideas/civics/self_governance.md)            |
+| Decentralization           | [Anarchy](meta/ideas/civics/subtrees/anarchy.md)           | [Docs](meta/ideas/civics/decentralization.md)              | [Code](openciv/gameplay/cultures/core/decentralization.py)         | [Mutual Aid](meta/ideas/civics/mutual_aid.md), [Direct Action](meta/ideas/civics/direct_action.md) |
+| Voluntary Associations     | [Anarchy](meta/ideas/civics/subtrees/anarchy.md)           | [Docs](meta/ideas/civics/voluntary_associations.md)        | [Code](openciv/gameplay/cultures/core/voluntary_associations.py)   | [Decentralization](meta/ideas/civics/decentralization.md)          |
+| Autonomy                   | [Anarchy](meta/ideas/civics/subtrees/anarchy.md)           | [Docs](meta/ideas/civics/autonomy.md)                      | [Code](openciv/gameplay/cultures/core/autonomy.py)                 | [Voluntary Associations](meta/ideas/civics/voluntary_associations.md) |
+| Corporate Influence        | [Corporatocracy](meta/ideas/civics/subtrees/corporatocracy.md) | [Docs](meta/ideas/civics/corporate_influence.md)      | [Code](openciv/gameplay/cultures/core/corporate_influence.py)      |                                            |
+| Lobbying Power             | [Corporatocracy](meta/ideas/civics/subtrees/corporatocracy.md) | [Docs](meta/ideas/civics/lobbying_power.md)          | [Code](openciv/gameplay/cultures/core/lobbying_power.py)           | [Corporate Influence](meta/ideas/civics/corporate_influence.md)    |
+| Business Privileges        | [Corporatocracy](meta/ideas/civics/subtrees/corporatocracy.md) | [Docs](meta/ideas/civics/business_privileges.md)     | [Code](openciv/gameplay/cultures/core/business_privileges.py)      | [Corporate Influence](meta/ideas/civics/corporate_influence.md)    |
+| Economic Focus             | [Corporatocracy](meta/ideas/civics/subtrees/corporatocracy.md) | [Docs](meta/ideas/civics/economic_focus.md)          | [Code](openciv/gameplay/cultures/core/economic_focus.py)           | [Lobbying Power](meta/ideas/civics/lobbying_power.md), [Business Privileges](meta/ideas/civics/business_privileges.md) |
+| Regulatory Capture         | [Corporatocracy](meta/ideas/civics/subtrees/corporatocracy.md) | [Docs](meta/ideas/civics/regulatory_capture.md)      | [Code](openciv/gameplay/cultures/core/regulatory_capture.py)       | [Economic Focus](meta/ideas/civics/economic_focus.md)              |
+| Corporate Governance       | [Corporatocracy](meta/ideas/civics/subtrees/corporatocracy.md) | [Docs](meta/ideas/civics/corporate_governance.md)    | [Code](openciv/gameplay/cultures/core/corporate_governance.py)     | [Regulatory Capture](meta/ideas/civics/regulatory_capture.md)      |
+| Forced Labor               | [Slavery](meta/ideas/civics/subtrees/slavery.md)           | [Docs](meta/ideas/civics/forced_labor.md)                  | [Code](openciv/gameplay/cultures/core/forced_labor.py)             |                                            |
+| Ownership Rights           | [Slavery](meta/ideas/civics/subtrees/slavery.md)           | [Docs](meta/ideas/civics/ownership_rights.md)              | [Code](openciv/gameplay/cultures/core/ownership_rights.py)         | [Forced Labor](meta/ideas/civics/forced_labor.md)                  |
+| Labor Exploitation         | [Slavery](meta/ideas/civics/subtrees/slavery.md)           | [Docs](meta/ideas/civics/labor_exploitation.md)             | [Code](openciv/gameplay/cultures/core/labor_exploitation.py)       | [Forced Labor](meta/ideas/civics/forced_labor.md)                  |
+| Social Hierarchy           | [Slavery](meta/ideas/civics/subtrees/slavery.md)           | [Docs](meta/ideas/civics/social_hierarchy.md)              | [Code](openciv/gameplay/cultures/core/social_hierarchy.py)         | [Ownership Rights](meta/ideas/civics/ownership_rights.md), [Labor Exploitation](meta/ideas/civics/labor_exploitation.md) |
+| Oppression                 | [Slavery](meta/ideas/civics/subtrees/slavery.md)           | [Docs](meta/ideas/civics/oppression.md)                    | [Code](openciv/gameplay/cultures/core/oppression.py)               | [Social Hierarchy](meta/ideas/civics/social_hierarchy.md)          |
+| Economic Dependence        | [Slavery](meta/ideas/civics/subtrees/slavery.md)           | [Docs](meta/ideas/civics/economic_dependence.md)           | [Code](openciv/gameplay/cultures/core/economic_dependence.py)      | [Oppression](meta/ideas/civics/oppression.md)                      |
+| Religious Discipline       | [Puritanism](meta/ideas/civics/subtrees/puritanism.md)     | [Docs](meta/ideas/civics/religious_discipline.md)          | [Code](openciv/gameplay/cultures/core/religious_discipline.py)     |                                            |
+| Moral Purity               | [Puritanism](meta/ideas/civics/subtrees/puritanism.md)     | [Docs](meta/ideas/civics/moral_purity.md)                  | [Code](openciv/gameplay/cultures/core/moral_purity.py)             | [Religious Discipline](meta/ideas/civics/religious_discipline.md)  |
+| Community Surveillance     | [Puritanism](meta/ideas/civics/subtrees/puritanism.md)     | [Docs](meta/ideas/civics/community_surveillance.md)        | [Code](openciv/gameplay/cultures/core/community_surveillance.py)   | [Religious Discipline](meta/ideas/civics/religious_discipline.md)  |
+| Simplified Living          | [Puritanism](meta/ideas/civics/subtrees/puritanism.md)     | [Docs](meta/ideas/civics/simplified_living.md)             | [Code](openciv/gameplay/cultures/core/simplified_living.py)        | [Moral Purity](meta/ideas/civics/moral_purity.md), [Community Surveillance](meta/ideas/civics/community_surveillance.md) |
+| Religious Governance       | [Puritanism](meta/ideas/civics/subtrees/puritanism.md)     | [Docs](meta/ideas/civics/religious_governance.md)          | [Code](openciv/gameplay/cultures/core/religious_governance.py)     | [Simplified Living](meta/ideas/civics/simplified_living.md)        |
+| Moral Legislation          | [Puritanism](meta/ideas/civics/subtrees/puritanism.md)     | [Docs](meta/ideas/civics/moral_legislation.md)             | [Code](openciv/gameplay/cultures/core/moral_legislation.py)        | [Religious Governance](meta/ideas/civics/religious_governance.md)  |
+| Expert Governance          | [Technocracy](meta/ideas/civics/subtrees/technocracy.md)   | [Docs](meta/ideas/civics/expert_governance.md)             | [Code](openciv/gameplay/cultures/core/expert_governance.py)        |                                            |
+| Scientific Management      | [Technocracy](meta/ideas/civics/subtrees/technocracy.md)   | [Docs](meta/ideas/civics/scientific_management.md)         | [Code](openciv/gameplay/cultures/core/scientific_management.py)    | [Expert Governance](meta/ideas/civics/expert_governance.md)        |
+| Innovation Focus           | [Technocracy](meta/ideas/civics/subtrees/technocracy.md)   | [Docs](meta/ideas/civics/innovation_focus.md)              | [Code](openciv/gameplay/cultures/core/innovation_focus.py)         | [Expert Governance](meta/ideas/civics/expert_governance.md)        |
+| Data-Driven Policy         | [Technocracy](meta/ideas/civics/subtrees/technocracy.md)   | [Docs](meta/ideas/civics/data_driven_policy.md)            | [Code](openciv/gameplay/cultures/core/data_driven_policy.py)       | [Scientific Management](meta/ideas/civics/scientific_management.md), [Innovation Focus](meta/ideas/civics/innovation_focus.md) |
+| Efficient Administration   | [Technocracy](meta/ideas/civics/subtrees/technocracy.md)   | [Docs](meta/ideas/civics/efficient_administration.md)      | [Code](openciv/gameplay/cultures/core/efficient_administration.py) | [Data-Driven Policy](meta/ideas/civics/data_driven_policy.md)      |
+| Meritocracy                | [Technocracy](meta/ideas/civics/subtrees/technocracy.md)   | [Docs](meta/ideas/civics/meritocracy.md)                   | [Code](openciv/gameplay/cultures/core/meritocracy.py)              | [Efficient Administration](meta/ideas/civics/efficient_administration.md) |
+| Reason and Logic           | [Rationalism](meta/ideas/civics/subtrees/rationalism.md)   | [Docs](meta/ideas/civics/reason_and_logic.md)              | [Code](openciv/gameplay/cultures/core/reason_and_logic.py)         |                                            |
+| Scientific Inquiry         | [Rationalism](meta/ideas/civics/subtrees/rationalism.md)   | [Docs](meta/ideas/civics/scientific_inquiry.md)            | [Code](openciv/gameplay/cultures/core/scientific_inquiry.py)       | [Reason and Logic](meta/ideas/civics/reason_and_logic.md)          |
+| Secular Governance         | [Rationalism](meta/ideas/civics/subtrees/rationalism.md)   | [Docs](meta/ideas/civics/secular_governance.md)            | [Code](openciv/gameplay/cultures/core/secular_governance.py)       | [Reason and Logic](meta/ideas/civics/reason_and_logic.md)          |
+| Education Reform           | [Rationalism](meta/ideas/civics/subtrees/rationalism.md)   | [Docs](meta/ideas/civics/education_reform.md)              | [Code](openciv/gameplay/cultures/core/education_reform.py)         | [Scientific Inquiry](meta/ideas/civics/scientific_inquiry.md), [Secular Governance](meta/ideas/civics/secular_governance.md) |
+| Evidence-Based Policy      | [Rationalism](meta/ideas/civics/subtrees/rationalism.md)   | [Docs](meta/ideas/civics/evidence_based_policy.md)         | [Code](openciv/gameplay/cultures/core/evidence_based_policy.py)    | [Education Reform](meta/ideas/civics/education_reform.md)          |
+| Philosophical Discourse    | [Rationalism](meta/ideas/civics/subtrees/rationalism.md)   | [Docs](meta/ideas/civics/philosophical_discourse.md)       | [Code](openciv/gameplay/cultures/core/philosophical_discourse.py)  | [Evidence-Based Policy](meta/ideas/civics/evidence_based_policy.md) |
+| Cooperative Governance     | [Unionism](meta/ideas/civics/subtrees/unionism.md)         | [Docs](meta/ideas/civics/cooperative_governance.md)        | [Code](openciv/gameplay/cultures/core/cooperative_governance.py)   |                                            |
+| Shared Sovereignty         | [Unionism](meta/ideas/civics/subtrees/unionism.md)         | [Docs](meta/ideas/civics/shared_sovereignty.md)            | [Code](openciv/gameplay/cultures/core/shared_sovereignty.py)       | [Cooperative Governance](meta/ideas/civics/cooperative_governance.md) |
+| Economic Integration       | [Unionism](meta/ideas/civics/subtrees/unionism.md)         | [Docs](meta/ideas/civics/economic_integration.md)          | [Code](openciv/gameplay/cultures/core/economic_integration.py)     | [Shared Sovereignty](meta/ideas/civics/shared_sovereignty.md)      |
+| Cultural Exchange          | [Unionism](meta/ideas/civics/subtrees/unionism.md)         | [Docs](meta/ideas/civics/cultural_exchange.md)             | [Code](openciv/gameplay/cultures/core/cultural_exchange.py)        | [Economic Integration](meta/ideas/civics/economic_integration.md)  |
+| Collective Security        | [Unionism](meta/ideas/civics/subtrees/unionism.md)         | [Docs](meta/ideas/civics/collective_security.md)           | [Code](openciv/gameplay/cultures/core/collective_security.py)      | [Cultural Exchange](meta/ideas/civics/cultural_exchange.md)        |
+| Unified Policy             | [Unionism](meta/ideas/civics/subtrees/unionism.md)         | [Docs](meta/ideas/civics/unified_policy.md)                | [Code](openciv/gameplay/cultures/core/unified_policy.py)           | [Collective Security](meta/ideas/civics/collective_security.md)    |

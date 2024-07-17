@@ -22,9 +22,9 @@ class MaintenanceActions:
             for log_file in log_files:
                 try:
                     os.remove(log_file)
-                    print(f"Removed {log_file}")
+                    print(f"Removed {log_file}")  # noqa
                 except Exception as e:
-                    print(f"Failed to remove {log_file}: {e}")
+                    print(f"Failed to remove {log_file}: {e}")  # noqa
 
     def remove_pycache(self, **kwargs) -> NoReturn:
         """
@@ -39,7 +39,157 @@ class MaintenanceActions:
                     counter += 1
                     dir_path = os.path.join(root, dir_name)
                     shutil.rmtree(dir_path)
-        print(f"Removed {counter} __pycache__ directories.")
+        print(f"Removed {counter} __pycache__ directories.")  # noqa
+
+    def generate_classes(self, **kwargs) -> NoReturn:
+        import os
+
+        # List of all civics with their names
+        civics = [
+            "IndividualRights",
+            "FreeMarket",
+            "RepresentativeDemocracy",
+            "SocialWelfare",
+            "CivilLiberties",
+            "GlobalCooperation",
+            "PatrioticEducation",
+            "CulturalPreservation",
+            "EconomicNationalism",
+            "MilitaryStrength",
+            "NationalSovereignty",
+            "NationalUnity",
+            "CollectiveOwnership",
+            "WorkersRights",
+            "UniversalHealthcare",
+            "FreeEducation",
+            "SocialEquality",
+            "StatePlanning",
+            "TotalitarianControl",
+            "StatePropaganda",
+            "Militarization",
+            "CorporateState",
+            "NationalPurity",
+            "LeaderWorship",
+            "ClassAbolition",
+            "CommunalLiving",
+            "CentralizedEconomy",
+            "ProletarianDictatorship",
+            "CollectivizedAgriculture",
+            "InternationalSolidarity",
+            "PrivateProperty",
+            "Entrepreneurship",
+            "FreeTrade",
+            "MinimalRegulation",
+            "CapitalAccumulation",
+            "MarketCompetition",
+            "ElectoralProcess",
+            "RuleOfLaw",
+            "SeparationOfPowers",
+            "HumanRights",
+            "ParticipatoryGovernance",
+            "TransparentGovernment",
+            "HereditaryRule",
+            "DivineRight",
+            "NobilitySystem",
+            "FeudalObligations",
+            "CentralizedAuthority",
+            "RoyalPatronage",
+            "ReligiousLaw",
+            "ClericalRule",
+            "MoralPolicing",
+            "FaithBasedEducation",
+            "DivineGovernance",
+            "ReligiousUnity",
+            "AutocraticRule",
+            "StateSurveillance",
+            "Censorship",
+            "Repression",
+            "Propaganda",
+            "CentralizedPower",
+            "EliteRule",
+            "EconomicControl",
+            "LimitedParticipation",
+            "WealthAccumulation",
+            "ExclusiveNetworks",
+            "PoliticalManipulation",
+            "SelfGovernance",
+            "MutualAid",
+            "DirectAction",
+            "Decentralization",
+            "VoluntaryAssociations",
+            "Autonomy",
+            "CorporateInfluence",
+            "LobbyingPower",
+            "BusinessPrivileges",
+            "EconomicFocus",
+            "RegulatoryCapture",
+            "CorporateGovernance",
+            "ForcedLabor",
+            "OwnershipRights",
+            "LaborExploitation",
+            "SocialHierarchy",
+            "Oppression",
+            "EconomicDependence",
+            "ReligiousDiscipline",
+            "MoralPurity",
+            "CommunitySurveillance",
+            "SimplifiedLiving",
+            "ReligiousGovernance",
+            "MoralLegislation",
+            "ExpertGovernance",
+            "ScientificManagement",
+            "InnovationFocus",
+            "DataDrivenPolicy",
+            "EfficientAdministration",
+            "Meritocracy",
+            "ReasonAndLogic",
+            "ScientificInquiry",
+            "SecularGovernance",
+            "EducationReform",
+            "EvidenceBasedPolicy",
+            "PhilosophicalDiscourse",
+            "CooperativeGovernance",
+            "SharedSovereignty",
+            "EconomicIntegration",
+            "CulturalExchange",
+            "CollectiveSecurity",
+            "UnifiedPolicy",
+        ]
+
+        # Function to convert camel case to snake case
+        def camel_to_snake(name):
+            return "".join(["_" + i.lower() if i.isupper() else i for i in name]).lstrip("_")
+
+        # Directory to create files in
+        directory = "openciv/gameplay/cultures/core"
+
+        # Ensure the directory exists
+        os.makedirs(directory, exist_ok=True)
+
+        # Template for the civic class
+        template = """from openciv.gameplay.culture import Civic
+        from openciv.engine.managers.i18n import _t
+
+
+        class {civic}(Civic):
+            def __init__(self, *args, **kwargs):
+                super().__init__(
+                    key="core.culture.civics.{civic_key}",
+                    name=_t("content.culture.civics.core.{civic_key}.name"),
+                    description=_t("content.culture.civics.core.{civic_key}.description"),
+                    *args,
+                    **kwargs,
+                )
+        """
+
+        # Create an empty Python file for each civic using the template
+        for civic in civics:
+            civic_snake_case = camel_to_snake(civic)
+            filename = f"{directory}/{civic_snake_case}.py"
+            with open(filename, "w") as file:
+                file.write(template.format(civic=civic, civic_key=civic_snake_case))
+
+        print("Civic files have been created with the template.")  # noqa
 
 
 def parse_args() -> argparse.Namespace:
@@ -66,7 +216,7 @@ def main() -> None:
         method = getattr(actions, action_name)
         method(**kwargs)
     else:
-        print(f"Function {action_name} not found.")
+        print(f"Function {action_name} not found.")  # noqa
 
 
 if __name__ == "__main__":

@@ -882,6 +882,530 @@
           }
         }
       },
+      "culture": {
+        "tree": {
+          "core": {
+            "name": "Core",
+            "description": "The core cultural advancements"
+          }
+        },
+        "subtrees": {
+          "core": {
+            "liberalism": {
+              "name": "Liberalism",
+              "description": "Political philosophy focused on individual freedoms and equality."
+            },
+            "nationalism": {
+              "name": "Nationalism",
+              "description": "Ideology emphasizing loyalty and devotion to a nation."
+            },
+            "socialism": {
+              "name": "Socialism",
+              "description": "System advocating for collective or governmental ownership of production."
+            },
+            "fascism": {
+              "name": "Fascism",
+              "description": "Authoritarian ideology centered on nationalism and dictatorial power."
+            },
+            "communism": {
+              "name": "Communism",
+              "description": "Ideology for a classless system where resources are shared equally."
+            },
+            "capitalism": {
+              "name": "Capitalism",
+              "description": "Economic system based on private ownership and free markets."
+            },
+            "democracy": {
+              "name": "Democracy",
+              "description": "System of government by the whole population, usually through elected representatives."
+            },
+            "monarchy": {
+              "name": "Monarchy",
+              "description": "Government system with a hereditary ruler, such as a king or queen."
+            },
+            "theocracy": {
+              "name": "Theocracy",
+              "description": "Government system in which priests rule in the name of a deity."
+            },
+            "dictatorship": {
+              "name": "Dictatorship",
+              "description": "Authoritarian government where power is concentrated in one leader."
+            },
+            "oligarchy": {
+              "name": "Oligarchy",
+              "description": "Power structure where a small number of people control the country."
+            },
+            "anarchy": {
+              "name": "Anarchy",
+              "description": "Absence of government and absolute freedom of individuals."
+            },
+            "corporatocracy": {
+              "name": "Corporatocracy",
+              "description": "Control of a state or organization by large corporations."
+            },
+            "slavery": {
+              "name": "Slavery",
+              "description": "System where individuals are owned and forced to work by others."
+            },
+            "puritanism": {
+              "name": "Puritanism",
+              "description": "Movement advocating for strict religious discipline and moral purity."
+            },
+            "technocracy": {
+              "name": "Technocracy",
+              "description": "Government or control by technical experts and professionals."
+            },
+            "rationalism": {
+              "name": "Rationalism",
+              "description": "Philosophical belief in reason as the primary source of knowledge."
+            },
+            "unionism": {
+              "name": "Unionism",
+              "description": "Ideology focused on unifying diverse states or cultures through democratic processes."
+            },
+            "federalism": {
+              "name": "Federalism",
+              "description": "System of government where power is divided between a central authority and constituent units."
+            }
+          }
+        },
+        "civics": {
+          "core": {
+            "individual_rights": {
+              "name": "Individual Rights",
+              "description": "Guarantees personal freedoms and protections under the law."
+            },
+            "free_market": {
+              "name": "Free Market",
+              "description": "Encourages economic growth through unrestricted trade and competition."
+            },
+            "representative_democracy": {
+              "name": "Representative Democracy",
+              "description": "Citizens elect representatives to make decisions on their behalf."
+            },
+            "social_welfare": {
+              "name": "Social Welfare",
+              "description": "Provides support and services to ensure the well-being of all citizens."
+            },
+            "civil_liberties": {
+              "name": "Civil Liberties",
+              "description": "Freedom of thought and expression equality for all."
+            },
+            "global_cooperation": {
+              "name": "Global Cooperation",
+              "description": "Fosters international alliances and collaborative efforts."
+            },
+            "patriotic_education": {
+              "name": "Patriotic Education",
+              "description": "Promotes national pride and loyalty through education."
+            },
+            "cultural_preservation": {
+              "name": "Cultural Preservation",
+              "description": "Protects and promotes the unique heritage and traditions of the nation."
+            },
+            "economic_nationalism": {
+              "name": "Economic Nationalism",
+              "description": "Prioritizes national economic interests and self-sufficiency."
+            },
+            "military_strength": {
+              "name": "Military Strength",
+              "description": "Builds a powerful and well-equipped military force."
+            },
+            "national_sovereignty": {
+              "name": "National Sovereignty",
+              "description": "Asserts the nation's independence and control over its affairs."
+            },
+            "national_unity": {
+              "name": "National Unity",
+              "description": "Promotes a strong, cohesive national identity and solidarity."
+            },
+            "collective_ownership": {
+              "name": "Collective Ownership",
+              "description": "Resources and means of production are owned and managed by the community."
+            },
+            "workers_rights": {
+              "name": "Workers' Rights",
+              "description": "Ensures fair labor practices and protections for workers."
+            },
+            "universal_healthcare": {
+              "name": "Universal Healthcare",
+              "description": "Provides healthcare services to all citizens free of charge."
+            },
+            "free_education": {
+              "name": "Free Education",
+              "description": "Guarantees access to education for all citizens."
+            },
+            "social_equality": {
+              "name": "Social Equality",
+              "description": "Strives to eliminate social disparities and promote equal opportunities."
+            },
+            "state_planning": {
+              "name": "State Planning",
+              "description": "Centralized management of the economy and resources."
+            },
+            "totalitarian_control": {
+              "name": "Totalitarian Control",
+              "description": "Centralized authority with strict control over all aspects of life."
+            },
+            "state_propaganda": {
+              "name": "State Propaganda",
+              "description": "Uses media to influence public perception and promote state policies."
+            },
+            "militarization": {
+              "name": "Militarization",
+              "description": "Focuses on military expansion and readiness."
+            },
+            "corporate_state": {
+              "name": "Corporate State",
+              "description": "Government closely collaborates with large corporations."
+            },
+            "national_purity": {
+              "name": "National Purity",
+              "description": "Promotes cultural homogeneity and traditional values."
+            },
+            "leader_worship": {
+              "name": "Leader Worship",
+              "description": "Cultivates reverence and loyalty towards the nation's leader."
+            },
+            "class_abolition": {
+              "name": "Class Abolition",
+              "description": "Eliminates class distinctions to create a classless society."
+            },
+            "communal_living": {
+              "name": "Communal Living",
+              "description": "Promotes shared living and communal resource management."
+            },
+            "centralized_economy": {
+              "name": "Centralized Economy",
+              "description": "Economic decisions and planning are managed by the state."
+            },
+            "proletarian_dictatorship": {
+              "name": "Proletarian Dictatorship",
+              "description": "Working class holds political power and governs the state."
+            },
+            "collectivized_agriculture": {
+              "name": "Collectivized Agriculture",
+              "description": "Farmland and resources are collectively managed by the community."
+            },
+            "international_solidarity": {
+              "name": "International Solidarity",
+              "description": "Promotes unity and cooperation among workers worldwide."
+            },
+            "private_property": {
+              "name": "Private Property",
+              "description": "Emphasizes individual ownership and control of property."
+            },
+            "entrepreneurship": {
+              "name": "Entrepreneurship",
+              "description": "Encourages innovation and business creation."
+            },
+            "free_trade": {
+              "name": "Free Trade",
+              "description": "Eliminates trade barriers to promote global commerce."
+            },
+            "minimal_regulation": {
+              "name": "Minimal Regulation",
+              "description": "Reduces government intervention in economic activities."
+            },
+            "capital_accumulation": {
+              "name": "Capital Accumulation",
+              "description": "Focuses on generating wealth and investment opportunities."
+            },
+            "market_competition": {
+              "name": "Market Competition",
+              "description": "Encourages competition to drive innovation and efficiency."
+            },
+            "electoral_process": {
+              "name": "Electoral Process",
+              "description": "Ensures free and fair elections for governmental positions."
+            },
+            "rule_of_law": {
+              "name": "Rule of Law",
+              "description": "All citizens and institutions are subject to the law."
+            },
+            "separation_of_powers": {
+              "name": "Separation of Powers",
+              "description": "Divides government responsibilities among independent branches."
+            },
+            "human_rights": {
+              "name": "Human Rights",
+              "description": "Protects fundamental rights and freedoms for all individuals."
+            },
+            "participatory_governance": {
+              "name": "Participatory Governance",
+              "description": "Encourages direct citizen involvement in decision-making."
+            },
+            "transparent_government": {
+              "name": "Transparent Government",
+              "description": "Promotes openness and accountability in government operations."
+            },
+            "hereditary_rule": {
+              "name": "Hereditary Rule",
+              "description": "Leadership is passed down through familial lines."
+            },
+            "divine_right": {
+              "name": "Divine Right",
+              "description": "Rulers claim their authority is granted by a divine power."
+            },
+            "nobility_system": {
+              "name": "Nobility System",
+              "description": "A hierarchical system with noble titles and privileges."
+            },
+            "feudal_obligations": {
+              "name": "Feudal Obligations",
+              "description": "Lords and vassals have mutual duties and responsibilities."
+            },
+            "centralized_authority": {
+              "name": "Centralized Authority",
+              "description": "Consolidates power within a central governing body."
+            },
+            "royal_patronage": {
+              "name": "Royal Patronage",
+              "description": "The monarchy supports and sponsors cultural and scientific endeavors."
+            },
+            "religious_law": {
+              "name": "Religious Law",
+              "description": "Governs the state based on religious doctrines."
+            },
+            "clerical_rule": {
+              "name": "Clerical Rule",
+              "description": "Religious leaders hold significant political power."
+            },
+            "moral_policing": {
+              "name": "Moral Policing",
+              "description": "Enforces strict moral codes and societal norms."
+            },
+            "faith_based_education": {
+              "name": "Faith-Based Education",
+              "description": "Education system rooted in religious teachings."
+            },
+            "divine_governance": {
+              "name": "Divine Governance",
+              "description": "The state is ruled by divine guidance and religious laws."
+            },
+            "religious_unity": {
+              "name": "Religious Unity",
+              "description": "Promotes harmony and uniformity in religious beliefs and practices."
+            },
+            "autocratic_rule": {
+              "name": "Autocratic Rule",
+              "description": "A single ruler holds absolute power and authority."
+            },
+            "state_surveillance": {
+              "name": "State Surveillance",
+              "description": "Monitors citizens to maintain control and security."
+            },
+            "censorship": {
+              "name": "Censorship",
+              "description": "Restricts information and media to control public perception."
+            },
+            "repression": {
+              "name": "Repression",
+              "description": "Suppresses dissent and opposition through force."
+            },
+            "propaganda": {
+              "name": "Propaganda",
+              "description": "Disseminates biased information to shape public opinion."
+            },
+            "centralized_power": {
+              "name": "Centralized Power",
+              "description": "Consolidates political power within a single authority."
+            },
+            "elite_rule": {
+              "name": "Elite Rule",
+              "description": "A small group of elites governs and makes decisions."
+            },
+            "economic_control": {
+              "name": "Economic Control",
+              "description": "Elites manage and control economic activities and resources."
+            },
+            "limited_participation": {
+              "name": "Limited Participation",
+              "description": "Restricts political participation to a select few."
+            },
+            "wealth_accumulation": {
+              "name": "Wealth Accumulation",
+              "description": "Focuses on gathering and consolidating wealth among elites."
+            },
+            "exclusive_networks": {
+              "name": "Exclusive Networks",
+              "description": "Maintains power through privileged social and economic connections."
+            },
+            "political_manipulation": {
+              "name": "Political Manipulation",
+              "description": "Uses influence and power to control political outcomes."
+            },
+            "self_governance": {
+              "name": "Self-Governance",
+              "description": "Communities manage their own affairs independently."
+            },
+            "mutual_aid": {
+              "name": "Mutual Aid",
+              "description": "Encourages mutual support and cooperation among citizens."
+            },
+            "direct_action": {
+              "name": "Direct Action",
+              "description": "Citizens take direct, collective action to achieve goals."
+            },
+            "decentralization": {
+              "name": "Decentralization",
+              "description": "Distributes power and decision-making across multiple entities."
+            },
+            "voluntary_associations": {
+              "name": "Voluntary Associations",
+              "description": "Citizens form independent groups to address common interests."
+            },
+            "autonomy": {
+              "name": "Autonomy",
+              "description": "Empowers communities and individuals with self-rule."
+            },
+            "corporate_influence": {
+              "name": "Corporate Influence",
+              "description": "Corporations hold significant sway over government policies."
+            },
+            "lobbying_power": {
+              "name": "Lobbying Power",
+              "description": "Corporations use lobbying to influence legislative decisions."
+            },
+            "business_privileges": {
+              "name": "Business Privileges",
+              "description": "Grants special rights and benefits to businesses."
+            },
+            "economic_focus": {
+              "name": "Economic Focus",
+              "description": "Prioritizes economic growth and corporate interests."
+            },
+            "regulatory_capture": {
+              "name": "Regulatory Capture",
+              "description": "Corporations control regulatory agencies for their benefit."
+            },
+            "corporate_governance": {
+              "name": "Corporate Governance",
+              "description": "Businesses play a major role in governance and policy-making."
+            },
+            "forced_labor": {
+              "name": "Forced Labor",
+              "description": "Uses compulsory labor to achieve economic goals."
+            },
+            "ownership_rights": {
+              "name": "Ownership Rights",
+              "description": "Defines the ownership of individuals as property."
+            },
+            "labor_exploitation": {
+              "name": "Labor Exploitation",
+              "description": "Maximizes output through the exploitation of labor."
+            },
+            "social_hierarchy": {
+              "name": "Social Hierarchy",
+              "description": "Enforces a rigid class system with limited mobility."
+            },
+            "oppression": {
+              "name": "Oppression",
+              "description": "Maintains control through systemic and institutionalized oppression."
+            },
+            "economic_dependence": {
+              "name": "Economic Dependence",
+              "description": "Creates dependency on the ruling class for economic survival."
+            },
+            "religious_discipline": {
+              "name": "Religious Discipline",
+              "description": "Imposes strict religious observance and practices."
+            },
+            "moral_purity": {
+              "name": "Moral Purity",
+              "description": "Promotes a strict moral code based on religious teachings."
+            },
+            "community_surveillance": {
+              "name": "Community Surveillance",
+              "description": "Monitors community behavior to enforce moral standards."
+            },
+            "simplified_living": {
+              "name": "Simplified Living",
+              "description": "Advocates for a simple lifestyle free of excess and indulgence."
+            },
+            "religious_governance": {
+              "name": "Religious Governance",
+              "description": "State governance is deeply intertwined with religious doctrine."
+            },
+            "moral_legislation": {
+              "name": "Moral Legislation",
+              "description": "Laws are based on and enforce religious morality."
+            },
+            "expert_governance": {
+              "name": "Expert Governance",
+              "description": "Relies on experts and technocrats to make informed decisions."
+            },
+            "scientific_management": {
+              "name": "Scientific Management",
+              "description": "Applies scientific principles to manage society and resources."
+            },
+            "innovation_focus": {
+              "name": "Innovation Focus",
+              "description": "Encourages technological advancements and innovation."
+            },
+            "data_driven_policy": {
+              "name": "Data-Driven Policy",
+              "description": "Utilizes data and evidence to shape policy decisions."
+            },
+            "efficient_administration": {
+              "name": "Efficient Administration",
+              "description": "Optimizes government operations for maximum efficiency."
+            },
+            "meritocracy": {
+              "name": "Meritocracy",
+              "description": "Advancement is based on individual merit and achievement."
+            },
+            "reason_and_logic": {
+              "name": "Reason and Logic",
+              "description": "Values rational thought and logical decision-making."
+            },
+            "scientific_inquiry": {
+              "name": "Scientific Inquiry",
+              "description": "Promotes research and exploration in scientific fields."
+            },
+            "secular_governance": {
+              "name": "Secular Governance",
+              "description": "Separates religious influence from state affairs."
+            },
+            "education_reform": {
+              "name": "Education Reform",
+              "description": "Reforms the education system to promote critical thinking."
+            },
+            "evidence_based_policy": {
+              "name": "Evidence-Based Policy",
+              "description": "Policies are formulated based on scientific evidence and research."
+            },
+            "philosophical_discourse": {
+              "name": "Philosophical Discourse",
+              "description": "Encourages open discussion and debate on philosophical ideas."
+            },
+            "cooperative_governance": {
+              "name": "Cooperative Governance",
+              "description": "Promotes collaborative decision-making and shared governance."
+            },
+            "shared_sovereignty": {
+              "name": "Shared Sovereignty",
+              "description": "Multiple entities share sovereignty and governance responsibilities."
+            },
+            "economic_integration": {
+              "name": "Economic Integration",
+              "description": "Integrates economies to promote mutual growth and stability."
+            },
+            "cultural_exchange": {
+              "name": "Cultural Exchange",
+              "description": "Encourages the exchange of cultural ideas and practices."
+            },
+            "collective_security": {
+              "name": "Collective Security",
+              "description": "Nations collaborate to ensure mutual security and defense."
+            },
+            "unified_policy": {
+              "name": "Unified Policy",
+              "description": "Aligns policies across multiple entities for cohesive governance."
+            }
+          }
+        }
+      },
       "ages": {
         "core": {
           "ancient": {

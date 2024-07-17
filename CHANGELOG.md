@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: finish basic implementation of resource system ([`764b458`](https://github.com/ScarlettSamantha/OpenCiv/commit/764b4583296c153c1746a8814c8114a4d5c94e13)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: rewrite pyload to be a lot more structured. ([`42d61e7`](https://github.com/ScarlettSamantha/OpenCiv/commit/42d61e78026c594381245575bed06f8da48b8d89)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
