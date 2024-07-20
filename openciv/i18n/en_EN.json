@@ -700,6 +700,14 @@
           "name": "Great Person Hero",
           "description": "A great person Hero resource"
         },
+        "great_person_explorer": {
+          "name": "Great Person Explorer",
+          "description": "A great person explorer resource"
+        },
+        "great_person_diplomat": {
+          "name": "Great Person Diplomat",
+          "description": "A great person diplomat resource"
+        },
         "core": {
           "types": {
             "basic": {
@@ -1600,6 +1608,70 @@
             "wind_farm": {
               "name": "Wind Farm",
               "description": "Facility for wind energy production"
+            }
+          }
+        }
+      },
+      "greats": {
+        "core": {
+          "trees": {
+            "culture": {
+              "name": "Culture",
+              "description": "Great cultural figures"
+            },
+            "diplomacy": {
+              "name": "Diplomacy",
+              "description": "Great diplomatic figures"
+            },
+            "engineers": {
+              "name": "Engineers",
+              "description": "Great engineering figures"
+            },
+            "explorers": {
+              "name": "Explorers",
+              "description": "Great explorers and navigators"
+            },
+            "heros": {
+              "name": "Heros",
+              "description": "Great folk heroes"
+            },
+            "holy": {
+              "name": "Holy",
+              "description": "Great religious figures"
+            },
+            "military": {
+              "name": "Military",
+              "description": "Great military figures"
+            },
+            "scientists": {
+              "name": "Scientists",
+              "description": "Great scientific figures"
+            }
+          },
+          "people": {
+            "guido_van_rossem": {
+              "name": "Guido van Rossem",
+              "description": "Guido van Rossem was a Dutch computer programmer who founded the Python programming language."
+            },
+            "curie": {
+              "name": "Marie Curie",
+              "description": "Marie Curie was a Polish/France physicist and chemist who conducted pioneering research on radioactivity."
+            },
+            "einstein": {
+              "name": "Albert Einstein",
+              "description": "Albert Einstein was a German-born theoretical physicist who developed the theory of relativity."
+            },
+            "newton": {
+              "name": "Isaac Newton",
+              "description": "Isaac Newton was an English mathematician, physicist, and astronomer who formulated the laws of motion and universal gravitation."
+            },
+            "tesla": {
+              "name": "Nikola Tesla",
+              "description": "Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the modern alternating current electricity supply system."
+            },
+            "vint_bob": {
+              "name": "Vint Cerf and Bob Kahn",
+              "description": "Vint Cerf and Bob Kahn are American computer scientists who co-invented the TCP/IP protocol, the foundation of the modern internet."
             }
           }
         }

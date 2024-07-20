@@ -2,6 +2,7 @@
 from openciv.engine.saving import SaveAble
 from openciv.engine.exceptions.save_exception import SaveRestorationRestoreTypeInvalidException
 from typing import ForwardRef, List
+from openciv.engine.managers.i18n import _t
 
 import pytest
 
@@ -176,3 +177,32 @@ def test_saving_civic():
     assert restored_civic.name == _t("test_civic")
     assert restored_civic.description == _t("test_civic_description")
     assert restored_civic.get_state_hash() == civic.get_state_hash()
+
+
+def test_saving_great():
+    from openciv.gameplay.great import Great
+
+    class GreatTest(Great):
+        def __init__(self):
+            super().__init__(key="test.great.key", name=_t("test_great"), description=_t("test_great_description"))
+
+    great = GreatTest()
+    data = great.saveable_data()
+    restored_great = great.create_object_from_data(data=data)
+    assert restored_great.get_state_hash() == great.get_state_hash()
+
+
+if __name__ == "__main__":
+    test_saveable_data()
+    test_is_valid_saveable_type()
+    test_invalid_restore_property()
+    test_recursive_save_restore()
+    test_register_saveable_properties()
+    test_register_instance_args()
+    test_eq_method()
+    test_module_not_found()
+    test_class_not_found()
+    test_object_not_saveable()
+    test_improvement_saveable()
+    test_saving_civic()
+    test_saving_great()

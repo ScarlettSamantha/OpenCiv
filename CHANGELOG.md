@@ -26,6 +26,9 @@
 
 ### Other
 
+* :memo: add better handling of base class detection in pyload.
+:white_check_mark: improve some of the unit tests. ([`d922132`](https://github.com/ScarlettSamantha/OpenCiv/commit/d92213279eaae17d9e195fab432189d89e9d73ee)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :note: readd readme.md ([`6de55b3`](https://github.com/ScarlettSamantha/OpenCiv/commit/6de55b3b8d8b17a876e1cc5e1defa7cd1185cb62)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * Merge remote-tracking branch &#39;origin/scarlett/feature/culture_sub_system&#39; ([`e0f1de9`](https://github.com/ScarlettSamantha/OpenCiv/commit/e0f1de9abd8bc61932c1159019db7e7d9f50f59d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

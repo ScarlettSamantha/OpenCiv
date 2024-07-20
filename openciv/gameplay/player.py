@@ -19,7 +19,7 @@ from openciv.gameplay.votes import Votes
 from openciv.gameplay.citizens import Citizens
 
 from openciv.gameplay.resource import Resources
-from openciv.gameplay.greats import Greats
+from openciv.gameplay.great import Greats
 
 from openciv.gameplay.trades import Trades
 
@@ -85,7 +85,7 @@ class Player:
         self.trades: Trades = Trades()
 
         self.resources: Resources = Resources()
-        self.greats = Greats()
+        self.greats: Greats = Greats()
 
         self.effects: Effects = Effects()
 

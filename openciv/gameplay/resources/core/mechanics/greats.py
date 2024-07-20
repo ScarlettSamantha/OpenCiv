@@ -1,9 +1,9 @@
-from openciv.gameplay.resources.core.mechanics._base import MechanicBaseResource
+from openciv.gameplay.resources.core.mechanics._base import MechanicBaseResource, BaseGreatMechanicResource
 from openciv.engine.managers.i18n import _t
 from typing import Union
 
 
-class GreatScientist(MechanicBaseResource):
+class GreatScientist(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_science",
@@ -15,7 +15,7 @@ class GreatScientist(MechanicBaseResource):
         )
 
 
-class GreatArtist(MechanicBaseResource):
+class GreatArtist(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_culture",
@@ -27,7 +27,7 @@ class GreatArtist(MechanicBaseResource):
         )
 
 
-class GreatHero(MechanicBaseResource):
+class GreatHero(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_hero",
@@ -39,7 +39,7 @@ class GreatHero(MechanicBaseResource):
         )
 
 
-class GreatHoly(MechanicBaseResource):
+class GreatHoly(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_faith",
@@ -51,7 +51,7 @@ class GreatHoly(MechanicBaseResource):
         )
 
 
-class GreatMilitary(MechanicBaseResource):
+class GreatMilitary(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_military",
@@ -63,7 +63,7 @@ class GreatMilitary(MechanicBaseResource):
         )
 
 
-class GreatEngineer(MechanicBaseResource):
+class GreatEngineer(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_engineer",
@@ -75,12 +75,24 @@ class GreatEngineer(MechanicBaseResource):
         )
 
 
-class GreatCommerece(MechanicBaseResource):
+class GreatCommerece(BaseGreatMechanicResource):
     def __init__(self, value: Union[float | int], *args, **kwargs):
         super().__init__(
             "core.mechanic.great_person_commerece",
-            _t("content.resources.contentment.name"),
-            _t("content.resources.contentment.description"),
+            _t("content.resources.great_person_commerece.name"),
+            _t("content.resources.great_person_commerece.description"),
+            value,
+            *args,
+            **kwargs,
+        )
+
+
+class GreatExplorer(BaseGreatMechanicResource):
+    def __init__(self, value: Union[float | int], *args, **kwargs):
+        super().__init__(
+            "core.mechanic.great_person_explorer",
+            _t("content.resources.great_person_explorer.name"),
+            _t("content.resources.great_person_explorer.description"),
             value,
             *args,
             **kwargs,
