@@ -25,6 +25,12 @@ else:
     _debug_timer_enable: bool = False
 
 
+def time_since_last_debug_timer(key: str) -> float:
+    if not _debug_timer_enable or key not in _debug_timers:
+        return 0
+    return round((datetime.now() - _debug_timers[key]).total_seconds() * 1000, 4)
+
+
 def md5_hash(value: Any) -> str:
     import hashlib
 
@@ -251,9 +257,7 @@ class SaveAble(Keyable, StateHashable):
         self._restored_on = datetime.now()
 
         if _debug_timer_enable:
-            LogManager._get_instance().engine.debug(
-                f"Restoring took: {round((datetime.now() - _debug_timers[self._key]).total_seconds() * 1000, 4)}"
-            )
+            LogManager._get_instance().engine.debug(f"Restoring took: {_debug_timers[self._key] - datetime.now()}ms")
             del _debug_timers[self._key]
 
     def saveable_data(
@@ -271,6 +275,9 @@ class SaveAble(Keyable, StateHashable):
 
         if self._key is None:
             self._register_key()
+
+        if self._instance_args.__len__() == 0:
+            self._instance_args = self._register_instance_args()
 
         data = {
             "__type": f"{self.__module__}.{self.__class__.__name__}",
@@ -380,7 +387,7 @@ class SaveAble(Keyable, StateHashable):
         return False
 
     def __eq__(self, other) -> bool:
-        if isinstance(other, SaveAble):
+        if isinstance(other, SaveAble) or isinstance(other, Keyable):
             return self._key == other._key
         else:
             return False

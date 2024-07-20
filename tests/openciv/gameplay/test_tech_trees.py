@@ -1,8 +1,14 @@
+import pytest
 from openciv.engine.additions.pyload import PyLoad
 from openciv.gameplay.techs.trees.core import Core
+from openciv.gameplay.tech import Tech
 from openciv.engine.managers.log import LogManager
 
 LogManager._get_instance().set_testing_mode(True)
+
+
+def Techs():
+    return list(PyLoad.load_classes("openciv/gameplay/techs/", base_classes=[Tech]).values())
 
 
 def test_no_duplicate_requires():
@@ -39,3 +45,13 @@ def test_all_techs_loaded():
 
     assert not missing_techs, f"Missing techs: {missing_techs}"
     assert not extra_techs, f"Extra techs: {extra_techs}"
+
+
+@pytest.mark.parametrize("tech", Techs())
+def test_tech_objects(tech: Tech):
+    _instance = tech()
+    assert isinstance(_instance, Tech)
+    assert _instance.key is not None
+    assert _instance.name is not None
+    assert _instance.description is not None
+    assert _instance.tech_points_required is not None

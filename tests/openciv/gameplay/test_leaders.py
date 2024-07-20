@@ -4,10 +4,13 @@ from openciv.gameplay.effect import Effect
 from openciv.gameplay.leader import Leader
 import pytest
 
-leaders = PyLoad.load_classes("openciv/gameplay/leaders/")
+
+def leaders():
+    leaders = PyLoad.load_classes("openciv/gameplay/leaders/")
+    return leaders.items()
 
 
-@pytest.mark.parametrize("class_name, class_ref", leaders.items())
+@pytest.mark.parametrize("class_name, class_ref", leaders())
 def test_leader_initialization(class_name, class_ref):
     """
     Test the initialization of different Leader implementations.
@@ -22,7 +25,7 @@ def test_leader_initialization(class_name, class_ref):
     assert leader_instance._effects.effects == {}, f"{class_name} has non-empty _effects"
 
 
-@pytest.mark.parametrize("class_name, class_ref", leaders.items())
+@pytest.mark.parametrize("class_name, class_ref", leaders())
 def test_leader_effects(class_name, class_ref):
     """
     Test the effects functionality of different Leader implementations.

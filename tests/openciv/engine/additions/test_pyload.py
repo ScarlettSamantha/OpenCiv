@@ -46,3 +46,11 @@ def test_load_classes_by_base_class_and_properties(setup_test_dir):
     assert "GenericExtend" in compare
     assert "NoneExistantTestClass" not in compare
     assert "GenericPropertyExtend" in compare
+
+
+if __name__ == "__main__":
+    test_load_classes_by_name_pattern("tests/resources/test_objects/")
+    test_load_classes_with_directory_list("tests/resources/test_objects/")
+    test_load_classes_by_base_class("tests/resources/test_objects/")
+    test_load_classes_by_properties("tests/resources/test_objects/")
+    test_load_classes_by_base_class_and_properties("tests/resources/test_objects/")

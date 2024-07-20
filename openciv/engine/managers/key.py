@@ -15,15 +15,6 @@ class Keyable:
         """Initializes a Keyable object with no key assigned initially."""
         self._key: str = _key
 
-    def key(self) -> str:
-        """
-        Returns the unique key assigned to this object.
-
-        Returns:
-            str: The unique key of the object.
-        """
-        return self._key
-
     def set_key(self, key: str) -> None:
         """
         Sets the unique key for this object.
@@ -107,7 +98,7 @@ class KeyManager(BaseManager, Singleton):
             ValueError: If the input is not a key or Keyable object.
         """
         if isinstance(key, Keyable):
-            key = key.key()
+            key = key._key
         elif not isinstance(key, str):
             raise ValueError("KeyManager.delete() only accepts a key or Keyable object.")
         if key not in self._registered_keys:

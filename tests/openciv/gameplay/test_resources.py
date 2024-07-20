@@ -6,6 +6,7 @@ from openciv.gameplay.resource import (
     ResourceTypeLuxury,
     ResourceTypeStrategic,
 )
+from openciv.gameplay.resources.core.mechanics._base import MechanicBaseResource
 from openciv.engine.exceptions.resource_exception import ResourceTypeException
 from openciv.engine.managers.i18n import _t
 
@@ -106,7 +107,7 @@ def test_resources_to_dict():
 def test_loading_resources():
     from openciv.engine.additions.pyload import PyLoad
 
-    pyload = PyLoad.load_classes("openciv/gameplay/resources/")
+    pyload = PyLoad.load_classes("openciv/gameplay/resources/", base_classes=[Resource])
     for _, resource in pyload.items():
         instance = resource(0.0)
         assert isinstance(instance, Resource)

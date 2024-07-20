@@ -26,6 +26,8 @@
 
 ### Other
 
+* :note: readd readme.md ([`6de55b3`](https://github.com/ScarlettSamantha/OpenCiv/commit/6de55b3b8d8b17a876e1cc5e1defa7cd1185cb62)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * Merge remote-tracking branch &#39;origin/scarlett/feature/culture_sub_system&#39; ([`e0f1de9`](https://github.com/ScarlettSamantha/OpenCiv/commit/e0f1de9abd8bc61932c1159019db7e7d9f50f59d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :construction: add basic culture system and loading systems ([`0c81998`](https://github.com/ScarlettSamantha/OpenCiv/commit/0c819982d941208352fdbaa303fe49bd157d5127)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

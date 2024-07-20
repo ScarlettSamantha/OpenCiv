@@ -32,18 +32,18 @@ def object_with_key():
 
 
 def test_keyable_initial_key_none(keyable):
-    assert keyable.key() is None
+    assert keyable._key is None
 
 
 def test_set_key(keyable):
     test_key = "test_key"
     keyable.set_key(test_key)
-    assert keyable.key() == test_key
+    assert keyable._key == test_key
 
 
 def test_register_key(key_manager, keyable):
     key = keyable._register_key()
-    assert keyable.key() is not None
+    assert keyable._key is not None
     assert key_manager.get(key) is keyable
 
 

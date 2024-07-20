@@ -9,9 +9,8 @@ from openciv.engine.managers.log import LogManager
 
 
 class GenericClassVisitor(ast.NodeVisitor):
-    def __init__(self, base_classes: Union[Type, List[Type]] = None, properties: List[Tuple[str, str]] = None):
+    def __init__(self, properties: List[Tuple[str, str]] = None):
         self.subclasses: List[str] = []
-        self.base_classes: List[Type] = base_classes if isinstance(base_classes, list) else [base_classes]
         self.properties: List[Tuple[str, str]] = properties or []
 
     def visit_ClassDef(self, node: ast.ClassDef) -> None:
@@ -94,6 +93,45 @@ class PyFileProcessor:
                 raise e
             return None
 
+    def _filter_classes(self, classes: Dict[str, Callable]) -> Dict[str, Type]:
+        """
+        Filters the classes based on the provided criteria.
+        """
+        filtered_classes: Dict[str, Type] = {}
+
+        def _filter_class(_class: Type, allowed: Union[List[Type], Type, str, None]) -> bool:
+            # Check if no base classes are provided
+            if allowed is None:
+                return True
+
+            # Check if allowed is a list of types
+            if isinstance(allowed, list):
+                for allowed_class in allowed:
+                    if issubclass(_class, allowed_class):
+                        return True
+            # Check if allowed is a string representing a class name
+            elif isinstance(allowed, str):
+                if _class.__name__ == allowed or any(base.__name__ == allowed for base in _class.__bases__):
+                    return True
+            # Check if allowed is an inspect class
+            elif inspect.isclass(allowed):
+                if issubclass(_class, allowed):
+                    return True
+                for base in _class.__bases__:
+                    if base == allowed or base.__name__ == allowed.__name__:
+                        return True
+
+            LogManager._get_instance().engine.debug(
+                f"Skipping class: {_class.__name__} due to base class mismatch {allowed}"
+            )
+            return False
+
+        for class_name, _class in classes.items():
+            if _filter_class(_class, self.base_classes):
+                filtered_classes[class_name] = _class
+
+        return filtered_classes
+
     def _extract_classes(self, file: str, file_content: str) -> Dict[str, Type]:
         """
         Parses the file content to extract class definitions.
@@ -102,9 +140,9 @@ class PyFileProcessor:
         loaded_classes: Dict[str, Type] = {}
         try:
             tree = ast.parse(file_content)
-            visitor = GenericClassVisitor(base_classes=self.base_classes, properties=self.properties)
+            visitor = GenericClassVisitor(properties=self.properties)
             visitor.visit(tree)
-            loaded_classes = self._load_classes_from_visitor(visitor, file)
+            loaded_classes = self._filter_classes(self._load_classes_from_visitor(visitor, file))
         except SyntaxError as e:
             if not self._skip_on_error:
                 raise e

@@ -12,8 +12,6 @@ from openciv.engine.exceptions.i18n_exception import (
 
 from openciv.engine.managers.i18n import Translation, set_i18n, _i18n
 
-# Replace 'your_module' with the actual module name where your i18n class is located
-
 
 def _objects(file=""):
     if file != "":
