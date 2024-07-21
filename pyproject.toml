@@ -1,9 +1,11 @@
 [tool.poetry]
 authors = ["Scarlett Samantha Verheul <scarlett.verheul@gmail.com>"]
-dependencies.python = "^3.12"
 description = "A Python project for OpenCiv game"
 license = "MIT"
 name = "openciv"
+
+[tool.poetry.dependencies]
+python = "^3.12"
 
 [tool.ruff]
 ignore = ["E501", "F841", "E721"]
@@ -11,15 +13,14 @@ line-length = 120
 select = ["E", "W", "F"]
 
 [tool.semantic_release]
-changelog_function = "changelog.py:openciv_changelog"
-commit_parser = "emoji"
+commit_parser = "processor.py:OpencivCommitParser"
 github_release = false
 version_source = "commit"
 version_variables = ["openciv/version.py:__version__"]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
-template_dir = "templates"
+template = "changedlog.md.j2"
 
 [tool.semantic_release.commit_parser_options]
 major_tags = [":boom:"]
@@ -48,7 +49,7 @@ patch_tags = [
   ":green_apple:",
 ]
 
-[semantic_release.branches.main]
+[tool.semantic_release.branches.main]
 match = "(main|master)"
 prerelease = false
 prerelease_token = "rc"

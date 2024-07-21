@@ -2,29 +2,9 @@
 
 ## Unreleased
 
-### :sparkles:
+### Unknown
 
-* :sparkles: finish basic implementation of resource system ([`764b458`](https://github.com/ScarlettSamantha/OpenCiv/commit/764b4583296c153c1746a8814c8114a4d5c94e13)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: add civics skeletons ([`26daad2`](https://github.com/ScarlettSamantha/OpenCiv/commit/26daad2d19e19407fcca74dbde37dd3a1e821519)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: rewrite pyload to be a lot more structured. ([`42d61e7`](https://github.com/ScarlettSamantha/OpenCiv/commit/42d61e78026c594381245575bed06f8da48b8d89)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: add support to load object from data and auto instance it with instance args. ([`824289e`](https://github.com/ScarlettSamantha/OpenCiv/commit/824289e5b8a5fddbc1e8939dcb16d84441731e04)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: make translations saveable ([`28864de`](https://github.com/ScarlettSamantha/OpenCiv/commit/28864de13a3bd514ff78e44cdba9b60d2a3ba4a3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: add object auto property detection. ([`9191e2d`](https://github.com/ScarlettSamantha/OpenCiv/commit/9191e2d55129df6988d21b65ebf59878b0a617b2)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: make saving more robust and implement object state verifification ([`31bf4c4`](https://github.com/ScarlettSamantha/OpenCiv/commit/31bf4c418f35288140b4e50a8357048406005407)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: add testing mode to log manager ([`ca05137`](https://github.com/ScarlettSamantha/OpenCiv/commit/ca05137511216017fdf124ba3f631803058af9a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-* :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
-
-### Other
+* :sparkles: add basic greats system ([`e2553f8`](https://github.com/ScarlettSamantha/OpenCiv/commit/e2553f878e27e6d7a10f9d17eb4510161525afa5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: add better handling of base class detection in pyload.
 :white_check_mark: improve some of the unit tests. ([`d922132`](https://github.com/ScarlettSamantha/OpenCiv/commit/d92213279eaae17d9e195fab432189d89e9d73ee)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
@@ -33,9 +13,15 @@
 
 * Merge remote-tracking branch &#39;origin/scarlett/feature/culture_sub_system&#39; ([`e0f1de9`](https://github.com/ScarlettSamantha/OpenCiv/commit/e0f1de9abd8bc61932c1159019db7e7d9f50f59d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
+* :sparkles: finish basic implementation of resource system ([`764b458`](https://github.com/ScarlettSamantha/OpenCiv/commit/764b4583296c153c1746a8814c8114a4d5c94e13)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: add civics skeletons ([`26daad2`](https://github.com/ScarlettSamantha/OpenCiv/commit/26daad2d19e19407fcca74dbde37dd3a1e821519)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :construction: add basic culture system and loading systems ([`0c81998`](https://github.com/ScarlettSamantha/OpenCiv/commit/0c819982d941208352fdbaa303fe49bd157d5127)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: added some documentation to the readme ([`c174c06`](https://github.com/ScarlettSamantha/OpenCiv/commit/c174c067d65de869c345446bca7f5c7c080fe5ed)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: rewrite pyload to be a lot more structured. ([`42d61e7`](https://github.com/ScarlettSamantha/OpenCiv/commit/42d61e78026c594381245575bed06f8da48b8d89)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: add some documentation for the ideas behind gold and religion victory conditions ([`b3ab569`](https://github.com/ScarlettSamantha/OpenCiv/commit/b3ab56949eef0e1f6f6ca93c1226926fae15bef5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
@@ -43,7 +29,15 @@
 
 * :memo: added a religion idea to meta ([`035e180`](https://github.com/ScarlettSamantha/OpenCiv/commit/035e1805731cec11b17c67f26d557e759f231c4a)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
+* :sparkles: add basic requirements system ([`871602a`](https://github.com/ScarlettSamantha/OpenCiv/commit/871602ad7500b063dbb67412351e75a50d788662)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :fire: remove print statements ([`aac6f36`](https://github.com/ScarlettSamantha/OpenCiv/commit/aac6f36e9b4dd38b148c2153f554eadae83a6ad5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: add support to load object from data and auto instance it with instance args. ([`824289e`](https://github.com/ScarlettSamantha/OpenCiv/commit/824289e5b8a5fddbc1e8939dcb16d84441731e04)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: make translations saveable ([`28864de`](https://github.com/ScarlettSamantha/OpenCiv/commit/28864de13a3bd514ff78e44cdba9b60d2a3ba4a3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: add object auto property detection. ([`9191e2d`](https://github.com/ScarlettSamantha/OpenCiv/commit/9191e2d55129df6988d21b65ebf59878b0a617b2)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: fix links in readme ([`f9b8e71`](https://github.com/ScarlettSamantha/OpenCiv/commit/f9b8e71280fa782d5447c84fb24b3e7bc582cf6e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
@@ -56,6 +50,8 @@
 * :fire: remove some print methods ([`81532d8`](https://github.com/ScarlettSamantha/OpenCiv/commit/81532d8805c76915fcc45a969c44b31552564b06)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :green_heart: add automatic checking for print and other debug functions ([`1f129cd`](https://github.com/ScarlettSamantha/OpenCiv/commit/1f129cd293ee0020600b8aa12793ff2fc048fd31)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: make saving more robust and implement object state verifification ([`31bf4c4`](https://github.com/ScarlettSamantha/OpenCiv/commit/31bf4c418f35288140b4e50a8357048406005407)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 👷 add remove_pycache action ([`4503c70`](https://github.com/ScarlettSamantha/OpenCiv/commit/4503c7053e0c943676321ad072836702aaa2b2f3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
@@ -87,6 +83,10 @@
 
 * ✅ add tech tree pytests ([`09832a0`](https://github.com/ScarlettSamantha/OpenCiv/commit/09832a0d0fca1cf7caa66909e92e48318d0d5c4e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
+* :sparkles: add testing mode to log manager ([`ca05137`](https://github.com/ScarlettSamantha/OpenCiv/commit/ca05137511216017fdf124ba3f631803058af9a6)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * ✨ add core tech tree structure ([`b247fd5`](https://github.com/ScarlettSamantha/OpenCiv/commit/b247fd59099256269e11537d3dec70882775f17c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :snake: fix tech typos ([`6825bec`](https://github.com/ScarlettSamantha/OpenCiv/commit/6825becf2487c398e7d5d76974f43dfbed1253b3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
@@ -103,6 +103,6 @@
 
 ## v0.0.0 (2024-07-06)
 
-### Other
+### Unknown
 
-* :tada: Init ([`adf1963`](https://github.com/ScarlettSamantha/OpenCiv/commit/adf1963e0e4d1fec999ec9dbfc5c841baa6ad91e)) | [](https://github.com/scarlett.verheul)
+* :tada: Init ([`adf1963`](https://github.com/ScarlettSamantha/OpenCiv/commit/adf1963e0e4d1fec999ec9dbfc5c841baa6ad91e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

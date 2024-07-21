@@ -1,0 +1,29 @@
+# CHANGELOG
+{% if context.history.unreleased | length > 0 -%}
+{# UNRELEASED #}
+## Unreleased
+{% for type_, commits in context.history.unreleased | dictsort %}
+### {{ type_ | capitalize }}
+{% for commit in process_commit_messages(commits) %}{% if type_ != "unknown" %}
+* {% for line in commit.message %}
+  {{ line }}<br>
+  {% endfor %}([`{{ commit.hexsha[:7] }}`]({{ commit.hexsha | commit_hash_url }})) | [{{ commit.author_name }}](https://github.com/{{ commit.author_email.split('@')[0] }})
+{% else %}
+* {% for line in commit.message %}
+  {{ line }}<br>
+  {% endfor %}([`{{ commit.hexsha[:7] }}`]({{ commit.hexsha | commit_hash_url }})) | [{{ commit.author_name }}](https://github.com/{{ commit.author_email.split('@')[0] }})
+{% endif %}{% endfor %}{% endfor %}{% endif -%}
+{# RELEASED #}
+{% for version, release in context.history.released.items() -%}
+## {{ version.as_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+{% for type_, commits in release["elements"] | dictsort %}
+### {{ type_ | capitalize }}
+{% for commit in process_commit_messages(commits) %}{% if type_ != "unknown" %}
+* {% for line in commit.message %}
+  {{ line }}<br>
+  {% endfor %}([`{{ commit.hexsha[:7] }}`]({{ commit.hexsha | commit_hash_url }})) | [{{ commit.author_name }}](https://github.com/{{ commit.author_email.split('@')[0] }})
+{% else %}
+* {% for line in commit.message %}
+  {{ line }}<br>
+  {% endfor %}([`{{ commit.hexsha[:7] }}`]({{ commit.hexsha | commit_hash_url }})) | [{{ commit.author_name }}](https://github.com/{{ commit.author_email.split('@')[0] }})
+{% endif %}{% endfor %}{% endfor %}{% endfor %}
