@@ -28,6 +28,8 @@
 
 ### Other
 
+* :building_construction: add skeletons for next release. ([`15888b3`](https://github.com/ScarlettSamantha/OpenCiv/commit/15888b38f3d9fb3f691605600c51b321a4afff57)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: add better handling of base class detection in pyload.
 :white_check_mark: improve some of the unit tests. ([`d922132`](https://github.com/ScarlettSamantha/OpenCiv/commit/d92213279eaae17d9e195fab432189d89e9d73ee)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 

@@ -2,13 +2,96 @@
 
 > 🚨 **Warning:** This project is in a very early development phase and is likely not functional yet. It may lack gameplay elements and is currently focused on testing raw system implementations.
 
-> ⚠️ **Danger:** This code is highly dynamic and can be vulnerable to arbitrary remote code execution if modified or when using downloaded files. Malicious actors could exploit this to run harmful code. Be extremely cautious and only load trusted, verified sources.
+> ⚠️ **Danger:** This code is highly dynamic and can be vulnerable to arbitrary remote code execution if modified or when using downloaded files. Malicious actors could exploit this to run harmful code(*!There is no sandbox!*). Be extremely cautious and only load trusted, verified sources.
 
 ## Project
 
 - [Roadmap](meta/roadmap.md) - A rough roadmap (without timelines as this is a hobby project).
 - [Contribution Guide](CONTRIBUTE.md) - Guidelines for contributing.
 - [Changelog](CHANGELOG.md) - Automatically generated changelog.
+
+<details>
+
+<summary> <b>Progress</b> on systems: </summary>
+
+| System        | Docs | Name | Priority | Expected Version Implementation | Thought out | Skeleton | Basic Implementation | Integration | UI | Play |  Final Implementation | Balance |
+|:-------------:|:----:|:----:|:--------:|:-------------------------------:|:-----------:|:--------:|:--------------------:|:-----------:|:--:|:----:|:---------------------:|:-------:|
+|engine|[\[doc\]](meta/)|[Logging](openciv/engine/loading.py)| |[v0.1 - PoC](meta/versions/0.0.1-poc.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | |
+|engine|[\[doc\]](meta/)|[Resource Maths](openciv/gameplay/resource.py)| |[v0.1 - PoC](meta/versions/0.0.1-poc.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|engine|[\[doc\]](meta/)|[Ages](openciv/gameplay/age.py)| |[v0.2 - PoC](meta/versions/0.0.1-poc.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Saving](openciv/engine/saving.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|engine|[\[doc\]](meta/)|[Loading](openciv/engine/saving.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|engine|[\[doc\]](meta/)|[Tiles](openciv/gameplay/tiles.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|engine|[\[doc\]](meta/)|[Yields](openciv/gameplay/tile_yield.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|engine|[\[doc\]](meta/)|[Turn](openciv/engine/managers/turn.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Combat](openciv/gameplay/combat.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[tile layers](openciv/engine/tile_layers.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Graphics](openciv/engine/managers/graphics.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Sounds](openciv/engine/managers/sound.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Mod Support](openciv/engine/managers/mods.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Land Plane](openciv/gameplay/combat/planes/land.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[CPU AI](openciv/engine/ai.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Space Plane](openciv/gameplay/combat/planes/space.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Air Plane](openciv/gameplay/combat/planes/land.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Naval Plane](openciv/gameplay/combat/planes/naval.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|engine|[\[doc\]](meta/)|[Multiplayer](openciv/engine/managers/multiplayer.py)| |[1.1 - Multiplayer](meta/versions/1.1.0-multiplayer.md)| |:heavy_check_mark:| | | | | | |
+|UI|[\[doc\]](meta/)|[Main Menu and Systems](openciv/engine/UI/main_menu.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|UI|[\[doc\]](meta/)|[Yield Overview](openciv/engine/UI/screens/yield_overview.py)| |[v0.4 - Alpha](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|UI|[\[doc\]](meta/)|[Options Menu](openciv/engine/UI/options_menu.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Tech](openciv/engine/managers/tech.py)| |[v0.1 - PoC](meta/versions/0.0.1-poc.md)|:heavy_check_mark:|:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Textures](openciv/gameplay/textures.py)| |[v0.1 - PoC](meta/versions/0.0.1-poc.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Culture \(Civics\)](openciv/engine/managers/culture.py)| |[v0.1 - PoC](meta/versions/0.0.1-poc.md)|:heavy_check_mark:|:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Greats](openciv/gameplay/great.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|gameplay|[\[doc\]](meta/)|[Victory Conditions](openciv/gameplay/victory)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Leaders](openciv/gameplay/leader.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|gameplay|[\[doc\]](meta/)|[Civs](openciv/gameplay/civilization.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|gameplay|[\[doc\]](meta/)|[Effects](openciv/gameplay/effect.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| | | | | |
+|gameplay|[\[doc\]](meta/)|[Tax](openciv/gameplay/tax.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Happiness](openciv/gameplay/happiness.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Tile yields](openciv/gameplay/tile_yield.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)|:heavy_check_mark:|:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Cities](openciv/gameplay/cities.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Units](openciv/gameplay/unit.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Events](openciv/gameplay/events/event.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Wonders](openciv/gameplay/wonder.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Buildings](openciv/gameplay/building.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Citizens](openciv/gameplay/citizen.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Map](openciv/gameplay/map.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Goverments+Anarchy](openciv/gameplay/goverment.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Ground Combat](openciv/gameplay/combat/ground.py)| |[v0.2 - Development](meta/versions/0.2.0-development.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Moods](openciv/gameplay/mood.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Personalities](openciv/gameplay/personality.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Empire](openciv/gameplay/empire.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Trade](openciv/gameplay/trade.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Rivers](openciv/gameplay/river.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Electricity](openciv/gameplay/electricity.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Border Growth](openciv/gameplay/border.py)| |[v0.3 - Pre-Alpha](meta/versions/0.3.0-pre-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Climate](openciv/gameplay/climate.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Gossip](openciv/gameplay/gossip.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Alliances](openciv/gameplay/alliance.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Spying](openciv/gameplay/spy.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[World Congress](openciv/gameplay/world_congress.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Influence](openciv/gameplay/influence.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Air Combat](openciv/gameplay/combat/air.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Naval Combat](openciv/gameplay/combat/naval.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Satelites](openciv/gameplay/satelite.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Advanced Diplomacy](openciv/gameplay/diplomacy.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Unit Promotion](openciv/gameplay/promotion.py)| |[v0.4 - Alpha](meta/versions/0.4.0-alpha.md)| |:heavy_check_mark:| | | | | | |
+|gameplay|[\[doc\]](meta/)|[Dynamic Naming](openciv/gameplay/dynamic_naming.py)| |[1.0 - Release](meta/versions/1.0.0-release.md)| |:heavy_check_mark:| | | | | | |
+
+
+\*:Ready - Meaning that its in a state where I dont think it will need major work anymore just adjustments. 
+
+</details>
+
+### Vision
+
+> [Main document](meta/vision.md)
+
+OpenCiv aims to create a larger and more complex game than Civilization VI, featuring a greater number of civilizations and deeper gameplay mechanics. Our goal is to build a game that retains the fun and engaging core gameplay of Civ6 while enhancing its complexity and mod-ability from the ground up. My aim is to create a more Stellaris-style Civ with more interesting things to do.
+
+### Pitfalls
+
+This is a lot of work, and the scale of the systems is significant. The main challenge might come from the lack of relevant game development experience. Currently, performance is acceptable, but we may need to revisit some aspects in the future. With careful planning and foresight, we hope to avoid major issues. But reality is almost never this good.
 
 ## Game
 
@@ -76,7 +159,6 @@
 | Oil           | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/oil.py)        | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
 | Rare Earth Metals | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/rare_earth_metals.py) | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
 | Uranium       | [Strategic](meta/ideas/gameplay/resources/STRATEGIC.md) | [Code](resources/core/strategic/uranium.py) | [Docs](meta/ideas/gameplay/resources/STRATEGIC.md)    |
-
 
 ### Civilizations
 
@@ -167,3 +249,6 @@
 | [Culture](openciv/meta/ideas/gameplay/victory/culture.md) | Culture/Tourism/Archaeology/Diplomacy | [culture.md](openciv/meta/ideas/gameplay/victory/culture.md) | code |
 
 > ⚖️ **Disclaimer:** This game and its associated code are provided for educational and informational purposes only. The author assumes no responsibility for any errors, omissions, or inaccuracies in the code. Users are strongly advised to thoroughly review, test, the code. The author makes no guarantees regarding the security, reliability, or performance of the game. By using this code, you agree that the author shall not be held liable for any damages, losses, or other consequences arising from its use, misuse, or inability to use the game, including but not limited to any unintended or harmful actions caused by the game. Use this game at your own risk and ensure that all necessary precautions are taken.
+
+> 🌍 **Historical Context and Point of View Disclaimer:**
+> OpenCiv includes civilizations, leaders, and events inspired by real-world history but real history is complex. While I strive to create a neutral point of view, the game may simplify or alter historical events for gameplay purposes. These portrayals try to not reflect any political or cultural stance but should not be taken as any kind of truth. The content reflects my personal view and understanding from a (inherently limited) Western perspective, and I try to avoid contentious topics I am uncomfortable with dealing with. I acknowledge that many events depicted were horrible and should never be repeated. This game is for entertainment. Please don't cancel me; I want to create a fun game for everyone. 🙏
