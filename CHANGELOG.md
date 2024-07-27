@@ -4,6 +4,8 @@
 
 ### :sparkles:
 
+* :sparkles: add basic greats system ([`e2553f8`](https://github.com/ScarlettSamantha/OpenCiv/commit/e2553f878e27e6d7a10f9d17eb4510161525afa5)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: finish basic implementation of resource system ([`764b458`](https://github.com/ScarlettSamantha/OpenCiv/commit/764b4583296c153c1746a8814c8114a4d5c94e13)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: add civics skeletons ([`26daad2`](https://github.com/ScarlettSamantha/OpenCiv/commit/26daad2d19e19407fcca74dbde37dd3a1e821519)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

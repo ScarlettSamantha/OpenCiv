@@ -1,0 +1,2 @@
+class Spy:
+    pass
