@@ -54,6 +54,11 @@ lint_markdown_files() {
     fi
 }
 
+copy_readme() {
+    cp README.md meta/README.md
+    git add README.md
+}
+
 exit 0
 
 fix_markdown_files() {
@@ -69,6 +74,7 @@ format_python_files
 fix_markdown_files
 ensure_newline_at_eof
 lint_markdown_files
+copy_readme
 
 git add .coverage
 git add coverage.xml

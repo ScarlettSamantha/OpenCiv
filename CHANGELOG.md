@@ -28,6 +28,8 @@
 
 ### Other
 
+* 📝 import meta from submodule ([`db17f6d`](https://github.com/ScarlettSamantha/OpenCiv/commit/db17f6d1d604b6d5796b6a983f013ff066bf8836)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 📝 move documentation to obsidian ([`c62a38d`](https://github.com/ScarlettSamantha/OpenCiv/commit/c62a38da2cea100346af265a03e90b8b2026a51b)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: work out skeletons and progress in the readme ([`31a9b1d`](https://github.com/ScarlettSamantha/OpenCiv/commit/31a9b1d8146b184114f03cb9c6160f4d333442d2)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
