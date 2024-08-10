@@ -1,6 +1,0 @@
-- Pavlov
-- Sagan
-- Einstein
-- Hawking
-- Oppenheimer
-- Grace Hopper

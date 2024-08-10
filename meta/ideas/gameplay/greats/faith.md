@@ -1,6 +1,0 @@
-- Jesus
-- [REDACTED]
-- Abraham
-- Vishnu
-- Buddah
-- [Japan- Shinto holy figure]

@@ -1,2 +1,0 @@
-- Suleiman
-- Attaturk

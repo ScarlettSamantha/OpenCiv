@@ -1,2 +1,0 @@
-Egypt   -> Ramesses II
-        -> Cleopatra

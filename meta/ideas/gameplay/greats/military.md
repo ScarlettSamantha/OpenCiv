@@ -1,3 +1,0 @@
-- Shaka Zulu
-- Tsun tsu
-- Romel [nazi link is an issue ?]

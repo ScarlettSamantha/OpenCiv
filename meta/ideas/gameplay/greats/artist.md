@@ -1,5 +1,0 @@
-- Davinchi (multi)
-- Picasso (painting)
-- Stanley Cubric (film)
-- Hitchcock (film)
-- Walt Disney (film)
