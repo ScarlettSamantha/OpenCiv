@@ -28,6 +28,8 @@
 
 ### Other
 
+* 📝 move documentation to obsidian ([`c62a38d`](https://github.com/ScarlettSamantha/OpenCiv/commit/c62a38da2cea100346af265a03e90b8b2026a51b)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: work out skeletons and progress in the readme ([`31a9b1d`](https://github.com/ScarlettSamantha/OpenCiv/commit/31a9b1d8146b184114f03cb9c6160f4d333442d2)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :building_construction: add skeletons for next release. ([`15888b3`](https://github.com/ScarlettSamantha/OpenCiv/commit/15888b38f3d9fb3f691605600c51b321a4afff57)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
