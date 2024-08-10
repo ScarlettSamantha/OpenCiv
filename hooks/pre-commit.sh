@@ -55,11 +55,9 @@ lint_markdown_files() {
 }
 
 copy_readme() {
-    cp README.md meta/README.md
+    cp meta/README.md README.md
     git add README.md
 }
-
-exit 0
 
 fix_markdown_files() {
     pymarkdownlnt fix .
