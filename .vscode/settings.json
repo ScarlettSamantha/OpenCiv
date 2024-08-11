@@ -1,4 +1,16 @@
 {
+
+
+    {
+        "python.jediEnabled": true,
+        "python.analysis.autoSearchPaths": true,
+        "python.autoComplete.extraPaths": [
+            // Add paths to your project-specific libraries here, if needed
+        ],
+        "python.autoComplete.addBrackets": false, // Optional: Adds brackets to function completions
+        "python.jediMemoryLimit": 4024, // Optional: Increase or decrease memory usage by Jedi
+        "python.autoComplete.showAdvancedMembers": false // Optional: Hide advanced members to reduce clutter
+    }
     "python.autoComplete.extraPaths": [
         "/home/scarlett/.local/lib/python3.12/site-packages/panda3d-stubs",
         "/home/scarlett/.local/lib/python3.12/site-packages/ursina"

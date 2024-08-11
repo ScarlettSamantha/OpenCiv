@@ -44,12 +44,12 @@ format_python_files() {
     fi
 }
 
-# Function to lint Markdown files using pymarkdown
+# Function to lint Markdown files using pymarkdownlnt
 lint_markdown_files() {
     if command -v pymarkdownlnt &> /dev/null; then
-        pymarkdown scan .
+        pymarkdownlnt --config .markdownlnt.json scan .
     else
-        echo "pymarkdown is not installed. Please install it with 'pip install pymarkdown'."
+        echo "pymarkdownlnt is not installed. Please install it with 'pip install pymarkdownlnt'."
         exit 1
     fi
 }
@@ -60,7 +60,7 @@ copy_readme() {
 }
 
 fix_markdown_files() {
-    pymarkdownlnt fix .
+    pymarkdownlnt --config .markdownlnt.json fix .
 }
 
 print() {

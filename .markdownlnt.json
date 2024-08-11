@@ -1,0 +1,19 @@
+{
+  "plugins": {
+    "md028": {
+      "bracket": false,
+      "bracket_same": false
+    },
+    "md013": {
+      "line_length": 1000,
+      "code_blocks": false,
+      "tables": false
+    },
+    "md026": {
+      "punctuation": ".,;:!?"
+    },
+    "md033": {
+      "enabled": false
+    }
+  }
+}
