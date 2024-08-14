@@ -1,7 +1,7 @@
 from ursina import Entity, Ursina
 from pathlib import Path
 from random import Random
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 from importlib import util
 
 from openciv.engine.managers.config import Config
@@ -81,8 +81,9 @@ class Game:
         )
         log_manager.engine.debug("Engine setup complete")
 
-    def setup_dof(self) -> None:
-        self.env = load_dotenv()
+    def setup_dotenv(self) -> None:
+        # Nearly identical as calling dotenv.load_dotenv(), except it returns any parsed env vars as a dict
+        self.env = dotenv_values()
 
     def setup_sentry(self) -> None:
         # We have to import sentry here because it's not a dependency
