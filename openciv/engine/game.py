@@ -82,7 +82,7 @@ class Game:
         log_manager.engine.debug("Engine setup complete")
 
     def setup_dotenv(self) -> None:
-        # Nearly identical as calling dotenv.load_dotenv(), except it returns any parsed env vars as a dict
+        # Nearly identical to calling dotenv.load_dotenv(), except it returns any parsed env vars as a dict
         self.env = dotenv_values()
 
     def setup_sentry(self) -> None:
