@@ -1,5 +1,5 @@
-from typing import List, Generator, Tuple
-from openciv.engine.managers.i18n import T_TranslationOrStr, _t
+from typing import List, Generator, Tuple, Any
+from openciv.engine.managers.i18n import T_TranslationOrStr
 
 
 class Tech:
@@ -104,7 +104,7 @@ class TechTree:
         return min_colors[min(min_colors.keys())]
 
     @classmethod
-    def convert_rgba_to_color_name(cls, rgba: tuple) -> str:
+    def convert_rgba_to_color_name(cls, rgba: tuple[Any]) -> str:
         import webcolors
 
         if rgba.__len__() == 4:
