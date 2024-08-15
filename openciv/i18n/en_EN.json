@@ -627,6 +627,26 @@
       }
     },
     "content": {
+      "planes": {
+        "core": {
+          "air": {
+            "name": "Air",
+            "description": "Air plane"
+          },
+          "naval": {
+            "name": "Naval",
+            "description": "Naval plane"
+          },
+          "land": {
+            "name": "Land",
+            "description": "Land plane"
+          },
+          "space": {
+            "name": "Space",
+            "description": "Space plane"
+          }
+        }
+      },
       "resources": {
         "science": {
           "name": "Science",
@@ -1672,6 +1692,638 @@
             "vint_bob": {
               "name": "Vint Cerf and Bob Kahn",
               "description": "Vint Cerf and Bob Kahn are American computer scientists who co-invented the TCP/IP protocol, the foundation of the modern internet."
+            }
+          }
+        }
+      },
+      "units": {
+        "core": {
+          "classes": {
+            "core": {
+              "civilian": {
+                "name": "Civilian",
+                "description": "Non-combat unit"
+              },
+              "engineer": {
+                "name": "Engineer",
+                "description": "Unit that constructs improvements"
+              },
+              "combat_engineer": {
+                "name": "Combat Engineer",
+                "description": "Unit that constructs and repairs military improvements"
+              },
+              "light_calvary": {
+                "name": "Light Calvary",
+                "description": "Fast-moving mounted unit"
+              },
+              "heavy_calvary": {
+                "name": "Heavy Calvary",
+                "description": "Armored mounted unit"
+              },
+              "mele": {
+                "name": "Mele",
+                "description": "Close combat unit"
+              },
+              "police": {
+                "name": "Police",
+                "description": "Unit that maintains order"
+              },
+              "combat": {
+                "name": "Combat",
+                "description": "Military unit"
+              },
+              "bomber": {
+                "name": "Bomber",
+                "description": "Aircraft that attacks ground targets"
+              },
+              "commando": {
+                "name": "Commando",
+                "description": "Special forces unit"
+              },
+              "corvete": {
+                "name": "Corvete",
+                "description": "Small naval vessel"
+              },
+              "frigate": {
+                "name": "Frigate",
+                "description": "Medium naval vessel"
+              },
+              "destroyer": {
+                "name": "Destroyer",
+                "description": "Large naval vessel"
+              },
+              "cruiser": {
+                "name": "Cruiser",
+                "description": "Heavy naval vessel"
+              },
+              "fighter": {
+                "name": "Fighter",
+                "description": "Aircraft that engages other aircraft"
+              },
+              "support": {
+                "name": "Support",
+                "description": "Unit that provides assistance"
+              },
+              "siege": {
+                "name": "Siege",
+                "description": "Unit that specializes in attacking cities"
+              },
+              "ranged": {
+                "name": "Ranged",
+                "description": "Unit that attacks from a distance"
+              },
+              "naval": {
+                "name": "Naval",
+                "description": "Unit that operates on water"
+              },
+              "air": {
+                "name": "Air",
+                "description": "Unit that operates in the air"
+              }
+            }
+          },
+          "units": {
+            "civilian": {
+              "settler": {
+                "name": "Settler",
+                "description": "Unit that founds new cities"
+              },
+              "worker": {
+                "name": "Worker",
+                "description": "Unit that constructs improvements"
+              },
+              "trader": {
+                "name": "Trader",
+                "description": "Unit that establishes trade routes"
+              },
+              "scout": {
+                "name": "Scout",
+                "description": "Unit that explores the map"
+              },
+              "spy": {
+                "name": "Spy",
+                "description": "Unit that conducts espionage"
+              },
+              "diplomat": {
+                "name": "Diplomat",
+                "description": "Unit that conducts diplomacy"
+              },
+              "great_person": {
+                "name": "Great Person",
+                "description": "Unit that provides unique abilities"
+              }
+            },
+            "military": {
+              "warrior": {
+                "name": "Warrior",
+                "description": "Basic melee unit"
+              },
+              "spearman": {
+                "name": "Spearman",
+                "description": "Anti-cavalry unit"
+              },
+              "archer": {
+                "name": "Archer",
+                "description": "Ranged unit"
+              },
+              "horseman": {
+                "name": "Horseman",
+                "description": "Fast-moving melee unit"
+              },
+              "crossbowman": {
+                "name": "Crossbowman",
+                "description": "Ranged unit"
+              },
+              "knight": {
+                "name": "Knight",
+                "description": "Heavy cavalry unit"
+              },
+              "musketman": {
+                "name": "Musketman",
+                "description": "Renaissance era melee unit"
+              },
+              "cavalry": {
+                "name": "Cavalry",
+                "description": "Industrial era melee unit"
+              },
+              "infantry": {
+                "name": "Infantry",
+                "description": "Modern era melee unit"
+              },
+              "tank": {
+                "name": "Tank",
+                "description": "Modern era armored unit"
+              }
+            }
+          },
+          "promotions": {
+            "corvette": {
+              "coast_raider": {
+                "name": "Costal Raider",
+                "description": "Increases gold from naval combat"
+              },
+              "sea_raider": {
+                "name": "Sea Raider",
+                "description": "Increases damage to enemy ships"
+              },
+              "mines": {
+                "name": "Mines",
+                "description": "Allows the unit to lay mines"
+              },
+              "escort_duty": {
+                "name": "Escort Duty",
+                "description": "Increases defense of nearby friendly units"
+              },
+              "agile_manoeuvring": {
+                "name": "Agile Manoeuvring",
+                "description": "Can evade mines."
+              }
+            },
+            "combat_engineer": {
+              "fortifications": {
+                "name": "Fortifications",
+                "description": "Builds defensive structures faster"
+              },
+              "repair": {
+                "name": "Repair",
+                "description": "Repairs units and structures faster"
+              },
+              "demolitions": {
+                "name": "Demolitions",
+                "description": "Increases effectiveness against enemy structures"
+              },
+              "construction_speed": {
+                "name": "Construction Speed",
+                "description": "Reduces time to build structures"
+              },
+              "bridge_building": {
+                "name": "Bridge Building",
+                "description": "Enables rapid bridge construction"
+              },
+              "field_hospitals": {
+                "name": "Field Hospitals",
+                "description": "Increases healing rate of nearby units"
+              }
+            },
+            "frigate": {
+              "long_range_bombardment": {
+                "name": "Long Range Bombardment",
+                "description": "Increases attack range"
+              },
+              "anti_aircraft": {
+                "name": "Anti-Aircraft",
+                "description": "Increases damage to air units"
+              },
+              "armor_piercing_shells": {
+                "name": "Armor Piercing Shells",
+                "description": "Increases damage to heavily armored units"
+              },
+              "radar_guidance": {
+                "name": "Radar Guidance",
+                "description": "Increases accuracy"
+              },
+              "torpedoes": {
+                "name": "Torpedoes",
+                "description": "Increases damage to naval units"
+              },
+              "fire_supression": {
+                "name": "Fire Supression",
+                "description": "Reduces damage taken"
+              }
+            },
+            "heavy_cavalry": {
+              "heavy_raiders": {
+                "name": "Heavy Raiders",
+                "description": "Increases civilian causalties during raids but increases gold"
+              },
+              "armored": {
+                "name": "Armored",
+                "description": "Increases defense"
+              },
+              "defensive_tactics": {
+                "name": "Lance",
+                "description": "Incrases units defences when attacked while stationary"
+              },
+              "shield_wall": {
+                "name": "Shield Wall",
+                "description": "Increases defense against ranged attacks"
+              },
+              "mounted_archery": {
+                "name": "Mounted Archery",
+                "description": "Allows ranged attacks while mounted"
+              },
+              "war_horses": {
+                "name": "War Horses",
+                "description": "Increases speed and stamina"
+              }
+            },
+            "light_cavalry": {
+              "skirmisher": {
+                "name": "Skirmisher",
+                "description": "Increases hit and run tactics"
+              },
+              "scout": {
+                "name": "Scout",
+                "description": "Increases vision range"
+              },
+              "flanking": {
+                "name": "Flanking",
+                "description": "Increases damage when attacking from the sides"
+              },
+              "harassment": {
+                "name": "Harassment",
+                "description": "Reduces enemy movement speed and logistics"
+              },
+              "mounted_archer": {
+                "name": "Mounted Archer",
+                "description": "Allows ranged attacks while mounted"
+              },
+              "mobility": {
+                "name": "Mobility",
+                "description": "Increases movement speed"
+              }
+            },
+            "logistics": {
+              "supply_chain": {
+                "name": "Supply Chain",
+                "description": "Increases supply efficiency"
+              },
+              "quick_repair": {
+                "name": "Quick Repair",
+                "description": "Reduces repair time"
+              },
+              "ammunition_transport": {
+                "name": "Ammunition Transport",
+                "description": "Increases ammo delivery speed"
+              },
+              "fuel_efficiency": {
+                "name": "Fuel Efficiency",
+                "description": "Reduces fuel consumption"
+              },
+              "medical_supplies": {
+                "name": "Medical Supplies",
+                "description": "Increases availability of medical supplies"
+              },
+              "communication_network": {
+                "name": "Communication Network",
+                "description": "Enhances communication efficiency"
+              }
+            },
+            "medic": {
+              "field_medic": {
+                "name": "Field Medic",
+                "description": "Increases healing rate in the field"
+              },
+              "triage": {
+                "name": "Triage",
+                "description": "Heals multiple units at once"
+              },
+              "first_aid": {
+                "name": "First Aid",
+                "description": "Increases effectiveness of first aid kits"
+              },
+              "mobile_hospital": {
+                "name": "Mobile Hospital",
+                "description": "Sets up mobile hospitals for faster healing"
+              },
+              "combat_medic": {
+                "name": "Combat Medic",
+                "description": "Increases effectiveness in combat situations"
+              },
+              "evacuation": {
+                "name": "Evacuation",
+                "description": "Speeds up the evacuation of wounded"
+              }
+            },
+            "melee": {
+              "berserk": {
+                "name": "Berserk",
+                "description": "Increases damage while reducing defense"
+              },
+              "shield_wall": {
+                "name": "Shield Wall",
+                "description": "Increases defense"
+              },
+              "dual_wielding": {
+                "name": "Dual Wielding",
+                "description": "Increases attack speed"
+              },
+              "battle_hardened": {
+                "name": "Battle Hardened",
+                "description": "Increases overall combat effectiveness"
+              },
+              "cleave": {
+                "name": "Cleave",
+                "description": "Deals damage to multiple enemies at once"
+              },
+              "defensive_stance": {
+                "name": "Defensive Stance",
+                "description": "Reduces damage taken"
+              }
+            },
+            "police": {
+              "riot_control": {
+                "name": "Riot Control",
+                "description": "Increases effectiveness against crowds"
+              },
+              "investigation": {
+                "name": "Investigation",
+                "description": "Increases crime solving speed"
+              },
+              "patrol": {
+                "name": "Patrol",
+                "description": "Increases visibility and area coverage"
+              },
+              "SWAT_training": {
+                "name": "SWAT Training",
+                "description": "Enhances tactical response capabilities"
+              },
+              "community_outreach": {
+                "name": "Community Outreach",
+                "description": "Improves relations with the community"
+              },
+              "rapid_response": {
+                "name": "Rapid Response",
+                "description": "Decreases response time to incidents"
+              }
+            },
+            "range": {
+              "sharpshooter": {
+                "name": "Sharpshooter",
+                "description": "Increases range and accuracy"
+              },
+              "volley_fire": {
+                "name": "Volley Fire",
+                "description": "Increases damage to groups"
+              },
+              "rapid_reload": {
+                "name": "Rapid Reload",
+                "description": "Decreases reload time"
+              },
+              "longbow": {
+                "name": "Longbow",
+                "description": "Increases range"
+              },
+              "fire_arrows": {
+                "name": "Fire Arrows",
+                "description": "Increases damage over time"
+              },
+              "camouflage": {
+                "name": "Camouflage",
+                "description": "Makes the unit harder to detect"
+              }
+            },
+            "scout": {
+              "pathfinder": {
+                "name": "Pathfinder",
+                "description": "Increases movement through rough terrain"
+              },
+              "tracker": {
+                "name": "Tracker",
+                "description": "Increases ability to track enemy units"
+              },
+              "stealth": {
+                "name": "Stealth",
+                "description": "Increases ability to remain undetected"
+              },
+              "survivalist": {
+                "name": "Survivalist",
+                "description": "Increases survival skills in hostile environments"
+              },
+              "reconnaissance": {
+                "name": "Reconnaissance",
+                "description": "Enhances scouting abilities"
+              },
+              "signal_flare": {
+                "name": "Signal Flare",
+                "description": "Allows the unit to call for reinforcements"
+              }
+            },
+            "siege": {
+              "battering_ram": {
+                "name": "Battering Ram",
+                "description": "Increases damage to walls and structures"
+              },
+              "artillery_barrage": {
+                "name": "Artillery Barrage",
+                "description": "Increases damage to clustered units"
+              },
+              "siege_tower": {
+                "name": "Siege Tower",
+                "description": "Increases effectiveness against fortified positions"
+              },
+              "catapult": {
+                "name": "Catapult",
+                "description": "Increases range and damage"
+              },
+              "engineer_support": {
+                "name": "Engineer Support",
+                "description": "Enhances siege equipment effectiveness"
+              },
+              "demolition_expert": {
+                "name": "Demolition Expert",
+                "description": "Increases damage to enemy fortifications"
+              }
+            },
+            "commando": {
+              "guerilla_warfare": {
+                "name": "Guerilla Warfare",
+                "description": "Ignores enemy zone of control"
+              },
+              "camouflage": {
+                "name": "Camouflage",
+                "description": "Invisible to enemy units"
+              },
+              "sabotage": {
+                "name": "Sabotage",
+                "description": "Damages enemy improvements"
+              },
+              "paratrooper": {
+                "name": "Paratrooper",
+                "description": "Can paradrop into enemy territory"
+              },
+              "special_forces": {
+                "name": "Special Forces",
+                "description": "Ignores terrain movement penalties"
+              }
+            },
+            "fighter": {
+              "dogfighting": {
+                "name": "Dogfighting",
+                "description": "Increases air unit's combat strength against other air units"
+              },
+              "flares": {
+                "name": "Flares",
+                "description": "Reduces damage taken from air defenses"
+              },
+              "multirole": {
+                "name": "Multirole",
+                "description": "Reduces air unit's combat strength against other air units"
+              },
+              "air_repair": {
+                "name": "Air Repair",
+                "description": "Heals every turn, even if it performs an action"
+              },
+              "navy_modifications": {
+                "name": "Navy Modifications",
+                "description": "Allows the unit to take off from carriers"
+              }
+            },
+            "bomber": {
+              "air_repair": {
+                "name": "Air Repair",
+                "description": "Heals every turn, even if it performs an action"
+              },
+              "jet_engine": {
+                "name": "Jet Engine",
+                "description": "Increases air unit's range"
+              },
+              "upgraded_bombbays": {
+                "name": "Upgraded Bombbays",
+                "description": "Allows the unit to attack twice"
+              },
+              "flares": {
+                "name": "Flares",
+                "description": "Reduces damage taken from air defenses"
+              },
+              "active_radar_jamming": {
+                "name": "Active Radar Jamming",
+                "description": "Reduces enemy air interception chance"
+              },
+              "glide_bombing": {
+                "name": "Glide Bombing",
+                "description": "Ignores interception"
+              }
+            },
+            "engineer": {
+              "fortifications": {
+                "name": "Fortifications",
+                "description": "Builds defensive structures faster"
+              },
+              "repair": {
+                "name": "Repair",
+                "description": "Repairs units and structures faster"
+              },
+              "bridge_building": {
+                "name": "Bridge Building",
+                "description": "Enables rapid bridge construction"
+              },
+              "power_lines": {
+                "name": "Power Lines",
+                "description": "Increases power grid efficiency"
+              },
+              "renewable_energy": {
+                "name": "Renewable Energy",
+                "description": "Increases energy production from renewable sources"
+              },
+              "civil_engineering": {
+                "name": "Civil Engineering",
+                "description": "Improves infrastructure and city planning"
+              }
+            },
+            "builder": {
+              "farmer": {
+                "name": "Farmer",
+                "description": "Allows construction of farms/plantations/pastures"
+              },
+              "miner": {
+                "name": "Miner",
+                "description": "Allows construction of mines/quarries"
+              },
+              "lumberjack": {
+                "name": "Lumberjack",
+                "description": "Allows construction of lumber camps"
+              },
+              "fisherman": {
+                "name": "Fisherman",
+                "description": "Allows construction of (fishing) boats"
+              },
+              "hunter": {
+                "name": "Hunter",
+                "description": "Allows construction of hunting camps"
+              },
+              "electrician": {
+                "name": "Electrician",
+                "description": "Allows construction of power improvements"
+              },
+              "renewable_energy": {
+                "name": "Renewable Energy",
+                "description": "Allows construction of renewable energy improvements"
+              }
+            },
+            "trader": {
+              "caravan": {
+                "name": "Caravan",
+                "description": "Increases trade route range"
+              },
+              "cargo_ship": {
+                "name": "Cargo Ship",
+                "description": "Increases trade route yield"
+              },
+              "tycoon": {
+                "name": "Tycoon",
+                "description": "Increases trade route gold"
+              },
+              "rail_tycoon": {
+                "name": "Rail Tycoon",
+                "description": "Increases trade route production"
+              },
+              "oil_tycoon": {
+                "name": "Oil Tycoon",
+                "description": "Increases trade route oil"
+              },
+              "industrialist": {
+                "name": "Industrialist",
+                "description": "Increases trade route production"
+              },
+              "corporate_tycoon": {
+                "name": "Corporate Tycoon",
+                "description": "Increases trade route gold"
+              },
+              "entrepreneur": {
+                "name": "Entrepreneur",
+                "description": "Increases trade route science"
+              }
             }
           }
         }
