@@ -3,7 +3,7 @@ from openciv.engine.managers.i18n import T_TranslationOrStr
 from openciv.engine.exceptions.great_exception import GreatPersonTreeNotLoaded
 from openciv.engine.saving import SaveAble
 from openciv.engine.managers.log import LogManager
-from openciv.gameplay.effects import Effects
+from openciv.gameplay.effect import Effects
 from openciv.gameplay.resource import Resource
 from openciv.gameplay.resources.core.mechanics._base import BaseGreatMechanicResource
 
@@ -53,22 +53,22 @@ class GreatsTree(SaveAble):
 
     def buy_great(self, great: Great) -> Great:
         self.points -= great.points
-        LogManager._get_instance().gameplay.debug(f"Bought Great {great.__class__.__name__} for {great.points} points")
+        LogManager.get_instance().gameplay.debug(f"Bought Great {great.__class__.__name__} for {great.points} points")
         return great
 
     def add_great(self, great: Great) -> NoReturn:
         self.greats.append(great)
-        LogManager._get_instance().gameplay.debug(f"Added Great {great.__class__.__name__} to {self.name}")
+        LogManager.get_instance().gameplay.debug(f"Added Great {great.__class__.__name__} to {self.name}")
 
     def remove_great(self, great: Great) -> NoReturn:
         self.greats.remove(great)
-        LogManager._get_instance().gameplay.debug(f"Removed Great {great.__class__.__name__} from {self.name}")
+        LogManager.get_instance().gameplay.debug(f"Removed Great {great.__class__.__name__} from {self.name}")
 
     def __add__(self, b: int | float | Great) -> ForwardRef("GreatsTree"):
         if isinstance(b, Great):
             self.add_great(b)
             return self
-        LogManager._get_instance().gameplay.debug(f"Adding {b.__class__.__name__} points to {self.name}")
+        LogManager.get_instance().gameplay.debug(f"Adding {b.__class__.__name__} points to {self.name}")
         self.points += float(b)
         return self
 
@@ -79,7 +79,7 @@ class GreatsTree(SaveAble):
         if isinstance(b, Great):
             self.remove_great(b)
             return self
-        LogManager._get_instance().gameplay.debug(f"Subtracting {b} points from {self.name}")
+        LogManager.get_instance().gameplay.debug(f"Subtracting {b} points from {self.name}")
         self.points -= float(b)
         return self
 

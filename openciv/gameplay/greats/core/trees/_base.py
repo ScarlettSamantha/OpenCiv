@@ -17,7 +17,7 @@ class BaseCoreGreatsTree(GreatsTree):
     def load_greats_from_folder(self) -> NoReturn:
         folder = self.base_folder() + self.load_folder
         greats: Dict[str, Callable] = PyLoad.load_classes(folder)
-        LogManager._get_instance().engine.debug(f"Loading Greats from {folder}")
-        LogManager._get_instance().engine.debug(f"Greats found: {', '.join(greats.keys())}")
+        LogManager.get_instance().engine.debug(f"Loading Greats from {folder}")
+        LogManager.get_instance().engine.debug(f"Greats found: {', '.join(greats.keys())}")
         for _, great in greats.items():
             self.add_great(great)
