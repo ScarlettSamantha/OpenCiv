@@ -36,7 +36,7 @@ class Taggable:
 
     def add_tag(self, tag: Tag):
         self.tags.append(tag)
-        _Tags._get_instance().add(tag)
+        _Tags.get_instance().add(tag)
 
     def has_tag(self, tag: str) -> bool:
         return any(t.tag == tag for t in self.tags)

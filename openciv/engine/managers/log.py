@@ -1,21 +1,23 @@
+from __future__ import annotations
+
 import logging
 import os
 import sys
 from datetime import datetime
-from typing import Callable, Union
+from typing import Any, Callable, Union, Dict
 from openciv.engine.mixins.singleton import Singleton
 
 
 class LogManager(Singleton):
-    def __setup__(self, debug_mode: bool = True, testing_mode: bool = False):
-        self.debug_mode = debug_mode
-        self.testing_mode = testing_mode
-        self.loggers = {}
+    def __setup__(self, debug_mode: bool = True, testing_mode: bool = False) -> None:
+        self.debug_mode: bool = debug_mode
+        self.testing_mode: bool = testing_mode
+        self.loggers: Dict[str, logging.Logger] = {}
         self.setup_loggers()
         self.redirect_output_to_debug()
 
-    def setup_loggers(self):
-        log_types = {
+    def setup_loggers(self) -> None:
+        log_types: Dict[str, int] = {
             "gameplay": logging.INFO,
             "engine": logging.DEBUG,
             "graphics": logging.INFO,
@@ -25,29 +27,31 @@ class LogManager(Singleton):
         }
 
         for log_type, level in log_types.items():
-            logger = logging.getLogger(log_type)
-            logger.setLevel(level)
+            logger: logging.Logger = logging.getLogger(name=log_type)
+            logger.setLevel(level=level)
 
             # Remove all handlers associated with the logger
             for handler in logger.handlers[:]:
-                logger.removeHandler(handler)
+                logger.removeHandler(hdlr=handler)
 
             # Create log directory structure
-            log_dir = f"logs/{log_type}"
-            os.makedirs(log_dir, exist_ok=True)
+            log_dir: str = f"logs/{log_type}"
+            os.makedirs(name=log_dir, exist_ok=True)
             if self.testing_mode:
-                log_file = os.path.join(log_dir, f'test_log_{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}.log')
+                log_file: str = os.path.join(
+                    log_dir, f'test_log_{datetime.now().strftime(format="%Y_%m_%d_%H_%M_%S")}.log'
+                )
             else:
-                log_file = os.path.join(log_dir, f'log_{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}.log')
+                log_file: str = os.path.join(log_dir, f'log_{datetime.now().strftime(format="%Y_%m_%d_%H_%M_%S")}.log')
 
             # Create file handler
-            file_handler = logging.FileHandler(log_file)
-            file_handler.setLevel(level)
+            file_handler = logging.FileHandler(filename=log_file)
+            file_handler.setLevel(level=level)
 
             # Create formatter and add it to the handlers
-            formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-            file_handler.setFormatter(formatter)
-            logger.addHandler(file_handler)
+            formatter = logging.Formatter(fmt="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+            file_handler.setFormatter(fmt=formatter)
+            logger.addHandler(hdlr=file_handler)
 
             # Add stream handler if in debug mode and not testing mode
             if self.debug_mode and not self.testing_mode:
@@ -74,19 +78,22 @@ class LogManager(Singleton):
             """
 
             def __init__(
-                self, logger: logging.Logger, method: Union[Callable, str] = "debug", testing_mode: bool = False
-            ):
-                self.logger = logger
+                self,
+                logger: logging.Logger,
+                method: Union[Callable[..., Any], str] = "debug",
+                testing_mode: bool = False,
+            ) -> None:
+                self.logger: logging.Logger = logger
                 self.buffer = ""
-                self.testing_mode = testing_mode
+                self.testing_mode: bool = testing_mode
 
                 # Set the logging method based on the provided method argument
                 if isinstance(method, str):
-                    self.log_method = getattr(logger, method)
+                    self.log_method: Callable[..., Any] = getattr(logger, method)
                 else:
-                    self.log_method = method
+                    self.log_method: Callable[..., Any] = method
 
-            def write(self, message: str):
+            def write(self, message: str) -> None:
                 """
                 Write the message to the buffer. Logs each line when a newline is encountered.
 
@@ -96,10 +103,10 @@ class LogManager(Singleton):
                 if not self.testing_mode:
                     self.buffer += message
                     while "\n" in self.buffer:
-                        line, self.buffer = self.buffer.split("\n", 1)
+                        line, self.buffer = self.buffer.split(sep="\n", maxsplit=1)
                         self.log_method(line)
 
-            def flush(self):
+            def flush(self) -> None:
                 """
                 Flush the buffer, logging any remaining messages.
                 """
@@ -107,8 +114,8 @@ class LogManager(Singleton):
                     self.log_method(self.buffer)
                     self.buffer = ""
 
-        sys.stdout = RedirectOutput(self.ursina, "debug", self.testing_mode)
-        sys.stderr = RedirectOutput(self.ursina, "error", self.testing_mode)
+        sys.stdout = RedirectOutput(logger=self.ursina, method="debug", testing_mode=self.testing_mode)
+        sys.stderr = RedirectOutput(logger=self.ursina, method="error", testing_mode=self.testing_mode)
 
     def log(self, log_type: str, message: str):
         if log_type in self.loggers:
@@ -116,16 +123,16 @@ class LogManager(Singleton):
         else:
             raise ValueError(f"Unknown log type: {log_type}")
 
-    def error(self, log_type: str, message: str):
+    def error(self, log_type: str, message: str) -> None:
         if log_type in self.loggers:
-            self.loggers[log_type].error(message)
+            self.loggers[log_type].error(msg=message)
         else:
             raise ValueError(f"Unknown log type: {log_type}")
 
-    def logger(self, logger) -> logging.Logger:
-        return self.loggers[logger]
+    def logger(self, logger_key: str) -> logging.Logger:
+        return self.loggers[logger_key]
 
-    def set_testing_mode(self, testing_mode: bool):
+    def set_testing_mode(self, testing_mode: bool) -> None:
         """
         Sets the testing mode and reconfigures the loggers and output redirection.
 

@@ -161,7 +161,7 @@ class GameManager(BaseManager):
         return self._camera
 
     def log(self) -> LogManager:
-        return LogManager._get_instance()
+        return LogManager.get_instance()
 
     def shutdown(self):
         print("Shutdown")

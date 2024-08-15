@@ -31,13 +31,13 @@ class Keyable:
         Returns:
             str: The unique key assigned to this object.
         """
-        return KeyManager._get_instance().register(self)
+        return KeyManager.get_instance().register(self)
 
     def _unregister_key(self) -> None:
         """
         Unregisters the object's key from the KeyManager.
         """
-        KeyManager._get_instance().delete(self._key)
+        KeyManager.get_instance().delete(self._key)
 
 
 class KeyManager(BaseManager, Singleton):
