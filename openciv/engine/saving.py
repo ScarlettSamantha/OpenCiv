@@ -18,7 +18,7 @@ SaveableType = TypeVar(
 )
 
 # This is to enable debug timers if the log level is set to DEBUG
-if LogManager._get_instance().engine.getEffectiveLevel() <= DEBUG:
+if LogManager.get_instance().engine.getEffectiveLevel() <= DEBUG:
     _debug_timers: Dict[str, datetime] = {}
     _debug_timer_enable: bool = True
 else:
@@ -165,7 +165,7 @@ class SaveAble(Keyable, StateHashable):
         """
         own_state_hash = self.get_state_hash()
         _state_hash_eq = self.remove_hash_tag(own_state_hash) == self.remove_hash_tag(previous_state_hash)
-        LogManager._get_instance().engine.debug(
+        LogManager.get_instance().engine.debug(
             f"Validating state for {self.__class__.__name__}.{self._key} {own_state_hash} == {previous_state_hash} -> {"MATCH!!" if _state_hash_eq else "!!NO MATCH"}"
         )
         return _state_hash_eq
@@ -223,7 +223,7 @@ class SaveAble(Keyable, StateHashable):
                 )
             else:
                 full_class_path: str = f"{value.__module__}.{value.__class__.__name__}"
-                LogManager._get_instance().engine.warning(f"Object is not SaveAble: {full_class_path}")
+                LogManager.get_instance().engine.warning(f"Object is not SaveAble: {full_class_path}")
                 return value if not hasattr(value, "__str__") else str(value)
         return value
 
@@ -244,7 +244,7 @@ class SaveAble(Keyable, StateHashable):
         self.restore_from_data(data)
         if self.validate_state(data["__hash"]) is False:
             if ignore_object_restore_failure:
-                LogManager._get_instance().engine.warning(
+                LogManager.get_instance().engine.warning(
                     f"Object failed to validate state: {self.__class__.__name__}.{self._key}"
                 )
                 return
@@ -257,7 +257,7 @@ class SaveAble(Keyable, StateHashable):
         self._restored_on = datetime.now()
 
         if _debug_timer_enable:
-            LogManager._get_instance().engine.debug(f"Restoring took: {_debug_timers[self._key] - datetime.now()}ms")
+            LogManager.get_instance().engine.debug(f"Restoring took: {_debug_timers[self._key] - datetime.now()}ms")
             del _debug_timers[self._key]
 
     def saveable_data(
@@ -284,14 +284,14 @@ class SaveAble(Keyable, StateHashable):
             "__hash": self.get_state_hash() if _calculate_state_hash else None,
             "__instance_args": self._instance_args,
         }
-        LogManager._get_instance().engine.debug(
+        LogManager.get_instance().engine.debug(
             f"Saving[{self.__class__.__name__}.{self._key}][R_L:{recursion_level}]: {self.__module__}.{self.__class__.__name__}"
         )
         for key in self._saveable_properties:
             data[key] = self._save_property(key, _recursion_level=recursion_level)
 
         if _debug_timer_enable:
-            LogManager._get_instance().engine.debug(
+            LogManager.get_instance().engine.debug(
                 f"Saving[{self.__class__.__name__}.{self._key}][R_L:{recursion_level}]: took {round((datetime.now() - _debug_timers[self._key]).total_seconds() * 1000, 4)}ms"
             )
             del _debug_timers[self._key]
@@ -339,7 +339,7 @@ class SaveAble(Keyable, StateHashable):
         """
 
         module_name, class_name = data["__type"].rsplit(".", 1)
-        LogManager._get_instance().engine.debug(f"Creating object from data: {module_name}.{class_name}")
+        LogManager.get_instance().engine.debug(f"Creating object from data: {module_name}.{class_name}")
         _kwargs = (
             {}
             if "__instance_args" not in data or data["__instance_args"] is None

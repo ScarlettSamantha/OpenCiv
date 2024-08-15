@@ -64,7 +64,7 @@ class Game:
         self.prepare_map()
 
     def setup_engine(self) -> None:
-        log_manager = LogManager._get_instance()
+        log_manager = LogManager.get_instance()
         log_manager.engine.debug("Setting up engine")
         self.ursina = Ursina(
             title=self.title,
@@ -110,7 +110,7 @@ class Game:
         i18n_manager = _i18n(config.get("game.engine.init.i18n.path.relative"), config.get("game.language"), True)
         i18n_manager.load_language("en_EN")
         set_i18n(i18n_manager)
-        log_manager = LogManager._get_instance()
+        log_manager = LogManager.get_instance()
         log_manager.engine.debug("Preparing game managers")
         map_manager = MapManager()
         map_manager.load("openciv/world/tiles/")
@@ -152,7 +152,7 @@ class Game:
         self.camera.game_manager = self.game_manager
 
     def prepare_map(self) -> None:
-        log_manager = LogManager._get_instance()
+        log_manager = LogManager.get_instance()
         log_manager.engine.debug("Preparing map")
         hexGridEntity = HexGrid(16, 16, tiles=self.game_manager.map().registeredTiles())
         log_manager.engine.debug("Hex grid entity created")
@@ -164,7 +164,7 @@ class Game:
 
     def run(self):
         self.game_manager.boot()
-        log_manager = LogManager._get_instance()
+        log_manager = LogManager.get_instance()
         log_manager.engine.debug("Game booted")
         log_manager.gameplay.debug("Game starting")
         self.game_manager.run()
