@@ -4,7 +4,7 @@ from openciv.gameplay.techs.trees.core import Core
 from openciv.gameplay.tech import Tech
 from openciv.engine.managers.log import LogManager
 
-LogManager._get_instance().set_testing_mode(True)
+LogManager.get_instance().set_testing_mode(True)
 
 
 def Techs():
