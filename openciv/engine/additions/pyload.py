@@ -4,7 +4,7 @@ import re
 import importlib.util
 import inspect
 import fnmatch
-from typing import Dict, Type, List, Union, Tuple, Callable, Optional
+from typing import Dict, Type, List, Union, Tuple, Callable, Optional, Any
 from openciv.engine.managers.log import LogManager
 
 
@@ -34,7 +34,7 @@ class PyFileProcessor:
             self._log_skip(file, name_pattern)
             return {}
 
-        LogManager._get_instance().engine.debug(f"Processing file: {file}")
+        LogManager.get_instance().engine.debug(f"Processing file: {file}")
         file_content = self._read_file(file)
         if not file_content:
             return {}
@@ -65,7 +65,7 @@ class PyFileProcessor:
                         and re.match(regex_pattern, file_name) is not None
                     )
                 except re.error as e:
-                    LogManager._get_instance().engine.error(f"Invalid regex pattern: {regex_pattern}, error: {e}")
+                    LogManager.get_instance().engine.error(f"Invalid regex pattern: {regex_pattern}, error: {e}")
                     return False
             else:
                 return re.match(r"^(?!_).*.py$", file_name) is not None and fnmatch.fnmatch(file_name, name_pattern)
@@ -76,7 +76,7 @@ class PyFileProcessor:
         Logs a message indicating that the file is skipped due to a pattern mismatch.
         """
         pattern = name_pattern if isinstance(name_pattern, str) else f"Custom->{name_pattern.__name__}"
-        LogManager._get_instance().engine.debug(f"Skipping {file} due to name pattern[{pattern}] mismatch")
+        LogManager.get_instance().engine.debug(f"Skipping {file} due to name pattern[{pattern}] mismatch")
 
     def _read_file(self, file: str) -> Optional[str]:
         """
@@ -88,7 +88,7 @@ class PyFileProcessor:
                 return f.read()
         except IOError as e:
             if self._skip_on_error:
-                LogManager._get_instance().engine.debug(f"Skipping {file} due to IO error: {e}")
+                LogManager.get_instance().engine.debug(f"Skipping {file} due to IO error: {e}")
             else:
                 raise e
             return None
@@ -121,7 +121,7 @@ class PyFileProcessor:
                     if base == allowed or base.__name__ == allowed.__name__:
                         return True
 
-            LogManager._get_instance().engine.debug(
+            LogManager.get_instance().engine.debug(
                 f"Skipping class: {_class.__name__} due to base class mismatch {allowed}"
             )
             return False
@@ -146,7 +146,7 @@ class PyFileProcessor:
         except SyntaxError as e:
             if not self._skip_on_error:
                 raise e
-            LogManager._get_instance().engine.debug(f"Skipping {file} due to syntax error: {e}")
+            LogManager.get_instance().engine.debug(f"Skipping {file} due to syntax error: {e}")
         return loaded_classes
 
     def _load_classes_from_visitor(self, visitor: GenericClassVisitor, file: str) -> Dict[str, Type]:
@@ -159,7 +159,7 @@ class PyFileProcessor:
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         for class_name in visitor.subclasses:
-            LogManager._get_instance().engine.debug(f"Found class: {class_name}")
+            LogManager.get_instance().engine.debug(f"Found class: {class_name}")
             if inspect.isfunction(self.base_classes):
                 if self.base_classes(module, class_name):
                     loaded_classes[class_name] = getattr(module, class_name)
@@ -183,8 +183,8 @@ class PyLoad:
         self,
         directory: Union[str, List[str]],
         name_pattern: Union[str, Callable[[str], bool]] = r"^(?!_).*.py$",
-        base_classes: Union[Type, List[Type], Callable[[str, str], bool]] = None,
-        properties: Tuple[str, str] = None,
+        base_classes: Union[Any, List[Any], Callable[[str, str], bool]] = None,
+        properties: Tuple[str, str] | None = None,
         *args,
         **kwargs,
     ):
@@ -199,9 +199,9 @@ class PyLoad:
         cls,
         directory: Union[str, List[str]],
         name_pattern: Union[str, Callable[[str], bool]] = r"^(?!_).*.py$",
-        base_classes: Union[Type, List[Type], Callable[[str, str], bool]] = None,
+        base_classes: Union[Any, List[Any], Callable[[str, str], bool]] = None,
         properties: Tuple[str, str] = None,
-    ) -> Dict[str, Type]:
+    ) -> Dict[str, Any]:
         """
         Loads and returns classes from Python files in the given directory based on the provided criteria.
 
