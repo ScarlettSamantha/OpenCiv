@@ -1,8 +1,8 @@
-from ursina import Entity, Vec3, MeshCollider
-from ursina.shaders import lit_with_shadows_shader
-from typing import List
+from ursina import Entity, Vec3, MeshCollider  # type: ignore
+from ursina.shaders import lit_with_shadows_shader  # type: ignore
+from typing import List, Any
 from openciv.engine.managers.player import PlayerManager, Player
-from openciv.gameplay.damage import DamageMode
+from openciv.gameplay.combat.damage import DamageMode
 from openciv.gameplay.units.baseunit import BaseUnit
 from openciv.gameplay.tile_yield_modifier import TileYieldModifier, TileYield
 from openciv.gameplay.improvements import Improvements
@@ -70,9 +70,9 @@ class BaseTile:
         self.movement_cost = 1.0
 
         # What kind of terrain does this have ?
-        self.terrain: BaseTerrain = None
+        self.terrain: BaseTerrain | None = None
         # What weather is the tile having ?
-        self.weather: BaseWeather = None
+        self.weather: BaseWeather | None = None
 
         # What features does this tile contain ?
         self.features: List[BaseFeature] = list()
@@ -83,18 +83,18 @@ class BaseTile:
         # Does this have items sitting on top of it ?
         self.items: List[BaseItem] = list()
         # What kind of states apply to this object ?
-        self.states = list()
+        self.states: List[Any] = []
 
         # Does this contain an city ?
-        self.city: "City" | None = None
+        self.city: City | None = None
         # Who if anybody is the owner of this tile ?
-        self.owner: Player = None
+        self.owner: Player | None = None
         # Who has claimed the tile but does not own it ?
-        self.claimants = list()
+        self.claimants: List[Any] = []
 
         # We configure base tile yield mostly just for debugging.
         self.tile_yield: TileYieldModifier = TileYieldModifier(
-            TileYield(gold=0.0, production=0.0, science=0.0, food=0.0, culture=0.0, housing=0.0),
+            values=TileYield(gold=0.0, production=0.0, science=0.0, food=0.0, culture=0.0, housing=0.0),
             mode=TileYieldModifier.MODE_SET,
         )
 
@@ -109,25 +109,25 @@ class BaseTile:
     def texture(self):
         return self.terrain.texture()
 
-    def setTerrain(self, terrain: BaseTerrain):
-        self.terrain = terrain()
+    def setTerrain(self, terrain: BaseTerrain) -> None:
+        self.terrain = terrain
 
-    def addTileYield(self, tileYield: TileYield):
-        self.tile_yield += tileYield
+    def addTileYield(self, tileYield: TileYield) -> None:
+        self.tile_yield.values += tileYield
 
-    def tileYield(self):
+    def tileYield(self) -> TileYieldModifier:
         return self.tile_yield
 
     def improvements(self) -> Improvements:
         return self._improvements
 
-    def build(self, improvement: "Improvement"):  # noqa: F821
+    def build(self, improvement: "Improvement") -> None:  # noqa: F821
         self._improvements.add(improvement)
 
     def found(self, player: Player = None, population: int = 1, capital: bool = False):
         if player is None:
             player = PlayerManager.player()
-        self.city = City.found_new("Test city", player, self, population, capital)
+        self.city = City.found_new(name="Test city", tile=self, population=population, is_capital=capital)
 
 
 class Tile(Entity):

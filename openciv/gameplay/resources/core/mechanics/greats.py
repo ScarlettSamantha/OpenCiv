@@ -1,4 +1,4 @@
-from openciv.gameplay.resources.core.mechanics._base import MechanicBaseResource, BaseGreatMechanicResource
+from openciv.gameplay.resources.core.mechanics._base import BaseGreatMechanicResource
 from openciv.engine.managers.i18n import _t
 from typing import Union
 
