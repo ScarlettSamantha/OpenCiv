@@ -5,7 +5,7 @@ from openciv.engine.exceptions.key_exception import KeyNotFoundException
 
 @pytest.fixture
 def key_manager():
-    return KeyManager._get_instance()
+    return KeyManager.get_instance()
 
 
 @pytest.fixture
