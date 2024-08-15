@@ -1,5 +1,5 @@
 from openciv.gameplay.leader import Leader
-from openciv.gameplay.effects import Effects
+from openciv.gameplay.effect import Effects
 from openciv.engine.managers.i18n import _t
 
 
