@@ -1,5 +1,5 @@
 from openciv.gameplay.tile_yield import TileYield
-from openciv.gameplay.effects import Effects
+from openciv.gameplay.effect import Effects
 from openciv.gameplay.conditions import Conditions
 from openciv.gameplay.exceptions.improvement_exceptions import ImprovementUpgradeException
 from openciv.engine.mixins.callbacks import CallbacksMixin

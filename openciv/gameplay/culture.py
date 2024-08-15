@@ -1,7 +1,7 @@
 from openciv.engine.saving import SaveAble
 from openciv.engine.managers.i18n import T_TranslationOrStr
 from openciv.engine.mixins.callbacks import CallbacksMixin
-from typing import ForwardRef, List, NoReturn, List
+from typing import ForwardRef, NoReturn, List
 from openciv.engine.requires import Requires
 from abc import abstractmethod
 
