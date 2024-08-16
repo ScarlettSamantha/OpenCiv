@@ -1,5 +1,6 @@
 from __future__ import annotations
 from openciv.engine.UI.base import BaseUI
+from openciv.engine.UI.menus.base import Menu
 from ursina import camera
 from openciv.gameplay.ui.elements.button import Button as _Button
 from openciv.gameplay.ui.elements.text import Text as _Text

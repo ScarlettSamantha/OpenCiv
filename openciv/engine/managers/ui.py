@@ -1,15 +1,32 @@
 from __future__ import annotations
 from openciv.engine.managers.base import BaseManager
+from openciv.engine.UI.menus import *
 
 
 class UIManager(BaseManager):
     def __init__(self):
+        self.active_menu = None
+        self.previous_menu = None
+        self.menus = []
+
+        # TODO remove after finishing refactor...
         self.main_menu = None
         self.game_config = None
         self.test_menu = None
 
+    def _add_available_menus(self):
+        pass
+
+    def change_to_menu(self, menu: Menu):
+        self.previous_menu = self.active_menu
+        self.active_menu = menu
+
+    def activate_current_menu(self):
+        self.active_menu.render()
+        self.active_menu.show()
+
     def start_test_menu(self):
-        from openciv.engine.UI.test_menu import TestMenu
+        
 
         self.stop_main_menu()
 
@@ -27,7 +44,7 @@ class UIManager(BaseManager):
         return self.test_menu.enabled
 
     def start_main_menu(self):
-        from openciv.engine.UI.main_menu import MainMenu
+        
 
         self.stop_game_config()
 
@@ -45,7 +62,7 @@ class UIManager(BaseManager):
         return self.main_menu.enabled
 
     def start_game_config(self):
-        from openciv.engine.UI.game_config import GameConfig
+        
 
         self.stop_main_menu()
 

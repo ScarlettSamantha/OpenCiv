@@ -1,10 +1,9 @@
-from __future__ import annotations
-from openciv.engine.UI.base import BaseUI
+from openciv.engine.UI.menus.base import Menu
 from ursina import camera, color, window
 from openciv.engine.entity import Entity
 
 
-class TestMenu(BaseUI):
+class TestMenu(Menu):
     def __init__(self, game_manager, call: callable, *args, **kwargs):
         self.panel = None
         self.on_start: callable = call

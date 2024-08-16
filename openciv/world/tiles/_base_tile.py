@@ -111,7 +111,7 @@ class BaseTile:
         return self.terrain.texture()
 
     def setTerrain(self, terrain: BaseTerrain) -> None:
-        self.terrain = terrain
+        self.terrain = terrain()
 
     def addTileYield(self, tileYield: TileYield) -> None:
         self.tile_yield.values += tileYield

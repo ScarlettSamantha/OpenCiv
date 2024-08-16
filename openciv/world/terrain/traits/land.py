@@ -1,6 +1,6 @@
 from __future__ import annotations
 from openciv.gameplay.tile_modifiers import TileModifier
-from openciv.gameplay.damage import DamageMode
+from openciv.gameplay.combat.damage import DamageMode
 
 # Some base modifiers these should match properties of the object.
 walk = (TileModifier("walkable", True),)

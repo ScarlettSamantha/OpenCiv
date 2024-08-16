@@ -1,5 +1,6 @@
 from __future__ import annotations
 from openciv.engine.managers.game import GameManager
+from openciv.engine.managers.ui import UIManager
 from openciv.gameplay.ui.elements.button import Button as _Button
 from openciv.gameplay.ui.elements.text import Text as _Text
 from openciv.gameplay.ui.elements.window_panel import WindowPanel as _WindowPanel
@@ -8,10 +9,10 @@ from openciv.gameplay.ui.elements.dropdown import DropdownMenuButton as _Dropdow
 
 
 class BaseUI:
-    def __init__(self, parent: GameManager):
-        self._parent: GameManager = parent
+    def __init__(self, parent: UIManager):
+        self._parent: UIManager = parent
 
-    def parent(self) -> GameManager:
+    def parent(self) -> UIManager:
         return self._parent
 
     def Button(self, text, click_action=None, *args, **kwargs):
