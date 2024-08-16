@@ -1,13 +1,16 @@
+from __future__ import annotations
+
 from openciv.gameplay.leader import Leader
 from openciv.gameplay.effect import Effects
-from openciv.engine.managers.i18n import _t
+from openciv.engine.managers.i18n import t_
 
 
 class Augustus(Leader):
-    def __init__(self):
-        super().__init__()
-        self.name = _t("civilization.rome.leaders.augustus.name")
-        self.icon = "augustus_icon"
-        self.description = _t("civilization.rome.leaders.augustus.description")
-
+    def __init__(self) -> None:
+        super().__init__(
+            key="core.leaders.augustus",
+            name=t_("civilization.rome.leaders.augustus.name"),
+            description=t_("civilization.rome.leaders.augustus.description"),
+            icon="civilization/rome/leaders/augustus/leader_icon.png",
+        )
         self._effects = Effects()
