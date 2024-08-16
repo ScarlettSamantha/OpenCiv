@@ -127,6 +127,26 @@ class SaveAble(Keyable, StateHashable):
         self._add_default_saveable_properties()
         self._instance_args: List[str] = self._register_instance_args()
 
+    def _add_saveable_property(self, prop: str) -> None:
+        """Add a saveable property.
+
+        Args:
+            prop (str): The property to add.
+        """
+        if prop in self._meta_properties + self._saveable_properties:
+            return
+        self._saveable_properties.append(prop)
+
+    def _remove_saveable_property(self, prop: str) -> None:
+        """Remove a saveable property.
+
+        Args:
+            prop (str): The property to remove.
+        """
+        if prop not in self._saveable_properties:
+            return
+        self._saveable_properties.remove(prop)
+
     def _register_instance_args(self) -> List[str]:
         """
         Registers instance arguments that have corresponding class properties.
