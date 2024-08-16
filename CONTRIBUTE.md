@@ -12,6 +12,14 @@ Beyond coding, skills in graphic design, sound, modeling, UI, and other creative
 
 If you’d like to contribute, fork the repository, make your changes, and submit a pull request with a brief description of your work. I’ll review contributions when I get the chance.
 
+## Gameplay logic seperation sturcture
+
+The core "mod" handles the foundational game logic, such as how units move, attack, and interact with the environment. For example, the core mod defines the general rules for unit movement—how far a unit can move per turn, how it engages in combat, and how it interacts with terrain. These broad behaviors ensure that the game functions consistently across all scenarios.
+
+In contrast, the specific details—such as the types of units available, their unique abilities, and their impact on gameplay—are defined in the "mod" part. For instance, while the core mod dictates that all units can move and attack, the "mod" part defines what a "Knight" or "Archer" is, what special abilities they have, and how they interact with other game elements. This separation allows for a clear distinction between essential mechanics and customizable content, making it easier for modders to create new content without altering core systems.
+
+This structure aligns well with the open-source nature of the project. Since the core game logic is implemented as a mod, contributors can easily see and understand how these systems are built. They can then use this knowledge as a reference to create their own mods, knowing exactly how the game’s core mechanics are designed and how they can extend or modify them.
+
 ## Branching
 
 At the moment, we are working with a working master model where the main branch is volatile until a basic release is made (v0.2.0). At that point, we will switch over to a more tested DTAP-compatible model of branching. For now, it's Main -> `[TASK/BUGFIX/DOCU]/[name]/[ticket_num]-[small description]`, for example, `TASK/Scarlett/-implement graphics system`. Please note the `-` before the description; this is because there are no ticket numbers at the moment.
