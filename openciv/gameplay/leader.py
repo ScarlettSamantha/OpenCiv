@@ -3,9 +3,12 @@ from openciv.engine.managers.i18n import T_TranslationOrStr
 
 
 class Leader:
-    def __init__(self, name: T_TranslationOrStr, icon: str, description: T_TranslationOrStr) -> None:
+    def __init__(
+        self, key: str, name: T_TranslationOrStr, description: T_TranslationOrStr, icon: str | None = None
+    ) -> None:
+        self.key: str = key
         self.name: T_TranslationOrStr = name
-        self.icon: str = icon
+        self.icon: str | None = icon
         self.description: T_TranslationOrStr = description
 
         self._effects: Effects = Effects()
