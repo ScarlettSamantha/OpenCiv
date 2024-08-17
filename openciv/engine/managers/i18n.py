@@ -50,6 +50,12 @@ class _i18n:
         path = pathlib.Path(self.generate_path(path=f"{language}.json"))
         return path.exists()
 
+    def get_data(self) -> Dict[str, Dict[Any, Any]]:
+        return self._data
+
+    def set_data(self, data: Dict[str, Dict[Any, Any]]) -> None:
+        self._data = data
+
     def load_file(self, path: str) -> None:
         try:
             f = io.open(file=path, mode="r")
