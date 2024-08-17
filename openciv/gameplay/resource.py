@@ -5,6 +5,7 @@ from typing import Union, List, Dict, Any, Self, Type
 
 from openciv.engine.saving import SaveAble
 from openciv.engine.managers.i18n import T_TranslationOrStr, t_
+from openciv.engine.exceptions.resource_exception import ResourceTypeException
 
 
 class ResourceType(Enum):
@@ -28,25 +29,25 @@ class ResourceTypeBase:
 
 
 class ResourceTypeMechanic(ResourceTypeBase):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
-            t_("content.resources.core.types.mechanic.name"),
-            t_("content.resources.core.types.mechanic.description"),
-            ResourceType.MECHANIC,
+            name=t_("content.resources.core.types.mechanic.name"),
+            description=t_("content.resources.core.types.mechanic.description"),
+            type_=ResourceType.MECHANIC,
         )
 
 
 class ResourceTypeBonus(ResourceTypeBase):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
-            t_("content.resources.core.types.bonus.name"),
-            t_("content.resources.core.types.bonus.description"),
-            ResourceType.BONUS,
+            name=t_("content.resources.core.types.bonus.name"),
+            description=t_("content.resources.core.types.bonus.description"),
+            type_=ResourceType.BONUS,
         )
 
 
 class ResourceTypeStrategic(ResourceTypeBase):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
             t_("content.resources.core.types.strategic.name"),
             t_("content.resources.core.types.strategic.description"),
@@ -55,20 +56,20 @@ class ResourceTypeStrategic(ResourceTypeBase):
 
 
 class ResourceTypeLuxury(ResourceTypeBase):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
-            t_("content.resources.core.types.luxury.name"),
-            t_("content.resources.core.types.luxury.description"),
-            ResourceType.LUXURY,
+            name=t_("content.resources.core.types.luxury.name"),
+            description=t_("content.resources.core.types.luxury.description"),
+            type_=ResourceType.LUXURY,
         )
 
 
 class ResourceTypeBasic(ResourceTypeBase):
     def __init__(self):
         super().__init__(
-            t_("content.resources.core.types.basic.name"),
-            t_("content.resources.core.types.basic.description"),
-            ResourceType.BASIC,
+            name=t_("content.resources.core.types.basic.name"),
+            description=t_("content.resources.core.types.basic.description"),
+            type_=ResourceType.BASIC,
         )
 
 
@@ -84,7 +85,7 @@ class Resource(SaveAble):
         description: T_TranslationOrStr | None = None,
         *args: Any,
         **kwargs: Any,
-    ):
+    ) -> None:
         super().__init__()
         self.key: str = key
         self.name: T_TranslationOrStr = name
@@ -261,9 +262,11 @@ class Resources:
 
         if isinstance(resource, Resource):
             _add(self=self, tmp_resource=resource)
-        else:
+        elif isinstance(resource, list):  # type: ignore | Pyright is wrong here. Its saying that its a un-needed check but it is needed because it can also be anything else.
             for r in resource:
                 _add(self=self, tmp_resource=r)
+        else:
+            raise ResourceTypeException(f"Resource must be of type Resource, not {type(resource)}")  # noqa: F821
 
     def __add__(self, b: Resource) -> None:
         self.add(b)
