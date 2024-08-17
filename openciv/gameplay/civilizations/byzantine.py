@@ -1,5 +1,4 @@
 from openciv.gameplay.civilization import Civilization
-from openciv.gameplay.effect import Effect
 
 
 class Byzantine(Civilization):
@@ -10,9 +9,7 @@ class Byzantine(Civilization):
         self.icon = "icons/rome.png"
 
     def register_effects(self):
-        self.add_effect(
-            Effect("civilization.rome.effects.civ_bonus_1", target=Effect.PLAYER_CURRENT, domain=Effect.PLAYER)
-        )
+        pass
 
     def register_leaders(self):
         from openciv.gameplay.leaders.justinian import Justinian
