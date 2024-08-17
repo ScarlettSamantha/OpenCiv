@@ -68,6 +68,8 @@
 
 ### Other
 
+* 🐛 fix trailing error ([`f340bbc`](https://github.com/ScarlettSamantha/OpenCiv/commit/f340bbc517a2d123c65645c8e7156f96db507a93)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 🐛 fix tile_yield ([`c0a6c53`](https://github.com/ScarlettSamantha/OpenCiv/commit/c0a6c536c302c18cf3a42e78ca24ac95d7c0903b)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✅ fix test_saving, passing ([`a8b02b6`](https://github.com/ScarlettSamantha/OpenCiv/commit/a8b02b6290942aa3d8ae90fd381c8920614920e7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
