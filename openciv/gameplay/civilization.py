@@ -1,15 +1,16 @@
 from typing import Self, List
 from openciv.gameplay.effect import Effects, Effect
 from openciv.gameplay.leader import Leader
+from openciv.engine.managers.i18n import T_TranslationOrStr
 from abc import abstractmethod
 
 
 class Civilization:
-    def __init__(self, name: str, description: str) -> None:
-        self.name: str = name
+    def __init__(self, name: T_TranslationOrStr, description: T_TranslationOrStr) -> None:
+        self.name: T_TranslationOrStr = name
         self.icon: str | None = None
         self._loadable = False
-        self.description: str = description
+        self.description: T_TranslationOrStr = description
         self._leaders: List[Leader] = []
 
         self._effects: Effects = Effects()
@@ -46,7 +47,7 @@ class Civilization:
     def __str__(self) -> str:
         leader_name_list: List[str] = []
         for leader in self.leaders:
-            leader_name_list.append(leader.name if leader.name else "Unknown")
+            leader_name_list.append(str(leader.name) if leader.name else "Unknown")
         leaders: str = ", ".join(leader_name_list)
         return f"{self.name} - {self.description} <{leaders}>"
 
