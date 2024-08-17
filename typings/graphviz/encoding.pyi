@@ -13,15 +13,15 @@ class Encoding(copying.CopyBase):
     _encoding = ...
     def __init__(self, *, encoding: typing.Optional[str] = ..., **kwargs) -> None:
         ...
-    
+
     @property
     def encoding(self) -> str:
         """The encoding for the saved source file."""
         ...
-    
+
     @encoding.setter
     def encoding(self, encoding: typing.Optional[str]) -> None:
         ...
-    
+
 
 

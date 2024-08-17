@@ -14,17 +14,17 @@ class Pipe(encoding.Encoding, base.Base, backend.Pipe):
     def pipe(self, format: typing.Optional[str] = ..., renderer: typing.Optional[str] = ..., formatter: typing.Optional[str] = ..., neato_no_op: typing.Union[bool, int, None] = ..., quiet: bool = ..., *, engine: typing.Optional[str] = ..., encoding: None = ...) -> bytes:
         """Return bytes with default ``encoding=None``."""
         ...
-    
+
     @typing.overload
     def pipe(self, format: typing.Optional[str] = ..., renderer: typing.Optional[str] = ..., formatter: typing.Optional[str] = ..., neato_no_op: typing.Union[bool, int, None] = ..., quiet: bool = ..., *, engine: typing.Optional[str] = ..., encoding: str) -> str:
         """Return string when given encoding."""
         ...
-    
+
     @typing.overload
     def pipe(self, format: typing.Optional[str] = ..., renderer: typing.Optional[str] = ..., formatter: typing.Optional[str] = ..., neato_no_op: typing.Union[bool, int, None] = ..., quiet: bool = ..., *, engine: typing.Optional[str] = ..., encoding: typing.Optional[str]) -> typing.Union[bytes, str]:
         """Return bytes or string depending on encoding argument."""
         ...
-    
+
     def pipe(self, format: typing.Optional[str] = ..., renderer: typing.Optional[str] = ..., formatter: typing.Optional[str] = ..., neato_no_op: typing.Union[bool, int, None] = ..., quiet: bool = ..., *, engine: typing.Optional[str] = ..., encoding: typing.Optional[str] = ...) -> typing.Union[bytes, str]:
         """Return the source piped through the Graphviz layout command.
 
@@ -68,6 +68,6 @@ class Pipe(encoding.Encoding, base.Base, backend.Pipe):
             '<?xml version='
         """
         ...
-    
+
 
 

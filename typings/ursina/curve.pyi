@@ -104,22 +104,22 @@ class CubicBezier:
     __slots__ = ...
     def __init__(self, a, b, c, d) -> None:
         ...
-    
+
     def sample_curve_x(self, t):
         ...
-    
+
     def sample_curve_y(self, t):
         ...
-    
+
     def sample_curve_derivative_x(self, t):
         ...
-    
+
     def calculate(self, x, epsilon=...):
         ...
-    
+
     def solve_curve_x(self, t, epsilon=...):
         ...
-    
+
 
 
 if __name__ == '__main__':

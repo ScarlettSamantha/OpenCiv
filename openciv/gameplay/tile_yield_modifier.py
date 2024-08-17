@@ -1,7 +1,7 @@
 from openciv.gameplay.tile_yield import TileYield
 from copy import deepcopy
 
-from typing import Dict, List, Type, Any, Self
+from typing import Dict, List, Type, Self
 
 
 class TileYieldModifier:

@@ -15,7 +15,7 @@ if __name__ == '__main__':
     sun = ...
     def update():
         ...
-    
+
     def input(key):
         ...
-    
+

@@ -18,16 +18,16 @@ class Renderer(base.ParameterBase):
     _verify_renderer = ...
     def __init__(self, *, renderer: typing.Optional[str] = ..., **kwargs) -> None:
         ...
-    
+
     @property
     def renderer(self) -> typing.Optional[str]:
         """The output renderer used for rendering
             (``'cairo'``, ``'gd'``, ...)."""
         ...
-    
+
     @renderer.setter
     def renderer(self, renderer: typing.Optional[str]) -> None:
         ...
-    
+
 
 

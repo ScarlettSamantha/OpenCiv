@@ -16,7 +16,7 @@ class QuadMesh(Mesh):
     point_placer = ...
     def __init__(self, radius=..., segments=..., aspect=..., scale=..., mode=..., thickness=...) -> None:
         ...
-    
+
 
 
 if __name__ == '__main__':

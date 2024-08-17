@@ -11,14 +11,14 @@ class Sky(Entity):
     instances = ...
     def __init__(self, **kwargs) -> None:
         ...
-    
+
     def update(self):
         ...
-    
+
 
 
 if __name__ == '__main__':
     app = ...
     def input(key):
         ...
-    
+

@@ -17,34 +17,34 @@ class ContentTypes:
 class InputField(Button):
     def __init__(self, default_value=..., label=..., max_lines=..., character_limit=..., text=..., active=..., **kwargs) -> None:
         ...
-    
+
     def input(self, key):
         ...
-    
+
     @property
     def text(self):
         ...
-    
+
     @text.setter
     def text(self, value):
         ...
-    
+
     @property
     def text_color(self):
         ...
-    
+
     @text_color.setter
     def text_color(self, value):
         ...
-    
+
     @property
     def active(self):
         ...
-    
+
     @active.setter
     def active(self, value):
         ...
-    
+
 
 
 if __name__ == '__main__':
@@ -54,4 +54,4 @@ if __name__ == '__main__':
     password_field = ...
     def submit():
         ...
-    
+

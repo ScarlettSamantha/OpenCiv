@@ -75,7 +75,7 @@ class Render(saving.Save, backend.Render, backend.View):
             can be given as paths relative to the DOT source file.
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=2)
     def view(self, filename: typing.Union[os.PathLike, str, None] = ..., directory: typing.Union[os.PathLike, str, None] = ..., cleanup: bool = ..., quiet: bool = ..., quiet_view: bool = ...) -> str:
         """Save the source to file, open the rendered result in a viewer.
@@ -107,6 +107,6 @@ class Render(saving.Save, backend.Render, backend.View):
             and no way to retrieve the application's exit status.
         """
         ...
-    
+
 
 

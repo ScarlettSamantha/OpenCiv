@@ -16,7 +16,7 @@ class LineIterable:
         Yields: Line ending with a newline (``'\n'``).
         """
         ...
-    
+
 
 
 class Base(LineIterable, copying.CopyBase):
@@ -24,10 +24,10 @@ class Base(LineIterable, copying.CopyBase):
     @property
     def source(self) -> str:
         ...
-    
+
     def __str__(self) -> str:
         """The DOT source code as string."""
         ...
-    
+
 
 

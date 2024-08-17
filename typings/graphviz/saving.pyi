@@ -16,12 +16,12 @@ class Save(encoding.Encoding, base.Base):
     _mkdirs = ...
     def __init__(self, *, filename: typing.Union[os.PathLike, str], directory: typing.Union[os.PathLike, str, None] = ..., **kwargs) -> None:
         ...
-    
+
     @property
     def filepath(self) -> str:
         """The target path for saving the DOT source file."""
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=2)
     def save(self, filename: typing.Union[os.PathLike, str, None] = ..., directory: typing.Union[os.PathLike, str, None] = ..., *, skip_existing: typing.Optional[bool] = ...) -> str:
         """Save the DOT source to file. Ensure the file ends with a newline.
@@ -35,6 +35,6 @@ class Save(encoding.Encoding, base.Base):
             The (possibly relative) path of the saved source file.
         """
         ...
-    
+
 
 

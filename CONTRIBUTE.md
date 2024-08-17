@@ -75,5 +75,5 @@ For the whole list you can go to gitmoji or install the gitmoji plugin in your I
 
 All contributors whose work is merged into the project will be mentioned in the `contributors.md` file and recognized by name and repository in the changelog. If the project reaches completion, all merged contributors will receive full recognition in the credits.
 
-Thank you for your time—it’s valuable.  
+Thank you for your time—it’s valuable.
 💜 Scarlett

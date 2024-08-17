@@ -20,8 +20,8 @@ if __name__ == '__main__':
     class Player(Entity):
         def update(self):
             ...
-        
-    
-    
+
+
+
     wall_left = ...
     wall_right = ...

@@ -13,5 +13,5 @@ def singleton(cls, **kwargs):
 if __name__ == '__main__':
     class Game(Ursina):
         ...
-    
-    
+
+

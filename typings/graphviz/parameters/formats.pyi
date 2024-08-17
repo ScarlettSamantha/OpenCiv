@@ -19,16 +19,16 @@ class Format(base.ParameterBase):
     _verify_format = ...
     def __init__(self, *, format: typing.Optional[str] = ..., **kwargs) -> None:
         ...
-    
+
     @property
     def format(self) -> str:
         """The output format used for rendering
             (``'pdf'``, ``'png'``, ...)."""
         ...
-    
+
     @format.setter
     def format(self, format: str) -> None:
         ...
-    
+
 
 

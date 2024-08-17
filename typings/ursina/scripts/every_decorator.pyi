@@ -23,10 +23,10 @@ class every:
     decorated_methods = ...
     def __init__(self, interval) -> None:
         ...
-    
+
     def __call__(self, func):
         ...
-    
+
 
 
 def get_class_name(func):
@@ -38,10 +38,10 @@ if __name__ == '__main__':
         @every(0.2)
         def attack(self):
             ...
-        
-    
-    
+
+
+
     enemy = ...
     def input(key):
         ...
-    
+

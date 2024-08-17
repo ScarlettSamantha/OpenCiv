@@ -18,14 +18,14 @@ class Shader:
     SPIR_V = ...
     def __init__(self, name=..., language=..., vertex=..., fragment=..., geometry=..., **kwargs) -> None:
         ...
-    
+
     def compile(self, shader_includes=...):
         ...
-    
+
     @classmethod
     def load(cls, language=..., vertex=..., fragment=..., geometry=..., **kwargs):
         ...
-    
+
 
 
 if __name__ == '__main__':
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     app = ...
     def input(key):
         ...
-    
+
     def reload_shaders():
         ...
-    
+

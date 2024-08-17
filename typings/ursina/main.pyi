@@ -29,13 +29,13 @@ class Ursina(ShowBase):
             window_type (str): The type of the window. Can be 'onscreen', 'offscreen' or 'none'.\n
         """
         ...
-    
+
     def input_up(self, key, is_raw=...):
         ...
-    
+
     def input_hold(self, key, is_raw=...):
         ...
-    
+
     def input(self, key, is_raw=...):
         """Built-in input handler. Propagates the input to all entities and the input function of the main script. Main use case for this it to simulate input though code, like: app.input('a').
 
@@ -44,20 +44,20 @@ class Ursina(ShowBase):
             is_raw (bool, optional): Whether or not the input should be treated as "raw". Defaults to False.
         """
         ...
-    
+
     def text_input(self, key):
         ...
-    
+
     def step(self):
         ...
-    
+
     def run(self, info=...):
         ...
-    
+
 
 
 if __name__ == '__main__':
     app = ...
     def input(key):
         ...
-    
+

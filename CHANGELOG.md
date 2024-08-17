@@ -68,6 +68,8 @@
 
 ### Other
 
+* 🐛 fix tile_yield ([`c0a6c53`](https://github.com/ScarlettSamantha/OpenCiv/commit/c0a6c536c302c18cf3a42e78ca24ac95d7c0903b)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * ✅ fix test_saving, passing ([`a8b02b6`](https://github.com/ScarlettSamantha/OpenCiv/commit/a8b02b6290942aa3d8ae90fd381c8920614920e7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✅ fix test_callbacks ([`2344550`](https://github.com/ScarlettSamantha/OpenCiv/commit/23445504361a12a95ec97fe9f379fa4f9e319900)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

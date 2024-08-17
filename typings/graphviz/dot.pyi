@@ -61,7 +61,7 @@ class Dot(quoting.Quote, base.Base):
     _attr = ...
     def __init__(self, *, name: typing.Optional[str] = ..., comment: typing.Optional[str] = ..., graph_attr=..., node_attr=..., edge_attr=..., body=..., strict: bool = ..., **kwargs) -> None:
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=1)
     def clear(self, keep_attrs: bool = ...) -> None:
         """Reset content to an empty body, clear graph/node/egde_attr mappings.
@@ -70,7 +70,7 @@ class Dot(quoting.Quote, base.Base):
             keep_attrs (bool): preserve graph/node/egde_attr mappings
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=1)
     def __iter__(self, subgraph: bool = ...) -> typing.Iterator[str]:
         r"""Yield the DOT source code line by line (as graph or subgraph).
@@ -78,7 +78,7 @@ class Dot(quoting.Quote, base.Base):
         Yields: Line ending with a newline (``'\n'``).
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=3)
     def node(self, name: str, label: typing.Optional[str] = ..., _attributes=..., **attrs) -> None:
         """Create a node.
@@ -95,7 +95,7 @@ class Dot(quoting.Quote, base.Base):
             :ref:`quoting-and-html-like-labels` in the user guide for details.
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=4)
     def edge(self, tail_name: str, head_name: str, label: typing.Optional[str] = ..., _attributes=..., **attrs) -> None:
         """Create an edge between two nodes.
@@ -121,7 +121,7 @@ class Dot(quoting.Quote, base.Base):
             :ref:`quoting-and-html-like-labels` in the user guide for details.
         """
         ...
-    
+
     def edges(self, tail_head_iter) -> None:
         """Create a bunch of edges.
 
@@ -137,7 +137,7 @@ class Dot(quoting.Quote, base.Base):
             See :ref:`details in the User Guide <node-ports-compass>`.
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=2)
     def attr(self, kw: typing.Optional[str] = ..., _attributes=..., **attrs) -> None:
         """Add a general or graph/node/edge attribute statement.
@@ -150,7 +150,7 @@ class Dot(quoting.Quote, base.Base):
         See the :ref:`usage examples in the User Guide <attributes>`.
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=2)
     def subgraph(self, graph=..., name: typing.Optional[str] = ..., comment: typing.Optional[str] = ..., graph_attr=..., node_attr=..., edge_attr=..., body=...): # -> _GeneratorContextManager[Self] | None:
         """Add the current content of the given sole ``graph`` argument
@@ -187,6 +187,6 @@ class Dot(quoting.Quote, base.Base):
             the layout engine will treat it as a special cluster subgraph.
         """
         ...
-    
+
 
 

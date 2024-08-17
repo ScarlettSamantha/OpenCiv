@@ -26,7 +26,8 @@ fi
 
 # Function to fix trailing whitespace
 fix_trailing_whitespace() {
-    find . -type f \( -name "*.py" -o -name "*.md" \) -exec sed -i 's/[[:space:]]\+$//' {} +
+    # find . -type f \( -name "*.py" -o -name "*.md" \) -exec sed -i 's/[[:space:]]\+$//' {} +
+    return 0
 }
 
 # Function to ensure files end with a newline

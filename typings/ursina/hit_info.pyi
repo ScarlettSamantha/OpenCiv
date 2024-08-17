@@ -9,9 +9,9 @@ class HitInfo:
     __slots__ = ...
     def __init__(self, **kwargs) -> None:
         ...
-    
+
     def __bool__(self):
         ...
-    
+
 
 

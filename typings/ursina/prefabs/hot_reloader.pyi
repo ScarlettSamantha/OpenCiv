@@ -15,31 +15,31 @@ def make_code_reload_safe(code): # -> LiteralString | Literal['']:
 class HotReloader(Entity):
     def __init__(self, path=..., **kwargs) -> None:
         ...
-    
+
     def input(self, key): # -> None:
         ...
-    
+
     def update(self): # -> None:
         ...
-    
+
     def get_source_code(self): # -> str:
         ...
-    
+
     def toggle_hotreloading(self): # -> None:
         ...
-    
+
     def reload_code(self, reset_camera=...): # -> None:
         ...
-    
+
     def reload_textures(self): # -> list[Any]:
         ...
-    
+
     def reload_models(self): # -> None:
         ...
-    
+
     def reload_shaders(self): # -> None:
         ...
-    
+
 
 
 if __name__ == '__main__':
@@ -50,4 +50,4 @@ if __name__ == '__main__':
     sun = ...
     def update(): # -> None:
         ...
-    
+

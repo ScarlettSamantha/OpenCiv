@@ -19,16 +19,16 @@ class Engine(base.ParameterBase):
     _verify_engine = ...
     def __init__(self, *, engine: typing.Optional[str] = ..., **kwargs) -> None:
         ...
-    
+
     @property
     def engine(self) -> str:
         """The layout engine used for rendering
             (``'dot'``, ``'neato'``, ...)."""
         ...
-    
+
     @engine.setter
     def engine(self, engine: str) -> None:
         ...
-    
+
 
 

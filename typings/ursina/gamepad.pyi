@@ -24,7 +24,7 @@ if __name__ == '__main__':
     player = ...
     def update():
         ...
-    
+
     def input(key):
         ...
-    
+

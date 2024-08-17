@@ -13,10 +13,10 @@ def texture_to_height_values(heightmap, skip=...):
 class Terrain(Mesh):
     def __init__(self, heightmap=..., height_values=..., gradient=..., skip=..., **kwargs) -> None:
         ...
-    
+
     def generate(self):
         ...
-    
+
 
 
 if __name__ == '__main__':
@@ -27,8 +27,8 @@ if __name__ == '__main__':
     terrain_bounds = ...
     def input(key):
         ...
-    
+
     player = ...
     def update():
         ...
-    
+

@@ -11,7 +11,7 @@ class Sprite(Entity):
     ppu = ...
     def __init__(self, texture=..., **kwargs) -> None:
         ...
-    
+
 
 
 if __name__ == '__main__':

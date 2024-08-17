@@ -20,4 +20,4 @@ if platform.system() == 'Windows':
     def get_startupinfo() -> subprocess.STARTUPINFO:
         """Return subprocess.STARTUPINFO instance hiding the console window."""
         ...
-    
+

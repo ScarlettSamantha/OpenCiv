@@ -9,51 +9,51 @@ Wait = ...
 class Func:
     def __init__(self, func, *args, **kwargs) -> None:
         ...
-    
+
     def __call__(self):
         ...
-    
+
 
 
 class Sequence:
     default_time_step = ...
     def __init__(self, *args, **kwargs) -> None:
         ...
-    
+
     def generate(self):
         ...
-    
+
     def __call__(self):
         ...
-    
+
     def append(self, arg):
         ...
-    
+
     def extend(self, list):
         ...
-    
+
     def start(self):
         ...
-    
+
     def pause(self):
         ...
-    
+
     def resume(self):
         ...
-    
+
     def finish(self):
         ...
-    
+
     def kill(self):
         ...
-    
+
     @property
     def finished(self):
         ...
-    
+
     def update(self):
         ...
-    
+
 
 
 if __name__ == '__main__':
@@ -62,4 +62,4 @@ if __name__ == '__main__':
     s = ...
     def input(key):
         ...
-    
+

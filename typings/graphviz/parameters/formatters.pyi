@@ -18,16 +18,16 @@ class Formatter(base.ParameterBase):
     _verify_formatter = ...
     def __init__(self, *, formatter: typing.Optional[str] = ..., **kwargs) -> None:
         ...
-    
+
     @property
     def formatter(self) -> typing.Optional[str]:
         """The output formatter used for rendering
             (``'cairo'``, ``'gd'``, ...)."""
         ...
-    
+
     @formatter.setter
     def formatter(self, formatter: typing.Optional[str]) -> None:
         ...
-    
+
 
 

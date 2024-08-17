@@ -13,7 +13,7 @@ if __name__ == '__main__':
     slider = ...
     def set_blur():
         ...
-    
+
     def update():
         ...
-    
+

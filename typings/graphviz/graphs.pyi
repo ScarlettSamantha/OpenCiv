@@ -42,12 +42,12 @@ class BaseGraph(dot.Dot, rendering.Render, jupyter_integration.JupyterIntegratio
     @_tools.deprecate_positional_args(supported_number=2)
     def __init__(self, name: typing.Optional[str] = ..., comment: typing.Optional[str] = ..., filename=..., directory=..., format: typing.Optional[str] = ..., engine: typing.Optional[str] = ..., encoding: typing.Optional[str] = ..., graph_attr=..., node_attr=..., edge_attr=..., body=..., strict: bool = ..., *, renderer: typing.Optional[str] = ..., formatter: typing.Optional[str] = ...) -> None:
         ...
-    
+
     @property
     def source(self) -> str:
         """The generated DOT source code as string."""
         ...
-    
+
 
 
 class Graph(dot.GraphSyntax, BaseGraph):
@@ -79,7 +79,7 @@ class Graph(dot.GraphSyntax, BaseGraph):
     def directed(self) -> bool:
         """``False``"""
         ...
-    
+
 
 
 class Digraph(dot.DigraphSyntax, BaseGraph):
@@ -90,6 +90,6 @@ class Digraph(dot.DigraphSyntax, BaseGraph):
     def directed(self) -> bool:
         """``True``"""
         ...
-    
+
 
 

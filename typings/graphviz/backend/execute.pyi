@@ -39,13 +39,13 @@ class ExecutableNotFound(RuntimeError):
     _msg = ...
     def __init__(self, args) -> None:
         ...
-    
+
 
 
 class CalledProcessError(subprocess.CalledProcessError):
     """:exc:`~subprocess.CalledProcessError` raised if a subprocess ``returncode`` is not ``0``."""
     def __str__(self) -> str:
         ...
-    
+
 
 

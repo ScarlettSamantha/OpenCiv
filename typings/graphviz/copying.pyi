@@ -13,6 +13,6 @@ class CopyBase:
             An independent copy of the current object.
         """
         ...
-    
+
 
 

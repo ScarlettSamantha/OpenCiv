@@ -11,27 +11,27 @@ class Draggable(Button):
     _z_plane = ...
     def __init__(self, **kwargs) -> None:
         ...
-    
+
     def input(self, key):
         ...
-    
+
     def start_dragging(self):
         ...
-    
+
     def stop_dragging(self):
         ...
-    
+
     def update(self):
         ...
-    
+
     @property
     def step(self):
         ...
-    
+
     @step.setter
     def step(self, value):
         ...
-    
+
 
 
 if __name__ == '__main__':

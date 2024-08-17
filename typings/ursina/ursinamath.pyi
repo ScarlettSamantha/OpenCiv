@@ -56,7 +56,7 @@ class Bounds:
     __slots__ = ...
     def __init__(self, start, end, center, size) -> None:
         ...
-    
+
 
 
 if __name__ == '__main__':

@@ -7,13 +7,13 @@ from ursina import *
 class SplashScreen(Sprite):
     def __init__(self, texture=..., **kwargs) -> None:
         ...
-    
+
     def input(self, key): # -> None:
         ...
-    
+
     def on_destroy(self): # -> None:
         ...
-    
+
 
 
 if __name__ == '__main__':

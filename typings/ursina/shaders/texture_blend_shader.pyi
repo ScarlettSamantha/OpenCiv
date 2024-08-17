@@ -11,7 +11,7 @@ if __name__ == '__main__':
     blend_map = ...
     def input(key): # -> None:
         ...
-    
+
     def update(): # -> None:
         ...
-    
+

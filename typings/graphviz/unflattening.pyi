@@ -39,6 +39,6 @@ class Unflatten(encoding.Encoding, base.Base, backend.Unflatten):
             https://www.graphviz.org/pdf/unflatten.1.pdf
         """
         ...
-    
+
 
 

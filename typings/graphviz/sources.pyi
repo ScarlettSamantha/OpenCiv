@@ -38,11 +38,11 @@ class Source(rendering.Render, saving.Save, jupyter_integration.JupyterIntegrati
             encoding: Encoding for loading/saving the source.
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=2)
     def __init__(self, source: str, filename: typing.Union[os.PathLike, str, None] = ..., directory: typing.Union[os.PathLike, str, None] = ..., format: typing.Optional[str] = ..., engine: typing.Optional[str] = ..., encoding: typing.Optional[str] = ..., *, renderer: typing.Optional[str] = ..., formatter: typing.Optional[str] = ..., loaded_from_path: typing.Optional[os.PathLike] = ...) -> None:
         ...
-    
+
     _source: str
     _loaded_from_path: typing.Optional[os.PathLike]
     def __iter__(self) -> typing.Iterator[str]:
@@ -51,7 +51,7 @@ class Source(rendering.Render, saving.Save, jupyter_integration.JupyterIntegrati
         Yields: Line ending with a newline (``'\n'``).
         """
         ...
-    
+
     @property
     def source(self) -> str:
         """The DOT source code as string.
@@ -59,7 +59,7 @@ class Source(rendering.Render, saving.Save, jupyter_integration.JupyterIntegrati
         Normalizes so that the string always ends in a final newline.
         """
         ...
-    
+
     @_tools.deprecate_positional_args(supported_number=2)
     def save(self, filename: typing.Union[os.PathLike, str, None] = ..., directory: typing.Union[os.PathLike, str, None] = ..., *, skip_existing: typing.Optional[bool] = ...) -> str:
         """Save the DOT source to file. Ensure the file ends with a newline.
@@ -75,6 +75,6 @@ class Source(rendering.Render, saving.Save, jupyter_integration.JupyterIntegrati
             The (possibly relative) path of the saved source file.
         """
         ...
-    
+
 
 
