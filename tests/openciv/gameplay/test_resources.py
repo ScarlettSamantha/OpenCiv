@@ -1,35 +1,40 @@
+from __future__ import annotations
+
+from typing import Any, Dict
 import pytest
 from openciv.gameplay.resource import (
     Resource,
+    ResourceTypeBase,
     Resources,
     ResourceTypeBonus,
     ResourceTypeLuxury,
     ResourceTypeStrategic,
 )
-from openciv.gameplay.resources.core.mechanics._base import MechanicBaseResource
 from openciv.engine.exceptions.resource_exception import ResourceTypeException
-from openciv.engine.managers.i18n import _t
+from openciv.engine.managers.i18n import t_
 
 
-def test_resource_initialization():
-    name = _t("test.resource.name")
-    description = _t("test.resource.description")
-    icon = _t("test.resource.icon")
-    resource = Resource("testkey", name, ResourceTypeBonus, 100, icon=icon, description=description)
+def test_resource_initialization() -> None:
+    name = t_("test.resource.name")
+    description = t_("test.resource.description")
+    icon = t_("test.resource.icon")
+    resource = Resource(
+        key="testkey", name=name, type_=ResourceTypeBonus, value=100, icon=icon, description=description
+    )
 
     assert resource.name == name
     assert resource.value == 100
-    assert resource._icon == icon
+    assert resource.icon == icon
     assert resource.description == description
-    assert resource._type == ResourceTypeBonus
+    assert resource.type == ResourceTypeBonus
 
 
-def test_resource_property_setters():
-    resource = Resource("testkey", _t("test.resource.name"), ResourceTypeBonus, 100)
-    new_name = _t("test.resource.new_name")
+def test_resource_property_setters() -> None:
+    resource = Resource(key="testkey", name=t_("test.resource.name"), type_=ResourceTypeBonus, value=100)
+    new_name = t_("test.resource.new_name")
     new_value = 200
-    new_icon = _t("test.resource.new_icon")
-    new_description = _t("test.resource.new_description")
+    new_icon = t_("test.resource.new_icon")
+    new_description = t_("test.resource.new_description")
 
     resource.name = new_name
     resource.value = new_value
@@ -42,9 +47,9 @@ def test_resource_property_setters():
     assert resource.description == new_description
 
 
-def test_resource_arithmetic_operations():
-    resource1 = Resource("testkey", _t("resource1"), ResourceTypeBonus, 100)
-    resource2 = Resource("testkey", _t("resource2"), ResourceTypeBonus, 50)
+def test_resource_arithmetic_operations() -> None:
+    resource1 = Resource(key="testkey", name=t_("resource1"), type_=ResourceTypeBonus, value=100)
+    resource2 = Resource(key="testkey", name=t_("resource2"), type_=ResourceTypeBonus, value=50)
 
     assert resource1 + resource2 == 150
     assert resource1 - resource2 == 50
@@ -55,19 +60,19 @@ def test_resource_arithmetic_operations():
     assert resource1**resource2 == 100**50
 
 
-def test_resource_class_methods():
-    name = _t("test.resource.name")
+def test_resource_class_methods() -> None:
+    name = t_("test.resource.name")
     value = 100
-    strategic_resource = Resource.strategic(key="testkey", name=name, value=value)
-    luxury_resource = Resource.luxury(key="testkey", name=name, value=value)
-    bonus_resource = Resource.bonus(key="testkey", name=name, value=value)
+    strategic_resource: Resource = Resource.strategic(key="testkey", name=name, value=value)
+    luxury_resource: Resource = Resource.luxury(key="testkey", name=name, value=value)
+    bonus_resource: Resource = Resource.bonus(key="testkey", name=name, value=value)
 
-    assert strategic_resource._type == ResourceTypeStrategic
-    assert luxury_resource._type == ResourceTypeLuxury
-    assert bonus_resource._type == ResourceTypeBonus
+    assert strategic_resource.type == ResourceTypeStrategic
+    assert luxury_resource.type == ResourceTypeLuxury
+    assert bonus_resource.type == ResourceTypeBonus
 
 
-def test_resources_initialization():
+def test_resources_initialization() -> None:
     resources = Resources()
 
     assert isinstance(resources.resources[ResourceTypeBonus], dict)
@@ -75,39 +80,39 @@ def test_resources_initialization():
     assert isinstance(resources.resources[ResourceTypeLuxury], dict)
 
 
-def test_resources_add_and_get():
+def test_resources_add_and_get() -> None:
     resources = Resources()
-    resource = Resource("testkey", _t("test.resource.name"), ResourceTypeBonus, 100)
+    resource = Resource(key="testkey", name=t_("test.resource.name"), type_=ResourceTypeBonus, value=100)
 
-    resources.add(resource)
-    retrieved_resource = resources.get(ResourceTypeBonus, "testkey")
-
+    resources.add(resource=resource)
+    retrieved_resource: Resource = resources.get(_type=ResourceTypeBonus, key="testkey")  # type: ignore | this is a test its kind of the point
+    assert isinstance(retrieved_resource, Resource)
     assert retrieved_resource.name == resource.name
     assert retrieved_resource.value == resource.value
 
 
-def test_resources_add_exception():
+def test_resources_add_exception() -> None:
     resources = Resources()
-    with pytest.raises(ResourceTypeException):
-        resources + "Not a Resource"
+    with pytest.raises(expected_exception=ResourceTypeException):
+        resources + "Not a Resource"  # type: ignore | this is a test its kind of the point
 
 
 def test_resources_to_dict():
     resources = Resources()
-    resource = Resource("testkey", _t("test.resource.name"), ResourceTypeBonus, 100)
-    resources.add(resource)
-    resources_dict = resources.toDict()
+    resource = Resource(key="testkey", name=t_("test.resource.name"), type_=ResourceTypeBonus, value=100)
+    resources.add(resource=resource)
+    resources_dict: Dict[type[ResourceTypeBase], Dict[str, Resource]] = resources.toDict()
 
     assert isinstance(resources_dict, dict)
     assert isinstance(resources_dict[ResourceTypeBonus], dict)
     assert "testkey" in resources_dict[ResourceTypeBonus]
-    assert resources_dict[ResourceTypeBonus]["testkey"].name == _t("test.resource.name")
+    assert resources_dict[ResourceTypeBonus]["testkey"].name == t_("test.resource.name")
 
 
 def test_loading_resources():
     from openciv.engine.additions.pyload import PyLoad
 
-    pyload = PyLoad.load_classes("openciv/gameplay/resources/", base_classes=[Resource])
+    pyload: Dict[str, Any] = PyLoad.load_classes(directory="openciv/gameplay/resources/", base_classes=[Resource])
     for _, resource in pyload.items():
         instance = resource(0.0)
         assert isinstance(instance, Resource)
