@@ -5,7 +5,7 @@ from openciv.gameplay.effect import Effects
 from openciv.engine.managers.i18n import t_
 
 
-class Lenin(Leader):
+class Leonidas(Leader):
     def __init__(self) -> None:
         super().__init__(
             key="core.leaders.leonidas",
