@@ -1,3 +1,4 @@
+from typing import Any
 from openciv.engine.mixins.callbacks import CallbacksMixin
 
 
@@ -5,44 +6,44 @@ class TestCallbacksMixin:
     def setup_method(self):
         self.manager = CallbacksMixin()
 
-    def test_declare_event(self):
-        self.manager._declare_event("new_event")
-        assert "new_event" in self.manager._event_types()
-        assert self.manager._events("new_event") == []
+    def test_declare_event(self) -> None:
+        self.manager._declare_event(event="new_event")  # type: ignore
+        assert "new_event" in self.manager.event_types()
+        assert self.manager.events(event="new_event") == []
 
-    def test_register_callback(self):
-        self.manager._declare_event("event1")
+    def test_register_callback(self) -> None:
+        self.manager._declare_event(event="event1")  # type: ignore
 
-        def dummy_callback(instance):
+        def dummy_callback(event: Any) -> None:
             pass
 
-        self.manager.register_callback("event1", dummy_callback)
-        assert dummy_callback in self.manager._events("event1")
+        self.manager.register_callback(event="event1", callback=dummy_callback)
+        assert dummy_callback in self.manager.events(event="event1")
 
-    def test_unregister_callback(self):
-        self.manager._declare_event("event2")
+    def test_unregister_callback(self) -> None:
+        self.manager._declare_event(event="event2")  # type: ignore
 
-        def dummy_callback(instance):
+        def dummy_callback(instance: Any) -> None:
             pass
 
-        self.manager.register_callback("event2", dummy_callback)
-        self.manager.unregister_callback("event2", dummy_callback)
-        assert dummy_callback not in self.manager._events("event2")
+        self.manager.register_callback(event="event2", callback=dummy_callback)
+        self.manager.unregister_callback(event="event2", callback=dummy_callback)
+        assert dummy_callback not in self.manager.events("event2")
 
-    def test_trigger_callback(self):
+    def test_trigger_callback(self) -> None:
         manager = CallbacksMixin()
-        manager._declare_event("event3")
+        manager._declare_event(event="event3")  # type: ignore
 
-        def dummy_callback():
+        def dummy_callback(event: Any) -> None:
             assert True
 
-        manager.register_callback("event3", dummy_callback)
-        manager.trigger_callback("event3")
+        manager.register_callback(event="event3", callback=dummy_callback)
+        manager.trigger_callback(category="event3")
 
-    def test_declare_events(self):
+    def test_declare_events(self) -> None:
         manager = CallbacksMixin()
-        events = ["event4", "event5"]
-        manager._declare_events(events)
+        events: list[str] = ["event4", "event5"]
+        manager._declare_events(events=events)  # type: ignore
         for event in events:
-            assert event in manager._event_types()
-            assert manager._events(event) == []
+            assert event in manager.event_types()
+            assert manager.events(event=event) == []
