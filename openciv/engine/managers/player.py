@@ -7,8 +7,10 @@ from openciv.engine.exceptions.invalid_pregame_condition import InvalidPregameCo
 
 
 class PlayerManager(BaseManager):
-    _players = {}
-    _session_player: Player = None
+    _players: Dict[
+        int, Player
+    ] = {}  # Players are stored in a dictionary with the key being the turn order. recalculated each turn.
+    _session_player: Player | None = None
 
     @classmethod
     def reset(cls) -> None:
@@ -36,7 +38,7 @@ class PlayerManager(BaseManager):
         return cls._players[turn]
 
     @classmethod
-    def players(cls) -> Dict[str, Player]:
+    def players(cls) -> Dict[int, Player]:
         return cls._players
 
     @classmethod
