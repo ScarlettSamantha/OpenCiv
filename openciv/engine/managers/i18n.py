@@ -127,3 +127,4 @@ class Translation(SaveAble):
 _t = Translation
 t_ = Translation
 T_TranslationOrStr = Union[Translation, str]
+T_TranslationOrStrOrNone = Union[Translation, str, None]
