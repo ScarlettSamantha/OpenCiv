@@ -4,6 +4,16 @@
 
 ### :sparkles:
 
+* :sparkles: add get and set data for raw access to i18n ([`0d5fef9`](https://github.com/ScarlettSamantha/OpenCiv/commit/0d5fef9d7f6ba16f2acf8973027943b7adcb400e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: add proper leader links to resources ([`74c1d4f`](https://github.com/ScarlettSamantha/OpenCiv/commit/74c1d4fd1148527141fd5d509bdf09bb1293b6c3)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: make leader object saveable, and register properties. ([`f037632`](https://github.com/ScarlettSamantha/OpenCiv/commit/f03763284fafadc0ae1c7d7995faaf7e204b8472)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: add methods to allow user to add saveable properties easily. ([`4e515c9`](https://github.com/ScarlettSamantha/OpenCiv/commit/4e515c91484b187537c1e610fc9bd66859ab29b0)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :sparkles: add key property to leader ([`6720320`](https://github.com/ScarlettSamantha/OpenCiv/commit/6720320e19a3fd7b85872a15db43598f06fecbb7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :sparkles: add effects exception. ([`85a21c0`](https://github.com/ScarlettSamantha/OpenCiv/commit/85a21c09163b3e2e2bd454be4b92a2fe69ce1032)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :sparkles: implement more of the resource object and the cost object ([`f59234a`](https://github.com/ScarlettSamantha/OpenCiv/commit/f59234a09138008571d526b61be61a79b08f82c9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
@@ -57,6 +67,42 @@
 * :sparkles: cahnge repr for tech object ([`7ed4517`](https://github.com/ScarlettSamantha/OpenCiv/commit/7ed45173e1437c1865d1620ab38cb4e587651ad7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 ### Other
+
+* ✅ fix test_saving, passing ([`a8b02b6`](https://github.com/ScarlettSamantha/OpenCiv/commit/a8b02b6290942aa3d8ae90fd381c8920614920e7)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* ✅ fix test_callbacks ([`2344550`](https://github.com/ScarlettSamantha/OpenCiv/commit/23445504361a12a95ec97fe9f379fa4f9e319900)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* ✅ fix test_i18n, passing ([`691c42a`](https://github.com/ScarlettSamantha/OpenCiv/commit/691c42ac116e015d1c4e5e41cf62f65c29ddff51)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  fix age typing. ([`655d120`](https://github.com/ScarlettSamantha/OpenCiv/commit/655d12001fa16871a0aeecee07989074529904a0)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  fix typing when a str is given that an exception should be thrown ([`0815ce7`](https://github.com/ScarlettSamantha/OpenCiv/commit/0815ce733123911880e74cb740de532bcd5eed34)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* ✅ fix test_resources, passing ([`feafef7`](https://github.com/ScarlettSamantha/OpenCiv/commit/feafef744a401d74120905ff1cda8f6bf6c0c0d1)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  fix typing of resource exception ([`fa72767`](https://github.com/ScarlettSamantha/OpenCiv/commit/fa7276749fb063d12e9679e2871b9e197adc57b9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  fix tech baseclass typing. ([`0257cbf`](https://github.com/ScarlettSamantha/OpenCiv/commit/0257cbf4dfae5cfdeb7dc3e22a59bf696278117e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🐛 fix wrong leader class names ([`0be8bcf`](https://github.com/ScarlettSamantha/OpenCiv/commit/0be8bcf348913585a91d0c1277b3d965455963e9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  add stub for graphviz ([`c2ee486`](https://github.com/ScarlettSamantha/OpenCiv/commit/c2ee486e6a58e14e5bd89962b1f89942beee16d4)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 👷 add easy t_translationorStr but now with none included ([`ecc577c`](https://github.com/ScarlettSamantha/OpenCiv/commit/ecc577c70d594a0936d3bf1e950b28d6b17e09a8)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  fix civilization base class typing. ([`8085398`](https://github.com/ScarlettSamantha/OpenCiv/commit/8085398fee2fa30c504a10632cf254c6f9498af0)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* ✅ fix test_player_mangers tests, passing. ([`5fec375`](https://github.com/ScarlettSamantha/OpenCiv/commit/5fec3750b6c3a2959597d3e5f9feb7c0f1f0e8a9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :label: fix player typing. ([`51822bc`](https://github.com/ScarlettSamantha/OpenCiv/commit/51822bc49e522e8332fe75238f56b402a1015ea1)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* 🏷️  set typing properly on civ implementation files ([`fcb72ba`](https://github.com/ScarlettSamantha/OpenCiv/commit/fcb72ba1ade526a5255dc3f851e2d5b7f4613932)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :memo: update documentation, Saving + combat stats ([`f7fe0ed`](https://github.com/ScarlettSamantha/OpenCiv/commit/f7fe0ede1d3c96b4ef7dfb617d7433de2126f93a)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :memo: add documentation about logic seperation in contribute.md ([`1bc6bb9`](https://github.com/ScarlettSamantha/OpenCiv/commit/1bc6bb9a720e0fd65e5baefc49bb8c52af7c8e68)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
+* :memo: update changelog ([`929d14f`](https://github.com/ScarlettSamantha/OpenCiv/commit/929d14fcd3ffdd583d3f47cbd186eb8c89720142)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * ✏️  fix typo in get_instance ([`1a4473c`](https://github.com/ScarlettSamantha/OpenCiv/commit/1a4473c6ef3c3c65f16744a104b2f5caaea60a8e)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 

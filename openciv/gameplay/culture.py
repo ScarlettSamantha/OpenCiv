@@ -9,7 +9,7 @@ from abc import abstractmethod
 class Civic(SaveAble, CallbacksMixin):
     def __init__(
         self, key: str, name: T_TranslationOrStr, description: T_TranslationOrStr, _cost: int = 0, *args, **kwargs
-    ):
+    ) -> None:
         SaveAble.__init__(self, *args, **kwargs)
         CallbacksMixin.__init__(self, *args, **kwargs)
 

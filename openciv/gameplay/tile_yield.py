@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from openciv.engine.saving import SaveAble
 from openciv.gameplay.resource import Resource
 from openciv.gameplay.resources.core.basic.culture import Culture
@@ -23,7 +25,7 @@ from openciv.gameplay.resources.core.mechanics.greats import (
     GreatHoly,
 )
 
-from typing import Dict, ForwardRef, Tuple
+from typing import Dict, List, Any, Self
 
 
 class TileYield(SaveAble):
@@ -33,7 +35,7 @@ class TileYield(SaveAble):
     PERCENTAGE_CUMMULATIVE = 2
     PERCENTAGE_ADDATIVE = 3
 
-    MODE_STR = {
+    MODE_STR: Dict[int, str] = {
         BASE: "BASE",
         ADDITIVE: "ADDATIVE",
         PERCENTAGE_CUMMULATIVE: "PERCENTAGE_CUMMULATIVE",
@@ -44,7 +46,7 @@ class TileYield(SaveAble):
     # Absolute numbers are taken as a float but *should* be treated more like integers and are going to be rounded at the end.
     def __init__(
         self,
-        name: str = None,
+        name: str | None = None,
         gold: float = 0.0,
         production: float = 0.0,
         science: float = 0.0,
@@ -53,34 +55,34 @@ class TileYield(SaveAble):
         housing: float = 0.0,
         faith: float = 0.0,
         mode: int = ADDITIVE,
-        *args,
-        **kwargs,
-    ):
+        *args: Any,
+        **kwargs: Any,
+    ) -> None:
         super().__init__(*args, **kwargs)
-        self._name = name
-        self.mode = mode
-        self.gold: Gold = Gold(gold)
-        self.production: Production = Production(production)
-        self.science: Science = Science(science)
-        self.food: Food = Food(food)
-        self.culture: Culture = Culture(culture)
-        self.housing: Housing = Housing(housing)
-        self.faith: Faith = Faith(faith)
+        self._name: str | None = name
+        self.mode: int = mode
+        self.gold: Gold = Gold(value=gold)
+        self.production: Production = Production(value=production)
+        self.science: Science = Science(value=science)
+        self.food: Food = Food(value=food)
+        self.culture: Culture = Culture(value=culture)
+        self.housing: Housing = Housing(value=housing)
+        self.faith: Faith = Faith(value=faith)
 
-        self.contentment: Contentment = Contentment(0.0)
-        self.angre: Angre = Angre(0.0)
-        self.revolt: Revolt = Revolt(0.0)
-        self.stability: Stability = Stability(0.0)
+        self.contentment: Contentment = Contentment(value=0.0)
+        self.angre: Angre = Angre(value=0.0)
+        self.revolt: Revolt = Revolt(value=0.0)
+        self.stability: Stability = Stability(value=0.0)
 
-        self.great_person_science: GreatScientist = GreatScientist(0.0)
-        self.great_person_production: GreatEngineer = GreatEngineer(0.0)
-        self.great_person_artist: GreatArtist = GreatArtist(0.0)
-        self.great_person_military: GreatMilitary = GreatMilitary(0.0)
-        self.great_person_commerce: GreatCommerece = GreatCommerece(0.0)
-        self.great_person_hero: GreatHero = GreatHero(0.0)
-        self.great_person_holy: GreatHoly = GreatHoly(0.0)
+        self.great_person_science: GreatScientist = GreatScientist(value=0.0)
+        self.great_person_production: GreatEngineer = GreatEngineer(value=0.0)
+        self.great_person_artist: GreatArtist = GreatArtist(value=0.0)
+        self.great_person_military: GreatMilitary = GreatMilitary(value=0.0)
+        self.great_person_commerce: GreatCommerece = GreatCommerece(value=0.0)
+        self.great_person_hero: GreatHero = GreatHero(value=0.0)
+        self.great_person_holy: GreatHoly = GreatHoly(value=0.0)
 
-        self._calculatable_properties: Tuple[str] = (
+        self._calculatable_properties: List[str] = [
             "gold",
             "production",
             "science",
@@ -88,9 +90,9 @@ class TileYield(SaveAble):
             "culture",
             "housing",
             "faith",
-        )
-        self._mechanic_resources: Tuple[str] = ("contentment", "angre", "revolt", "stability")
-        self._calculatable_great_people: Tuple[str] = (
+        ]
+        self._mechanic_resources: List[str] = ["contentment", "angre", "revolt", "stability"]
+        self._calculatable_great_people: List[str] = [
             "science",
             "production",
             "artist",
@@ -98,7 +100,7 @@ class TileYield(SaveAble):
             "commerce",
             "hero",
             "holy",
-        )
+        ]
 
         self.other_mechnics: Dict[str, Resource] = {}
 
@@ -115,18 +117,18 @@ class TileYield(SaveAble):
     def __repr__(self) -> str:
         return f"TileYield<Mode:{self.MODE_STR[self.mode]}>g:<{self.gold}>|p:<{self.production}>|s:<{self.science}>|f:<{self.food}>|c:<{self.culture}>|h:<{self.housing}>|fa:<{self.faith}>"
 
-    def __add__(self, b: "TileYield") -> None:
-        return self.add(b)
+    def __add__(self, b: TileYield) -> Self:
+        return self.add(tile_yield=b)
 
-    def __mul__(self, b: "TileYield") -> None:
-        return self.multiply(b)
+    def __mul__(self, b: TileYield) -> Self:
+        return self.multiply(tile_yield=b)
 
-    def set_prop(self, name: str, value: any):
-        if name in self.calculatable_great_people() + self.calculatable_properties() + self.population_modifiers():
+    def set_prop(self, name: str, value: Any):
+        if name in self.calculatable_great_people() + self.calculatable_properties():
             raise ValueError(f"cannot set property[{name}] as it does not exist or is accessable")
         setattr(self, name, value)
 
-    def add(self, tile_yield: "TileYield"):
+    def add(self, tile_yield: TileYield) -> Self:
         for property in self.calculatable_properties():
             addative_value = getattr(tile_yield, property)
             old_value = getattr(self, property)
@@ -144,11 +146,11 @@ class TileYield(SaveAble):
             # Property is not in the other object so no operation.
             if key not in tile_yield.other_mechnics.keys():
                 continue
-            addative_value = getattr(tile_yield, mechanic)
+            addative_value = getattr(tile_yield, str(mechanic))
             self.other_mechnics[key] = tile_yield.other_mechnics[key] + addative_value
         return self
 
-    def multiply(self, tile_yield: ForwardRef("TileYield")):
+    def multiply(self, tile_yield: TileYield) -> Self:
         for property in self.calculatable_properties():
             multiplicative_value = getattr(tile_yield, property)
             if (
@@ -156,6 +158,7 @@ class TileYield(SaveAble):
                 or multiplicative_value == 1.0
                 or multiplicative_value == -1.0
                 or multiplicative_value == 0
+                or (hasattr(multiplicative_value, "value") and multiplicative_value.value == 0.0)
             ):
                 continue
             old_value = getattr(self, property)
@@ -173,15 +176,15 @@ class TileYield(SaveAble):
             # Property is not in the other object so no operation.
             if key not in tile_yield.other_mechnics.keys():
                 continue
-            multiplicative_value = getattr(tile_yield, mechanic)
+            multiplicative_value = getattr(tile_yield, str(mechanic))
             self.other_mechnics[key] = tile_yield.other_mechnics[key] * multiplicative_value
         return self
 
-    def calculate(self):
+    def calculate(self) -> None:
         pass
 
-    def props(self):
-        a = {}
+    def props(self) -> Dict[Any, Any]:
+        a: Dict[Any, Any] = {}
         for item in self.calculatable_properties():
             a[item] = getattr(self, item)
         return a
@@ -193,19 +196,19 @@ class TileYield(SaveAble):
             )
         return f"great_person_{value}"
 
-    def calculatable_properties(self):
+    def calculatable_properties(self) -> List[str]:
         return self._calculatable_properties
 
-    def mechanic_resources(self):
+    def mechanic_resources(self) -> List[str]:
         return self._mechanic_resources
 
-    def calculatable_great_people(self):
+    def calculatable_great_people(self) -> List[str]:
         return self._calculatable_great_people
 
     @staticmethod
-    def baseYield() -> "TileYield":
+    def baseYield() -> TileYield:
         return TileYield()
 
     @staticmethod
-    def nullYield() -> "TileYield":
+    def nullYield() -> TileYield:
         return TileYield(gold=0.0, production=0.0, science=0.0, food=0.0, culture=0.0, housing=0.0, faith=0.0)

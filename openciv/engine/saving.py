@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from openciv.engine.managers.key import Keyable
 from openciv.engine.managers.log import LogManager
 from openciv.engine.mixins.statehash import StateHashable
@@ -11,6 +13,7 @@ from openciv.engine.exceptions.save_exception import (
 import inspect
 from logging import DEBUG
 from typing import Dict, List, TypeVar, Any, ForwardRef, Tuple, Callable
+from enum import Enum
 
 # Define a type variable for saveable properties with self-reference
 SaveableType = TypeVar(
@@ -59,6 +62,8 @@ def hash_saveable_type(value: SaveableType, hash_func: Callable[[Any], int] = md
         return hash_func(frozenset((k, hash_saveable_type(v, hash_func)) for k, v in value.items()))
     elif isinstance(value, SaveAble):
         return value.get_state_hash()
+    elif isinstance(value, Enum):
+        return hash_func(value.name)  # Handle Enum by its name
     else:
         raise TypeError(f"Unsupported type for hashing: {type(value)}")
 
@@ -210,10 +215,16 @@ class SaveAble(Keyable, StateHashable):
             # Assuming there's a method to get a class by name
             obj_class: object = self._get_class_by_name(class_name)
             if issubclass(obj_class, SaveAble):
-                obj: ForwardRef("SaveAble") = obj_class()
+                obj: SaveAble = obj_class()
                 obj.restore_from_data(value)
                 setattr(self, key, obj)
                 return
+
+        # Handle restoring Enum by its name
+        if isinstance(value, str) and hasattr(self, key) and isinstance(getattr(self, key), Enum):
+            enum_class = type(getattr(self, key))
+            setattr(self, key, enum_class[value])
+            return
 
         setattr(self, key, value)
 
@@ -234,6 +245,8 @@ class SaveAble(Keyable, StateHashable):
         value = getattr(self, key)
         if isinstance(value, SaveAble) and auto_recursion:
             return value.saveable_data(parent_recursion_level=_recursion_level)
+        elif isinstance(value, Enum):
+            return value.name  # Save Enum by its name
         elif isinstance(value, object) and not self._is_valid_saveable_type(value):
             if not permissive_object_saving:
                 full_class_path: str = f"{value.__module__}.{value.__class__.__name__}"
@@ -333,7 +346,7 @@ class SaveAble(Keyable, StateHashable):
         self.validate_state(data["__hash"])
 
     @classmethod
-    def create_object_from_data(cls, data: Dict[str, SaveableType]) -> ForwardRef("SaveAble"):
+    def create_object_from_data(cls, data: Dict[str, SaveableType]) -> SaveAble:
         """Create an object from saved data.
 
         Args:
@@ -348,7 +361,7 @@ class SaveAble(Keyable, StateHashable):
         return instance
 
     @staticmethod
-    def _create_object(data: Dict[str, SaveableType]) -> ForwardRef("SaveAble"):
+    def _create_object(data: Dict[str, SaveableType]) -> SaveAble:
         """Create an object from saved data.
 
         Args:
@@ -395,7 +408,7 @@ class SaveAble(Keyable, StateHashable):
         Returns:
             bool: True if the value is a valid saveable type, False otherwise.
         """
-        valid_types: Tuple = (str, int, float, bool, type(None), SaveAble)
+        valid_types: Tuple = (str, int, float, bool, type(None), SaveAble, Enum)
         if isinstance(value, valid_types):
             return True
         if isinstance(value, type) and issubclass(value, valid_types):

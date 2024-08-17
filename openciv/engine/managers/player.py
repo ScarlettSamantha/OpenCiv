@@ -34,7 +34,6 @@ class PlayerManager(BaseManager):
 
     @classmethod
     def get(cls, turn: int) -> Player:
-        print(cls._players)
         return cls._players[turn]
 
     @classmethod
@@ -45,4 +44,8 @@ class PlayerManager(BaseManager):
     def player(cls) -> Player:
         if cls._session_player is None:
             raise InvalidPregameCondition("No player has been set for this session.")
+        return cls._session_player
+
+    @classmethod
+    def session_player(cls) -> Player | None:
         return cls._session_player

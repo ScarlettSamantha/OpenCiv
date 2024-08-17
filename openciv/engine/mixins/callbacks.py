@@ -11,10 +11,10 @@ class CallbacksMixin:
         # Mapping event names to lists of dictionaries, each containing a callable and an optional dictionary of kwargs for the callable
         self.__callbacks: Dict[str, List[Dict[str, Union[Callable[..., Any], Optional[Dict[str, Any]]]]]] = {}
 
-    def _event_types(self) -> List[str]:
+    def event_types(self) -> List[str]:
         return list(self.__callbacks.keys())
 
-    def _events(self, event: str) -> List[Callable[..., Any]] | Any:
+    def events(self, event: str) -> List[Callable[..., Any]] | Any:
         return [cb["callback"] for cb in self.__callbacks[event]]
 
     def _declare_event(self, event: str) -> None:

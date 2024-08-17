@@ -32,9 +32,7 @@ def test_leader_effects(class_name: str, class_ref: Type[Leader]) -> None:
     Test the effects functionality of different Leader implementations.
     """
     leader_instance: Leader = class_ref()  # type: ignore
-    effect = Effect(
-        key="Test", target=None, target_type=None, domain=None, name=t_("Test"), description=t_("Test"), icon="Test"
-    )
+    effect = Effect(key="Test", target=None, target_type=None, name=t_("Test"), description=t_("Test"), icon="Test")
     leader_instance.add_effect(effect=effect)
 
     assert effect in leader_instance.effects.effects.values(), f"{class_name} failed to add effect"
