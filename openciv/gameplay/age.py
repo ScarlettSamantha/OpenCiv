@@ -1,16 +1,16 @@
-from openciv.engine.managers.i18n import T_TranslationOrStr
+from openciv.engine.managers.i18n import T_TranslationOrStrOrNone
 from typing import Tuple
 
 
 class Age:
     def __init__(
         self,
-        key: T_TranslationOrStr,
-        name: T_TranslationOrStr,
-        description: T_TranslationOrStr,
-        color: Tuple[int, int, int, int],
-    ):
-        self.key: T_TranslationOrStr = key
-        self.name: T_TranslationOrStr = name
-        self.description: T_TranslationOrStr = description
-        self.color: Tuple[int, int, int, int] = color
+        key: T_TranslationOrStrOrNone,
+        name: T_TranslationOrStrOrNone,
+        description: T_TranslationOrStrOrNone,
+        color: Tuple[int, int, int, int] | None,
+    ) -> None:
+        self.key: T_TranslationOrStrOrNone = key
+        self.name: T_TranslationOrStrOrNone = name
+        self.description: T_TranslationOrStrOrNone = description
+        self.color: Tuple[int, int, int, int] | None = color
