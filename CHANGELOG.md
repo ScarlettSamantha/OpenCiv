@@ -68,7 +68,7 @@
 
 ### Other
 
-* :memo: update documentation + project structure ([`d65b9ed`](https://github.com/ScarlettSamantha/OpenCiv/commit/d65b9edbbef55108cfba6a48dca87567b218a142)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+* :memo: update documentation + project structure ([`754fcc6`](https://github.com/ScarlettSamantha/OpenCiv/commit/754fcc623da19115c31c0bdf3ab229641b6c55f9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 📝 update meta, medival european house problem. ([`22e4ea1`](https://github.com/ScarlettSamantha/OpenCiv/commit/22e4ea13224fbb9e8b259c3271c9cfce984f242d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 

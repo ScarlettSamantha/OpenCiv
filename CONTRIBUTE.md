@@ -12,6 +12,8 @@ Beyond coding, skills in graphic design, sound, modeling, UI, and other creative
 
 If you’d like to contribute, fork the repository, make your changes, and submit a pull request with a brief description of your work. I’ll review contributions when I get the chance.
 
+I can recommend the following software for use in contributing and development in generate, you can it [here](https://github.com/ScarlettSamantha/openciv-meta/blob/main/knowledge/Software%20recommendations.md)
+
 ## Gameplay logic seperation sturcture
 
 The core "mod" handles the foundational game logic, such as how units move, attack, and interact with the environment. For example, the core mod defines the general rules for unit movement—how far a unit can move per turn, how it engages in combat, and how it interacts with terrain. These broad behaviors ensure that the game functions consistently across all scenarios.
