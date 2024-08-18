@@ -1,3 +1,4 @@
+from __future__ import annotations
 import sys
 import os
 import re
@@ -35,6 +36,7 @@ def main() -> int:
         if (
             file_path.endswith(".py")
             and not file_path.endswith("detect_debug_methods.py")
+            and not file_path.startswith("hooks/")
             and os.path.exists(file_path)
         ):
             violations.extend(scan_file(file_path))

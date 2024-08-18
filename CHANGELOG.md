@@ -68,6 +68,8 @@
 
 ### Other
 
+* :memo: update documentation, +software recomendations, add link in contribute. ([`4e45400`](https://github.com/ScarlettSamantha/OpenCiv/commit/4e45400862ee82c46be61ef1c95ed6ca5be21c8c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: update documentation + project structure ([`754fcc6`](https://github.com/ScarlettSamantha/OpenCiv/commit/754fcc623da19115c31c0bdf3ab229641b6c55f9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 📝 update meta, medival european house problem. ([`22e4ea1`](https://github.com/ScarlettSamantha/OpenCiv/commit/22e4ea13224fbb9e8b259c3271c9cfce984f242d)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
