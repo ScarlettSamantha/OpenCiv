@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.cultures.core.tree.core import CoreCultureTree
 from openciv.engine.additions.pyload import PyLoad
 from openciv.gameplay.culture import Civic

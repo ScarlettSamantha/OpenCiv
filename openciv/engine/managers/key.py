@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.managers.base import BaseManager
 from openciv.engine.mixins.singleton import Singleton
 from openciv.engine.exceptions.key_exception import KeyNotFoundException

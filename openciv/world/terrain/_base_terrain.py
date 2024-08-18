@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import rgb
 from typing import List, Tuple
 

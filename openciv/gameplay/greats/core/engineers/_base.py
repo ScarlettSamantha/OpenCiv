@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.greats.core._base import CoreGreat
 
 

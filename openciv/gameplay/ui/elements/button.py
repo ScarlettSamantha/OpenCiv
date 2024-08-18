@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Button as _button
 from typing import Callable
 

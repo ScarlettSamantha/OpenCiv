@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.saving import SaveAble
 from openciv.engine.exceptions.save_exception import SaveRestorationRestoreTypeInvalidException
 from typing import List, Any, Dict

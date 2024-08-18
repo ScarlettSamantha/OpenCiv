@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.citizen import Citizen
 from openciv.engine.mixins.callbacks import CallbacksMixin
 

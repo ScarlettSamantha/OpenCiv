@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.UI.base import BaseUI
 from ursina import camera
 from openciv.gameplay.ui.elements.button import Button as _Button
@@ -25,14 +26,14 @@ class GameConfig(BaseUI):
                 ["Small", "Medium", "Large", "Huge"],
                 parent=camera.ui,
                 title="World Size",
-                on_change=lambda x: print(x),
+                on_change=lambda x: print(x),  # noqa
             ),
             ListView(
                 ["Romans", "Egypt", "Large", "Huge"],
                 position=(-0.5, 0),
                 parent=camera.ui,
                 title="Empire",
-                on_change=lambda x: print(x),
+                on_change=lambda x: print(x),  # noqa
             ),
             self.Button(text="Back", click_action=lambda: self.on_back()),
         ]

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.cultures.core.subs._base import BaseCoreSubtree
 from openciv.engine.managers.i18n import _t
 

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.improvement import Improvement
 from openciv.gameplay.tile_yield import TileYield
 from openciv.engine.managers.tags import Tag

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.tech import TechTree, Tech
 from openciv.engine.managers.i18n import _t
 from openciv.engine.exceptions.tech_exception import TechNotFoundException

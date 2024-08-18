@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.additions.hex_grid import HexGridRow, HexGrid
 from openciv.engine.managers.base import BaseManager
 from openciv.world.tiles._base_tile import BaseTile

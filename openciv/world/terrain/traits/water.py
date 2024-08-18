@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.tile_modifiers import TileModifier
 from openciv.world.terrain.traits.land import buildable
 

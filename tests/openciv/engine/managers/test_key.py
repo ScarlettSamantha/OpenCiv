@@ -1,3 +1,4 @@
+from __future__ import annotations
 import pytest
 from openciv.engine.managers.key import KeyManager, Keyable
 from openciv.engine.exceptions.key_exception import KeyNotFoundException

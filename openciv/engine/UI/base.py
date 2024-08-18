@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.managers.game import GameManager
 from openciv.gameplay.ui.elements.button import Button as _Button
 from openciv.gameplay.ui.elements.text import Text as _Text

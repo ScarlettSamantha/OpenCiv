@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Vec3, Entity
 from openciv.world.tiles._base_tile import BaseTile, Tile
 from openciv.engine.exceptions.argument_exception import ArgumentException

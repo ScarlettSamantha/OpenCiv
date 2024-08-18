@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.resource import Resource, ResourceTypeStrategic, ResourceValueType
 
 from openciv.engine.managers.i18n import _t

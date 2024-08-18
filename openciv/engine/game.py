@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Entity, Ursina
 from pathlib import Path
 from random import Random

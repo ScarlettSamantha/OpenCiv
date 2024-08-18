@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.great import Great
 from openciv.gameplay.resources.core.basic.gold import Gold
 

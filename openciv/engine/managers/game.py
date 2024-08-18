@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.managers.base import BaseManager
 
 from openciv.engine.managers.map import MapManager
@@ -164,7 +165,7 @@ class GameManager(BaseManager):
         return LogManager.get_instance()
 
     def shutdown(self):
-        print("Shutdown")
+        print("Shutdown")  # noqa
         exit(0)
 
     def __call__(self, *args, **kwargs):

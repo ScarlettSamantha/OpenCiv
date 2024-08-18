@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.tile_yield import TileYield
 from openciv.gameplay.effect import Effects
 from openciv.gameplay.conditions import Conditions
@@ -31,7 +32,7 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
         self.max_health: int = max_health
 
         self.upgradable: bool = False
-        self.upgrade_into: ForwardRef("Improvement") | None = None
+        self.upgrade_into: Improvement | None = None
 
         self.constructable_builder: bool = True
         self.constructable_on_tile: bool = True
@@ -39,7 +40,7 @@ class Improvement(CallbacksMixin, SaveAble, Taggable):
         self.placeable_by_player: bool = False
         self.placeable_on_tiles: bool = False
         self.placeable_on_city: bool = False
-        self.placeable_on_condition: Conditions = False
+        self.placeable_on_condition: Conditions | bool = False
 
         self.player_enabled: bool = True
 

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Text as _text
 from typing import Callable
 

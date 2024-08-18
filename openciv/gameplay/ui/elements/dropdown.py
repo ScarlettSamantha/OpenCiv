@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina.prefabs.dropdown_menu import DropdownMenu as _DropdownMenu
 from ursina.prefabs.dropdown_menu import DropdownMenuButton as _DropdownMenuButton
 

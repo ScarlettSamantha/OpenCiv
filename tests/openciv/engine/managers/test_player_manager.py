@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.managers.player import PlayerManager
 from openciv.gameplay.player import Player
 from openciv.gameplay.personality import Personality

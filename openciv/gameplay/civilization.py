@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import Self, List
 from openciv.gameplay.effect import Effects, Effect
 from openciv.gameplay.leader import Leader

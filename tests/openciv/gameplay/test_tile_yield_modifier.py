@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.tile_yield_modifier import TileYieldModifier
 from openciv.gameplay.tile_yield import TileYield
 

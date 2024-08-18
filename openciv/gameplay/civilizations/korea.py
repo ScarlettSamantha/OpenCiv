@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.civilization import Civilization
 
 from openciv.engine.managers.i18n import t_

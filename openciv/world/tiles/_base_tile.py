@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Entity, Vec3, MeshCollider  # type: ignore
 from ursina.shaders import lit_with_shadows_shader  # type: ignore
 from typing import List, Any

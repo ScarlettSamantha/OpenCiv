@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.player import Player
 from typing import Type
 

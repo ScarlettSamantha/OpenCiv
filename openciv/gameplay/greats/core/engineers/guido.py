@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.greats.core.engineers._base import CoreBaseGreatEngineer
 from openciv.engine.managers.i18n import _t
 

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.additions.pyload import PyLoad
 from openciv.engine.managers.i18n import t_
 from openciv.gameplay.effect import Effect, Effects

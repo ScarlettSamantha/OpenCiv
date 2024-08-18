@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import camera, Vec2, Entity, Vec3, mouse, held_keys, lerp, slerp, time, destroy, curve
 
 from openciv.engine.managers.game import GameManager
@@ -43,7 +44,6 @@ class Camera(Entity):
         self.game_world_interactive = True
 
     def gameInteractive(self, state: bool):
-        print("Gameworld is now {} interactive".format("IS" if state else "IS NOT"))
         self.game_world_interactive = state
 
     def on_enable(self):
@@ -104,11 +104,9 @@ class Camera(Entity):
             self.game_manager.ui().start_main_menu()
 
         elif key == "left mouse down":
-            print("casting")
             self.handle_click()
 
         elif key == "i":
-            print("Saving map")
             self.save_map()
 
         elif key == "z":
@@ -137,9 +135,9 @@ class Camera(Entity):
             self.dump_camera_properties()
 
     def dump_camera_properties(self):
-        print(f"Camera Position: {self.position}")
-        print(f"Camera Rotation: {self.rotation}")
-        print(f"Camera Scale: {self.scale}")
+        print(f"Camera Position: {self.position}")  # noqa
+        print(f"Camera Rotation: {self.rotation}")  # noqa
+        print(f"Camera Scale: {self.scale}")  # noqa
 
     def goto(self, position: Vec3, rotation: Vec3 = None):
         self.position = position

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.city import City
 from typing import List, Iterator
 

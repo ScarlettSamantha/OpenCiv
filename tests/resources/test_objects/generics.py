@@ -1,3 +1,4 @@
+from __future__ import annotations
 class GenericBase:
     def __init__(self):
         pass

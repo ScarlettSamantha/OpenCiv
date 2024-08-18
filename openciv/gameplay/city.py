@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.improvements import Improvements
 from openciv.gameplay.improvement import Improvement
 from openciv.gameplay.citizens import Citizens

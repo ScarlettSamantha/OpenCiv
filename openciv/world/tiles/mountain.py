@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.world.tiles._base_tile import BaseTile
 from openciv.world.terrain.mountain import Mountain as MountainTerrain
 

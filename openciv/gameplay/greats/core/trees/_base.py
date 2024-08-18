@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.great import GreatsTree
 from openciv.engine.additions.pyload import PyLoad
 from openciv.engine.managers.log import LogManager

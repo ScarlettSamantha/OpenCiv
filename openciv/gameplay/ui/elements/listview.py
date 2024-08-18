@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Entity, color, mouse, Button
 from typing import List
 

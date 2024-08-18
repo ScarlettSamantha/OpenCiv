@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.gameplay.resources.core.basic._base import BasicBaseResource
 from openciv.engine.managers.i18n import _t
 

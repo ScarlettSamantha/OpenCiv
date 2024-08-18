@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.managers.base import BaseManager
 from collections import OrderedDict
 from openciv.gameplay.tech import Tech

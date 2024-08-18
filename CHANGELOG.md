@@ -68,6 +68,8 @@
 
 ### Other
 
+* 👷 add script to ensure future annotations in each pyfile ([`5b92ad9`](https://github.com/ScarlettSamantha/OpenCiv/commit/5b92ad9dce9bf874ab5cba98d517670f93fe8a14)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: update documentation, +software recomendations, add link in contribute. ([`4e45400`](https://github.com/ScarlettSamantha/OpenCiv/commit/4e45400862ee82c46be61ef1c95ed6ca5be21c8c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: update documentation + project structure ([`754fcc6`](https://github.com/ScarlettSamantha/OpenCiv/commit/754fcc623da19115c31c0bdf3ab229641b6c55f9)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

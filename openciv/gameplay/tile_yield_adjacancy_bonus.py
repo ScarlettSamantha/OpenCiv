@@ -1,3 +1,4 @@
+from __future__ import annotations
 class TileYieldAdjacancyBonus:
     def __init__(self):
         self.science = 0.0

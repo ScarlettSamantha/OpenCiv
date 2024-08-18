@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.UI.base import BaseUI
 from ursina import camera, color, window
 from openciv.engine.entity import Entity

@@ -1,3 +1,4 @@
+from __future__ import annotations
 import pytest
 from openciv.engine.exceptions.condition_exception import ConditionObjectPropertyDoesNotExist
 from openciv.engine.requires import Condition, ConditionMultiple, Requires, RequiresMultiple

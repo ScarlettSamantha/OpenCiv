@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.saving import SaveAble
 from openciv.engine.managers.i18n import T_TranslationOrStr
 from openciv.engine.mixins.callbacks import CallbacksMixin

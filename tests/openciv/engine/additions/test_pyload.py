@@ -1,3 +1,4 @@
+from __future__ import annotations
 import pytest
 from openciv.engine.additions.pyload import PyLoad
 from tests.resources.test_objects.generics import GenericBase

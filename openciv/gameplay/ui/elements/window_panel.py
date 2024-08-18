@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ursina import Entity, Draggable, Text, Slider, Button, color, Vec3, Quad
 from ursina.prefabs.input_field import InputField
 
@@ -48,7 +49,6 @@ class WindowPanel(Draggable):
             content = content.values()
 
         for c in content:
-            # print('........', c)
             if isinstance(c, Space):
                 height += c.height
 
@@ -80,7 +80,6 @@ class WindowPanel(Draggable):
                     c.world_parent = self
                     c.x = -0.5 * 0.9
                     c.scale = (0.9 * 2, 20)
-                    # print('-------------', c.scale_y * c.height)
                     height += 1
 
                 elif hasattr(c, "scale_y"):

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from openciv.engine.exceptions.gameplay_exception import GameplayException
 
 

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import List, NoReturn, ForwardRef, Tuple
 from openciv.engine.managers.i18n import T_TranslationOrStr
 from openciv.engine.exceptions.great_exception import GreatPersonTreeNotLoaded

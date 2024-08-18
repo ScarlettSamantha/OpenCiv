@@ -1,3 +1,4 @@
+from __future__ import annotations
 from ._base_terrain import BaseTerrain
 
 from ursina import Texture
