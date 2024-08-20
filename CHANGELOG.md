@@ -68,6 +68,8 @@
 
 ### Other
 
+* 🏷️  add typing to test_key ([`4fa324c`](https://github.com/ScarlettSamantha/OpenCiv/commit/4fa324cde875edec60178627aadd7d82b23568c4)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 🏷️  fix typing of tile_yield ([`d732bdd`](https://github.com/ScarlettSamantha/OpenCiv/commit/d732bdd8457cb35aadfa5939cbc6fea0bb7e479f)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 🐛 there was a bug in saving where a generic object would be assigned a property via the saving ([`81f9188`](https://github.com/ScarlettSamantha/OpenCiv/commit/81f9188fd7c2ad4d30594a658aca8d3f388896da)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

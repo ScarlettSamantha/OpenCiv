@@ -14,6 +14,40 @@ If you’d like to contribute, fork the repository, make your changes, and submi
 
 I can recommend the following software for use in contributing and development in generate, you can it [here](https://github.com/ScarlettSamantha/openciv-meta/blob/main/knowledge/Software%20recommendations.md)
 
+## Code Typing
+
+When contributing code, it's important to use strict typing to maintain consistency and reliability throughout the project. We utilize Pyright as our primary static type checker. Pyright is fast and effective, allowing us to catch potential issues before they become problems. It integrates well with most IDEs, making it easy to ensure your code meets our typing standards.
+
+In addition to Pyright, we use Ruff or Flake8 to enforce style guidelines and ensure code quality. Ruff is a powerful linter that checks for code smells, formatting issues, and adherence to PEP 8 standards. It’s designed to catch common errors and enforce best practices, helping to keep our codebase clean and maintainable.
+
+Example: Before and After Code Typing
+To illustrate the importance of proper typing, here’s a simple example of a function that calculates the average of a list of numbers:
+
+Before:
+
+```python
+def calculate_average(numbers):
+total = sum(numbers)
+count = len(numbers)
+return total / count if count > 0 else 0.0
+```
+
+After:
+
+```python
+from typing import List
+
+def calculate_average(numbers: List[float]) -> float:
+"""Calculate the average of a list of numbers."""
+total: float = sum(numbers)
+count: int = len(numbers)
+return total / count if count > 0 else 0.0
+```
+
+In the original version, the function lacks type hints, making it unclear what types are expected for the input and output. By adding type hints like List[float] for the numbers parameter and -> float to specify the return type, the function becomes clearer and easier to maintain. Explicitly typing variables such as total and count further improves code readability and reliability.
+
+Using proper typing practices like this not only makes your code more robust but also helps tools like Pyright catch potential issues early. This ensures that your contributions align with the project’s standards and are easier for others to understand and build upon.
+
 ## Gameplay logic seperation sturcture
 
 The core "mod" handles the foundational game logic, such as how units move, attack, and interact with the environment. For example, the core mod defines the general rules for unit movement—how far a unit can move per turn, how it engages in combat, and how it interacts with terrain. These broad behaviors ensure that the game functions consistently across all scenarios.
