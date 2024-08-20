@@ -6,6 +6,7 @@ pytest
 pytest-cov
 poetry-core
 pymarkdownlnt
+tqdm # used in the build script
 
 # This is used by the tech tree to generate a graph of the dependencies
 graphviz

@@ -68,6 +68,8 @@
 
 ### Other
 
+* :memo: add typing section to CONTRIBUTE.md ([`90a1b70`](https://github.com/ScarlettSamantha/OpenCiv/commit/90a1b70475c6604a934eb0c616985dd59158af86)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 🏷️  add typing to test_key ([`4fa324c`](https://github.com/ScarlettSamantha/OpenCiv/commit/4fa324cde875edec60178627aadd7d82b23568c4)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 🏷️  fix typing of tile_yield ([`d732bdd`](https://github.com/ScarlettSamantha/OpenCiv/commit/d732bdd8457cb35aadfa5939cbc6fea0bb7e479f)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
