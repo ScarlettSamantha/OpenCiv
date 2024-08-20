@@ -68,6 +68,8 @@
 
 ### Other
 
+* ♻️  Refactor, add __future__ at the top of the file ([`a37c6fd`](https://github.com/ScarlettSamantha/OpenCiv/commit/a37c6fdf95308def12e58ab3a624b53c79477815)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * 👷 add script to ensure future annotations in each pyfile ([`5b92ad9`](https://github.com/ScarlettSamantha/OpenCiv/commit/5b92ad9dce9bf874ab5cba98d517670f93fe8a14)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * :memo: update documentation, +software recomendations, add link in contribute. ([`4e45400`](https://github.com/ScarlettSamantha/OpenCiv/commit/4e45400862ee82c46be61ef1c95ed6ca5be21c8c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)

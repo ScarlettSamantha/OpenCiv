@@ -12,9 +12,9 @@ class Keyable:
     Interacts with KeyManager to ensure each object has a unique identifier.
     """
 
-    def __init__(self, _key: str = None):
+    def __init__(self, _key: str | None = None):
         """Initializes a Keyable object with no key assigned initially."""
-        self._key: str = _key
+        self._key: str | None = _key
 
     def set_key(self, key: str) -> None:
         """
@@ -32,7 +32,7 @@ class Keyable:
         Returns:
             str: The unique key assigned to this object.
         """
-        return KeyManager.get_instance().register(self)
+        return KeyManager.get_instance().register(object_to_register=self)
 
     def _unregister_key(self) -> None:
         """
@@ -85,7 +85,7 @@ class KeyManager(BaseManager, Singleton):
         Returns:
             str: A new unique key.
         """
-        return str(uuid4())
+        return str(object=uuid4())
 
     def delete(self, key: str | object | Keyable) -> None:
         """
@@ -99,14 +99,14 @@ class KeyManager(BaseManager, Singleton):
             ValueError: If the input is not a key or Keyable object.
         """
         if isinstance(key, Keyable):
-            key = key._key
+            key = key._key  # type: ignore | This is a valid operation, but pyright doesn't recognize it.
         elif not isinstance(key, str):
             raise ValueError("KeyManager.delete() only accepts a key or Keyable object.")
         if key not in self._registered_keys:
             raise KeyNotFoundException(f"Key {key} not found.")
         del self._registered_keys[key]
 
-    def register(self, object_to_register: object) -> str:
+    def register(self, object_to_register: Keyable) -> str:
         """
         Registers an object with the manager, assigning it a unique key if it doesn't already have one.
 
@@ -119,16 +119,11 @@ class KeyManager(BaseManager, Singleton):
         Raises:
             ValueError: If the object is not Keyable or doesn't have a _key attribute.
         """
-        if hasattr(object_to_register, "_key") and object_to_register._key is not None:
-            key = object_to_register._key
+        if hasattr(object_to_register, "_key") and object_to_register._key is not None:  # type: ignore
+            key: str = object_to_register._key  # type: ignore
         else:
-            key = self._generate_key()
-            if isinstance(object_to_register, Keyable):
-                object_to_register.set_key(key)
-            elif hasattr(object_to_register, "_key"):
-                object_to_register._key = key
-            else:
-                raise ValueError("KeyManager.register() only accepts a Keyable object with a _key attribute.")
-
+            key: str = self._generate_key()
+            if hasattr(object_to_register, "set_key"):
+                object_to_register.set_key(key=key)
         self._registered_keys[key] = object_to_register
         return key
