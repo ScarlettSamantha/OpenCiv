@@ -68,6 +68,8 @@
 
 ### Other
 
+* 👷 add a non-bash commit checker ([`38fcc24`](https://github.com/ScarlettSamantha/OpenCiv/commit/38fcc245bce9d2064fc4f9e6718aced16807795c)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * :memo: add typing section to CONTRIBUTE.md ([`90a1b70`](https://github.com/ScarlettSamantha/OpenCiv/commit/90a1b70475c6604a934eb0c616985dd59158af86)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 🏷️  add typing to test_key ([`4fa324c`](https://github.com/ScarlettSamantha/OpenCiv/commit/4fa324cde875edec60178627aadd7d82b23568c4)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
