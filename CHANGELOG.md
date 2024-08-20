@@ -68,6 +68,8 @@
 
 ### Other
 
+* 🏷️  fix typing of the key ([`3e068d3`](https://github.com/ScarlettSamantha/OpenCiv/commit/3e068d3560b5243813767aa5426e70c6788d5b16)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
+
 * ♻️  Refactor, add __future__ at the top of the file ([`a37c6fd`](https://github.com/ScarlettSamantha/OpenCiv/commit/a37c6fdf95308def12e58ab3a624b53c79477815)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
 
 * 👷 add script to ensure future annotations in each pyfile ([`5b92ad9`](https://github.com/ScarlettSamantha/OpenCiv/commit/5b92ad9dce9bf874ab5cba98d517670f93fe8a14)) | [Scarlett Samantha Verheul](https://github.com/scarlett.verheul)
