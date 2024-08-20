@@ -29,11 +29,11 @@ from typing import Dict, List, Any, Self
 
 
 class TileYield(SaveAble):
-    BASE = 0
-    ADDITIVE = 1
+    BASE: int = 0
+    ADDITIVE: int = 1
 
-    PERCENTAGE_CUMMULATIVE = 2
-    PERCENTAGE_ADDATIVE = 3
+    PERCENTAGE_CUMMULATIVE: int = 2
+    PERCENTAGE_ADDATIVE: int = 3
 
     MODE_STR: Dict[int, str] = {
         BASE: "BASE",
@@ -54,11 +54,13 @@ class TileYield(SaveAble):
         culture: float = 0.0,
         housing: float = 0.0,
         faith: float = 0.0,
-        mode: int = ADDITIVE,
+        mode: int = 1,
         *args: Any,
         **kwargs: Any,
     ) -> None:
         super().__init__(*args, **kwargs)
+
+        # Initialize the attributes specific to TileYield
         self._name: str | None = name
         self.mode: int = mode
         self.gold: Gold = Gold(value=gold)
