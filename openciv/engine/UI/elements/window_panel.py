@@ -1,5 +1,5 @@
 from __future__ import annotations
-from ursina import Entity, Draggable, Text, Slider, Button, color, Vec3, Quad
+from ursina import Entity, Draggable, Text, Slider, Button, color, Vec3, Quad, ButtonGroup
 from ursina.prefabs.input_field import InputField
 
 
@@ -9,8 +9,8 @@ class Space:
 
 
 class WindowPanel(Draggable):
-    def __init__(self, title="", content=[], **kwargs):
-        self.content = content
+    def __init__(self, title="", content=None, **kwargs):
+        self.content = content if content is not None else []
         self.popup = False
         self._prev_input_field = None
         super().__init__(origin=(-0, 0.5), scale=(0.5, 0.05), text=title, color=color.black)
@@ -44,6 +44,7 @@ class WindowPanel(Draggable):
             return
         spacing = 0.25
         height = 1.5 + spacing
+        width = 1.5 + spacing
 
         if isinstance(content, dict):
             content = content.values()
@@ -82,6 +83,12 @@ class WindowPanel(Draggable):
                     c.scale = (0.9 * 2, 20)
                     height += 1
 
+                elif isinstance(c, ButtonGroup):
+                    c.world_parent = self
+                    c.origin=(-.5,0)
+                    height += c.scale_y
+                    self.panel.scale_x += c.scale_x
+                    
                 elif hasattr(c, "scale_y"):
                     height += c.scale_y
 

@@ -1,80 +1,55 @@
 from __future__ import annotations
-from openciv.engine.managers.base import BaseManager
-from openciv.engine.UI.menus import *
+from typing import Any
+from openciv.engine.managers.base import BaseSingletonManager
+from openciv.engine.UI import V
+from openciv.engine.UI.menus.main_menu import MainMenu
 
 
-class UIManager(BaseManager):
-    def __init__(self):
-        self.active_menu = None
-        self.previous_menu = None
-        self.menus = []
+class UIManager(BaseSingletonManager):
+    
+    def __setup__(self) -> None:
+        self.current_view: V = None
+        self.previous_view: V = None
 
-        # TODO remove after finishing refactor...
-        self.main_menu = None
-        self.game_config = None
-        self.test_menu = None
+    def __call__(self, **kwargs: Any) -> Any:
+        self.__setup__(**kwargs)
+        return self
 
-    def _add_available_menus(self):
+    def start(self):
+        """
+        Game boots into the main menu, so first thing after __init__ is to instantiate and set the
+        initial active view to the main menu.
+        """
+        self.current_view = MainMenu(self.parent())
+        self.activate_current_view()
+
+    def shutdown_previous_view(self):
+        self.previous_view.hide()
+        self.previous_view.clear()
+
+    def activate_current_view(self):
+        if not isinstance(self.current_view, V.__constraints__):
+            view_cls = self.current_view
+            self.current_view = view_cls(self.parent())
+
+        if self.current_view is not None and isinstance(self.current_view, V.__constraints__):
+            menu_elems = self.current_view.setup_content()
+            self.parent().log().engine.debug(f'view class: {self.current_view.__class__} preparing to render...')
+            self.parent().log().engine.debug(f'view content created: {menu_elems}')
+            self.current_view.populate(menu_elems)
+            self.current_view.render()
+            self.current_view.show()
+        else:
+            self.parent().log().engine.debug(f'unable to instantiate view of type: {view_cls}')
+
+    def revert_view(self):
+        self.change_to_menu(self.previous_view)
+
+    def change_to_tab(self):
         pass
 
-    def change_to_menu(self, menu: Menu):
-        self.previous_menu = self.active_menu
-        self.active_menu = menu
-
-    def activate_current_menu(self):
-        self.active_menu.render()
-        self.active_menu.show()
-
-    def start_test_menu(self):
-        
-
-        self.stop_main_menu()
-
-        if self.test_menu is None:
-            self.test_menu = TestMenu(self.parent, self.start_main_menu)
-            self.test_menu.render()
-            self.test_menu.show()
-
-    def stop_test_menu(self):
-        if self.test_menu is not None:
-            self.test_menu.hide()
-            self.test_menu = None
-
-    def is_test_menu_open(self) -> bool:
-        return self.test_menu.enabled
-
-    def start_main_menu(self):
-        
-
-        self.stop_game_config()
-
-        if self.main_menu is None:
-            self.main_menu = MainMenu(self.parent, self.start_game_config)
-            self.main_menu.render()
-            self.main_menu.show()
-
-    def stop_main_menu(self):
-        if self.main_menu is not None:
-            self.main_menu.hide()
-            self.main_menu = None
-
-    def is_main_menu_open(self) -> bool:
-        return self.main_menu.enabled
-
-    def start_game_config(self):
-        
-
-        self.stop_main_menu()
-
-        if self.game_config is None:
-            self.game_config = GameConfig(self.parent, self.start_main_menu)
-            self.game_config.render()
-            self.game_config.show()
-
-    def stop_game_config(self):
-        if self.game_config is not None:
-            self.game_config.hide()
-            self.game_config = None
-
-    def is_game_config_open(self) -> bool:
-        return self.game_config.enabled
+    def change_to_menu(self, menu: V):
+        self.previous_view = self.current_view
+        self.current_view = menu
+        self.shutdown_previous_view()
+        self.activate_current_view()
