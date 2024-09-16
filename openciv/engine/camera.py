@@ -3,7 +3,7 @@ from ursina import camera, Vec2, Entity, Vec3, mouse, held_keys, lerp, slerp, ti
 
 from openciv.engine.managers.game import GameManager
 from openciv.engine import ui
-from openciv.gameplay.ui.elements.button import Button
+from openciv.engine.UI.elements.button import Button
 
 
 class Camera(Entity):
@@ -101,7 +101,7 @@ class Camera(Entity):
             self.gameInteractive(not self.game_world_interactive)
 
         elif key == "l":
-            self.game_manager.ui().start_main_menu()
+            self.game_manager.ui().start()
 
         elif key == "left mouse down":
             self.handle_click()

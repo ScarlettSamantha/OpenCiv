@@ -32,3 +32,5 @@ logs/ursina/*
 
 saves/*
 .env
+
+scratch.py

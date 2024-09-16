@@ -8,8 +8,7 @@ from importlib import util
 from openciv.engine.managers.config import Config
 from openciv.engine.managers.log import LogManager
 from openciv.engine.camera import Camera
-
-from openciv.engine.managers.game import GameManager, GameManagerInstance
+from openciv.engine.managers.game import GameManager
 from openciv.engine.managers.map import MapManager
 from openciv.engine.managers.market import MarketManager
 from openciv.engine.managers.player import PlayerManager
@@ -17,7 +16,6 @@ from openciv.engine.managers.turn import TurnManager
 from openciv.engine.managers.knowledge import KnowledgeManager
 from openciv.engine.managers.tech import TechManager
 from openciv.engine.managers.culture import CultureManager
-from openciv.engine.managers.ui import UIManager
 from openciv.engine.managers.i18n import _i18n, set_i18n
 from openciv.engine.additions.hex_grid import HexGrid
 
@@ -128,12 +126,10 @@ class Game:
         log_manager.engine.debug("Tech manager created")
         culture_manager = CultureManager()
         log_manager.engine.debug("Culture manager created")
-        ui_manager = UIManager()
-        log_manager.engine.debug("UI manager created")
 
         name = "Devgame - {}".format(Random().randint(1, 90000))
 
-        self.game_manager = GameManagerInstance(
+        self.game_manager = GameManager.get_instance(
             name=name,
             i18n_manager=i18n_manager,
             config_manager=config,
@@ -145,7 +141,6 @@ class Game:
             knowledge_manager=knowledge_manager,
             tech_manager=tech_manager,
             culture_manager=culture_manager,
-            ui_manager=ui_manager,
             log_manager=log_manager,
         )
         log_manager.engine.debug("Game managers prepared")
@@ -168,7 +163,9 @@ class Game:
         log_manager = LogManager.get_instance()
         log_manager.engine.debug("Game booted")
         log_manager.gameplay.debug("Game starting")
+
+        # currently, run() and ui().start() are redundant, but keeping
+        # the latter commented out temporarily in case they need to diverge
         self.game_manager.run()
-        self.game_manager.ui().start_main_menu()
         self.game_manager.camera().gameInteractive(False)
         self.ursina.run()

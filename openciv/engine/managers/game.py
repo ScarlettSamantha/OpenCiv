@@ -1,11 +1,9 @@
 from __future__ import annotations
-from openciv.engine.managers.base import BaseManager
-
+from openciv.engine.managers.base import BaseSingletonManager
 from openciv.engine.managers.map import MapManager
 from openciv.engine.managers.market import MarketManager
 from openciv.engine.managers.player import PlayerManager
 from openciv.engine.managers.turn import TurnManager
-
 from openciv.engine.managers.knowledge import KnowledgeManager
 from openciv.engine.managers.tech import TechManager
 from openciv.engine.managers.culture import CultureManager
@@ -19,13 +17,8 @@ from openciv.gameplay.player import Player
 from openciv.gameplay.resource import ResourceValueType
 from typing import Union, List
 
-GameManagerInstance = None
 
-
-class GameManager(BaseManager):
-    def __init__(self):
-        pass
-
+class GameManager(BaseSingletonManager):
     def __setup__(
         self,
         name,
@@ -40,10 +33,8 @@ class GameManager(BaseManager):
         knowledge_manager: KnowledgeManager,
         tech_manager: TechManager,
         culture_manager: CultureManager,
-        ui_manager: UIManager,
     ):
         self.name = name
-
         self.i18n_manager: i18n = i18n_manager
         self.config_manager: Config = config_manager
         self.map_manager: MapManager = map_manager
@@ -53,9 +44,10 @@ class GameManager(BaseManager):
         self.knowledge_manager: KnowledgeManager = knowledge_manager
         self.tech_manager: TechManager = tech_manager
         self.culture_manager: CultureManager = culture_manager
-        self.ui_manager: UIManager = ui_manager
         self.log_manager: LogManager = log_manager
         self._camera: "Camera" = camera  # noqa: F821
+        self.ui_manager = UIManager.get_instance()
+        self.log().engine.debug('UI manager created')
 
     def configure_managers(self):
         def give_managers_parents(self):
@@ -75,7 +67,7 @@ class GameManager(BaseManager):
         self.configure_managers()
 
     def run(self):
-        window = self.ui().start_main_menu()
+        self.ui().start()
 
     def configure_game(self):
         pass
@@ -171,7 +163,3 @@ class GameManager(BaseManager):
     def __call__(self, *args, **kwargs):
         self.__setup__(**kwargs)
         return self
-
-
-if GameManagerInstance is None:
-    GameManagerInstance = GameManager()
